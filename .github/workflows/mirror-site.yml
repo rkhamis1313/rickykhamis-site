@@ -1,0 +1,44 @@
+name: Mirror live site
+
+# rickykhamis.com is reachable from GitHub's runners, so the mirror is taken
+# here and committed back to the repo. Netlify then publishes site/ as-is.
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays, 04:00 America/Phoenix (UTC-7, no DST) — refresh the mirror weekly.
+    - cron: "0 11 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-site
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Mirror rickykhamis.com into site/
+        run: python scripts/mirror_site.py
+
+      - name: Commit the mirror
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A site
+          if git diff --cached --quiet; then
+            echo "Mirror is already up to date."
+            exit 0
+          fi
+          git commit -m "Mirror rickykhamis.com ($(date -u +%Y-%m-%d))"
+          git push origin HEAD:${GITHUB_REF_NAME}
