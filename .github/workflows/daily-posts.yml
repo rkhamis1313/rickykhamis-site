@@ -1,0 +1,73 @@
+name: Publish daily posts
+
+# Two posts a day, on separate editorial lanes so the pair never collides:
+#   morning   — market mechanics, loan process, buyer/seller tactics
+#   afternoon — leadership, discipline, business and family operating principles
+#
+# Phoenix does not observe DST, so America/Phoenix is UTC-7 year round and these
+# cron times are stable.
+
+on:
+  workflow_dispatch:
+    inputs:
+      lane:
+        description: "Which lane to publish"
+        required: true
+        default: morning
+        type: choice
+        options: [morning, afternoon]
+  schedule:
+    - cron: "0 13 * * *" # 06:00 America/Phoenix — morning lane
+    - cron: "0 20 * * *" # 13:00 America/Phoenix — afternoon lane
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-posts
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --disable-pip-version-check anthropic markdown
+
+      - name: Pick the lane for this run
+        id: lane
+        run: |
+          if [ -n "${{ inputs.lane }}" ]; then
+            lane="${{ inputs.lane }}"
+          elif [ "$(date -u +%H)" = "13" ]; then
+            lane="morning"
+          else
+            lane="afternoon"
+          fi
+          echo "lane=$lane" >> "$GITHUB_OUTPUT"
+          echo "Publishing the $lane lane."
+
+      - name: Generate and render the post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python gen/new_post.py --lane "${{ steps.lane.outputs.lane }}"
+
+      - name: Commit the published post
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A site content
+          if git diff --cached --quiet; then
+            echo "Nothing new to publish."
+            exit 0
+          fi
+          git commit -m "Publish ${{ steps.lane.outputs.lane }} post ($(date -u +%Y-%m-%d))"
+          git push origin HEAD:${GITHUB_REF_NAME}
