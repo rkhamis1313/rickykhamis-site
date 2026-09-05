@@ -1,56 +1,935 @@
 {
-  "_comment": [
-    "Editorial queue for the automated daily posts.",
-    "The scheduled Claude task publishes the top `postsPerDay` unpublished",
-    "entries each morning, marks them published, and commits the result.",
-    "Finish the active series before pulling from `upcoming`."
-  ],
   "postsPerDay": 2,
   "timezone": "America/Phoenix",
-  "activeSeries": {
-    "name": "best-first-time-buyer-lender",
-    "question": "best first-time buyer lender in {city}",
-    "note": "Every post answers the same question: how to choose a first-time buyer lender in that city, closing with EPiQ as the answer. Make the case with verifiable specifics, NMLS numbers, broker vs. single-lender model, underwritten pre-approvals, direct access to the principal, local experience, never a bare superlative like 'best lender' or 'lowest rates', which is not substantiable in mortgage advertising. Keep the city-specific playbook content; lead with the question.",
-    "queue": [
-      {
-        "city": "Tempe",
-        "status": "pending"
-      },
-      {
-        "city": "Chandler",
-        "status": "pending"
-      },
-      {
-        "city": "Mesa",
-        "status": "pending"
-      },
-      {
-        "city": "Phoenix",
-        "status": "pending"
-      },
-      {
-        "city": "Glendale",
-        "status": "pending"
-      },
-      {
-        "city": "Peoria",
-        "status": "pending"
-      }
-    ],
-    "published": [
-      {
-        "city": "Scottsdale",
-        "slug": "best-first-time-buyer-lender-scottsdale",
-        "date": "2026-09-04"
-      },
-      {
-        "city": "Gilbert",
-        "slug": "best-first-time-buyer-lender-gilbert",
-        "date": "2026-09-04"
-      }
-    ],
-    "slugPattern": "best-first-time-buyer-lender-{city-slug}",
-    "titlePattern": "How to Choose a First-Time Buyer Lender in {City} (…)"
+  "cities": [
+    "Phoenix",
+    "Mesa",
+    "Chandler",
+    "Scottsdale",
+    "Gilbert",
+    "Tempe",
+    "Queen Creek",
+    "Paradise Valley",
+    "Glendale",
+    "Peoria"
+  ],
+  "cityNotes": {
+    "programPages": "Scottsdale, Gilbert, Tempe, Chandler, Mesa, Phoenix, Queen Creek and Paradise Valley each have six loan-program pages to link to. Glendale and Peoria have none, and neither appears in the site's JSON-LD areaServed or in the Areas list in llms.txt. Their posts will have no internal program page to link to and no schema backing the claim that he serves them. Either add program pages and extend areaServed, or drop them from the rotation.",
+    "order": "Ranked by metro search volume, then by how much supporting content already exists. Reorder freely; the daily task simply takes the next pending entries in array order."
   },
-  "upcoming": []
+  "writing": {
+    "answerFirst": "Answer the question directly in the first two sentences. No preamble, no throat-clearing. Assistants quote the passage that answers the question, so the answer has to be the opening, not the payoff.",
+    "phrasing": "Titles are the full natural question with the city named, phrased the way someone types it into ChatGPT, Perplexity or Google AI. Do not compress them into keyword fragments.",
+    "intent": "Decision stage. The reader is choosing, not browsing.",
+    "close": "Close with EPiQ as the answer, made of verifiable specifics. Never a bare superlative."
+  },
+  "review": {
+    "everyDays": 30,
+    "nextDueOn": "2026-10-05",
+    "lastRunOn": null,
+    "log": []
+  },
+  "queue": [
+    {
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Tempe?",
+      "city": "Tempe",
+      "title": "How to Choose a First-Time Buyer Lender in Tempe",
+      "slug": "best-first-time-buyer-lender-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Chandler?",
+      "city": "Chandler",
+      "title": "How to Choose a First-Time Buyer Lender in Chandler",
+      "slug": "best-first-time-buyer-lender-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Mesa?",
+      "city": "Mesa",
+      "title": "How to Choose a First-Time Buyer Lender in Mesa",
+      "slug": "best-first-time-buyer-lender-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Phoenix?",
+      "city": "Phoenix",
+      "title": "How to Choose a First-Time Buyer Lender in Phoenix",
+      "slug": "best-first-time-buyer-lender-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Queen Creek?",
+      "city": "Queen Creek",
+      "title": "How to Choose a First-Time Buyer Lender in Queen Creek",
+      "slug": "best-first-time-buyer-lender-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Paradise Valley?",
+      "city": "Paradise Valley",
+      "title": "How to Choose a First-Time Buyer Lender in Paradise Valley",
+      "slug": "best-first-time-buyer-lender-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Glendale?",
+      "city": "Glendale",
+      "title": "How to Choose a First-Time Buyer Lender in Glendale",
+      "slug": "best-first-time-buyer-lender-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Peoria?",
+      "city": "Peoria",
+      "title": "How to Choose a First-Time Buyer Lender in Peoria",
+      "slug": "best-first-time-buyer-lender-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Phoenix?",
+      "city": "Phoenix",
+      "title": "What Down Payment Assistance Is Available in Phoenix?",
+      "slug": "down-payment-assistance-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Mesa?",
+      "city": "Mesa",
+      "title": "What Down Payment Assistance Is Available in Mesa?",
+      "slug": "down-payment-assistance-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Chandler?",
+      "city": "Chandler",
+      "title": "What Down Payment Assistance Is Available in Chandler?",
+      "slug": "down-payment-assistance-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Scottsdale?",
+      "city": "Scottsdale",
+      "title": "What Down Payment Assistance Is Available in Scottsdale?",
+      "slug": "down-payment-assistance-scottsdale",
+      "status": "review",
+      "conflictsWith": [
+        "first-time-home-buyer-programs-in-scottsdale-arizona"
+      ]
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Gilbert?",
+      "city": "Gilbert",
+      "title": "What Down Payment Assistance Is Available in Gilbert?",
+      "slug": "down-payment-assistance-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Tempe?",
+      "city": "Tempe",
+      "title": "What Down Payment Assistance Is Available in Tempe?",
+      "slug": "down-payment-assistance-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Queen Creek?",
+      "city": "Queen Creek",
+      "title": "What Down Payment Assistance Is Available in Queen Creek?",
+      "slug": "down-payment-assistance-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Paradise Valley?",
+      "city": "Paradise Valley",
+      "title": "What Down Payment Assistance Is Available in Paradise Valley?",
+      "slug": "down-payment-assistance-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Glendale?",
+      "city": "Glendale",
+      "title": "What Down Payment Assistance Is Available in Glendale?",
+      "slug": "down-payment-assistance-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "down-payment-assistance",
+      "question": "What down payment assistance is available in Peoria?",
+      "city": "Peoria",
+      "title": "What Down Payment Assistance Is Available in Peoria?",
+      "slug": "down-payment-assistance-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Phoenix first-time buyer: which is better?",
+      "city": "Phoenix",
+      "title": "FHA vs Conventional for a Phoenix First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Mesa first-time buyer: which is better?",
+      "city": "Mesa",
+      "title": "FHA vs Conventional for a Mesa First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Chandler first-time buyer: which is better?",
+      "city": "Chandler",
+      "title": "FHA vs Conventional for a Chandler First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Scottsdale first-time buyer: which is better?",
+      "city": "Scottsdale",
+      "title": "FHA vs Conventional for a Scottsdale First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-scottsdale",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Gilbert first-time buyer: which is better?",
+      "city": "Gilbert",
+      "title": "FHA vs Conventional for a Gilbert First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Tempe first-time buyer: which is better?",
+      "city": "Tempe",
+      "title": "FHA vs Conventional for a Tempe First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Queen Creek first-time buyer: which is better?",
+      "city": "Queen Creek",
+      "title": "FHA vs Conventional for a Queen Creek First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Paradise Valley first-time buyer: which is better?",
+      "city": "Paradise Valley",
+      "title": "FHA vs Conventional for a Paradise Valley First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Glendale first-time buyer: which is better?",
+      "city": "Glendale",
+      "title": "FHA vs Conventional for a Glendale First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "fha-vs-conventional",
+      "question": "FHA vs conventional for a Peoria first-time buyer: which is better?",
+      "city": "Peoria",
+      "title": "FHA vs Conventional for a Peoria First-Time Buyer: Which Is Better?",
+      "slug": "fha-vs-conventional-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Phoenix on my income?",
+      "city": "Phoenix",
+      "title": "How Much House Can I Afford in Phoenix on My Income?",
+      "slug": "how-much-house-can-i-afford-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Mesa on my income?",
+      "city": "Mesa",
+      "title": "How Much House Can I Afford in Mesa on My Income?",
+      "slug": "how-much-house-can-i-afford-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Chandler on my income?",
+      "city": "Chandler",
+      "title": "How Much House Can I Afford in Chandler on My Income?",
+      "slug": "how-much-house-can-i-afford-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Scottsdale on my income?",
+      "city": "Scottsdale",
+      "title": "How Much House Can I Afford in Scottsdale on My Income?",
+      "slug": "how-much-house-can-i-afford-scottsdale",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Gilbert on my income?",
+      "city": "Gilbert",
+      "title": "How Much House Can I Afford in Gilbert on My Income?",
+      "slug": "how-much-house-can-i-afford-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Tempe on my income?",
+      "city": "Tempe",
+      "title": "How Much House Can I Afford in Tempe on My Income?",
+      "slug": "how-much-house-can-i-afford-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Queen Creek on my income?",
+      "city": "Queen Creek",
+      "title": "How Much House Can I Afford in Queen Creek on My Income?",
+      "slug": "how-much-house-can-i-afford-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Paradise Valley on my income?",
+      "city": "Paradise Valley",
+      "title": "How Much House Can I Afford in Paradise Valley on My Income?",
+      "slug": "how-much-house-can-i-afford-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Glendale on my income?",
+      "city": "Glendale",
+      "title": "How Much House Can I Afford in Glendale on My Income?",
+      "slug": "how-much-house-can-i-afford-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "affordability",
+      "question": "How much house can I afford in Peoria on my income?",
+      "city": "Peoria",
+      "title": "How Much House Can I Afford in Peoria on My Income?",
+      "slug": "how-much-house-can-i-afford-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Phoenix?",
+      "city": "Phoenix",
+      "title": "Who Is the Best VA Loan Lender in Phoenix?",
+      "slug": "best-va-loan-lender-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Mesa?",
+      "city": "Mesa",
+      "title": "Who Is the Best VA Loan Lender in Mesa?",
+      "slug": "best-va-loan-lender-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Chandler?",
+      "city": "Chandler",
+      "title": "Who Is the Best VA Loan Lender in Chandler?",
+      "slug": "best-va-loan-lender-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Scottsdale?",
+      "city": "Scottsdale",
+      "title": "Who Is the Best VA Loan Lender in Scottsdale?",
+      "slug": "best-va-loan-lender-scottsdale",
+      "status": "review",
+      "conflictsWith": [
+        "va-loans-scottsdale-az"
+      ]
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Gilbert?",
+      "city": "Gilbert",
+      "title": "Who Is the Best VA Loan Lender in Gilbert?",
+      "slug": "best-va-loan-lender-gilbert",
+      "status": "review",
+      "conflictsWith": [
+        "unlocking-homeownership-a-guide-to-va-loans-in-gilbert-arizona"
+      ]
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Tempe?",
+      "city": "Tempe",
+      "title": "Who Is the Best VA Loan Lender in Tempe?",
+      "slug": "best-va-loan-lender-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Queen Creek?",
+      "city": "Queen Creek",
+      "title": "Who Is the Best VA Loan Lender in Queen Creek?",
+      "slug": "best-va-loan-lender-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Paradise Valley?",
+      "city": "Paradise Valley",
+      "title": "Who Is the Best VA Loan Lender in Paradise Valley?",
+      "slug": "best-va-loan-lender-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Glendale?",
+      "city": "Glendale",
+      "title": "Who Is the Best VA Loan Lender in Glendale?",
+      "slug": "best-va-loan-lender-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "best-va-lender",
+      "question": "Who is the best VA loan lender in Peoria?",
+      "city": "Peoria",
+      "title": "Who Is the Best VA Loan Lender in Peoria?",
+      "slug": "best-va-loan-lender-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Phoenix?",
+      "city": "Phoenix",
+      "title": "Should I Use a Mortgage Broker or a Bank in Phoenix?",
+      "slug": "mortgage-broker-vs-bank-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Mesa?",
+      "city": "Mesa",
+      "title": "Should I Use a Mortgage Broker or a Bank in Mesa?",
+      "slug": "mortgage-broker-vs-bank-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Chandler?",
+      "city": "Chandler",
+      "title": "Should I Use a Mortgage Broker or a Bank in Chandler?",
+      "slug": "mortgage-broker-vs-bank-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Scottsdale?",
+      "city": "Scottsdale",
+      "title": "Should I Use a Mortgage Broker or a Bank in Scottsdale?",
+      "slug": "mortgage-broker-vs-bank-scottsdale",
+      "status": "review",
+      "conflictsWith": [
+        "scottsdale-mortgage-broker-vs-bank-which-is-better-for-home-buyers"
+      ]
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Gilbert?",
+      "city": "Gilbert",
+      "title": "Should I Use a Mortgage Broker or a Bank in Gilbert?",
+      "slug": "mortgage-broker-vs-bank-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Tempe?",
+      "city": "Tempe",
+      "title": "Should I Use a Mortgage Broker or a Bank in Tempe?",
+      "slug": "mortgage-broker-vs-bank-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Queen Creek?",
+      "city": "Queen Creek",
+      "title": "Should I Use a Mortgage Broker or a Bank in Queen Creek?",
+      "slug": "mortgage-broker-vs-bank-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Paradise Valley?",
+      "city": "Paradise Valley",
+      "title": "Should I Use a Mortgage Broker or a Bank in Paradise Valley?",
+      "slug": "mortgage-broker-vs-bank-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Glendale?",
+      "city": "Glendale",
+      "title": "Should I Use a Mortgage Broker or a Bank in Glendale?",
+      "slug": "mortgage-broker-vs-bank-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "broker-vs-bank",
+      "question": "Should I use a mortgage broker or a bank in Peoria?",
+      "city": "Peoria",
+      "title": "Should I Use a Mortgage Broker or a Bank in Peoria?",
+      "slug": "mortgage-broker-vs-bank-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Phoenix?",
+      "city": "Phoenix",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Phoenix?",
+      "slug": "how-to-get-pre-approved-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Mesa?",
+      "city": "Mesa",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Mesa?",
+      "slug": "how-to-get-pre-approved-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Chandler?",
+      "city": "Chandler",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Chandler?",
+      "slug": "how-to-get-pre-approved-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Scottsdale?",
+      "city": "Scottsdale",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Scottsdale?",
+      "slug": "how-to-get-pre-approved-scottsdale",
+      "status": "review",
+      "conflictsWith": [
+        "mortgage-pre-approval-in-scottsdale",
+        "mortgage-pre-approval-in-scottsdale-arizona"
+      ]
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Gilbert?",
+      "city": "Gilbert",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Gilbert?",
+      "slug": "how-to-get-pre-approved-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Tempe?",
+      "city": "Tempe",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Tempe?",
+      "slug": "how-to-get-pre-approved-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Queen Creek?",
+      "city": "Queen Creek",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Queen Creek?",
+      "slug": "how-to-get-pre-approved-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Paradise Valley?",
+      "city": "Paradise Valley",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Paradise Valley?",
+      "slug": "how-to-get-pre-approved-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Glendale?",
+      "city": "Glendale",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Glendale?",
+      "slug": "how-to-get-pre-approved-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "pre-approval",
+      "question": "How do I get pre-approved for a mortgage in Peoria?",
+      "city": "Peoria",
+      "title": "How Do I Get Pre-Approved for a Mortgage in Peoria?",
+      "slug": "how-to-get-pre-approved-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Phoenix with a 580 credit score?",
+      "city": "Phoenix",
+      "title": "Can I Buy a Home in Phoenix With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Mesa with a 580 credit score?",
+      "city": "Mesa",
+      "title": "Can I Buy a Home in Mesa With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Chandler with a 580 credit score?",
+      "city": "Chandler",
+      "title": "Can I Buy a Home in Chandler With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Scottsdale with a 580 credit score?",
+      "city": "Scottsdale",
+      "title": "Can I Buy a Home in Scottsdale With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-scottsdale",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Gilbert with a 580 credit score?",
+      "city": "Gilbert",
+      "title": "Can I Buy a Home in Gilbert With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Tempe with a 580 credit score?",
+      "city": "Tempe",
+      "title": "Can I Buy a Home in Tempe With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Queen Creek with a 580 credit score?",
+      "city": "Queen Creek",
+      "title": "Can I Buy a Home in Queen Creek With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Paradise Valley with a 580 credit score?",
+      "city": "Paradise Valley",
+      "title": "Can I Buy a Home in Paradise Valley With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Glendale with a 580 credit score?",
+      "city": "Glendale",
+      "title": "Can I Buy a Home in Glendale With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "580-credit-score",
+      "question": "Can I buy a home in Peoria with a 580 credit score?",
+      "city": "Peoria",
+      "title": "Can I Buy a Home in Peoria With a 580 Credit Score?",
+      "slug": "buy-home-580-credit-score-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Phoenix or should I wait?",
+      "city": "Phoenix",
+      "title": "Is Now a Good Time to Buy in Phoenix or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Mesa or should I wait?",
+      "city": "Mesa",
+      "title": "Is Now a Good Time to Buy in Mesa or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Chandler or should I wait?",
+      "city": "Chandler",
+      "title": "Is Now a Good Time to Buy in Chandler or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Scottsdale or should I wait?",
+      "city": "Scottsdale",
+      "title": "Is Now a Good Time to Buy in Scottsdale or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-scottsdale",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Gilbert or should I wait?",
+      "city": "Gilbert",
+      "title": "Is Now a Good Time to Buy in Gilbert or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Tempe or should I wait?",
+      "city": "Tempe",
+      "title": "Is Now a Good Time to Buy in Tempe or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Queen Creek or should I wait?",
+      "city": "Queen Creek",
+      "title": "Is Now a Good Time to Buy in Queen Creek or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Paradise Valley or should I wait?",
+      "city": "Paradise Valley",
+      "title": "Is Now a Good Time to Buy in Paradise Valley or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Glendale or should I wait?",
+      "city": "Glendale",
+      "title": "Is Now a Good Time to Buy in Glendale or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "buy-now-or-wait",
+      "question": "Is now a good time to buy in Peoria or should I wait?",
+      "city": "Peoria",
+      "title": "Is Now a Good Time to Buy in Peoria or Should I Wait?",
+      "slug": "is-now-a-good-time-to-buy-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Phoenix?",
+      "city": "Phoenix",
+      "title": "How Does a Mortgage Rate Buydown Work in Phoenix?",
+      "slug": "mortgage-rate-buydown-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Mesa?",
+      "city": "Mesa",
+      "title": "How Does a Mortgage Rate Buydown Work in Mesa?",
+      "slug": "mortgage-rate-buydown-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Chandler?",
+      "city": "Chandler",
+      "title": "How Does a Mortgage Rate Buydown Work in Chandler?",
+      "slug": "mortgage-rate-buydown-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Scottsdale?",
+      "city": "Scottsdale",
+      "title": "How Does a Mortgage Rate Buydown Work in Scottsdale?",
+      "slug": "mortgage-rate-buydown-scottsdale",
+      "status": "review",
+      "conflictsWith": [
+        "mortgage-rate-buydowns-scottsdale-arizona"
+      ]
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Gilbert?",
+      "city": "Gilbert",
+      "title": "How Does a Mortgage Rate Buydown Work in Gilbert?",
+      "slug": "mortgage-rate-buydown-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Tempe?",
+      "city": "Tempe",
+      "title": "How Does a Mortgage Rate Buydown Work in Tempe?",
+      "slug": "mortgage-rate-buydown-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Queen Creek?",
+      "city": "Queen Creek",
+      "title": "How Does a Mortgage Rate Buydown Work in Queen Creek?",
+      "slug": "mortgage-rate-buydown-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Paradise Valley?",
+      "city": "Paradise Valley",
+      "title": "How Does a Mortgage Rate Buydown Work in Paradise Valley?",
+      "slug": "mortgage-rate-buydown-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Glendale?",
+      "city": "Glendale",
+      "title": "How Does a Mortgage Rate Buydown Work in Glendale?",
+      "slug": "mortgage-rate-buydown-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "rate-buydown",
+      "question": "How does a mortgage rate buydown work in Peoria?",
+      "city": "Peoria",
+      "title": "How Does a Mortgage Rate Buydown Work in Peoria?",
+      "slug": "mortgage-rate-buydown-peoria",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Phoenix?",
+      "city": "Phoenix",
+      "title": "What Are Closing Costs on a Home in Phoenix?",
+      "slug": "closing-costs-phoenix",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Mesa?",
+      "city": "Mesa",
+      "title": "What Are Closing Costs on a Home in Mesa?",
+      "slug": "closing-costs-mesa",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Chandler?",
+      "city": "Chandler",
+      "title": "What Are Closing Costs on a Home in Chandler?",
+      "slug": "closing-costs-chandler",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Scottsdale?",
+      "city": "Scottsdale",
+      "title": "What Are Closing Costs on a Home in Scottsdale?",
+      "slug": "closing-costs-scottsdale",
+      "status": "review",
+      "conflictsWith": [
+        "mortgage-closing-costs-in-scottsdale-arizona",
+        "mortgage-closing-costs-scottsdale-arizona"
+      ]
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Gilbert?",
+      "city": "Gilbert",
+      "title": "What Are Closing Costs on a Home in Gilbert?",
+      "slug": "closing-costs-gilbert",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Tempe?",
+      "city": "Tempe",
+      "title": "What Are Closing Costs on a Home in Tempe?",
+      "slug": "closing-costs-tempe",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Queen Creek?",
+      "city": "Queen Creek",
+      "title": "What Are Closing Costs on a Home in Queen Creek?",
+      "slug": "closing-costs-queen-creek",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Paradise Valley?",
+      "city": "Paradise Valley",
+      "title": "What Are Closing Costs on a Home in Paradise Valley?",
+      "slug": "closing-costs-paradise-valley",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Glendale?",
+      "city": "Glendale",
+      "title": "What Are Closing Costs on a Home in Glendale?",
+      "slug": "closing-costs-glendale",
+      "status": "pending"
+    },
+    {
+      "series": "closing-costs",
+      "question": "What are closing costs on a home in Peoria?",
+      "city": "Peoria",
+      "title": "What Are Closing Costs on a Home in Peoria?",
+      "slug": "closing-costs-peoria",
+      "status": "pending"
+    }
+  ],
+  "published": [
+    {
+      "city": "Scottsdale",
+      "series": "first-time-buyer-lender",
+      "slug": "best-first-time-buyer-lender-scottsdale",
+      "date": "2026-09-04"
+    },
+    {
+      "city": "Gilbert",
+      "series": "first-time-buyer-lender",
+      "slug": "best-first-time-buyer-lender-gilbert",
+      "date": "2026-09-04"
+    }
+  ]
 }

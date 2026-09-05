@@ -10,7 +10,7 @@ markdown in `content/posts/` and rendered into the mirror by `gen/new_post.py`.
 |---|---|
 | `site/` | The published site. Netlify's `publish` directory. |
 | `content/posts/*.md` | Post sources: YAML front matter + markdown body. |
-| `content/series.json` | Editorial queue and what has already been published. |
+| `content/series.json` | Editorial queue, house writing rules, and the review log. |
 | `gen/new_post.py` | Markdown → HTML renderer. No API calls, no credentials. |
 | `gen/mdlite.py` | Small dependency-free markdown subset converter. |
 | `gen/compliance_check.py` | Screens post markdown for advertising problems. |
@@ -67,6 +67,27 @@ It also cannot recover `_redirects`. Netlify consumes that file at deploy time
 and never serves it back. The live deploy has redirect rules; they must be
 committed to `site/_redirects` by hand or those URLs will 404.
 
+## The editorial queue
+
+`content/series.json` holds a flat, ordered `queue`. The daily task takes the
+next entries whose `status` is `pending`, in array order. Reordering the array
+is the only thing needed to change priority, which is what the monthly review
+step does.
+
+An entry with `status: "review"` is held back deliberately: an existing post
+already targets that question for that city, and publishing a near-duplicate
+would split the ranking signal between two pages rather than concentrate it.
+`conflictsWith` names the existing slugs. Resolve each by either refreshing the
+existing post in place, or writing the new one and redirecting the old URL to
+it in `site/_redirects`. Do not simply publish both.
+
+### Monthly review
+
+`review.everyDays` is 30. On or after `review.nextDueOn` the daily task runs a
+review before writing, appends the result to `review.log`, and reorders the
+queue toward whatever is actually being cited. See the task prompt for the
+procedure and its limits.
+
 ## House rules for post content
 
 - Ricky is a licensed MLO (NMLS #173141; EPiQ Lending NMLS #1936984). Posts are
@@ -85,3 +106,6 @@ committed to `site/_redirects` by hand or those URLs will 404.
 - Program terms change. Cite figures with their vintage and tell the reader to
   confirm current guidelines.
 - Equal Housing Opportunity. Nothing is a commitment to lend.
+- **Answer the question in the first two sentences.** Assistants quote the
+  passage that answers the question. If the answer is the payoff at the bottom,
+  there is nothing for them to quote.

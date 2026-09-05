@@ -471,21 +471,37 @@ def add_newer_link(post: dict, newer: dict) -> None:
 
 
 def mark_published(meta: dict) -> None:
+    """Move this post's queue entry into `published`, matching on slug."""
     if not SERIES_FILE.exists():
         return
     data = json.loads(read(SERIES_FILE))
-    series = data.get("activeSeries") or {}
-    city = meta.get("city")
-    if not city:
-        return
-    queue = series.get("queue", [])
-    remaining = [q for q in queue if q.get("city") != city]
-    if len(remaining) != len(queue):
-        series["queue"] = remaining
-        series.setdefault("published", []).append(
-            {"city": city, "slug": meta["slug"], "date": meta["date"]}
+    queue = data.get("queue", [])
+
+    match = next((q for q in queue if q.get("slug") == meta["slug"]), None)
+    if match is None:
+        # Published outside the queue (a one-off). Still record it so the
+        # review step sees the full history.
+        data.setdefault("published", []).append(
+            {
+                "city": meta.get("city"),
+                "series": meta.get("series"),
+                "slug": meta["slug"],
+                "date": meta["date"],
+                "offQueue": True,
+            }
         )
-        write(SERIES_FILE, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    else:
+        data["queue"] = [q for q in queue if q is not match]
+        data.setdefault("published", []).append(
+            {
+                "city": match.get("city"),
+                "series": match.get("series"),
+                "question": match.get("question"),
+                "slug": meta["slug"],
+                "date": meta["date"],
+            }
+        )
+    write(SERIES_FILE, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 
 # ------------------------------------------------------------------------ check
