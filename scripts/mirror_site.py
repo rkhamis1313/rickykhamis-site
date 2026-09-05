@@ -38,8 +38,20 @@ WORKERS = 8
 RETRIES = 3
 TIMEOUT = 45
 
-# Fetched even when the sitemap does not list them.
-EXTRA_PATHS = ["/sitemap.xml", "/robots.txt", "/llms.txt", "/favicon.ico", "/404.html"]
+# Fetched even when the sitemap does not list them. Missing ones are logged and
+# skipped, not fatal.
+EXTRA_PATHS = [
+    "/sitemap.xml",
+    "/robots.txt",
+    "/llms.txt",
+    "/favicon.ico",
+    "/404.html",
+    # Netlify consumes these at deploy time rather than serving them, so they
+    # usually 404 here. They are still worth attempting — see the warning at the
+    # end of main() for why their absence matters.
+    "/_redirects",
+    "/_headers",
+]
 
 # Same-origin files worth mirroring wherever they live in the URL space.
 ASSET_SUFFIXES = {
@@ -268,6 +280,20 @@ def main() -> int:
 
     total = sum(1 for _ in OUT.rglob("*") if _.is_file())
     log(f"\nMirror complete: {total} files under {OUT}/")
+
+    # The live deploy serves 72 redirect rules. Netlify reads those from a
+    # _redirects file (or netlify.toml) inside the published directory and does
+    # not serve the file back over HTTP, so an HTTP mirror cannot recover them.
+    # Publishing site/ without them would silently drop every rule.
+    if not (OUT / "_redirects").exists():
+        log(
+            "\nWARNING: site/_redirects is missing.\n"
+            "  The live site has redirect rules that cannot be fetched over HTTP.\n"
+            "  Export them from the Netlify UI (or the folder that was originally\n"
+            "  dropped) and commit them to site/_redirects before cutting over,\n"
+            "  otherwise those URLs will 404."
+        )
+
     return 0
 
 
