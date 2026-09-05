@@ -59,7 +59,8 @@ def main() -> int:
             raise StepFailed("screen", "no markdown posts found in content/posts/")
 
         # 1. House style and advertising compliance, before anything is rendered.
-        run(["python3", "gen/compliance_check.py", *[str(p) for p in posts]],
+        run(["python3", "gen/compliance_check.py",
+             *[str(p.relative_to(ROOT)) for p in posts]],
             "compliance_check")
 
         # 2. Render. new_post.py runs its own --check and exits non-zero on a

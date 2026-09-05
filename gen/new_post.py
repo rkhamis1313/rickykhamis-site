@@ -413,6 +413,16 @@ def update_sitemap(new_posts: list[dict], today: date) -> None:
     text = read(path)
     stamp = today.isoformat()
 
+    # Re-rendering a post must not add a second <url> for it. Drop any existing
+    # entry for these slugs first, then insert one each.
+    for post in new_posts:
+        text = re.sub(
+            rf"^<url><loc>{re.escape(BASE_URL + post['url'])}</loc>[^\n]*\n?",
+            "",
+            text,
+            flags=re.M,
+        )
+
     entries = "\n".join(
         f"<url><loc>{BASE_URL}{p['url']}</loc><lastmod>{stamp}</lastmod></url>"
         for p in new_posts
@@ -432,6 +442,17 @@ def update_sitemap(new_posts: list[dict], today: date) -> None:
 def update_llms(new_posts: list[dict]) -> None:
     path = SITE / "llms.txt"
     text = read(path)
+
+    # Same rule as the sitemap: one line per post, no matter how often it is
+    # re-rendered.
+    for post in new_posts:
+        text = re.sub(
+            rf"^- \[[^\]]*\]\({re.escape(BASE_URL + post['url'])}\):[^\n]*\n?",
+            "",
+            text,
+            flags=re.M,
+        )
+
     entries = "\n".join(
         f"- [{p['title']}]({BASE_URL}{p['url']}): {p['description']}"
         for p in new_posts
@@ -477,11 +498,18 @@ def mark_published(meta: dict) -> None:
     data = json.loads(read(SERIES_FILE))
     queue = data.get("queue", [])
 
+    published = data.setdefault("published", [])
+    if any(p.get("slug") == meta["slug"] for p in published):
+        # Already recorded; a re-render is not a second publication.
+        data["queue"] = [q for q in queue if q.get("slug") != meta["slug"]]
+        write(SERIES_FILE, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+        return
+
     match = next((q for q in queue if q.get("slug") == meta["slug"]), None)
     if match is None:
         # Published outside the queue (a one-off). Still record it so the
         # review step sees the full history.
-        data.setdefault("published", []).append(
+        published.append(
             {
                 "city": meta.get("city"),
                 "series": meta.get("series"),
@@ -492,7 +520,7 @@ def mark_published(meta: dict) -> None:
         )
     else:
         data["queue"] = [q for q in queue if q is not match]
-        data.setdefault("published", []).append(
+        published.append(
             {
                 "city": match.get("city"),
                 "series": match.get("series"),
@@ -532,11 +560,17 @@ def check() -> int:
         problems.append(f"site/blog/{slug}/ exists but no index page links to it")
 
     sitemap = read(SITE / "sitemap.xml")
+    locs = re.findall(r"<loc>([^<]*)</loc>", sitemap)
+    for loc in sorted({l for l in locs if locs.count(l) > 1}):
+        problems.append(f"{loc} appears {locs.count(loc)} times in sitemap.xml")
     for post in posts:
         if f"{BASE_URL}{post['url']}" not in sitemap:
             problems.append(f"{post['url']} is missing from sitemap.xml")
 
     llms = read(SITE / "llms.txt")
+    links = re.findall(r"^- \[[^\]]*\]\(([^)]*)\):", llms, re.M)
+    for link in sorted({l for l in links if links.count(l) > 1}):
+        problems.append(f"{link} appears {links.count(link)} times in llms.txt")
     for post in posts:
         if f"{BASE_URL}{post['url']}" not in llms:
             problems.append(f"{post['url']} is missing from llms.txt")
