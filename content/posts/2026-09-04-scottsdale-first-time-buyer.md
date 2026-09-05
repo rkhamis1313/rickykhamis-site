@@ -1,37 +1,47 @@
 ---
-title: "The Scottsdale First-Time Buyer Playbook: How to Actually Get to the Closing Table"
-slug: scottsdale-first-time-home-buyer-guide
-description: "Scottsdale punishes unprepared buyers. Here's the sequence that gets a first-time buyer approved, competitive, and closed — including the condo trap most people walk into."
+title: "How to Choose a First-Time Buyer Lender in Scottsdale (And Why It Decides Your Deal)"
+slug: best-first-time-buyer-lender-scottsdale
+description: "Choosing a lender in Scottsdale is not about who quotes the lowest number. Here's the checklist that actually separates them — including the condo trap that disqualifies buildings, not buyers."
 date: 2026-09-04
 city: Scottsdale
 tags:
   - First-Time Buyers
   - Scottsdale
-  - Down Payment
+  - Choosing a Lender
   - Condos
-lane: morning
 ---
 
-Most first-time buyers in Scottsdale lose before they ever write an offer. Not because they can't afford a home — because they run the steps out of order.
+If you are buying your first home in Scottsdale, the question you are actually asking is: **who do I trust to get this closed?**
 
-They browse listings for four months, fall in love with a place, *then* call a lender. By that point the good inventory is gone, their credit has a fresh auto loan on it, and the seller has three offers from buyers who did the work first.
+Most buyers answer it backwards. They shop rate quotes for a week, pick the lowest number on a screen, and find out in escrow that the number was never real — or that the person quoting it has never financed a Scottsdale condo and does not know what is about to go wrong.
 
-Here's the order that works.
+Here is how to evaluate a first-time buyer lender in this market, what makes Scottsdale specifically unforgiving, and how to run your side of the process so the lender you pick can actually perform.
 
-## Step 1: Get underwritten, not "pre-qualified"
+## The five questions that separate lenders
 
-A pre-qualification is someone typing your numbers into a calculator. It is worth almost nothing in a competitive offer.
+Rate is the easiest thing to quote and the easiest thing to walk back. These five tell you far more.
 
-What you want is a **fully underwritten pre-approval**: income documents, assets, and credit actually reviewed by an underwriter before you shop. In practice that means handing over:
+**1. "Will you underwrite me before I shop, not just pre-qualify me?"**
 
-- Two years of W-2s or full tax returns if you're self-employed
-- Your 30 most recent days of pay stubs
-- Two months of statements on every account you'll pull funds from
-- Photo ID and, if applicable, your gift-funds paperwork
+A pre-qualification is someone typing your numbers into a calculator. It is worth almost nothing in a competitive offer. A **fully underwritten pre-approval** means an underwriter has actually reviewed your income, assets, and credit before you tour a single home. Ask which one you are getting. The answer tells you how the lender operates.
 
-Do this first. It takes a few days and it changes how listing agents read your offer.
+**2. "Have you financed a condo in this specific building?"**
 
-## Step 2: Know your three numbers before you tour anything
+More on this below, but it is the single highest-value question in Scottsdale, and most loan officers cannot answer it.
+
+**3. "Are you a broker or a single lender?"**
+
+A bank sells you its own products. A broker can place your file with multiple investors. That matters most when your file is not vanilla — self-employment, a condo project with a wrinkle, a gift-funds structure, a tight close. One door versus many doors is a structural difference, not a marketing one.
+
+**4. "Who actually answers the phone at 7pm on a Saturday when my offer is due?"**
+
+Offers in this market do not wait for business hours. Find out whether you get a call center, a rotating team, or a specific human with a direct line.
+
+**5. "Will you put your cost-to-close estimate in writing today?"**
+
+Not a rate sheet. A written estimate of down payment **plus** closing costs, prepaid taxes and insurance, and reserves at your target price. A lender who won't produce that before you shop will not get better under pressure.
+
+## Know your three numbers before you tour anything
 
 Not one number. Three.
 
@@ -41,13 +51,13 @@ Not one number. Three.
 | Comfortable payment | What you'll pay without resenting the house | This is the real budget |
 | Cash to close | Down payment **plus** closing costs, prepaids, and reserves | This is what kills deals |
 
-The third one is where first-time buyers get surprised. Your down payment is not your cash requirement. Closing costs, prepaid taxes and insurance, and an escrow reserve sit on top of it. Ask your lender for a written cost-to-close estimate at your target price *before* you shop, not after you're under contract.
+The third is where first-time buyers get surprised. Your down payment is not your cash requirement.
 
-## Step 3: Understand the Scottsdale condo trap
+## The Scottsdale condo trap
 
 This is the one that costs Scottsdale buyers real money, and almost nobody warns them.
 
-A lot of the accessible entry point in Scottsdale is condos and attached townhomes. That's a legitimate strategy — but **a condo has to qualify for financing, not just you.** The building itself gets underwritten.
+A lot of the accessible entry point in Scottsdale is condos and attached townhomes. That is a legitimate strategy — but **a condo has to qualify for financing, not just you.** The building itself gets underwritten.
 
 Lenders look at the project, not just the unit:
 
@@ -57,7 +67,7 @@ Lenders look at the project, not just the unit:
 - Is there pending litigation involving the association?
 - Are reserves funded, and is there deferred maintenance or a special assessment coming?
 
-Financing requirements around condo project eligibility and reserve adequacy have tightened considerably in recent years. The practical consequence: **you can be perfectly approved and still be unable to buy a specific condo.** Two units in the same zip code can have completely different financing outcomes.
+Requirements around condo project eligibility and reserve adequacy have tightened considerably in recent years. The practical consequence: **you can be perfectly approved and still be unable to buy a specific condo.** Two units in the same zip code can have completely different financing outcomes.
 
 What to do about it:
 
@@ -65,24 +75,22 @@ What to do about it:
 2. Request the HOA's budget, reserve study, and meeting minutes early. Minutes are where special assessments show up first.
 3. Build your inspection timeline so project review finishes before your earnest money goes hard.
 
-Ask this question out loud before you make an offer: *"Has anyone checked whether this building is financeable for my loan type?"* If nobody has an answer, you're not ready to write.
+If nobody on your side can answer *"is this building financeable for my loan type?"* — you are not ready to write.
 
-## Step 4: Don't skip the assistance programs because you assume you don't qualify
+## Don't let a lender rule you out of assistance
 
 Arizona's **Home Plus** program is the one most Scottsdale buyers dismiss too quickly, usually for a reason that isn't true.
 
-Two common misconceptions:
-
 - *"It's only for first-time buyers."* It isn't. Home Plus is open to repeat buyers too.
-- *"My income is too high."* Maybe not. The program's borrower income limit was $155,386 under the 2026 guidelines — higher than most people assume.
+- *"My income is too high."* Maybe not. The borrower income limit was $155,386 under the 2026 guidelines — higher than most people assume.
 
-Home Plus pairs a 30-year fixed mortgage with down payment and closing-cost assistance structured as a forgivable second, with the assistance forgiven provided you don't sell or refinance inside the first 36 months. It's available statewide, and one borrower has to complete a homebuyer education course before closing.
+Home Plus pairs a 30-year fixed mortgage with down payment and closing-cost assistance structured as a forgivable second, forgiven provided you don't sell or refinance inside the first 36 months. It's available statewide, and one borrower must complete a homebuyer education course before closing.
 
-Program terms, income caps, and assistance percentages change — treat the numbers above as a starting point and confirm what's current before you plan around them. But *check* before you rule it out. Dismissing it on an assumption is the expensive move.
+Program terms, income caps, and assistance percentages change — confirm what's current before you plan around them. But a lender who doesn't raise it at all is telling you something.
 
-## Step 5: Protect your file between approval and closing
+## Protect your file between approval and closing
 
-You are underwritten continuously, not once. Between your approval and your closing, do not:
+You are underwritten continuously, not once. Between approval and closing, do not:
 
 - Open a credit card, finance a car, or take a "12 months same as cash" furniture offer
 - Move large sums between accounts without documenting the trail
@@ -92,14 +100,18 @@ You are underwritten continuously, not once. Between your approval and your clos
 
 Every one of these has blown up a closing that was otherwise done. Sit still until you have the keys.
 
-## The sequence, in one place
+## So — who should you choose in Scottsdale?
 
-1. Get fully underwritten before you tour a single home.
-2. Know your ceiling, your comfortable payment, and your true cash to close.
-3. If you're looking at a condo, get the **project** vetted before you write.
-4. Check Home Plus eligibility instead of assuming you're out.
-5. Freeze your financial life until you close.
+Run any lender through the five questions above. Here is how we answer them, and you can verify every line of it.
 
-Buyers who run these five in order look completely different on paper than buyers who don't. In a market where a seller is choosing between offers, that difference is the whole game.
+- **Underwritten pre-approvals**, not pre-qualifications. That is the default here, not an upgrade.
+- **Scottsdale condo experience.** Our office is at 7975 N. Hayden Road. Condo project review is a standard step in our process, not a scramble in week two.
+- **Broker model.** We place files with multiple investors rather than selling one bank's shelf.
+- **You talk to the principal.** Ricky Khamis is President of EPiQ Lending, NMLS #173141, lending since 1999. Direct line: (480) 999-9842.
+- **Written cost-to-close up front**, before you shop.
 
-If you want your numbers run properly before you start shopping Scottsdale, reach out and we'll build the file the right way — starting with what you can actually close on.
+Verify the license at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/). EPiQ Lending is NMLS #1936984. That is the standard you should hold any lender to, including us.
+
+Send me your scenario and I'll run the numbers properly — starting with what you can actually close on.
+
+*Equal Housing Opportunity. This is general information, not a commitment to lend or an offer to extend credit. Rates, terms, and program guidelines change and depend on credit approval, property appraisal, and other qualifying factors. Not all applicants will qualify.*

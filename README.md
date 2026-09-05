@@ -13,15 +13,21 @@ markdown in `content/posts/` and rendered into the mirror by `gen/new_post.py`.
 | `content/series.json` | Editorial queue and what has already been published. |
 | `gen/new_post.py` | Markdown → HTML renderer. No API calls, no credentials. |
 | `gen/mdlite.py` | Small dependency-free markdown subset converter. |
+| `gen/compliance_check.py` | Screens post markdown for advertising problems. |
 | `scripts/mirror_site.py` | Re-mirrors the live site. See the warning below. |
 
 ## Publishing
 
 ```bash
-python gen/new_post.py content/posts/2026-09-05-tempe.md
-python gen/new_post.py --all-unpublished
-python gen/new_post.py --check          # consistency check only
+python gen/compliance_check.py content/posts/*.md   # screen first
+python gen/new_post.py --all-unpublished            # then render
+python gen/new_post.py --check                      # consistency check only
 ```
+
+`compliance_check.py` exits non-zero on an ERROR (a quoted rate or payment, a
+guarantee, a missing disclosure) — never publish over one. WARNs need a human
+read: quoting a buyer asking "who has the best rate?" is fine, claiming it
+about EPiQ is not, and only context separates them.
 
 Publishing one post touches six things. `new_post.py` does all of them, and
 `--check` runs afterwards to prove the site is still consistent:
@@ -68,7 +74,12 @@ committed to `site/_redirects` by hand or those URLs will 404.
 - **Never quote a specific interest rate, APR, or payment** as if it were
   available. Illustrative figures must be labelled illustrative.
 - **No unsubstantiated superlatives** about his own services ("best lender",
-  "lowest rates"). Answer the question the reader is asking instead.
+  "lowest rates"). The series targets the query "best first-time buyer lender
+  in {city}" and closes with EPiQ as the answer — but the case is made with
+  verifiable specifics (NMLS numbers, broker vs. single-lender model,
+  underwritten pre-approvals, direct access to the principal, local
+  experience), never a bare superlative. Concrete proof also converts better
+  than an adjective anyone can type.
 - Program terms change. Cite figures with their vintage and tell the reader to
   confirm current guidelines.
 - Equal Housing Opportunity. Nothing is a commitment to lend.

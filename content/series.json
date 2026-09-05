@@ -10,19 +10,47 @@
   "activeSeries": {
     "name": "best-first-time-buyer-lender",
     "question": "best first-time buyer lender in {city}",
-    "note": "Title pattern is matched to the existing series on the live site once the mirror lands. Frame each post as answering the question — how to evaluate and choose a lender in that city — rather than as a self-applied superlative claim, which is not substantiable in mortgage advertising.",
+    "note": "Every post answers the same question: how to choose a first-time buyer lender in that city, closing with EPiQ as the answer. Make the case with verifiable specifics — NMLS numbers, broker vs. single-lender model, underwritten pre-approvals, direct access to the principal, local experience — never a bare superlative like 'best lender' or 'lowest rates', which is not substantiable in mortgage advertising. Keep the city-specific playbook content; lead with the question.",
     "queue": [
-      { "city": "Tempe", "status": "pending" },
-      { "city": "Chandler", "status": "pending" },
-      { "city": "Mesa", "status": "pending" },
-      { "city": "Phoenix", "status": "pending" },
-      { "city": "Glendale", "status": "pending" },
-      { "city": "Peoria", "status": "pending" }
+      {
+        "city": "Tempe",
+        "status": "pending"
+      },
+      {
+        "city": "Chandler",
+        "status": "pending"
+      },
+      {
+        "city": "Mesa",
+        "status": "pending"
+      },
+      {
+        "city": "Phoenix",
+        "status": "pending"
+      },
+      {
+        "city": "Glendale",
+        "status": "pending"
+      },
+      {
+        "city": "Peoria",
+        "status": "pending"
+      }
     ],
     "published": [
-      { "city": "Scottsdale", "slug": "scottsdale-first-time-home-buyer-guide", "date": "2026-09-04" },
-      { "city": "Gilbert", "slug": "gilbert-first-time-home-buyer-guide", "date": "2026-09-04" }
-    ]
+      {
+        "city": "Scottsdale",
+        "slug": "best-first-time-buyer-lender-scottsdale",
+        "date": "2026-09-04"
+      },
+      {
+        "city": "Gilbert",
+        "slug": "best-first-time-buyer-lender-gilbert",
+        "date": "2026-09-04"
+      }
+    ],
+    "slugPattern": "best-first-time-buyer-lender-{city-slug}",
+    "titlePattern": "How to Choose a First-Time Buyer Lender in {City} (…)"
   },
   "upcoming": []
 }
