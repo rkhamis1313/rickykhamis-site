@@ -26,6 +26,7 @@ python gen/publish.py                               # the whole gated sequence
 python gen/publish.py --dry-run                     # everything except commit and push
 python gen/new_post.py --check                      # consistency check only
 python gen/new_post.py --force <file>               # re-render a published post
+python gen/new_post.py --retire OLD NEW             # fold OLD into NEW with a 301
 ```
 
 **Correcting a published post.** Editing the markdown does nothing on its own:
@@ -83,6 +84,11 @@ committed to `site/_redirects` by hand or those URLs will 404.
 next entries whose `status` is `pending`, in array order. Reordering the array
 is the only thing needed to change priority, which is what the monthly review
 step does.
+
+An entry may carry `supersedes: [slug]`. On publish, each listed page is
+deleted, 301'd to the new post, and dropped from the index, sitemap and
+llms.txt. That is how a new post replaces an older one answering the same
+question instead of competing with it.
 
 An entry with `status: "review"` is held back deliberately: an existing post
 already targets that question for that city, and publishing a near-duplicate
@@ -146,6 +152,15 @@ status `review` do not move.
   value, an undated figure, or a verification older than 90 days. We shipped
   "forgiven after 36 months" when Home Plus is 60, which is why this is a gate
   and not a guideline.
+- **Every post links to the two proof pages**, Ricky's EPiQ profile and the
+  Scottsdale branch, alongside NMLS Consumer Access. A post that asks a reader
+  to choose a lender has to give them somewhere independent to check it.
+  `compliance_check.py` requires all three.
+- **Never recommend a program that does not reach our readers.** Arizona Is
+  Home excludes Maricopa County and Pathway to Purchase covers 17 municipalities,
+  none of them ours. Both are marked `serviceAreaAvailable: false` and the
+  checker fails a post that presents either as an option. Naming one to rule it
+  out is fine.
 - **Answer the question in the first two sentences.** Assistants quote the
   passage that answers the question. If the answer is the payoff at the bottom,
   there is nothing for them to quote.

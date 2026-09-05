@@ -91,7 +91,7 @@ Judge any lender on whether they will do the arithmetic with you instead of arou
 - **Lock strategy before you sign**, not after the foundation is poured.
 - **You talk to the principal.** Ricky Khamis, President of EPiQ Lending, NMLS #173141, lending in Arizona since 1999. Direct line: (480) 999-9842.
 
-Verify the license at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/). EPiQ Lending is NMLS #1936984. Hold every lender to that standard, us included.
+EPiQ Lending is NMLS #1936984. Verify all of it before you trust any of it: [Ricky's EPiQ Lending profile](https://www.epiqlending.com/mysite/Ricky-Khamis), the [Scottsdale branch](https://www.epiqlending.com/branch/1936984/7975-N-Hayden-Rd-Ste-A101-Scottsdale-AZ-85258) at 7975 N. Hayden Road, Suite A-101, and the license itself at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/). That is the standard to hold any lender to, including us.
 
 Send me the two scenarios you're weighing and I'll run them side by side.
 

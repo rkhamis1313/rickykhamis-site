@@ -532,6 +532,64 @@ def mark_published(meta: dict) -> None:
     write(SERIES_FILE, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 
+def add_redirect(old_url: str, new_url: str) -> None:
+    """Append a 301 to site/_redirects, skipping one that already exists."""
+    path = SITE / "_redirects"
+    text = read(path) if path.exists() else ""
+    if re.search(rf"^{re.escape(old_url)}\s", text, re.M):
+        log(f"  = redirect for {old_url} already present")
+        return
+    if not text.endswith("\n"):
+        text += "\n"
+    text += f"{old_url}  {new_url}  301\n"
+    write(path, text)
+    log(f"  + 301 {old_url} -> {new_url}")
+
+
+def retire(old_slug: str, new_slug: str) -> int:
+    """Consolidate old_slug into new_slug: delete the page, redirect its URL,
+    and drop it from the index pages, sitemap and llms.txt.
+
+    Two pages answering one question compete with each other. This folds the
+    weaker one into the stronger and keeps whatever authority the old URL has.
+    """
+    old_dir = BLOG / old_slug
+    if not (old_dir / "index.html").exists():
+        log(f"  ! site/blog/{old_slug}/ does not exist")
+        return 1
+    if not (BLOG / new_slug / "index.html").exists():
+        log(f"  ! target site/blog/{new_slug}/ does not exist; refusing to "
+            "redirect to a page that is not there")
+        return 1
+
+    old_url, new_url = f"/blog/{old_slug}/", f"/blog/{new_slug}/"
+
+    (old_dir / "index.html").unlink()
+    try:
+        old_dir.rmdir()
+    except OSError:
+        pass
+    log(f"  - removed site/blog/{old_slug}/")
+
+    add_redirect(old_url, new_url)
+
+    sitemap = SITE / "sitemap.xml"
+    write(sitemap, re.sub(
+        rf"^<url><loc>{re.escape(BASE_URL + old_url)}</loc>[^\n]*\n?", "",
+        read(sitemap), flags=re.M))
+    log("  ~ sitemap.xml")
+
+    llms = SITE / "llms.txt"
+    write(llms, re.sub(
+        rf"^- \[[^\]]*\]\({re.escape(BASE_URL + old_url)}\):[^\n]*\n?", "",
+        read(llms), flags=re.M))
+    log("  ~ llms.txt")
+
+    rewrite_index_pages([p for p in load_post_index() if p["slug"] != old_slug])
+    log("  ~ repaginated index pages")
+    return 0
+
+
 # ------------------------------------------------------------------------ check
 def check() -> int:
     posts = load_post_index()
@@ -669,6 +727,13 @@ def publish(paths: list[Path], force: bool = False) -> None:
         mark_published(entry["meta"])
     log("  ~ series.json")
 
+    # A post can replace older pages answering the same question. Fold them in
+    # once the new page exists, so the 301 never points at a missing target.
+    for entry in rendered:
+        for old_slug in entry["meta"].get("supersedes", []) or []:
+            log(f"  superseding {old_slug}:")
+            retire(old_slug, entry["slug"])
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -682,6 +747,13 @@ def main() -> int:
         "--check", action="store_true", help="verify site consistency and exit"
     )
     parser.add_argument(
+        "--retire",
+        nargs=2,
+        metavar=("OLD_SLUG", "NEW_SLUG"),
+        help="fold OLD_SLUG into NEW_SLUG: delete the page, 301 its URL, and "
+        "drop it from the index, sitemap and llms.txt",
+    )
+    parser.add_argument(
         "--force",
         action="store_true",
         help="re-render posts whose pages already exist. Needed to push a "
@@ -691,6 +763,11 @@ def main() -> int:
     args = parser.parse_args()
 
     if args.check:
+        return check()
+
+    if args.retire:
+        if retire(*args.retire) != 0:
+            return 1
         return check()
 
     sources = list(args.sources)

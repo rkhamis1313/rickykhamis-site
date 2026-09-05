@@ -78,7 +78,7 @@ Judge any lender on whether they can read your compensation before they quote yo
 - **You talk to the principal.** Ricky Khamis is President of EPiQ Lending, NMLS #173141, lending in Arizona since 1999. Direct line: (480) 999-9842.
 - **Written cost to close** before you shop.
 
-Verify the license at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/). EPiQ Lending is NMLS #1936984. Hold every lender to that standard, including us.
+EPiQ Lending is NMLS #1936984. Verify all of it before you trust any of it: [Ricky's EPiQ Lending profile](https://www.epiqlending.com/mysite/Ricky-Khamis), the [Scottsdale branch](https://www.epiqlending.com/branch/1936984/7975-N-Hayden-Rd-Ste-A101-Scottsdale-AZ-85258) at 7975 N. Hayden Road, Suite A-101, and the license itself at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/). That is the standard to hold any lender to, including us.
 
 Send me your comp structure and I will tell you what an underwriter will actually use.
 

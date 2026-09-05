@@ -1,13 +1,17 @@
 {
   "_comment": [
     "Single source of truth for down payment assistance program terms.",
-    "gen/compliance_check.py enforces this file: a post that names one of these",
-    "programs must cite its official URL, must not contain a known stale value,",
-    "and must carry an as-of marker when it states a specific figure.",
-    "Re-verify against officialUrl before writing any post that cites terms, and",
-    "update verifiedOn when you do. Stale verification is itself a failure."
+    "gen/compliance_check.py enforces this file. A post that names a program must",
+    "cite its official URL, must not repeat a known stale value, must date any",
+    "figure it states, and must not recommend a program whose",
+    "serviceAreaAvailable is false. Re-verify against officialUrl before writing,",
+    "and set verifiedOn when you do. Stale verification blocks publishing."
   ],
   "maxVerificationAgeDays": 90,
+  "serviceArea": {
+    "counties": ["Maricopa"],
+    "cities": ["Scottsdale", "Gilbert", "Tempe", "Chandler", "Mesa", "Phoenix", "Queen Creek", "Paradise Valley"]
+  },
   "programs": {
     "Home Plus": {
       "administrator": "Arizona Industrial Development Authority",
@@ -15,6 +19,7 @@
       "citeDomain": "homeplusaz.com",
       "verifiedOn": "2026-09-05",
       "verifiedAgainst": "homeplusaz.com/home-plus-dpa and homeplusaz.com/arizona-dpa-programs",
+      "serviceAreaAvailable": true,
       "facts": {
         "assistanceMax": "up to 4% of the loan amount",
         "forgivenessMonths": 60,
@@ -25,38 +30,62 @@
         "statewide": true,
         "homebuyerEducationRequired": true
       },
-      "staleValues": [
-        "36 months",
-        "first 36 months",
-        "three years",
-        "3 years"
-      ]
+      "staleValues": ["36 months", "first 36 months", "three years", "3 years"]
+    },
+    "Home in Five": {
+      "administrator": "Phoenix IDA and Maricopa County IDA",
+      "officialUrl": "https://homein5advantage.com/",
+      "citeDomain": "homein5advantage.com",
+      "verifiedOn": "2026-09-05",
+      "verifiedAgainst": "homein5advantage.com and phoenixida.com/home-in-five-advantage",
+      "serviceAreaAvailable": true,
+      "facts": {
+        "assistanceMax": "up to 7% of the loan amount",
+        "assistanceBonus": "an additional 1% for qualifying military, veterans, K-12 teachers and first responders",
+        "incomeLimit": "$108,920",
+        "minimumFico": 640,
+        "maxDti": "50%",
+        "forgivable": true,
+        "homebuyerEducationRequired": true,
+        "coverage": "Maricopa County"
+      },
+      "staleValues": []
     },
     "Arizona Is Home": {
       "administrator": "Arizona Industrial Development Authority",
       "officialUrl": "https://homeplusaz.com/arizona-is-home-dpa/",
       "citeDomain": "homeplusaz.com",
-      "verifiedOn": null,
-      "verifiedAgainst": null,
-      "facts": {},
+      "verifiedOn": "2026-09-05",
+      "verifiedAgainst": "homeplusaz.com/arizona-is-home-dpa",
+      "serviceAreaAvailable": false,
+      "unavailableReason": "Not offered in Maricopa County, Pima County or Chino Valley. Every city we write for is in Maricopa County, so this program is not available to our readers. Do not recommend it.",
+      "facts": {
+        "assistanceMax": "4% of the first mortgage balance",
+        "forgivable": false,
+        "repaymentNote": "Non-forgivable. The entire balance is due on sale or refinance.",
+        "incomeLimit": "at or below 100% of Area Median Income",
+        "coverage": "Apache, Cochise, Coconino, Gila, Graham, Greenlee, La Paz, Mohave, Navajo, Pinal, Santa Cruz, Yavapai and Yuma counties"
+      },
       "staleValues": []
     },
     "Pathway to Purchase": {
       "administrator": "Arizona Department of Housing",
-      "officialUrl": "https://housing.az.gov/",
+      "officialUrl": "https://housing.az.gov/general-public/pathway-purchase-down-payment-assistance",
       "citeDomain": "housing.az.gov",
-      "verifiedOn": null,
-      "verifiedAgainst": null,
-      "facts": {},
-      "staleValues": []
-    },
-    "Home in Five": {
-      "administrator": "Maricopa County and City of Phoenix",
-      "officialUrl": "https://homeinfive.com/",
-      "citeDomain": "homeinfive.com",
-      "verifiedOn": null,
-      "verifiedAgainst": null,
-      "facts": {},
+      "verifiedOn": "2026-09-05",
+      "verifiedAgainst": "housing.az.gov program flier and homebuyer-assistance pages",
+      "serviceAreaAvailable": false,
+      "unavailableReason": "Limited to 17 named municipalities: Arizona City, Avondale, Buckeye, Casa Grande, Coolidge, Douglas, El Mirage, Fort Mohave, Goodyear, Huachuca City, Laveen, Maricopa, Red Rock, Sierra Vista, Snowflake, Tucson and Yuma. None of the cities we write for are on that list. Do not recommend it.",
+      "confidence": "The eligible-city list and limits come from an Arizona Department of Housing flier that is not recently dated, and the program's current status is not confirmed. Confirm with ADOH before citing any figure.",
+      "facts": {
+        "assistanceMax": "up to 10% of purchase price, maximum $20,000",
+        "lienTermYears": 5,
+        "incomeLimit": "$92,984",
+        "purchasePriceLimit": "$371,936",
+        "minimumFico": 640,
+        "maxDti": "45%",
+        "newConstructionAllowed": false
+      },
       "staleValues": []
     }
   }

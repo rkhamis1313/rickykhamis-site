@@ -53,6 +53,11 @@ REQUIRED: list[tuple[str, str]] = [
     ("Equal Housing Opportunity", "Equal Housing Opportunity disclosure"),
     ("not a commitment to lend", "'not a commitment to lend' disclaimer"),
     ("173141", "Ricky's NMLS number"),
+    # Proof pages. A post that asks the reader to choose a lender has to give
+    # them somewhere independent to check the claim.
+    ("epiqlending.com/mysite/Ricky-Khamis", "link to Ricky's EPiQ profile page"),
+    ("epiqlending.com/branch/1936984", "link to the Scottsdale branch page"),
+    ("nmlsconsumeraccess.org", "link to NMLS Consumer Access"),
 ]
 
 
@@ -89,14 +94,32 @@ def check_dpa(path: Path, text: str) -> tuple[int, int]:
                   f"{program.get('officialUrl')}")
             errors += 1
 
-        # 2. Never repeat a value we know has changed.
+        # 2. Never point a reader at a program they cannot use.
+        if program.get("serviceAreaAvailable") is False:
+            recommending = re.search(
+                rf"(?:apply|qualify|eligible|available|consider|look into|check)"
+                rf"[^.]{{0,80}}\b{re.escape(name)}\b"
+                rf"|\b{re.escape(name)}\b[^.]{{0,80}}"
+                rf"(?:is available|you can|may qualify|offers you)",
+                text, re.I,
+            )
+            if recommending:
+                print(f"  ERROR {path.name}:{line}  {name} is not available in "
+                      f"our service area. {program.get('unavailableReason', '')}")
+                errors += 1
+            else:
+                print(f"  WARN  {path.name}:{line}  {name} is not available in "
+                      "our service area; mention it only to rule it out")
+                warnings += 1
+
+        # 3. Never repeat a value we know has changed.
         for stale in program.get("staleValues", []):
             for hit in re.finditer(re.escape(stale), text, re.I):
                 print(f"  ERROR {path.name}:{line_of(text, hit.start())}  "
                       f"{name}: {stale!r} is a known stale value")
                 errors += 1
 
-        # 3. Any specific figure needs a date the reader can judge.
+        # 4. Any specific figure needs a date the reader can judge.
         program_facts = program.get("facts") or {}
         figures = [str(program_facts.get(k)) for k in
                    ("incomeLimit", "assistanceMax", "forgivenessMonths")
@@ -113,12 +136,13 @@ def check_dpa(path: Path, text: str) -> tuple[int, int]:
                   "'as of <date>' or 'verified against ... <year>' marker")
             errors += 1
 
-        # 4. Our own verification has to be recent.
+        # 5. Our own verification has to be recent.
         verified_on = program.get("verifiedOn")
         if states_figure:
             if not verified_on:
                 print(f"  ERROR {path.name}:{line}  {name} has no verifiedOn in "
-                      "content/program-facts.json; verify terms before citing them")
+                      f"content/program-facts.json. Read {program.get('officialUrl')}, "
+                      "fill in the facts, set verifiedOn to today, then re-run")
                 errors += 1
             else:
                 age = (date.today() - datetime.strptime(verified_on, "%Y-%m-%d").date()).days

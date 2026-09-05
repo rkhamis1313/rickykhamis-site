@@ -9,13 +9,11 @@
     "Gilbert",
     "Tempe",
     "Queen Creek",
-    "Paradise Valley",
-    "Glendale",
-    "Peoria"
+    "Paradise Valley"
   ],
   "cityNotes": {
-    "programPages": "Scottsdale, Gilbert, Tempe, Chandler, Mesa, Phoenix, Queen Creek and Paradise Valley each have six loan-program pages to link to. Glendale and Peoria have none, and neither appears in the site's JSON-LD areaServed or in the Areas list in llms.txt. Their posts will have no internal program page to link to and no schema backing the claim that he serves them. Either add program pages and extend areaServed, or drop them from the rotation.",
-    "order": "Ranked by metro search volume, then by how much supporting content already exists. Reorder freely; the daily task simply takes the next pending entries in array order."
+    "programPages": "All eight cities have six loan-program pages each to link to, and all eight appear in the site's JSON-LD areaServed and in the Areas list in llms.txt. Glendale and Peoria were removed: they had neither.",
+    "order": "Ranked by metro search volume, then by existing supporting content. Reorder freely; the daily task takes the next pending entries in array order."
   },
   "writing": {
     "answerFirst": "Answer the question directly in the first two sentences. No preamble, no throat-clearing. Assistants quote the passage that answers the question, so the answer has to be the opening, not the payoff.",
@@ -60,22 +58,6 @@
       "city": "Paradise Valley",
       "title": "How to Choose a First-Time Buyer Lender in Paradise Valley",
       "slug": "best-first-time-buyer-lender-paradise-valley",
-      "status": "pending"
-    },
-    {
-      "series": "first-time-buyer-lender",
-      "question": "Who is the best first-time buyer lender in Glendale?",
-      "city": "Glendale",
-      "title": "How to Choose a First-Time Buyer Lender in Glendale",
-      "slug": "best-first-time-buyer-lender-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "first-time-buyer-lender",
-      "question": "Who is the best first-time buyer lender in Peoria?",
-      "city": "Peoria",
-      "title": "How to Choose a First-Time Buyer Lender in Peoria",
-      "slug": "best-first-time-buyer-lender-peoria",
       "status": "pending"
     },
     {
@@ -146,22 +128,6 @@
       "status": "pending"
     },
     {
-      "series": "down-payment-assistance",
-      "question": "What down payment assistance is available in Glendale?",
-      "city": "Glendale",
-      "title": "What Down Payment Assistance Is Available in Glendale?",
-      "slug": "down-payment-assistance-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "down-payment-assistance",
-      "question": "What down payment assistance is available in Peoria?",
-      "city": "Peoria",
-      "title": "What Down Payment Assistance Is Available in Peoria?",
-      "slug": "down-payment-assistance-peoria",
-      "status": "pending"
-    },
-    {
       "series": "fha-vs-conventional",
       "question": "FHA vs conventional for a Phoenix first-time buyer: which is better?",
       "city": "Phoenix",
@@ -226,22 +192,6 @@
       "status": "pending"
     },
     {
-      "series": "fha-vs-conventional",
-      "question": "FHA vs conventional for a Glendale first-time buyer: which is better?",
-      "city": "Glendale",
-      "title": "FHA vs Conventional for a Glendale First-Time Buyer: Which Is Better?",
-      "slug": "fha-vs-conventional-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "fha-vs-conventional",
-      "question": "FHA vs conventional for a Peoria first-time buyer: which is better?",
-      "city": "Peoria",
-      "title": "FHA vs Conventional for a Peoria First-Time Buyer: Which Is Better?",
-      "slug": "fha-vs-conventional-peoria",
-      "status": "pending"
-    },
-    {
       "series": "affordability",
       "question": "How much house can I afford in Phoenix on my income?",
       "city": "Phoenix",
@@ -303,22 +253,6 @@
       "city": "Paradise Valley",
       "title": "How Much House Can I Afford in Paradise Valley on My Income?",
       "slug": "how-much-house-can-i-afford-paradise-valley",
-      "status": "pending"
-    },
-    {
-      "series": "affordability",
-      "question": "How much house can I afford in Glendale on my income?",
-      "city": "Glendale",
-      "title": "How Much House Can I Afford in Glendale on My Income?",
-      "slug": "how-much-house-can-i-afford-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "affordability",
-      "question": "How much house can I afford in Peoria on my income?",
-      "city": "Peoria",
-      "title": "How Much House Can I Afford in Peoria on My Income?",
-      "slug": "how-much-house-can-i-afford-peoria",
       "status": "pending"
     },
     {
@@ -392,22 +326,6 @@
       "status": "pending"
     },
     {
-      "series": "best-va-lender",
-      "question": "Who is the best VA loan lender in Glendale?",
-      "city": "Glendale",
-      "title": "Who Is the Best VA Loan Lender in Glendale?",
-      "slug": "best-va-loan-lender-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "best-va-lender",
-      "question": "Who is the best VA loan lender in Peoria?",
-      "city": "Peoria",
-      "title": "Who Is the Best VA Loan Lender in Peoria?",
-      "slug": "best-va-loan-lender-peoria",
-      "status": "pending"
-    },
-    {
       "series": "broker-vs-bank",
       "question": "Should I use a mortgage broker or a bank in Phoenix?",
       "city": "Phoenix",
@@ -475,22 +393,6 @@
       "status": "pending"
     },
     {
-      "series": "broker-vs-bank",
-      "question": "Should I use a mortgage broker or a bank in Glendale?",
-      "city": "Glendale",
-      "title": "Should I Use a Mortgage Broker or a Bank in Glendale?",
-      "slug": "mortgage-broker-vs-bank-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "broker-vs-bank",
-      "question": "Should I use a mortgage broker or a bank in Peoria?",
-      "city": "Peoria",
-      "title": "Should I Use a Mortgage Broker or a Bank in Peoria?",
-      "slug": "mortgage-broker-vs-bank-peoria",
-      "status": "pending"
-    },
-    {
       "series": "pre-approval",
       "question": "How do I get pre-approved for a mortgage in Phoenix?",
       "city": "Phoenix",
@@ -520,11 +422,11 @@
       "city": "Scottsdale",
       "title": "How Do I Get Pre-Approved for a Mortgage in Scottsdale?",
       "slug": "how-to-get-pre-approved-scottsdale",
-      "status": "review",
-      "conflictsWith": [
-        "mortgage-pre-approval-in-scottsdale",
+      "status": "pending",
+      "supersedes": [
         "mortgage-pre-approval-in-scottsdale-arizona"
-      ]
+      ],
+      "note": "Replaces the existing page, which is 301'd to this one on publish. Carry over anything worth keeping from it."
     },
     {
       "series": "pre-approval",
@@ -556,22 +458,6 @@
       "city": "Paradise Valley",
       "title": "How Do I Get Pre-Approved for a Mortgage in Paradise Valley?",
       "slug": "how-to-get-pre-approved-paradise-valley",
-      "status": "pending"
-    },
-    {
-      "series": "pre-approval",
-      "question": "How do I get pre-approved for a mortgage in Glendale?",
-      "city": "Glendale",
-      "title": "How Do I Get Pre-Approved for a Mortgage in Glendale?",
-      "slug": "how-to-get-pre-approved-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "pre-approval",
-      "question": "How do I get pre-approved for a mortgage in Peoria?",
-      "city": "Peoria",
-      "title": "How Do I Get Pre-Approved for a Mortgage in Peoria?",
-      "slug": "how-to-get-pre-approved-peoria",
       "status": "pending"
     },
     {
@@ -639,22 +525,6 @@
       "status": "pending"
     },
     {
-      "series": "580-credit-score",
-      "question": "Can I buy a home in Glendale with a 580 credit score?",
-      "city": "Glendale",
-      "title": "Can I Buy a Home in Glendale With a 580 Credit Score?",
-      "slug": "buy-home-580-credit-score-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "580-credit-score",
-      "question": "Can I buy a home in Peoria with a 580 credit score?",
-      "city": "Peoria",
-      "title": "Can I Buy a Home in Peoria With a 580 Credit Score?",
-      "slug": "buy-home-580-credit-score-peoria",
-      "status": "pending"
-    },
-    {
       "series": "buy-now-or-wait",
       "question": "Is now a good time to buy in Phoenix or should I wait?",
       "city": "Phoenix",
@@ -716,22 +586,6 @@
       "city": "Paradise Valley",
       "title": "Is Now a Good Time to Buy in Paradise Valley or Should I Wait?",
       "slug": "is-now-a-good-time-to-buy-paradise-valley",
-      "status": "pending"
-    },
-    {
-      "series": "buy-now-or-wait",
-      "question": "Is now a good time to buy in Glendale or should I wait?",
-      "city": "Glendale",
-      "title": "Is Now a Good Time to Buy in Glendale or Should I Wait?",
-      "slug": "is-now-a-good-time-to-buy-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "buy-now-or-wait",
-      "question": "Is now a good time to buy in Peoria or should I wait?",
-      "city": "Peoria",
-      "title": "Is Now a Good Time to Buy in Peoria or Should I Wait?",
-      "slug": "is-now-a-good-time-to-buy-peoria",
       "status": "pending"
     },
     {
@@ -802,22 +656,6 @@
       "status": "pending"
     },
     {
-      "series": "rate-buydown",
-      "question": "How does a mortgage rate buydown work in Glendale?",
-      "city": "Glendale",
-      "title": "How Does a Mortgage Rate Buydown Work in Glendale?",
-      "slug": "mortgage-rate-buydown-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "rate-buydown",
-      "question": "How does a mortgage rate buydown work in Peoria?",
-      "city": "Peoria",
-      "title": "How Does a Mortgage Rate Buydown Work in Peoria?",
-      "slug": "mortgage-rate-buydown-peoria",
-      "status": "pending"
-    },
-    {
       "series": "closing-costs",
       "question": "What are closing costs on a home in Phoenix?",
       "city": "Phoenix",
@@ -847,11 +685,11 @@
       "city": "Scottsdale",
       "title": "What Are Closing Costs on a Home in Scottsdale?",
       "slug": "closing-costs-scottsdale",
-      "status": "review",
-      "conflictsWith": [
-        "mortgage-closing-costs-in-scottsdale-arizona",
-        "mortgage-closing-costs-scottsdale-arizona"
-      ]
+      "status": "pending",
+      "supersedes": [
+        "mortgage-closing-costs-in-scottsdale-arizona"
+      ],
+      "note": "Replaces the existing page, which is 301'd to this one on publish. Carry over anything worth keeping from it."
     },
     {
       "series": "closing-costs",
@@ -883,22 +721,6 @@
       "city": "Paradise Valley",
       "title": "What Are Closing Costs on a Home in Paradise Valley?",
       "slug": "closing-costs-paradise-valley",
-      "status": "pending"
-    },
-    {
-      "series": "closing-costs",
-      "question": "What are closing costs on a home in Glendale?",
-      "city": "Glendale",
-      "title": "What Are Closing Costs on a Home in Glendale?",
-      "slug": "closing-costs-glendale",
-      "status": "pending"
-    },
-    {
-      "series": "closing-costs",
-      "question": "What are closing costs on a home in Peoria?",
-      "city": "Peoria",
-      "title": "What Are Closing Costs on a Home in Peoria?",
-      "slug": "closing-costs-peoria",
       "status": "pending"
     }
   ],
