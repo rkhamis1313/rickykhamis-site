@@ -1,0 +1,28 @@
+{
+  "_comment": [
+    "Editorial queue for the automated daily posts.",
+    "The scheduled Claude task publishes the top `postsPerDay` unpublished",
+    "entries each morning, marks them published, and commits the result.",
+    "Finish the active series before pulling from `upcoming`."
+  ],
+  "postsPerDay": 2,
+  "timezone": "America/Phoenix",
+  "activeSeries": {
+    "name": "best-first-time-buyer-lender",
+    "question": "best first-time buyer lender in {city}",
+    "note": "Title pattern is matched to the existing series on the live site once the mirror lands. Frame each post as answering the question — how to evaluate and choose a lender in that city — rather than as a self-applied superlative claim, which is not substantiable in mortgage advertising.",
+    "queue": [
+      { "city": "Tempe", "status": "pending" },
+      { "city": "Chandler", "status": "pending" },
+      { "city": "Mesa", "status": "pending" },
+      { "city": "Phoenix", "status": "pending" },
+      { "city": "Glendale", "status": "pending" },
+      { "city": "Peoria", "status": "pending" }
+    ],
+    "published": [
+      { "city": "Scottsdale", "slug": "scottsdale-first-time-home-buyer-guide", "date": "2026-09-04" },
+      { "city": "Gilbert", "slug": "gilbert-first-time-home-buyer-guide", "date": "2026-09-04" }
+    ]
+  },
+  "upcoming": []
+}
