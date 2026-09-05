@@ -80,21 +80,30 @@ def main() -> int:
         # 4. Stage. Nothing staged is a legitimate no-op, not a failure.
         run(["git", "add", "-A"], "stage")
         staged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT)
-        if staged.returncode == 0:
-            print("\nNothing to publish; working tree already matches the site.")
-            return 0
+        nothing_to_commit = staged.returncode == 0
 
         if args.dry_run:
             print("\n--dry-run: stopping before commit and push.")
             return 0
 
-        # 5. Commit.
-        message = f"Publish daily posts ({date.today().isoformat()})"
-        run(["git", "-c", "user.name=github-actions[bot]",
-             "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com",
-             "commit", "-m", message], "commit")
-
-        local = run(["git", "rev-parse", "HEAD"], "commit").strip().splitlines()[-1]
+        # 5. Commit, unless a commit already exists for this work. Nothing to
+        #    commit does not mean nothing to push: a commit made outside this
+        #    script still has to reach the remote, because Netlify deploys from
+        #    there and an unpushed commit publishes nothing.
+        if nothing_to_commit:
+            local = run(["git", "rev-parse", "HEAD"], "commit").strip().splitlines()[-1]
+            remote_now = run(["git", "ls-remote", "origin", f"refs/heads/{BRANCH}"],
+                             "commit")
+            if local[:40] in remote_now:
+                print("\nNothing to publish; the remote already has this commit.")
+                return 0
+            print("\nNothing new to commit, but the remote is behind. Pushing.")
+        else:
+            message = f"Publish daily posts ({date.today().isoformat()})"
+            run(["git", "-c", "user.name=github-actions[bot]",
+                 "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+                 "commit", "-m", message], "commit")
+            local = run(["git", "rev-parse", "HEAD"], "commit").strip().splitlines()[-1]
 
         # 6. Push.
         run(["git", "push", "origin", f"HEAD:{BRANCH}"], "push")
