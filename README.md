@@ -14,6 +14,8 @@ markdown in `content/posts/` and rendered into the mirror by `gen/new_post.py`.
 | `gen/new_post.py` | Markdown → HTML renderer. No API calls, no credentials. |
 | `gen/mdlite.py` | Small dependency-free markdown subset converter. |
 | `gen/compliance_check.py` | Screens post markdown for advertising problems. |
+| `gen/publish.py` | Gated publish: screen, render, verify, commit, push, confirm. |
+| `gen/review.py` | Monthly citation review driven by hand-checked results. |
 | `scripts/mirror_site.py` | Re-mirrors the live site. See the warning below. |
 
 ## Publishing
@@ -83,10 +85,32 @@ it in `site/_redirects`. Do not simply publish both.
 
 ### Monthly review
 
-`review.everyDays` is 30. On or after `review.nextDueOn` the daily task runs a
-review before writing, appends the result to `review.log`, and reorders the
-queue toward whatever is actually being cited. See the task prompt for the
-procedure and its limits.
+There is no ChatGPT or Perplexity API here, so the citation check is done by
+hand and the loop is async. It never blocks a publish run.
+
+```bash
+python gen/review.py --status                    # is one due, is one waiting
+python gen/review.py --new                       # write a dated checklist
+python gen/review.py --apply content/review/<file>.md
+```
+
+1. On or after `review.nextDueOn`, the daily task runs `--new`. That writes
+   `content/review/YYYY-MM-DD-checklist.md` listing the last ten published
+   questions, and notifies Ricky. Publishing continues as normal.
+2. Ricky runs each question in ChatGPT and Perplexity and ticks the box for
+   whichever cited rickykhamis.com. Notes are free text and are kept verbatim.
+   Skipping a question is fine; it is ignored.
+3. `--apply` scores each question out of two, aggregates by series and by city,
+   reorders the pending queue, and appends to `review.log`.
+
+A series or city must have at least `MIN_EVIDENCE` (2) tested questions before
+it can move anything. One citation is an anecdote: acting on it reshuffled 89
+of 99 entries in testing. Below the bar a bucket counts as untested and the
+order holds.
+
+Winning buckets sort to the front, cold ones (two or more tested, no citations
+at all) to the back, everything else keeps its relative order. Entries held at
+status `review` do not move.
 
 ## House rules for post content
 
