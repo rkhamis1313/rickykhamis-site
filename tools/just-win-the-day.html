@@ -1,0 +1,392 @@
+<title>Just Win The Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --paper:#FFF8F3;
+  --surface:#FFFFFF;
+  --surface-2:#FBF0E7;
+  --ink:#12232E;
+  --ink-2:#4E5F6B;
+  --ink-3:#8C949C;
+  --line:#EADCD0;
+  --line-2:#DCC9B9;
+  --brand:#F36B24;
+  --brand-soft:#FFE7D8;
+  --brand-ink:#A8410C;
+  --band:#173141;
+  --band-2:#0F232F;
+  --band-ink:#FFF3EA;
+  --band-ink-2:#9FB3BF;
+  --win:#1B8757;
+  --win-soft:#DFF2E8;
+  --shadow:0 1px 2px rgba(23,49,65,.06),0 8px 24px -16px rgba(23,49,65,.35);
+}
+:root:not([data-theme="light"]){ }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D1B24;
+    --surface:#142833;
+    --surface-2:#1A3341;
+    --ink:#F3E8DF;
+    --ink-2:#AFC0CA;
+    --ink-3:#7A8C97;
+    --line:#24404F;
+    --line-2:#31525F;
+    --brand:#FF823F;
+    --brand-soft:#3A2317;
+    --brand-ink:#FFB183;
+    --band:#0A151C;
+    --band-2:#0A151C;
+    --band-ink:#FFF3EA;
+    --band-ink-2:#8FA5B2;
+    --win:#43C48A;
+    --win-soft:#123328;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D1B24;
+  --surface:#142833;
+  --surface-2:#1A3341;
+  --ink:#F3E8DF;
+  --ink-2:#AFC0CA;
+  --ink-3:#7A8C97;
+  --line:#24404F;
+  --line-2:#31525F;
+  --brand:#FF823F;
+  --brand-soft:#3A2317;
+  --brand-ink:#FFB183;
+  --band:#0A151C;
+  --band-2:#0A151C;
+  --band-ink:#FFF3EA;
+  --band-ink-2:#8FA5B2;
+  --win:#43C48A;
+  --win-soft:#123328;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.num,.eyebrow{font-family:Archivo,system-ui,sans-serif}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* ---------- masthead ---------- */
+.mast{background:var(--band);color:var(--band-ink);padding:44px 0 40px;border-bottom:3px solid var(--brand)}
+.mast .eyebrow{
+  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--brand);margin:0 0 14px;
+}
+.mast h1{
+  font-size:clamp(38px,7vw,68px);
+  font-variation-settings:"wdth" 118,"wght" 800;
+  line-height:.94;margin:0;text-wrap:balance;text-transform:uppercase;
+}
+.mast p{margin:16px 0 0;max-width:56ch;color:var(--band-ink-2);font-size:15px}
+.mast .rule{display:flex;gap:28px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,243,234,.14)}
+.mast .rule div{display:flex;flex-direction:column;gap:2px}
+.mast .rule dt{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--band-ink-2)}
+.mast .rule dd{margin:0;font-family:Archivo,sans-serif;font-weight:700;font-size:19px}
+
+/* ---------- scoreboard ---------- */
+.board{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+.board-in{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding:12px 24px;max-width:1000px;margin:0 auto}
+.who{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+select,input[type="date"],input[type="text"]{
+  font:inherit;font-size:14px;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--line-2);border-radius:8px;padding:7px 10px;
+}
+select{font-weight:600;min-width:150px}
+button{
+  font:inherit;font-size:13px;font-weight:600;cursor:pointer;
+  background:var(--surface-2);color:var(--ink);border:1px solid var(--line-2);
+  border-radius:8px;padding:7px 12px;
+}
+button.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+button:hover{border-color:var(--brand)}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+
+.stats{display:flex;align-items:center;gap:22px;margin-left:auto;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column;line-height:1.15}
+.stat b{font-family:Archivo,sans-serif;font-variation-settings:"wdth" 112,"wght" 700;font-size:20px;font-variant-numeric:tabular-nums}
+.stat span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.stat.pts b{color:var(--brand)}
+.chip{
+  font-family:Archivo,sans-serif;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--brand-soft);color:var(--brand-ink);border-radius:999px;padding:6px 12px;white-space:nowrap;
+}
+.track{height:4px;background:var(--line);position:relative}
+.track i{display:block;height:100%;background:var(--brand);width:0;transition:width .35s ease}
+.hint{width:100%;font-size:12.5px;color:var(--ink-3);margin:-2px 0 2px}
+.hint b{color:var(--brand-ink);font-weight:600}
+
+/* ---------- weeks ---------- */
+main{padding:36px 0 90px}
+.wk{border-top:1px solid var(--line);padding:26px 0 8px}
+.wk:first-child{border-top:none}
+.wk-h{display:flex;align-items:flex-start;gap:18px;margin-bottom:14px}
+.wk-n{
+  font-family:Archivo,sans-serif;font-variation-settings:"wdth" 125,"wght" 800;
+  font-size:44px;line-height:.8;color:var(--line-2);font-variant-numeric:tabular-nums;flex:0 0 auto;
+  padding-top:2px;
+}
+.wk-t{flex:1 1 auto;min-width:0}
+.wk-t h2{margin:0;font-size:17px;font-variation-settings:"wdth" 110,"wght" 700;letter-spacing:.01em}
+.wk-t p{margin:1px 0 0;color:var(--ink-3);font-size:13.5px}
+.wk-m{flex:0 0 auto;text-align:right;min-width:96px}
+.wk-m b{font-family:Archivo,sans-serif;font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.wk-m .bar{height:3px;background:var(--line);border-radius:2px;margin-top:6px;overflow:hidden}
+.wk-m .bar i{display:block;height:100%;width:0;background:var(--win);transition:width .3s ease}
+
+.wk.now{background:var(--surface);border-radius:14px;padding:22px 22px 12px;border:1px solid var(--brand);border-top:1px solid var(--brand);margin:14px 0}
+.wk.now .wk-n{color:var(--brand)}
+.wk.done .wk-n{color:var(--win)}
+.tag{font-family:Archivo,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-left:10px;vertical-align:3px}
+.tag.now{background:var(--brand);color:#fff}
+.tag.done{background:var(--win-soft);color:var(--win)}
+
+ul.tasks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.tk{display:flex;align-items:flex-start;gap:13px;padding:9px 2px;border-top:1px dashed var(--line)}
+.tk:first-child{border-top:none}
+.tk label{flex:1 1 auto;cursor:pointer;font-size:14.5px;line-height:1.45;padding-top:1px}
+.tk input{
+  appearance:none;-webkit-appearance:none;flex:0 0 auto;margin:2px 0 0;
+  width:20px;height:20px;border:2px solid var(--line-2);border-radius:6px;
+  background:var(--surface);cursor:pointer;position:relative;transition:background .15s,border-color .15s;
+}
+.tk input:hover{border-color:var(--brand)}
+.tk input:checked{background:var(--win);border-color:var(--win)}
+.tk input:checked::after{
+  content:"";position:absolute;left:5.5px;top:1.5px;width:5px;height:10px;
+  border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(42deg);
+}
+.tk .pts{
+  flex:0 0 auto;font-family:Archivo,sans-serif;font-size:12px;font-weight:700;
+  font-variant-numeric:tabular-nums;color:var(--ink-3);padding-top:3px;min-width:44px;text-align:right;
+}
+.tk.on label{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--line-2)}
+.tk.on .pts{color:var(--win)}
+
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--ink-3);font-size:12.5px}
+footer b{color:var(--ink-2);font-weight:600}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:640px){
+  .stats{margin-left:0;gap:16px}
+  .wk-n{font-size:34px}
+  .wk.now{padding:18px 14px 10px}
+}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <p class="eyebrow">Khamis Group &middot; New Hire Loan Officer Ramp</p>
+    <h1>Just Win<br>The Day</h1>
+    <p>Twelve weeks. Sixty-six moves. Nothing here is theory &mdash; every line is something you do, log, or book. Check it the day you do it.</p>
+    <dl class="rule">
+      <div><dt>Plan length</dt><dd>90 days</dd></div>
+      <div><dt>Total moves</dt><dd class="num" id="mTasks">66</dd></div>
+      <div><dt>Points available</dt><dd class="num" id="mPts">0</dd></div>
+      <div><dt>Coach</dt><dd>Ricky Khamis</dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="board">
+  <div class="board-in">
+    <div class="who">
+      <select id="hire" aria-label="Whose board"><option value="">Local board</option></select>
+      <input type="date" id="start" aria-label="Start date">
+      <button id="add">+ Hire</button>
+    </div>
+    <div class="stats">
+      <span class="chip" id="weekChip">Week 1 &middot; Get set up</span>
+      <div class="stat pts"><b class="num" id="sPts">0</b><span>Points</span></div>
+      <div class="stat"><b class="num" id="sDone">0/66</b><span>Complete</span></div>
+      <div class="stat"><b class="num" id="sPct">0%</b><span>Ramp</span></div>
+    </div>
+    <p class="hint" id="hint">Tracking on this device only. <b>Add a hire</b> to put the board on the shared roster.</p>
+  </div>
+  <div class="track"><i id="track"></i></div>
+</div>
+
+<main class="wrap" id="weeks"></main>
+
+<footer class="wrap">
+  <p><b>How points work.</b> Prospecting volume, booked meetings and taught classes carry the weight; check-ins and debriefs are table stakes. Points are a scoreboard, not a paycheck &mdash; the debrief with Ricky is where they get read.</p>
+</footer>
+
+<script>
+const WEEKS=[
+ {n:1,theme:"Get set up",tasks:[["Complete onboarding",50],["Upload database into CRM",100],["AIO Certified / Home Fund It Trained / Lien N Lock",100],["Daily 3pm check-ins with Ricky",50],["Shadow 1 senior LO call/meeting (w/ Austin)",75]]},
+ {n:2,theme:"Meet the room",tasks:[["Meet with ROG Office Manager — learn the wins and losses of the office, gather intel on teams, make a plan to meet their support",100],["Launch Grind to Greatness planner",50],["Clean up database — trained with Ricky on database marketing",75],["Mastered AutoUW and EPiQ LO Helper",75],["Update social media profiles & drop DUBB intro",75],["ChatGPT training with Ricky",50],["Meet: Chris Harris, Tom James, Pat Kelly — potentially Kuba",100]]},
+ {n:3,theme:"Start dialing",tasks:[["Submit for CE certification",75],["Sit with Ricky for live prospecting session",75],["Log 50 calls this week",25],["Secure 10 agent meetings",150],["Attend Realty One office meeting — what to say, mastered",75],["Role played with Ricky / Austin / Chuck",50]]},
+ {n:4,theme:"Get in front of people",tasks:[["Attend live agent meeting with Ricky",75],["Make 75 prospecting calls",50],["Post first Reel/video — scripted",100],["Support or attend 1 open house",75],["Take ROG manager or top producer to lunch",100],["Debrief weekly with Ricky",25]]},
+ {n:5,theme:"Build the rhythm",tasks:[["Attend open house with agent",75],["Make 100 prospecting calls",50],["Book 3 face-to-face agent meetings",75],["Post market update on social media",75],["Weekly debrief with Ricky",25]]},
+ {n:6,theme:"Learn the file",tasks:[["Sit with processor for file walk-through",75],["Log 100 calls",50],["Book 3 agent meetings",75],["Shadow Ricky on a client file review",75],["Weekly debrief with Ricky",25]]},
+ {n:7,theme:"Earn the room",tasks:[["Plan first CE class or Lunch & Learn",100],["Make 125 calls",75],["Book 4 agent meetings",100],["Post Reel/video about your ‘Why Me’",100],["Weekly debrief with Ricky",25]]},
+ {n:8,theme:"Take the mic",tasks:[["Take ROG manager or top producer to lunch",100],["Deliver 5-minute market update at Realty One meeting",125],["Make 125 calls",75],["Book 4 agent meetings",100],["Post 2 social media updates",75],["Weekly debrief with Ricky",25]]},
+ {n:9,theme:"Work the pipeline",tasks:[["Pipeline review with Ricky",75],["Make 150 calls",75],["Book 5 agent meetings",125],["Support 1 open house",75],["Weekly debrief with Ricky",25]]},
+ {n:10,theme:"Teach the class",tasks:[["Host or co-host CE class or Lunch & Learn",200],["Make 150 calls",75],["Book 5 agent meetings",125],["Post 2 social updates",75],["Weekly debrief with Ricky",25]]},
+ {n:11,theme:"Be seen",tasks:[["Social media day with Ricky — record & post video",125],["Make 150 calls",75],["Book 5 agent meetings",125],["Support 1 open house",75],["Weekly debrief with Ricky",25]]},
+ {n:12,theme:"Prove it and reload",tasks:[["90-day debrief & next plan with Ricky",150],["Make 150 calls",75],["Book 5 agent meetings",125],["Post reflection video or post",75],["Weekly debrief with Ricky",25],["Referred one loan officer to Ricky to meet",200]]}
+];
+
+const ALL=[];WEEKS.forEach(w=>w.tasks.forEach((t,i)=>ALL.push({id:"w"+w.n+"-"+i,w:w.n,label:t[0],pts:t[1]})));
+const MAX=ALL.reduce((a,t)=>a+t.pts,0);
+const LKEY="jwtd.local";
+const $=s=>document.querySelector(s);
+
+let db=null, hires=[], hireId="", done={}, startDate="";
+
+/* ---------- render ---------- */
+const weeksEl=$("#weeks");
+WEEKS.forEach(w=>{
+  const sec=document.createElement("section");
+  sec.className="wk";sec.id="wk"+w.n;
+  sec.innerHTML=
+    '<div class="wk-h">'+
+      '<div class="wk-n">'+String(w.n).padStart(2,"0")+'</div>'+
+      '<div class="wk-t"><h2>Week '+w.n+'<span class="tag" hidden></span></h2><p>'+w.theme+'</p></div>'+
+      '<div class="wk-m"><b>0/'+w.tasks.length+'</b><div class="bar"><i></i></div></div>'+
+    '</div><ul class="tasks"></ul>';
+  const ul=sec.querySelector("ul");
+  ALL.filter(t=>t.w===w.n).forEach(t=>{
+    const li=document.createElement("li");
+    li.className="tk";li.dataset.id=t.id;
+    li.innerHTML='<input type="checkbox" id="'+t.id+'"><label for="'+t.id+'"></label><span class="pts num">'+t.pts+'</span>';
+    li.querySelector("label").textContent=t.label;
+    li.querySelector("input").addEventListener("change",e=>toggle(t.id,e.target.checked));
+    ul.appendChild(li);
+  });
+  weeksEl.appendChild(sec);
+});
+$("#mPts").textContent=MAX.toLocaleString();
+$("#mTasks").textContent=ALL.length;
+
+/* ---------- state ---------- */
+function currentWeek(){
+  if(startDate){
+    const d=Math.floor((Date.now()-new Date(startDate+"T00:00:00").getTime())/864e5);
+    if(d>=0)return Math.min(12,Math.max(1,Math.floor(d/7)+1));
+  }
+  for(const w of WEEKS){if(ALL.filter(t=>t.w===w.n).some(t=>!done[t.id]))return w.n;}
+  return 12;
+}
+function paint(){
+  let pts=0,n=0;
+  ALL.forEach(t=>{if(done[t.id]){pts+=t.pts;n++;}});
+  const cw=currentWeek();
+  $("#sPts").textContent=pts.toLocaleString();
+  $("#sDone").textContent=n+"/"+ALL.length;
+  $("#sPct").textContent=Math.round(n/ALL.length*100)+"%";
+  $("#track").style.width=(pts/MAX*100)+"%";
+  const wk=WEEKS[cw-1];
+  $("#weekChip").innerHTML="Week "+cw+" &middot; "+wk.theme;
+
+  WEEKS.forEach(w=>{
+    const sec=$("#wk"+w.n), ts=ALL.filter(t=>t.w===w.n);
+    const c=ts.filter(t=>done[t.id]).length;
+    sec.querySelector(".wk-m b").textContent=c+"/"+ts.length;
+    sec.querySelector(".wk-m .bar i").style.width=(c/ts.length*100)+"%";
+    const full=c===ts.length;
+    sec.classList.toggle("done",full);
+    sec.classList.toggle("now",!full&&w.n===cw);
+    const tag=sec.querySelector(".tag");
+    tag.hidden=!(full||w.n===cw);
+    tag.className="tag "+(full?"done":"now");
+    tag.textContent=full?"Won":"On the clock";
+    ts.forEach(t=>{
+      const li=sec.querySelector('[data-id="'+t.id+'"]');
+      li.classList.toggle("on",!!done[t.id]);
+      li.querySelector("input").checked=!!done[t.id];
+    });
+  });
+}
+function readLocal(){try{return JSON.parse(localStorage.getItem(LKEY)||"{}")}catch(e){return{}}}
+function writeLocal(){try{localStorage.setItem(LKEY,JSON.stringify(done))}catch(e){}}
+
+function toggle(id,on){
+  if(on)done[id]=new Date().toISOString();else delete done[id];
+  paint();
+  if(db&&hireId){db.doc("boards/"+hireId).set({done:done,updatedAt:Date.now()}).catch(()=>{});}
+  else writeLocal();
+}
+
+/* ---------- roster ---------- */
+function fillRoster(){
+  const sel=$("#hire"),keep=hireId;
+  sel.innerHTML='<option value="">Local board</option>';
+  hires.forEach(h=>{
+    const o=document.createElement("option");o.value=h.id;o.textContent=h.name;sel.appendChild(o);
+  });
+  sel.value=keep||"";
+  $("#add").hidden=false;
+}
+function setHint(){
+  const h=$("#hint");
+  if(!db){h.innerHTML="Saved on this device. Open this link on the machine you check off from.";return;}
+  if(!hireId){h.innerHTML="Tracking on this device only. <b>Add a hire</b> to put the board on the shared roster.";return;}
+  const who=(hires.find(x=>x.id===hireId)||{}).name||"";
+  h.innerHTML="Saved to the shared roster as <b>"+who+"</b>. Ricky sees the same board.";
+}
+let unsubBoard=null;
+async function loadHire(id){
+  hireId=id;
+  if(unsubBoard){unsubBoard();unsubBoard=null;}
+  if(!db||!id){done=readLocal();startDate="";$("#start").value="";paint();setHint();return;}
+  const h=hires.find(x=>x.id===id)||{};
+  startDate=h.startDate||"";$("#start").value=startDate;
+  try{
+    unsubBoard=db.doc("boards/"+id).onSnapshot(snap=>{
+      const body=snap.exists?snap.data():null;
+      done=Object.assign({},(body&&body.done)||{});
+      paint();
+    },()=>{});
+  }catch(e){done={};paint();}
+  setHint();
+}
+
+$("#hire").addEventListener("change",e=>loadHire(e.target.value));
+$("#start").addEventListener("change",e=>{
+  startDate=e.target.value;paint();
+  if(!db||!hireId)return;
+  const h=hires.find(x=>x.id===hireId);
+  if(h){h.startDate=startDate;db.doc("hires/"+hireId).set({name:h.name,startDate:startDate}).catch(()=>{});}
+});
+$("#add").addEventListener("click",async()=>{
+  const name=(prompt("New hire's name")||"").trim();
+  if(!name)return;
+  if(!db){alert("Shared roster isn't available here — this board stays on your device.");return;}
+  const id=name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||("hire-"+Date.now());
+  const rec={id:id,name:name,startDate:new Date().toISOString().slice(0,10)};
+  await db.doc("hires/"+id).set({name:rec.name,startDate:rec.startDate,createdAt:Date.now()}).catch(()=>{});
+  if(!hires.some(h=>h.id===id))hires.push(rec);
+  fillRoster();$("#hire").value=id;await loadHire(id);
+});
+
+/* ---------- boot ---------- */
+done=readLocal();paint();setHint();
+(async()=>{
+  if(!window.claude||!claude.use)return;
+  db=await claude.use("db");
+  if(!db)return;
+  try{
+    db.collection("hires").onSnapshot(snap=>{
+      hires=snap.docs.map(d=>{const v=d.data()||{};return{id:d.id,name:v.name||d.id,startDate:v.startDate||""};})
+                     .sort((a,b)=>a.name.localeCompare(b.name));
+      fillRoster();
+      if(hireId){const h=hires.find(x=>x.id===hireId);if(h&&h.startDate!==startDate){startDate=h.startDate;$("#start").value=startDate;paint();}}
+    },()=>{});
+  }catch(e){}
+  setHint();
+})();
+</script>
