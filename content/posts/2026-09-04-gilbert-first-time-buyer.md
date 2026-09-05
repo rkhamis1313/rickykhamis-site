@@ -13,7 +13,7 @@ tags:
 
 Gilbert is a different buy than Scottsdale. More master-planned communities, more new construction competing directly with resale, more families stretching for a specific school boundary.
 
-That changes the lender question. In Gilbert it rarely shows up as *"who has the best rate?"* It shows up as **"should I just use the builder's lender?"** — usually with a five-figure incentive attached and a sales office telling you to decide this week.
+That changes the lender question. In Gilbert it rarely shows up as *"who has the best rate?"* It shows up as **"should I just use the builder's lender?"**, usually with a five-figure incentive attached and a sales office telling you to decide this week.
 
 Here is how to answer that honestly, and what to demand from whoever you pick.
 
@@ -25,7 +25,7 @@ You are allowed to shop. Federal rules prohibit a seller from requiring you to u
 
 The arithmetic takes one afternoon:
 
-1. Get the builder lender's **Loan Estimate**. Not a flyer, not a payment sheet — the actual Loan Estimate form.
+1. Get the builder lender's **Loan Estimate**. Not a flyer, not a payment sheet. The actual Loan Estimate form.
 2. Get a competing Loan Estimate on the same loan type, same price, same down payment, same lock period.
 3. Compare page 2 line by line: origination charges, discount points, and third-party fees.
 4. Then price the incentive. If the builder credit exceeds the total cost difference over the time you'll realistically hold the loan, take the incentive. If it doesn't, it isn't a deal.
@@ -49,7 +49,7 @@ A builder's advertised price and a resale asking price are not comparable number
 
 That last pair matters more than people expect.
 
-**Special taxing districts.** Some newer Arizona master-planned communities sit inside a Community Facilities District, which funds infrastructure through an additional assessment on your tax bill. Legitimate structure — but a real recurring cost that is not on the sales-office payment sheet. Ask directly: *"Is this parcel inside a CFD or any special assessment district?"* Get it in writing.
+**Special taxing districts.** Some newer Arizona master-planned communities sit inside a Community Facilities District, which funds infrastructure through an additional assessment on your tax bill. Legitimate structure, but a real recurring cost that is not on the sales-office payment sheet. Ask directly: *"Is this parcel inside a CFD or any special assessment district?"* Get it in writing.
 
 **Property tax reset.** On a new build, the first tax bill can reflect an unimproved lot. Once the home is assessed, your escrow payment can jump at the first escrow analysis. Budget for the assessed-home number, not the first bill you see.
 
@@ -69,10 +69,10 @@ That single lock-strategy conversation is worth more than any upgrade in the des
 
 ## Don't rule yourself out of assistance
 
-**Home Plus is available statewide**, in every county and zip code in Arizona — Gilbert included.
+**Home Plus is available statewide**, in every county and zip code in Arizona, Gilbert included.
 
 - It does **not** require first-time buyer status.
-- The 2026 borrower income limit was $155,386 — higher than most families assume.
+- The 2026 borrower income limit was $155,386, higher than most families assume.
 - Assistance comes as a forgivable second toward down payment and closing costs, forgiven provided you don't sell or refinance within the first 36 months.
 - One borrower must complete a homebuyer education course before closing.
 
@@ -80,14 +80,14 @@ Caps and terms move. Confirm the current guidelines rather than planning around 
 
 ## Protect your file until you close
 
-Between approval and closing, do not open new credit, finance a car, take a "same as cash" furniture offer, move large sums without a documented trail, change how you're paid, or co-sign anything. On a long build this window is months, not weeks — which is exactly why it gets people.
+Between approval and closing, do not open new credit, finance a car, take a "same as cash" furniture offer, move large sums without a documented trail, change how you're paid, or co-sign anything. On a long build this window is months, not weeks, which is exactly why it gets people.
 
-## So — who should you choose in Gilbert?
+## So who should you choose in Gilbert?
 
 Judge any lender on whether they will do the arithmetic with you instead of around you.
 
 - **We will price the builder incentive against our own offer, in writing.** If the builder's deal wins, that is the answer, and we will tell you so.
-- **Broker model.** Multiple investors rather than one bank's shelf — which matters on long locks and non-vanilla files.
+- **Broker model.** Multiple investors rather than one bank's shelf, which matters on long locks and non-vanilla files.
 - **Lock strategy before you sign**, not after the foundation is poured.
 - **You talk to the principal.** Ricky Khamis, President of EPiQ Lending, NMLS #173141, lending in Arizona since 1999. Direct line: (480) 999-9842.
 

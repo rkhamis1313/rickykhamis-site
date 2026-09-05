@@ -6,10 +6,10 @@ name: Fetch missing files
 #
 # Closes three gaps found by diffing the mirror against the original Sep 3
 # Netlify deploy:
-#   /thank-you/  — the Netlify Forms success page. Nothing links to it (a dozen
+#   /thank-you/  the Netlify Forms success page. Nothing links to it (eleven
 #                  forms POST to it), so link scraping never found it.
-#   /feed.xml    — not in sitemap.xml either.
-#   6 assets     — two are referenced only inside JSON-LD string values; four
+#   /feed.xml    not in sitemap.xml either.
+#   6 assets     two are referenced only inside JSON-LD string values; four
 #                  are in the deploy but no longer referenced by any page.
 
 on:

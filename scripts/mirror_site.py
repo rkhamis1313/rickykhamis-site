@@ -45,13 +45,13 @@ EXTRA_PATHS = [
     "/robots.txt",
     "/llms.txt",
     "/feed.xml",
-    # Netlify Forms success page. Nothing links to it — a dozen forms POST to
-    # it — so link scraping alone never finds it.
+    # Netlify Forms success page. Nothing links to it, a dozen forms POST to
+    # it, so link scraping alone never finds it.
     "/thank-you/",
     "/favicon.ico",
     "/404.html",
     # Netlify consumes these at deploy time rather than serving them, so they
-    # usually 404 here. They are still worth attempting — see the warning at the
+    # usually 404 here. They are still worth attempting, see the warning at the
     # end of main() for why their absence matters.
     "/_redirects",
     "/_headers",

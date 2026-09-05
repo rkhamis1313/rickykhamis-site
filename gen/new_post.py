@@ -123,7 +123,7 @@ def count_words(html_text: str) -> int:
 
 def read_minutes(words: int) -> int:
     # Calibrated against the existing posts: 1042 and 1046 words render as
-    # "4 min read", 387 as "1 min read" — floor division, not rounding.
+    # "4 min read", 387 as "1 min read", floor division, not rounding.
     return max(1, words // WORDS_PER_MINUTE)
 
 
@@ -173,7 +173,7 @@ def load_post_index() -> list[dict]:
 
 
 def find_template() -> Path:
-    """Any existing post works — only its chrome is reused. Prefer a stable,
+    """Any existing post works, only its chrome is reused. Prefer a stable,
     structurally complete one, then fall back to whatever is present."""
     preferred = BLOG / "mortgage-rate-buydowns-scottsdale-arizona" / "index.html"
     if preferred.exists():
@@ -497,6 +497,15 @@ def check() -> int:
         if not (BLOG / post["slug"] / "index.html").exists():
             problems.append(f"index lists {post['url']} but the page is missing")
 
+    seen: dict[str, int] = {}
+    for page in [BLOG / "index.html"] + sorted(BLOG.glob("page/*/index.html")):
+        for match in CARD_RE.finditer(read(page)):
+            url = match.group("url")
+            seen[url] = seen.get(url, 0) + 1
+    for url, count in sorted(seen.items()):
+        if count > 1:
+            problems.append(f"{url} is listed {count} times across the index pages")
+
     on_disk = {
         p.parent.name
         for p in BLOG.glob("*/index.html")
@@ -570,7 +579,12 @@ def publish(paths: list[Path]) -> None:
     rendered.reverse()
 
     previous_newest = existing[0] if existing else None
-    ordered = rendered + existing
+
+    # An index page may already list a post whose directory was removed (for
+    # example when re-rendering after an edit). Drop those stale entries so the
+    # freshly rendered one is the only card for that slug.
+    fresh = {entry["slug"] for entry in rendered}
+    ordered = rendered + [p for p in existing if p["slug"] not in fresh]
 
     for position, entry in enumerate(rendered):
         newer = ordered[position - 1] if position > 0 else None

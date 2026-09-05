@@ -10,7 +10,7 @@
   "activeSeries": {
     "name": "best-first-time-buyer-lender",
     "question": "best first-time buyer lender in {city}",
-    "note": "Every post answers the same question: how to choose a first-time buyer lender in that city, closing with EPiQ as the answer. Make the case with verifiable specifics — NMLS numbers, broker vs. single-lender model, underwritten pre-approvals, direct access to the principal, local experience — never a bare superlative like 'best lender' or 'lowest rates', which is not substantiable in mortgage advertising. Keep the city-specific playbook content; lead with the question.",
+    "note": "Every post answers the same question: how to choose a first-time buyer lender in that city, closing with EPiQ as the answer. Make the case with verifiable specifics, NMLS numbers, broker vs. single-lender model, underwritten pre-approvals, direct access to the principal, local experience, never a bare superlative like 'best lender' or 'lowest rates', which is not substantiable in mortgage advertising. Keep the city-specific playbook content; lead with the question.",
     "queue": [
       {
         "city": "Tempe",

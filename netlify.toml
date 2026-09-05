@@ -1,4 +1,4 @@
 # rickykhamis.com is served as a pre-built static mirror committed under site/.
-# Nothing is compiled at deploy time — Netlify just publishes the directory.
+# Nothing is compiled at deploy time. Netlify just publishes the directory.
 [build]
   publish = "site"

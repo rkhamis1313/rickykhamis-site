@@ -2,10 +2,11 @@
 """Screen post markdown for mortgage-advertising problems before publishing.
 
 Ricky is a licensed MLO (NMLS #173141; EPiQ Lending NMLS #1936984), so these
-posts are regulated advertising. This is a coarse net, not legal review — it
+posts are regulated advertising. This is a coarse net, not legal review. It
 catches the mistakes an automated writer actually makes.
 
-  ERROR  exits non-zero. Never publish over one.
+  ERROR  exits non-zero. Never publish over one. Covers house style too:
+         em dashes are banned outright in Ricky's content.
   WARN   needs a human look. Quoting what a buyer says ("who has the best
          rate?") is fine; claiming it about EPiQ is not, and only context
          separates them.
@@ -21,6 +22,12 @@ import sys
 from pathlib import Path
 
 ERRORS: list[tuple[str, str]] = [
+    # House style, not compliance, but non-negotiable: Ricky does not use em
+    # dashes. Rewrite the sentence with a comma, colon, or full stop rather
+    # than swapping in another dash.
+    ("\u2014", "uses an em dash"),
+    ("\u2015", "uses a horizontal bar"),
+    (r"\s\u2013\s", "uses a spaced en dash as punctuation"),
     (r"\b\d+(?:\.\d+)?\s*%\s*(?:APR|interest\s+rate|rate)\b", "quotes a specific rate or APR"),
     (r"\bAPR\s+of\s+\d", "quotes a specific APR"),
     (r"\bguarante\w*\s+(?:approval|rate|savings|closing)", "promises a guarantee"),
@@ -31,9 +38,9 @@ ERRORS: list[tuple[str, str]] = [
 
 WARNINGS: list[tuple[str, str]] = [
     (r"\b(?:best|lowest|cheapest|top|#1|number\s+one)\s+(?:lender|rate|rates|mortgage|broker|loan)\b",
-     "superlative — fine when quoting a buyer, not as our own claim"),
+     "superlative: fine when quoting a buyer, not as our own claim"),
     (r"\b(?:always|never)\s+(?:cheaper|better|worse)\b", "absolute comparison"),
-    (r"\bpre-?qualif", "mentions pre-qualification — make sure the distinction is drawn"),
+    (r"\bpre-?qualif", "mentions pre-qualification: make sure the distinction is drawn"),
 ]
 
 REQUIRED: list[tuple[str, str]] = [
@@ -85,7 +92,7 @@ def main() -> int:
         f"{total_errors} error(s), {total_warnings} warning(s)."
     )
     if total_warnings and not total_errors:
-        print("Warnings need a human read — check the context before publishing.")
+        print("Warnings need a human read. Check the context before publishing.")
     return 1 if total_errors else 0
 
 

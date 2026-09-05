@@ -1,7 +1,7 @@
 ---
 title: "How to Choose a First-Time Buyer Lender in Scottsdale (And Why It Decides Your Deal)"
 slug: best-first-time-buyer-lender-scottsdale
-description: "Choosing a lender in Scottsdale is not about who quotes the lowest number. Here's the checklist that actually separates them — including the condo trap that disqualifies buildings, not buyers."
+description: "Choosing a lender in Scottsdale is not about who quotes the lowest number. Here's the checklist that actually separates them, including the condo trap that disqualifies buildings, not buyers."
 date: 2026-09-04
 city: Scottsdale
 tags:
@@ -13,7 +13,7 @@ tags:
 
 If you are buying your first home in Scottsdale, the question you are actually asking is: **who do I trust to get this closed?**
 
-Most buyers answer it backwards. They shop rate quotes for a week, pick the lowest number on a screen, and find out in escrow that the number was never real — or that the person quoting it has never financed a Scottsdale condo and does not know what is about to go wrong.
+Most buyers answer it backwards. They shop rate quotes for a week, pick the lowest number on a screen, and find out in escrow that the number was never real, or that the person quoting it has never financed a Scottsdale condo and does not know what is about to go wrong.
 
 Here is how to evaluate a first-time buyer lender in this market, what makes Scottsdale specifically unforgiving, and how to run your side of the process so the lender you pick can actually perform.
 
@@ -31,7 +31,7 @@ More on this below, but it is the single highest-value question in Scottsdale, a
 
 **3. "Are you a broker or a single lender?"**
 
-A bank sells you its own products. A broker can place your file with multiple investors. That matters most when your file is not vanilla — self-employment, a condo project with a wrinkle, a gift-funds structure, a tight close. One door versus many doors is a structural difference, not a marketing one.
+A bank sells you its own products. A broker can place your file with multiple investors. That matters most when your file is not vanilla: self-employment, a condo project with a wrinkle, a gift-funds structure, a tight close. One door versus many doors is a structural difference, not a marketing one.
 
 **4. "Who actually answers the phone at 7pm on a Saturday when my offer is due?"**
 
@@ -57,7 +57,7 @@ The third is where first-time buyers get surprised. Your down payment is not you
 
 This is the one that costs Scottsdale buyers real money, and almost nobody warns them.
 
-A lot of the accessible entry point in Scottsdale is condos and attached townhomes. That is a legitimate strategy — but **a condo has to qualify for financing, not just you.** The building itself gets underwritten.
+A lot of the accessible entry point in Scottsdale is condos and attached townhomes. That is a legitimate strategy, but **a condo has to qualify for financing, not just you.** The building itself gets underwritten.
 
 Lenders look at the project, not just the unit:
 
@@ -75,18 +75,18 @@ What to do about it:
 2. Request the HOA's budget, reserve study, and meeting minutes early. Minutes are where special assessments show up first.
 3. Build your inspection timeline so project review finishes before your earnest money goes hard.
 
-If nobody on your side can answer *"is this building financeable for my loan type?"* — you are not ready to write.
+If nobody on your side can answer *"is this building financeable for my loan type?"*, you are not ready to write.
 
 ## Don't let a lender rule you out of assistance
 
 Arizona's **Home Plus** program is the one most Scottsdale buyers dismiss too quickly, usually for a reason that isn't true.
 
 - *"It's only for first-time buyers."* It isn't. Home Plus is open to repeat buyers too.
-- *"My income is too high."* Maybe not. The borrower income limit was $155,386 under the 2026 guidelines — higher than most people assume.
+- *"My income is too high."* Maybe not. The borrower income limit was $155,386 under the 2026 guidelines, higher than most people assume.
 
 Home Plus pairs a 30-year fixed mortgage with down payment and closing-cost assistance structured as a forgivable second, forgiven provided you don't sell or refinance inside the first 36 months. It's available statewide, and one borrower must complete a homebuyer education course before closing.
 
-Program terms, income caps, and assistance percentages change — confirm what's current before you plan around them. But a lender who doesn't raise it at all is telling you something.
+Program terms, income caps, and assistance percentages change. Confirm what's current before you plan around them. But a lender who doesn't raise it at all is telling you something.
 
 ## Protect your file between approval and closing
 
@@ -100,7 +100,7 @@ You are underwritten continuously, not once. Between approval and closing, do no
 
 Every one of these has blown up a closing that was otherwise done. Sit still until you have the keys.
 
-## So — who should you choose in Scottsdale?
+## So who should you choose in Scottsdale?
 
 Run any lender through the five questions above. Here is how we answer them, and you can verify every line of it.
 
@@ -112,6 +112,6 @@ Run any lender through the five questions above. Here is how we answer them, and
 
 Verify the license at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/). EPiQ Lending is NMLS #1936984. That is the standard you should hold any lender to, including us.
 
-Send me your scenario and I'll run the numbers properly — starting with what you can actually close on.
+Send me your scenario and I'll run the numbers properly, starting with what you can actually close on.
 
 *Equal Housing Opportunity. This is general information, not a commitment to lend or an offer to extend credit. Rates, terms, and program guidelines change and depend on credit approval, property appraisal, and other qualifying factors. Not all applicants will qualify.*
