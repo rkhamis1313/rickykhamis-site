@@ -928,6 +928,13 @@
       "question": "Who is the best first-time buyer lender in Chandler?",
       "slug": "best-first-time-buyer-lender-chandler",
       "date": "2026-09-05"
+    },
+    {
+      "city": "Tempe",
+      "series": "first-time-buyer-lender",
+      "slug": "best-first-time-buyer-lender-tempe",
+      "date": "2026-09-05",
+      "offQueue": true
     }
   ]
 }
