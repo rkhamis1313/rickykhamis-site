@@ -16,15 +16,23 @@ markdown in `content/posts/` and rendered into the mirror by `gen/new_post.py`.
 | `gen/compliance_check.py` | Screens post markdown for advertising problems. |
 | `gen/publish.py` | Gated publish: screen, render, verify, commit, push, confirm. |
 | `gen/review.py` | Monthly citation review driven by hand-checked results. |
+| `content/program-facts.json` | Verified DPA program terms and when they were checked. |
 | `scripts/mirror_site.py` | Re-mirrors the live site. See the warning below. |
 
 ## Publishing
 
 ```bash
-python gen/compliance_check.py content/posts/*.md   # screen first
-python gen/new_post.py --all-unpublished            # then render
+python gen/publish.py                               # the whole gated sequence
+python gen/publish.py --dry-run                     # everything except commit and push
 python gen/new_post.py --check                      # consistency check only
+python gen/new_post.py --force <file>               # re-render a published post
 ```
+
+**Correcting a published post.** Editing the markdown does nothing on its own:
+`--all-unpublished` skips any post whose page already exists, so a factual fix
+has no route to the reader. Edit the markdown, run `new_post.py --force` on it,
+then commit and push. This was found the hard way while fixing a wrong Home
+Plus figure that stayed live after the source was corrected.
 
 `compliance_check.py` exits non-zero on an ERROR (a quoted rate or payment, a
 guarantee, an em dash, a missing disclosure). Never publish over one. WARNs
@@ -130,6 +138,14 @@ status `review` do not move.
 - Program terms change. Cite figures with their vintage and tell the reader to
   confirm current guidelines.
 - Equal Housing Opportunity. Nothing is a commitment to lend.
+- **Down payment assistance figures must be verified against the program's
+  official site before every use, and dated in the post.** A reader plans a
+  purchase around these. `content/program-facts.json` records the terms, the
+  official URL, known stale values, and when each program was last checked;
+  `compliance_check.py` fails the run on an uncited program, a known stale
+  value, an undated figure, or a verification older than 90 days. We shipped
+  "forgiven after 36 months" when Home Plus is 60, which is why this is a gate
+  and not a guideline.
 - **Answer the question in the first two sentences.** Assistants quote the
   passage that answers the question. If the answer is the payoff at the bottom,
   there is nothing for them to quote.
