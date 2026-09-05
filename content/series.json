@@ -32,22 +32,6 @@
   "queue": [
     {
       "series": "first-time-buyer-lender",
-      "question": "Who is the best first-time buyer lender in Tempe?",
-      "city": "Tempe",
-      "title": "How to Choose a First-Time Buyer Lender in Tempe",
-      "slug": "best-first-time-buyer-lender-tempe",
-      "status": "pending"
-    },
-    {
-      "series": "first-time-buyer-lender",
-      "question": "Who is the best first-time buyer lender in Chandler?",
-      "city": "Chandler",
-      "title": "How to Choose a First-Time Buyer Lender in Chandler",
-      "slug": "best-first-time-buyer-lender-chandler",
-      "status": "pending"
-    },
-    {
-      "series": "first-time-buyer-lender",
       "question": "Who is the best first-time buyer lender in Mesa?",
       "city": "Mesa",
       "title": "How to Choose a First-Time Buyer Lender in Mesa",
@@ -930,6 +914,20 @@
       "series": "first-time-buyer-lender",
       "slug": "best-first-time-buyer-lender-gilbert",
       "date": "2026-09-04"
+    },
+    {
+      "city": "Tempe",
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Tempe?",
+      "slug": "best-first-time-buyer-lender-tempe",
+      "date": "2026-09-05"
+    },
+    {
+      "city": "Chandler",
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Chandler?",
+      "slug": "best-first-time-buyer-lender-chandler",
+      "date": "2026-09-05"
     }
   ]
 }
