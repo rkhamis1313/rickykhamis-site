@@ -1,13 +1,17 @@
 name: Mirror live site
 
-# rickykhamis.com is reachable from GitHub's runners, so the mirror is taken
-# here and committed back to the repo. Netlify then publishes site/ as-is.
+# rickykhamis.com is reachable from GitHub's runners but not from the authoring
+# sandbox, so the mirror is taken here and committed back to the repo. Netlify
+# then publishes site/ as-is.
+#
+# Manual dispatch ONLY, deliberately. This job rewrites site/ from whatever the
+# live site currently serves and commits the result with `git add -A site`, so
+# any generated post that has not yet made it into the live sitemap would be
+# deleted by an unattended run. Treat it as a bootstrap/re-baseline tool, not
+# something to put on a timer.
 
 on:
   workflow_dispatch:
-  schedule:
-    # Mondays, 04:00 America/Phoenix (UTC-7, no DST) — refresh the mirror weekly.
-    - cron: "0 11 * * 1"
 
 permissions:
   contents: write
