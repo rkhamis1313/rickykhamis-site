@@ -78,7 +78,10 @@ def main() -> int:
                              check[-1500:])
 
         # 4. Stage. Nothing staged is a legitimate no-op, not a failure.
-        run(["git", "add", "-A"], "stage")
+        # Stage only what a publish is allowed to change. Using `add -A` here
+        # swept up unrelated code edits and committed them under a "Publish
+        # daily posts" message, which makes the history lie about what changed.
+        run(["git", "add", "-A", "content", "site"], "stage")
         staged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT)
         nothing_to_commit = staged.returncode == 0
 
