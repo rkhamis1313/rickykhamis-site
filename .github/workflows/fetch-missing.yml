@@ -1,0 +1,66 @@
+name: Fetch missing files
+
+# Additive counterpart to "Mirror live site". That job rebuilds site/ from
+# scratch and would delete generated posts; this one fetches an explicit list of
+# paths and touches nothing else, so it is safe to run at any time.
+#
+# Closes three gaps found by diffing the mirror against the original Sep 3
+# Netlify deploy:
+#   /thank-you/  — the Netlify Forms success page. Nothing links to it (a dozen
+#                  forms POST to it), so link scraping never found it.
+#   /feed.xml    — not in sitemap.xml either.
+#   6 assets     — two are referenced only inside JSON-LD string values; four
+#                  are in the deploy but no longer referenced by any page.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-missing
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch the missing paths
+        run: |
+          python scripts/mirror_site.py --fetch \
+            /thank-you/ \
+            /feed.xml \
+            /assets/images/epiq-logo.png \
+            /assets/images/ricky-khamis.jpg \
+            /assets/images/ricky-casual.jpg \
+            "/assets/images/blog/new-condo-loan-rules-for-2026-what-every-buyer-seller-agent-needs-to-know-1.png" \
+            "/assets/images/blog/new-condo-loan-rules-for-2026-what-every-buyer-seller-agent-needs-to-know-2.png" \
+            "/assets/images/blog/new-condo-loan-rules-for-2026-what-every-buyer-seller-agent-needs-to-know-3.jpg"
+
+      - name: Confirm the two page-level gaps closed
+        run: |
+          test -f site/thank-you/index.html || { echo "site/thank-you/index.html missing"; exit 1; }
+          test -f site/feed.xml           || { echo "site/feed.xml missing"; exit 1; }
+          echo "thank-you and feed.xml present."
+          echo "assets now: $(find site/assets -type f | wc -l)"
+
+      - name: Commit the fetched files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A site
+          if git diff --cached --quiet; then
+            echo "Nothing new."
+            exit 0
+          fi
+          git commit -m "Fetch files the mirror missed ($(date -u +%Y-%m-%d))"
+          git push origin HEAD:${GITHUB_REF_NAME}

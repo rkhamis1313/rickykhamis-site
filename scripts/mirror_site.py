@@ -44,6 +44,10 @@ EXTRA_PATHS = [
     "/sitemap.xml",
     "/robots.txt",
     "/llms.txt",
+    "/feed.xml",
+    # Netlify Forms success page. Nothing links to it — a dozen forms POST to
+    # it — so link scraping alone never finds it.
+    "/thank-you/",
     "/favicon.ico",
     "/404.html",
     # Netlify consumes these at deploy time rather than serving them, so they
@@ -66,6 +70,12 @@ ATTR_RE = re.compile(
 )
 SRCSET_RE = re.compile(r"""srcset\s*=\s*["']([^"']+)["']""", re.I)
 CSS_URL_RE = re.compile(r"""url\(\s*['"]?([^'")]+)['"]?\s*\)""", re.I)
+# Asset paths also show up in JSON-LD string values and inline scripts,
+# where no attribute pattern will match them.
+BARE_ASSET_RE = re.compile(
+    r"(?:https?://rickykhamis\.com)?/assets/[A-Za-z0-9._\-/%]+", re.I
+)
+
 
 
 def log(msg: str) -> None:
@@ -160,6 +170,8 @@ def candidate_links(text: str, base: str) -> set[str]:
         found.add(match)
     for match in CSS_URL_RE.findall(text):
         found.add(match)
+    for match in BARE_ASSET_RE.findall(text):
+        found.add(match)
     for srcset in SRCSET_RE.findall(text):
         for entry in srcset.split(","):
             candidate = entry.strip().split()
@@ -227,6 +239,14 @@ def download_all(urls: list[str], label: str) -> dict[str, str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--fetch",
+        nargs="+",
+        metavar="PATH",
+        help="fetch only these paths and write them; makes no other change to "
+        "site/ (no sitemap walk, no deletions) so it is safe to run over a "
+        "mirror that already contains generated posts",
+    )
+    parser.add_argument(
         "--expect-min",
         type=int,
         default=100,
@@ -234,6 +254,19 @@ def main() -> int:
         "committing a truncated mirror over a good one)",
     )
     args = parser.parse_args()
+
+    if args.fetch:
+        targets = [urllib.parse.urljoin(SITE, path) for path in args.fetch]
+        log(f"Fetching {len(targets)} path(s); nothing else will be touched.")
+        download_all(targets, "fetch")
+        missing = [t for t in targets if not local_path(t).exists()]
+        if missing:
+            log("\nERROR: these did not land:")
+            for target in missing:
+                log(f"  {target}")
+            return 1
+        log("\nAll requested paths written.")
+        return 0
 
     log(f"Reading {SITE}/sitemap.xml")
     pages = read_sitemap(f"{SITE}/sitemap.xml", set())
