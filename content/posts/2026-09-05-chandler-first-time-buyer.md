@@ -55,12 +55,12 @@ Chandler also has a heavy contractor and consultant population. If you file a Sc
 
 ## Do not let anyone rule you out of assistance
 
-Arizona's **Home Plus** program gets dismissed for reasons that are not true.
+Arizona's **[Home Plus](https://homeplusaz.com/home-plus-dpa/)** program gets dismissed for reasons that are not true.
 
 - *"It is only for first-time buyers."* It is not. Repeat buyers qualify too.
-- *"My income is too high."* The borrower income limit was $155,386 under the 2026 guidelines, which catches more Chandler households than people expect, especially single-income ones.
+- *"My income is too high."* The borrower income limit was $155,386 as of April 6, 2026, which catches more Chandler households than people expect, especially single-income ones.
 
-Home Plus pairs a 30-year fixed mortgage with down payment and closing-cost assistance structured as a forgivable second, forgiven provided you do not sell or refinance inside the first 36 months. Statewide, and one borrower must complete a homebuyer education course before closing. Confirm current caps and terms rather than planning around a number you read once.
+Home Plus pairs a 30-year fixed mortgage with up to 4% in down payment and closing-cost assistance, structured as a forgivable second. It is fully forgiven after 60 months, and a sale or refinance inside that window means the DPA second has to be repaid. Statewide, and one borrower must complete a homebuyer education course before closing. Terms verified against the program's official site on September 5, 2026. Confirm current caps and terms rather than planning around a number you read once.
 
 ## Protect your file until you close
 

@@ -584,7 +584,7 @@ def check() -> int:
 
 
 # ------------------------------------------------------------------------- main
-def publish(paths: list[Path]) -> None:
+def publish(paths: list[Path], force: bool = False) -> None:
     sources = sorted(paths, key=lambda p: p.name)
     existing = load_post_index()
     template = read(find_template())
@@ -596,8 +596,9 @@ def publish(paths: list[Path]) -> None:
         for field in ("title", "slug", "description", "date"):
             require(meta, field, source)
 
-        if (BLOG / meta["slug"] / "index.html").exists():
-            log(f"  = {meta['slug']} already published; skipping")
+        if (BLOG / meta["slug"] / "index.html").exists() and not force:
+            log(f"  = {meta['slug']} already published; skipping "
+                "(use --force to re-render after an edit)")
             continue
 
         body_html = mdlite.convert(body)
@@ -628,13 +629,17 @@ def publish(paths: list[Path]) -> None:
     # Newest first: the last source in the batch ends up at the top.
     rendered.reverse()
 
-    previous_newest = existing[0] if existing else None
-
     # An index page may already list a post whose directory was removed (for
     # example when re-rendering after an edit). Drop those stale entries so the
     # freshly rendered one is the only card for that slug.
     fresh = {entry["slug"] for entry in rendered}
     ordered = rendered + [p for p in existing if p["slug"] not in fresh]
+
+    # The post that gains a forward link is the newest one we are NOT
+    # re-rendering. Taking existing[0] blindly gave the newest post on the site
+    # a "Newer" link pointing back at an older post whenever that post was
+    # itself part of the batch, which is exactly what a --force correction does.
+    previous_newest = next((p for p in existing if p["slug"] not in fresh), None)
 
     for position, entry in enumerate(rendered):
         newer = ordered[position - 1] if position > 0 else None
@@ -676,6 +681,13 @@ def main() -> int:
     parser.add_argument(
         "--check", action="store_true", help="verify site consistency and exit"
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="re-render posts whose pages already exist. Needed to push a "
+        "correction: editing the markdown alone does not touch the rendered "
+        "HTML, so a factual fix would otherwise never reach the site.",
+    )
     args = parser.parse_args()
 
     if args.check:
@@ -687,7 +699,7 @@ def main() -> int:
     if not sources:
         parser.error("give one or more markdown files, or --all-unpublished")
 
-    publish(sources)
+    publish(sources, force=args.force)
     return check()
 
 

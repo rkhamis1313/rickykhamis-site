@@ -5,8 +5,10 @@ Ricky is a licensed MLO (NMLS #173141; EPiQ Lending NMLS #1936984), so these
 posts are regulated advertising. This is a coarse net, not legal review. It
 catches the mistakes an automated writer actually makes.
 
-  ERROR  exits non-zero. Never publish over one. Covers house style too:
-         em dashes are banned outright in Ricky's content.
+  ERROR  exits non-zero. Never publish over one. Covers house style (no em
+         dashes) and down payment assistance terms, which must be cited to the
+         program's official site, dated, and verified recently. Program facts
+         and their verification dates live in content/program-facts.json.
   WARN   needs a human look. Quoting what a buyer says ("who has the best
          rate?") is fine; claiming it about EPiQ is not, and only context
          separates them.
@@ -17,9 +19,13 @@ Usage:  python gen/compliance_check.py content/posts/*.md
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
+from datetime import date, datetime
 from pathlib import Path
+
+FACTS_FILE = Path(__file__).resolve().parent.parent / "content" / "program-facts.json"
 
 ERRORS: list[tuple[str, str]] = [
     # House style, not compliance, but non-negotiable: Ricky does not use em
@@ -54,6 +60,81 @@ def line_of(text: str, index: int) -> int:
     return text.count("\n", 0, index) + 1
 
 
+def load_facts() -> dict:
+    if not FACTS_FILE.exists():
+        return {}
+    return json.loads(FACTS_FILE.read_text(encoding="utf-8"))
+
+
+def check_dpa(path: Path, text: str) -> tuple[int, int]:
+    """Down payment assistance terms are the figures most likely to go stale and
+    the ones a reader will act on. A post that names a program must cite that
+    program's official site, must not repeat a value known to be out of date,
+    and must date any specific figure it states."""
+    facts = load_facts()
+    programs = facts.get("programs", {})
+    max_age = int(facts.get("maxVerificationAgeDays", 90))
+    errors = warnings = 0
+
+    for name, program in programs.items():
+        match = re.search(rf"\b{re.escape(name)}\b", text, re.I)
+        if not match:
+            continue
+        line = line_of(text, match.start())
+
+        # 1. Cite the official source.
+        domain = program.get("citeDomain")
+        if domain and domain.lower() not in text.lower():
+            print(f"  ERROR {path.name}:{line}  names {name} without citing "
+                  f"{program.get('officialUrl')}")
+            errors += 1
+
+        # 2. Never repeat a value we know has changed.
+        for stale in program.get("staleValues", []):
+            for hit in re.finditer(re.escape(stale), text, re.I):
+                print(f"  ERROR {path.name}:{line_of(text, hit.start())}  "
+                      f"{name}: {stale!r} is a known stale value")
+                errors += 1
+
+        # 3. Any specific figure needs a date the reader can judge.
+        program_facts = program.get("facts") or {}
+        figures = [str(program_facts.get(k)) for k in
+                   ("incomeLimit", "assistanceMax", "forgivenessMonths")
+                   if program_facts.get(k)]
+        states_figure = any(
+            re.search(re.escape(f.replace("up to ", "").split(" of ")[0]), text, re.I)
+            for f in figures
+        )
+        dated = re.search(
+            r"as of \w+ \d{1,2},? \d{4}|verified against[^.]*\d{4}", text, re.I
+        )
+        if states_figure and not dated:
+            print(f"  ERROR {path.name}:{line}  states {name} terms with no "
+                  "'as of <date>' or 'verified against ... <year>' marker")
+            errors += 1
+
+        # 4. Our own verification has to be recent.
+        verified_on = program.get("verifiedOn")
+        if states_figure:
+            if not verified_on:
+                print(f"  ERROR {path.name}:{line}  {name} has no verifiedOn in "
+                      "content/program-facts.json; verify terms before citing them")
+                errors += 1
+            else:
+                age = (date.today() - datetime.strptime(verified_on, "%Y-%m-%d").date()).days
+                if age > max_age:
+                    print(f"  ERROR {path.name}:{line}  {name} terms were last "
+                          f"verified {age} days ago (limit {max_age}). Re-check "
+                          f"{program.get('officialUrl')} and update verifiedOn")
+                    errors += 1
+                elif age > max_age // 2:
+                    print(f"  WARN  {path.name}:{line}  {name} verification is "
+                          f"{age} days old; re-check soon")
+                    warnings += 1
+
+    return errors, warnings
+
+
 def check(path: Path) -> tuple[int, int]:
     text = path.read_text(encoding="utf-8")
     errors = warnings = 0
@@ -72,6 +153,10 @@ def check(path: Path) -> tuple[int, int]:
         if needle not in text:
             print(f"  ERROR {path.name}  missing {label}")
             errors += 1
+
+    dpa_errors, dpa_warnings = check_dpa(path, text)
+    errors += dpa_errors
+    warnings += dpa_warnings
 
     return errors, warnings
 

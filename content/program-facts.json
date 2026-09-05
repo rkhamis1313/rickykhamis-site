@@ -1,0 +1,63 @@
+{
+  "_comment": [
+    "Single source of truth for down payment assistance program terms.",
+    "gen/compliance_check.py enforces this file: a post that names one of these",
+    "programs must cite its official URL, must not contain a known stale value,",
+    "and must carry an as-of marker when it states a specific figure.",
+    "Re-verify against officialUrl before writing any post that cites terms, and",
+    "update verifiedOn when you do. Stale verification is itself a failure."
+  ],
+  "maxVerificationAgeDays": 90,
+  "programs": {
+    "Home Plus": {
+      "administrator": "Arizona Industrial Development Authority",
+      "officialUrl": "https://homeplusaz.com/home-plus-dpa/",
+      "citeDomain": "homeplusaz.com",
+      "verifiedOn": "2026-09-05",
+      "verifiedAgainst": "homeplusaz.com/home-plus-dpa and homeplusaz.com/arizona-dpa-programs",
+      "facts": {
+        "assistanceMax": "up to 4% of the loan amount",
+        "forgivenessMonths": 60,
+        "forgivenessNote": "Fully forgiven after 60 months. A sale or refinance inside the first 60 months requires the DPA second lien to be repaid.",
+        "incomeLimit": "$155,386",
+        "incomeLimitAsOf": "2026-04-06",
+        "firstTimeBuyerRequired": false,
+        "statewide": true,
+        "homebuyerEducationRequired": true
+      },
+      "staleValues": [
+        "36 months",
+        "first 36 months",
+        "three years",
+        "3 years"
+      ]
+    },
+    "Arizona Is Home": {
+      "administrator": "Arizona Industrial Development Authority",
+      "officialUrl": "https://homeplusaz.com/arizona-is-home-dpa/",
+      "citeDomain": "homeplusaz.com",
+      "verifiedOn": null,
+      "verifiedAgainst": null,
+      "facts": {},
+      "staleValues": []
+    },
+    "Pathway to Purchase": {
+      "administrator": "Arizona Department of Housing",
+      "officialUrl": "https://housing.az.gov/",
+      "citeDomain": "housing.az.gov",
+      "verifiedOn": null,
+      "verifiedAgainst": null,
+      "facts": {},
+      "staleValues": []
+    },
+    "Home in Five": {
+      "administrator": "Maricopa County and City of Phoenix",
+      "officialUrl": "https://homeinfive.com/",
+      "citeDomain": "homeinfive.com",
+      "verifiedOn": null,
+      "verifiedAgainst": null,
+      "facts": {},
+      "staleValues": []
+    }
+  }
+}

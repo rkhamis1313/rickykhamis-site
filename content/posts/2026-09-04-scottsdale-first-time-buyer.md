@@ -79,12 +79,12 @@ If nobody on your side can answer *"is this building financeable for my loan typ
 
 ## Don't let a lender rule you out of assistance
 
-Arizona's **Home Plus** program is the one most Scottsdale buyers dismiss too quickly, usually for a reason that isn't true.
+Arizona's **[Home Plus](https://homeplusaz.com/home-plus-dpa/)** program is the one most Scottsdale buyers dismiss too quickly, usually for a reason that isn't true.
 
 - *"It's only for first-time buyers."* It isn't. Home Plus is open to repeat buyers too.
-- *"My income is too high."* Maybe not. The borrower income limit was $155,386 under the 2026 guidelines, higher than most people assume.
+- *"My income is too high."* Maybe not. The borrower income limit was $155,386 as of April 6, 2026, higher than most people assume.
 
-Home Plus pairs a 30-year fixed mortgage with down payment and closing-cost assistance structured as a forgivable second, forgiven provided you don't sell or refinance inside the first 36 months. It's available statewide, and one borrower must complete a homebuyer education course before closing.
+Home Plus pairs a 30-year fixed mortgage with up to 4% in down payment and closing-cost assistance, structured as a forgivable second. It is fully forgiven after 60 months. Sell or refinance inside those first 60 months and the DPA second has to be repaid. It is available statewide, and one borrower must complete a homebuyer education course before closing. Terms verified against the program's official site on September 5, 2026.
 
 Program terms, income caps, and assistance percentages change. Confirm what's current before you plan around them. But a lender who doesn't raise it at all is telling you something.
 

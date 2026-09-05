@@ -69,14 +69,14 @@ That single lock-strategy conversation is worth more than any upgrade in the des
 
 ## Don't rule yourself out of assistance
 
-**Home Plus is available statewide**, in every county and zip code in Arizona, Gilbert included.
+**[Home Plus](https://homeplusaz.com/home-plus-dpa/) is available statewide**, in every county and zip code in Arizona, Gilbert included.
 
 - It does **not** require first-time buyer status.
-- The 2026 borrower income limit was $155,386, higher than most families assume.
-- Assistance comes as a forgivable second toward down payment and closing costs, forgiven provided you don't sell or refinance within the first 36 months.
+- The borrower income limit was $155,386 as of April 6, 2026, higher than most families assume.
+- Assistance is up to 4% of the loan amount, structured as a forgivable second, fully forgiven after 60 months. Sell or refinance inside those 60 months and it has to be repaid.
 - One borrower must complete a homebuyer education course before closing.
 
-Caps and terms move. Confirm the current guidelines rather than planning around a number you read once.
+Terms verified against the program's official site on September 5, 2026. Caps and terms move, so confirm current guidelines rather than planning around a number you read once.
 
 ## Protect your file until you close
 

@@ -66,12 +66,12 @@ Government-backed programs carry minimum property requirements that a tired 1974
 
 ## Do not let anyone rule you out of assistance
 
-Arizona's **Home Plus** program gets dismissed for reasons that are not true.
+Arizona's **[Home Plus](https://homeplusaz.com/home-plus-dpa/)** program gets dismissed for reasons that are not true.
 
 - *"It is only for first-time buyers."* It is not. Repeat buyers qualify too.
-- *"My income is too high."* The borrower income limit was $155,386 under the 2026 guidelines, higher than most people assume.
+- *"My income is too high."* The borrower income limit was $155,386 as of April 6, 2026, higher than most people assume.
 
-Home Plus pairs a 30-year fixed mortgage with down payment and closing-cost assistance structured as a forgivable second, forgiven provided you do not sell or refinance inside the first 36 months. It is available statewide, and one borrower must complete a homebuyer education course before closing. Terms and caps change, so confirm current guidelines rather than planning around a number you read once. A lender who never raises it is telling you something.
+Home Plus pairs a 30-year fixed mortgage with up to 4% in down payment and closing-cost assistance, structured as a forgivable second. It is fully forgiven after 60 months, and a sale or refinance inside that window means the DPA second has to be repaid. Available statewide, and one borrower must complete a homebuyer education course before closing. Terms verified against the program's official site on September 5, 2026, and they do change, so confirm current guidelines rather than planning around a number you read once. A lender who never raises it is telling you something.
 
 ## Protect your file until you close
 
