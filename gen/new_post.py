@@ -216,6 +216,8 @@ def render_author_block(author: dict, published: date, title: str) -> str:
         + (f'<p style="margin-bottom:8px">{escape_text(background)}</p>' if background else "")
         + (f'<p style="margin-bottom:8px">Licensed in {escape_text(states)}.</p>' if states else "")
         + (f'<ul style="margin-bottom:8px">{award_line}</ul>' if award_line else "")
+        + (f'<p style="margin-bottom:8px"><em>{escape_text(author["slogan"])}</em></p>'
+           if author.get("slogan") else "")
         + '<p style="margin-bottom:0;font-size:.85rem;color:var(--muted)">Verify: '
         f'<a href="{links.get("profile", "")}">EPiQ profile</a> · '
         f'<a href="{links.get("branch", "")}">Scottsdale branch</a> · '
@@ -268,6 +270,8 @@ def build_jsonld(document: str, meta: dict, published: date, image: str,
             ]
         if author.get("awards"):
             node["award"] = author["awards"]
+        if author.get("slogan") and not node.get("description"):
+            node["description"] = author["slogan"]
         break
     for node in graph.get("@graph", []):
         if node.get("@type") == "BlogPosting":
