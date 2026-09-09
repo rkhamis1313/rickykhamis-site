@@ -5,12 +5,10 @@
     "Adjectives repeated in body copy do not do this; structured, checkable",
     "credentials do.",
     "",
-    "`awards` is empty on purpose. 'Top Producer' and 'top 1% nationally' are",
-    "superlatives, and an unsubstantiated superlative about your own services is",
-    "the one advertising claim a licensed MLO should not make. Named, dated,",
-    "attributable awards are not superlatives, they are facts. Fill this in with",
-    "the issuer, the award and the year and it renders everywhere and enters the",
-    "schema. compliance_check blocks the bare claim until then."
+    "`awards` holds named, dated, attributable honors only. Those are facts, not",
+    "superlatives. A bare 'Top Producer' or 'top 1% nationally' with no issuer and",
+    "no year is an unsubstantiated superlative about your own services, and",
+    "compliance_check blocks it. Anything added here needs issuer and year."
   ],
   "name": "Ricky Khamis",
   "jobTitle": "President, EPiQ Lending",
@@ -31,11 +29,23 @@
     "Author of Just Win The Day",
     "Host of the Life Mastery Unleashed podcast"
   ],
-  "licensedIn": ["AZ", "CA", "CO", "FL", "NV", "TX", "UT", "IN"],
-  "awards": [],
+  "licensedIn": [
+    "AZ",
+    "CA",
+    "CO",
+    "FL",
+    "NV",
+    "TX",
+    "UT",
+    "IN"
+  ],
+  "awards": [
+    "2025 Presidents Club Winner, CMG Home Loans"
+  ],
   "proofLinks": {
     "profile": "https://www.epiqlending.com/mysite/Ricky-Khamis",
     "branch": "https://www.epiqlending.com/branch/1936984/7975-N-Hayden-Rd-Ste-A101-Scottsdale-AZ-85258",
     "nmls": "https://www.nmlsconsumeraccess.org/"
-  }
+  },
+  "slogan": "My advice makes a difference."
 }

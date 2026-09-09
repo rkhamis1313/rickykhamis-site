@@ -31,28 +31,6 @@
     {
       "series": "borrower-x-neighborhood",
       "borrowerType": "Self-Employed",
-      "neighborhood": "DC Ranch",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in DC Ranch?",
-      "title": "Self-Employed and Buying in DC Ranch: How You Actually Qualify",
-      "slug": "self-employed-dc-ranch-scottsdale",
-      "why": "jumbo reserve requirements stack on top of two years of returns, so write-offs that cut your tax bill also cut the loan you qualify for",
-      "status": "pending"
-    },
-    {
-      "series": "borrower-x-neighborhood",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "Old Town Scottsdale",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Old Town Scottsdale?",
-      "title": "Self-Employed and Buying in Old Town Scottsdale: How You Actually Qualify",
-      "slug": "self-employed-old-town-scottsdale",
-      "why": "a double gate: your income has to clear underwriting and the building has to clear project eligibility, and either one can kill it",
-      "status": "pending"
-    },
-    {
-      "series": "borrower-x-neighborhood",
-      "borrowerType": "Self-Employed",
       "neighborhood": "Silverleaf",
       "city": "Scottsdale",
       "question": "I am a self-employed buyer. How do I qualify for a home in Silverleaf?",
@@ -1045,6 +1023,20 @@
       "series": "first-time-buyer-lender",
       "question": "Who is the best first-time buyer lender in Mesa?",
       "slug": "best-first-time-buyer-lender-mesa",
+      "date": "2026-09-09"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "borrower-x-neighborhood",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Old Town Scottsdale?",
+      "slug": "self-employed-old-town-scottsdale",
+      "date": "2026-09-09"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "borrower-x-neighborhood",
+      "question": "I am a self-employed buyer. How do I qualify for a home in DC Ranch?",
+      "slug": "self-employed-dc-ranch-scottsdale",
       "date": "2026-09-09"
     }
   ],
