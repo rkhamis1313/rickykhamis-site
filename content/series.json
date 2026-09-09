@@ -30,22 +30,6 @@
   "queue": [
     {
       "series": "first-time-buyer-lender",
-      "question": "Who is the best first-time buyer lender in Mesa?",
-      "city": "Mesa",
-      "title": "How to Choose a First-Time Buyer Lender in Mesa",
-      "slug": "best-first-time-buyer-lender-mesa",
-      "status": "pending"
-    },
-    {
-      "series": "first-time-buyer-lender",
-      "question": "Who is the best first-time buyer lender in Phoenix?",
-      "city": "Phoenix",
-      "title": "How to Choose a First-Time Buyer Lender in Phoenix",
-      "slug": "best-first-time-buyer-lender-phoenix",
-      "status": "pending"
-    },
-    {
-      "series": "first-time-buyer-lender",
       "question": "Who is the best first-time buyer lender in Queen Creek?",
       "city": "Queen Creek",
       "title": "How to Choose a First-Time Buyer Lender in Queen Creek",
@@ -750,6 +734,20 @@
       "question": "Who is the best first-time buyer lender in Chandler?",
       "slug": "best-first-time-buyer-lender-chandler",
       "date": "2026-09-05"
+    },
+    {
+      "city": "Phoenix",
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Phoenix?",
+      "slug": "best-first-time-buyer-lender-phoenix",
+      "date": "2026-09-09"
+    },
+    {
+      "city": "Mesa",
+      "series": "first-time-buyer-lender",
+      "question": "Who is the best first-time buyer lender in Mesa?",
+      "slug": "best-first-time-buyer-lender-mesa",
+      "date": "2026-09-09"
     }
   ]
 }
