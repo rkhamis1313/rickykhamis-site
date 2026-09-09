@@ -99,6 +99,27 @@ it in `site/_redirects`. Do not simply publish both.
 
 ### Series in the queue
 
+The strategy is Scottsdale luxury lending, and the queue interleaves a pillar
+post with a neighborhood post each day so every day ships a mechanic and an
+application of it.
+
+`qualification-mechanics` is the moat. A luxury borrower's problem is almost
+never the rate, it is whether their income can be documented at all: K-1s,
+business return add-backs, bank statement analysis, asset depletion, equity
+comp, trust income, several entities, a recent liquidity event. Show the actual
+mechanic, which line of the return and which months of statements. Generic
+reassurance is worthless to this reader. Never state a guideline as universal;
+investors differ and guidelines change, so attribute and date anything specific.
+
+`luxury-products` covers the structures those files land in. Each post says who
+the product suits AND who it does not. The All In One Loan gets its own gate in
+compliance_check: every pound of its benefit comes from how the borrower parks
+and spends their money, so a savings figure presented as an outcome is a promise
+we cannot keep. Mark it illustrative, say what it depends on, and say who it
+does not suit.
+
+
+
 `scottsdale-neighborhoods` runs first. Scottsdale is already about two thirds of
 the blog at city level and every mortgage topic is covered there, so the
 unclaimed ground is geography inside the city, where there are currently zero

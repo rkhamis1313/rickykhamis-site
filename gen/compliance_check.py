@@ -71,6 +71,47 @@ def load_facts() -> dict:
     return json.loads(FACTS_FILE.read_text(encoding="utf-8"))
 
 
+AIO_NAMES = re.compile(r"All In One Loan|\bAIO\b", re.I)
+AIO_SAVINGS = re.compile(
+    r"(sav(?:e|es|ing|ings)|pay off|payoff|cut(?:s|ting)? (?:years|interest)"
+    r"|less interest|interest savings)", re.I
+)
+AIO_QUALIFIER = re.compile(
+    r"illustrative|depends (?:entirely )?on|will vary|your results|behaviou?r"
+    r"|not a projection|example only", re.I
+)
+
+
+def check_aio(path: Path, text: str) -> tuple[int, int]:
+    """The All In One Loan is an offset product. Every pound of its benefit
+    comes from how the borrower actually parks and spends their money, so a
+    savings figure presented as an outcome is a promise we cannot keep and the
+    kind of claim that draws regulatory attention. Require the qualifier."""
+    if not AIO_NAMES.search(text):
+        return 0, 0
+
+    claim = AIO_SAVINGS.search(text)
+    if not claim:
+        return 0, 0
+
+    line = line_of(text, claim.start())
+    if not AIO_QUALIFIER.search(text):
+        print(f"  ERROR {path.name}:{line}  All In One Loan savings claim "
+              f"({claim.group(0)!r}) with no qualifier. Any benefit depends on "
+              "the borrower's deposit and spending behaviour. Mark the figure "
+              "illustrative and say what it depends on.")
+        return 1, 0
+
+    if not re.search(r"not (?:right|for everyone|suit)|does not suit|wrong fit"
+                     r"|only works if|unsuitable", text, re.I):
+        print(f"  WARN  {path.name}:{line}  All In One Loan post does not say "
+              "who it does NOT suit. A product page that only sells is weaker "
+              "and less credible than one that disqualifies.")
+        return 0, 1
+
+    return 0, 0
+
+
 def check_dpa(path: Path, text: str) -> tuple[int, int]:
     """Down payment assistance terms are the figures most likely to go stale and
     the ones a reader will act on. A post that names a program must cite that
@@ -181,6 +222,10 @@ def check(path: Path) -> tuple[int, int]:
     dpa_errors, dpa_warnings = check_dpa(path, text)
     errors += dpa_errors
     warnings += dpa_warnings
+
+    aio_errors, aio_warnings = check_aio(path, text)
+    errors += aio_errors
+    warnings += aio_warnings
 
     return errors, warnings
 
