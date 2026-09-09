@@ -9,16 +9,27 @@
   ],
   "maxVerificationAgeDays": 90,
   "serviceArea": {
-    "counties": ["Maricopa"],
-    "cities": ["Scottsdale", "Gilbert", "Tempe", "Chandler", "Mesa", "Phoenix", "Queen Creek", "Paradise Valley"]
+    "counties": [
+      "Maricopa"
+    ],
+    "cities": [
+      "Scottsdale",
+      "Gilbert",
+      "Tempe",
+      "Chandler",
+      "Mesa",
+      "Phoenix",
+      "Queen Creek",
+      "Paradise Valley"
+    ]
   },
   "programs": {
     "Home Plus": {
       "administrator": "Arizona Industrial Development Authority",
       "officialUrl": "https://homeplusaz.com/home-plus-dpa/",
       "citeDomain": "homeplusaz.com",
-      "verifiedOn": "2026-09-05",
-      "verifiedAgainst": "homeplusaz.com/home-plus-dpa and homeplusaz.com/arizona-dpa-programs",
+      "verifiedOn": "2026-09-09",
+      "verifiedAgainst": "homeplusaz.com/home-plus-dpa, re-checked 2026-09-09",
       "serviceAreaAvailable": true,
       "facts": {
         "assistanceMax": "up to 4% of the loan amount",
@@ -30,26 +41,38 @@
         "statewide": true,
         "homebuyerEducationRequired": true
       },
-      "staleValues": ["36 months", "first 36 months", "three years", "3 years"]
+      "staleValues": [
+        "36 months",
+        "first 36 months",
+        "three years",
+        "3 years"
+      ]
     },
     "Home in Five": {
       "administrator": "Phoenix IDA and Maricopa County IDA",
       "officialUrl": "https://homein5advantage.com/",
       "citeDomain": "homein5advantage.com",
-      "verifiedOn": "2026-09-05",
-      "verifiedAgainst": "homein5advantage.com and phoenixida.com/home-in-five-advantage",
+      "verifiedOn": "2026-09-09",
+      "verifiedAgainst": "homein5advantage.com program description and lender materials",
       "serviceAreaAvailable": true,
       "facts": {
-        "assistanceMax": "up to 7% of the loan amount",
-        "assistanceBonus": "an additional 1% for qualifying military, veterans, K-12 teachers and first responders",
-        "incomeLimit": "$108,920",
+        "assistanceBase": "3% to 6% of the loan amount, depending on qualification",
+        "assistanceBonus": "an additional 1% for qualifying K-12 teachers, US military, veterans, first responders and income-qualified borrowers",
+        "assistanceBoost": "BOOST adds up to a further 0.5%, to a maximum of 1.5%, in low-income census tracts",
+        "incomeLimit": "$141,820",
         "minimumFico": 640,
-        "maxDti": "50%",
+        "maxDti": "45",
         "forgivable": true,
+        "forgivenessTerms": "interest-free forgivable second, offered on 3-year, 7-year or 30-year terms",
         "homebuyerEducationRequired": true,
         "coverage": "Maricopa County"
       },
-      "staleValues": []
+      "staleValues": [
+        "$108,920",
+        "up to 7% of the loan amount",
+        "DTI of 50%"
+      ],
+      "correctionNote": "Recorded on 2026-09-05 as up to 7% assistance, a $108,920 income limit and 50% DTI. All three were wrong. Re-verified 2026-09-09 against the program's own materials."
     },
     "Arizona Is Home": {
       "administrator": "Arizona Industrial Development Authority",
@@ -66,7 +89,8 @@
         "incomeLimit": "at or below 100% of Area Median Income",
         "coverage": "Apache, Cochise, Coconino, Gila, Graham, Greenlee, La Paz, Mohave, Navajo, Pinal, Santa Cruz, Yavapai and Yuma counties"
       },
-      "staleValues": []
+      "staleValues": [],
+      "confidence": "The administrator published updated AMI limits effective for reservations on or after 2026-07-01, and sources conflict on whether the second is forgivable. That date has passed. Re-verify from scratch before citing any figure. Not available in Maricopa County regardless, so it should not be recommended here."
     },
     "Pathway to Purchase": {
       "administrator": "Arizona Department of Housing",
