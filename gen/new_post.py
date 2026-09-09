@@ -38,6 +38,7 @@ SITE = ROOT / "site"
 BLOG = SITE / "blog"
 POSTS_DIR = ROOT / "content" / "posts"
 SERIES_FILE = ROOT / "content" / "series.json"
+AUTHOR_FILE = ROOT / "content" / "author.json"
 
 BASE_URL = "https://rickykhamis.com"
 PER_PAGE = 12
@@ -185,6 +186,45 @@ def find_template() -> Path:
 
 
 # ------------------------------------------------------------------- rendering
+def load_author() -> dict:
+    return json.loads(read(AUTHOR_FILE)) if AUTHOR_FILE.exists() else {}
+
+
+def render_author_block(author: dict, published: date, title: str) -> str:
+    """The E-E-A-T block. Every claim in it is checkable, which is the point:
+    an assistant deciding whether to name a source weighs verifiable credentials,
+    not how many times a page repeats its own name."""
+    if not author:
+        return ""
+
+    creds = ", ".join(author.get("credentials", []))
+    background = " · ".join(author.get("background", []))
+    states = ", ".join(author.get("licensedIn", []))
+    awards = author.get("awards") or []
+    award_line = (
+        "".join(f"<li>{escape_text(a)}</li>" for a in awards) if awards else ""
+    )
+    links = author.get("proofLinks", {})
+
+    return (
+        '<aside class="card" style="margin-top:40px;padding:20px 22px">'
+        f'<h3 style="margin-top:0">About {escape_text(author.get("name", ""))}</h3>'
+        f'<p style="margin-bottom:8px"><strong>{escape_text(author.get("jobTitle", ""))}</strong>'
+        f' · NMLS #{author.get("nmls", "")} · {escape_text(author.get("office", ""))}'
+        f' · <a href="tel:+14809999842">{escape_text(author.get("phone", ""))}</a></p>'
+        + (f'<p style="margin-bottom:8px">{escape_text(creds)}</p>' if creds else "")
+        + (f'<p style="margin-bottom:8px">{escape_text(background)}</p>' if background else "")
+        + (f'<p style="margin-bottom:8px">Licensed in {escape_text(states)}.</p>' if states else "")
+        + (f'<ul style="margin-bottom:8px">{award_line}</ul>' if award_line else "")
+        + '<p style="margin-bottom:0;font-size:.85rem;color:var(--muted)">Verify: '
+        f'<a href="{links.get("profile", "")}">EPiQ profile</a> · '
+        f'<a href="{links.get("branch", "")}">Scottsdale branch</a> · '
+        f'<a href="{links.get("nmls", "")}">NMLS Consumer Access</a>'
+        f'. Cite as: Khamis, R. ({published.year}). "{escape_text(title)}." '
+        'rickykhamis.com.</p></aside>'
+    )
+
+
 def render_card(post: dict) -> str:
     return (
         f'<div class="card post"><a href="{post["url"]}">'
@@ -216,6 +256,19 @@ def build_jsonld(document: str, meta: dict, published: date, image: str,
 
     graph = json.loads(match.group(2))
     url = f"{BASE_URL}/blog/{meta['slug']}/"
+
+    author = load_author()
+    for node in graph.get("@graph", []):
+        if node.get("@type") != "Person":
+            continue
+        if author.get("credentials"):
+            node["hasCredential"] = [
+                {"@type": "EducationalOccupationalCredential", "name": c}
+                for c in author["credentials"]
+            ]
+        if author.get("awards"):
+            node["award"] = author["awards"]
+        break
     for node in graph.get("@graph", []):
         if node.get("@type") == "BlogPosting":
             node.update(
@@ -309,12 +362,7 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
             'style="border-radius:18px;margin-bottom:32px;aspect-ratio:16/9;'
             'object-fit:cover;width:100%">'
         )
-    citation = (
-        '<p style="margin-top:32px;font-size:.85rem;color:var(--muted)">'
-        "Written by Ricky Khamis, President of EPiQ Lending, NMLS #173141, "
-        f"Scottsdale, Arizona. Cite as: Khamis, R. ({published.year}). "
-        f'"{title_text}." rickykhamis.com.</p>'
-    )
+    citation = render_author_block(load_author(), published, meta["title"])
 
     buttons = []
     if older:

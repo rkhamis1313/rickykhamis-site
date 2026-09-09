@@ -82,6 +82,35 @@ AIO_QUALIFIER = re.compile(
 )
 
 
+SUPERLATIVES = [
+    (re.compile(r"\btop producer\b", re.I),
+     "'Top Producer' needs the award and year that substantiates it"),
+    (re.compile(r"\btop\s*1\s*%", re.I),
+     "'top 1%' needs the ranking, issuer and year"),
+    (re.compile(r"#\s*1\s+(?:lender|broker|originator|mortgage)", re.I),
+     "a number one ranking about our own services needs its source and year"),
+]
+YEAR = re.compile(r"\b(?:19|20)\d{2}\b")
+SUBSTANTIATION_WINDOW = 160
+
+
+def check_superlatives(path: Path, text: str) -> tuple[int, int]:
+    """Superlatives about our own services are the one advertising claim a
+    licensed MLO should not make loosely. A named, dated, attributable award is
+    not a superlative, it is a fact, so look for a year near the claim in either
+    direction rather than only after it."""
+    errors = 0
+    for pattern, message in SUPERLATIVES:
+        for match in pattern.finditer(text):
+            lo = max(0, match.start() - SUBSTANTIATION_WINDOW)
+            hi = min(len(text), match.end() + SUBSTANTIATION_WINDOW)
+            if not YEAR.search(text[lo:hi]):
+                print(f"  ERROR {path.name}:{line_of(text, match.start())}  "
+                      f"{message}: {match.group(0)!r}")
+                errors += 1
+    return errors, 0
+
+
 def check_aio(path: Path, text: str) -> tuple[int, int]:
     """The All In One Loan is an offset product. Every pound of its benefit
     comes from how the borrower actually parks and spends their money, so a
@@ -226,6 +255,10 @@ def check(path: Path) -> tuple[int, int]:
     aio_errors, aio_warnings = check_aio(path, text)
     errors += aio_errors
     warnings += aio_warnings
+
+    sup_errors, sup_warnings = check_superlatives(path, text)
+    errors += sup_errors
+    warnings += sup_warnings
 
     return errors, warnings
 

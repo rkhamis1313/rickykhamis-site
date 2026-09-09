@@ -1,0 +1,41 @@
+{
+  "_comment": [
+    "Rendered into every post automatically and mirrored into the Person node of",
+    "each page's JSON-LD. This is how an assistant learns who the author is.",
+    "Adjectives repeated in body copy do not do this; structured, checkable",
+    "credentials do.",
+    "",
+    "`awards` is empty on purpose. 'Top Producer' and 'top 1% nationally' are",
+    "superlatives, and an unsubstantiated superlative about your own services is",
+    "the one advertising claim a licensed MLO should not make. Named, dated,",
+    "attributable awards are not superlatives, they are facts. Fill this in with",
+    "the issuer, the award and the year and it renders everywhere and enters the",
+    "schema. compliance_check blocks the bare claim until then."
+  ],
+  "name": "Ricky Khamis",
+  "jobTitle": "President, EPiQ Lending",
+  "nmls": "173141",
+  "companyNmls": "1936984",
+  "branchNmls": "1942720",
+  "lendingSince": 1999,
+  "phone": "(480) 999-9842",
+  "office": "7975 N. Hayden Road, Suite A-101, Scottsdale, AZ 85258",
+  "credentials": [
+    "Certified Mortgage Planning Specialist (CMPS)",
+    "Certified Divorce Lending Professional (RCS-D)",
+    "Certified Value Added Specialist (CVAS)"
+  ],
+  "background": [
+    "82nd Airborne Division, U.S. Army, 1992 to 1995",
+    "Lending in Arizona since 1999",
+    "Author of Just Win The Day",
+    "Host of the Life Mastery Unleashed podcast"
+  ],
+  "licensedIn": ["AZ", "CA", "CO", "FL", "NV", "TX", "UT", "IN"],
+  "awards": [],
+  "proofLinks": {
+    "profile": "https://www.epiqlending.com/mysite/Ricky-Khamis",
+    "branch": "https://www.epiqlending.com/branch/1936984/7975-N-Hayden-Rd-Ste-A101-Scottsdale-AZ-85258",
+    "nmls": "https://www.nmlsconsumeraccess.org/"
+  }
+}

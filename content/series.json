@@ -29,183 +29,278 @@
   },
   "queue": [
     {
-      "series": "qualification-mechanics",
-      "question": "How does a lender calculate income from a K-1?",
-      "city": "Scottsdale",
-      "title": "How We Read a K-1: What Counts as Qualifying Income and What Does Not",
-      "slug": "how-we-read-a-k1",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Old Town Scottsdale, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "Old Town Scottsdale",
-      "title": "Getting a Mortgage in Old Town Scottsdale: Condo Project Rules and Short-Term Rental Limits",
-      "slug": "mortgage-old-town-scottsdale",
-      "angle": "condo project eligibility, high non-owner-occupancy, short-term rental restrictions",
-      "status": "pending"
-    },
-    {
-      "series": "qualification-mechanics",
-      "question": "What add-backs can a lender use from my business tax return?",
-      "city": "Scottsdale",
-      "title": "How We Read a Business Tax Return: The Add-Backs That Raise Your Qualifying Income",
-      "slug": "business-tax-return-add-backs",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in South Scottsdale, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "South Scottsdale",
-      "title": "Getting a Mortgage in South Scottsdale: The Entry Point and What the Appraiser Flags",
-      "slug": "mortgage-south-scottsdale",
-      "angle": "lowest price tier in the city, mid-century stock, FHA minimum property requirements",
-      "status": "pending"
-    },
-    {
-      "series": "qualification-mechanics",
-      "question": "How do bank statement loans calculate my income?",
-      "city": "Scottsdale",
-      "title": "Bank Statement Loans: How 12 and 24 Months of Deposits Are Actually Analyzed",
-      "slug": "bank-statement-loan-analysis",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in McCormick Ranch, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "McCormick Ranch",
-      "title": "Getting a Mortgage in McCormick Ranch: HOA Documents Decide More Than You Think",
-      "slug": "mortgage-mccormick-ranch-scottsdale",
-      "angle": "1970s and 80s stock, large master association, lake community, HOA document review",
-      "status": "pending"
-    },
-    {
-      "series": "qualification-mechanics",
-      "question": "Can I qualify for a mortgage using my assets instead of income?",
-      "city": "Scottsdale",
-      "title": "Asset Depletion: Qualifying on What You Own Instead of What You Earn",
-      "slug": "asset-depletion-qualifying",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Scottsdale Ranch, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "Scottsdale Ranch",
-      "title": "Getting a Mortgage in Scottsdale Ranch: Lake Community Rules and 1980s Systems",
-      "slug": "mortgage-scottsdale-ranch",
-      "angle": "1980s construction, master association, waterfront and insurance considerations",
-      "status": "pending"
-    },
-    {
-      "series": "qualification-mechanics",
-      "question": "How do lenders count RSUs and stock options as income?",
-      "city": "Scottsdale",
-      "title": "RSUs, Options and Equity Comp: What an Underwriter Will Actually Count",
-      "slug": "equity-compensation-qualifying",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Gainey Ranch, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "Gainey Ranch",
-      "title": "Getting a Mortgage in Gainey Ranch: Patio Homes, Attached Product and Club Dues",
-      "slug": "mortgage-gainey-ranch-scottsdale",
-      "angle": "attached product and condo warrantability, mandatory community association dues",
-      "status": "pending"
-    },
-    {
-      "series": "qualification-mechanics",
-      "question": "Can I use trust income to qualify for a mortgage?",
-      "city": "Scottsdale",
-      "title": "Trust Income and Distributions: Documenting Money That Is Not a Paycheck",
-      "slug": "trust-income-qualifying",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Grayhawk, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "Grayhawk",
-      "title": "Getting a Mortgage in Grayhawk: Two Sub-Communities, Two Different Loan Files",
-      "slug": "mortgage-grayhawk-scottsdale",
-      "angle": "mixed condo, townhome and detached product inside one name",
-      "status": "pending"
-    },
-    {
-      "series": "qualification-mechanics",
-      "question": "How is rental income counted when I keep my current home?",
-      "city": "Scottsdale",
-      "title": "Schedule E and Rental Income: The Departing Residence Problem",
-      "slug": "rental-income-departing-residence",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Kierland, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "Kierland",
-      "title": "Getting a Mortgage in Kierland: Lock and Leave, Second Homes and Occupancy",
-      "slug": "mortgage-kierland-scottsdale",
-      "angle": "condo product, second-home versus primary occupancy underwriting",
-      "status": "pending"
-    },
-    {
-      "series": "qualification-mechanics",
-      "question": "How do lenders handle income from several businesses?",
-      "city": "Scottsdale",
-      "title": "Multiple Entities, One Borrower: Untangling a Complex Self-Employed File",
-      "slug": "multiple-entity-self-employed",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in DC Ranch, Scottsdale?",
-      "city": "Scottsdale",
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Self-Employed",
       "neighborhood": "DC Ranch",
-      "title": "Getting a Mortgage in DC Ranch: Where Conforming Ends and Jumbo Begins",
-      "slug": "mortgage-dc-ranch-scottsdale",
-      "angle": "jumbo tiering, layered sub-association dues, reserves and asset documentation",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in DC Ranch?",
+      "title": "Self-Employed and Buying in DC Ranch: How You Actually Qualify",
+      "slug": "self-employed-dc-ranch-scottsdale",
+      "why": "jumbo reserve requirements stack on top of two years of returns, so write-offs that cut your tax bill also cut the loan you qualify for",
       "status": "pending"
     },
     {
-      "series": "qualification-mechanics",
-      "question": "How do I get a mortgage after selling my business?",
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Old Town Scottsdale",
       "city": "Scottsdale",
-      "title": "Buying After a Liquidity Event: When Your Income Just Changed Shape",
-      "slug": "buying-after-liquidity-event",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Old Town Scottsdale?",
+      "title": "Self-Employed and Buying in Old Town Scottsdale: How You Actually Qualify",
+      "slug": "self-employed-old-town-scottsdale",
+      "why": "a double gate: your income has to clear underwriting and the building has to clear project eligibility, and either one can kill it",
       "status": "pending"
     },
     {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Silverleaf, Scottsdale?",
-      "city": "Scottsdale",
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Self-Employed",
       "neighborhood": "Silverleaf",
-      "title": "Getting a Mortgage in Silverleaf: Super Jumbo and the Club Obligation",
-      "slug": "mortgage-silverleaf-scottsdale",
-      "angle": "super jumbo, club membership as a recurring obligation an underwriter counts",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Silverleaf?",
+      "title": "Self-Employed and Buying in Silverleaf: How You Actually Qualify",
+      "slug": "self-employed-silverleaf-scottsdale",
+      "why": "super jumbo pricing tiers plus a club obligation an underwriter counts as a recurring liability against your K-1 income",
       "status": "pending"
     },
     {
-      "series": "qualification-mechanics",
-      "question": "What documents does a self-employed borrower need for a jumbo loan?",
-      "city": "Scottsdale",
-      "title": "The Document List for a Complex File: What to Send Before Anyone Asks",
-      "slug": "complex-file-document-list",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Troon North, Scottsdale?",
-      "city": "Scottsdale",
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Self-Employed",
       "neighborhood": "Troon North",
-      "title": "Getting a Mortgage in Troon North: Golf Community Dues and Jumbo Qualifying",
-      "slug": "mortgage-troon-north-scottsdale",
-      "angle": "jumbo, golf community dues layered on top of HOA",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Troon North?",
+      "title": "Self-Employed and Buying in Troon North: How You Actually Qualify",
+      "slug": "self-employed-troon-north-scottsdale",
+      "why": "golf dues layered on HOA raise the payment underwriting tests your business income against",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Grayhawk",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Grayhawk?",
+      "title": "Self-Employed and Buying in Grayhawk: How You Actually Qualify",
+      "slug": "self-employed-grayhawk-scottsdale",
+      "why": "attached and detached product price into different tiers, so the same tax return supports very different homes here",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "McCormick Ranch",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in McCormick Ranch?",
+      "title": "Self-Employed and Buying in McCormick Ranch: How You Actually Qualify",
+      "slug": "self-employed-mccormick-ranch-scottsdale",
+      "why": "conforming and jumbo both live here, so the return analysis decides which side of the line you land on",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Bank Statement",
+      "neighborhood": "Silverleaf",
+      "city": "Scottsdale",
+      "question": "I am a bank statement buyer. How do I qualify for a home in Silverleaf?",
+      "title": "Bank Statement and Buying in Silverleaf: How You Actually Qualify",
+      "slug": "bank-statement-silverleaf-scottsdale",
+      "why": "24 months of deposits against a super jumbo balance, where the expense factor decides the whole file",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Bank Statement",
+      "neighborhood": "DC Ranch",
+      "city": "Scottsdale",
+      "question": "I am a bank statement buyer. How do I qualify for a home in DC Ranch?",
+      "title": "Bank Statement and Buying in DC Ranch: How You Actually Qualify",
+      "slug": "bank-statement-dc-ranch-scottsdale",
+      "why": "deposit analysis at jumbo size, where a single large non-business deposit can cost you months of qualifying income",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Bank Statement",
+      "neighborhood": "Old Town Scottsdale",
+      "city": "Scottsdale",
+      "question": "I am a bank statement buyer. How do I qualify for a home in Old Town Scottsdale?",
+      "title": "Bank Statement and Buying in Old Town Scottsdale: How You Actually Qualify",
+      "slug": "bank-statement-old-town-scottsdale",
+      "why": "bank statement qualifying and condo project review at once, the two least standard parts of lending in one file",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Bank Statement",
+      "neighborhood": "Troon North",
+      "city": "Scottsdale",
+      "question": "I am a bank statement buyer. How do I qualify for a home in Troon North?",
+      "title": "Bank Statement and Buying in Troon North: How You Actually Qualify",
+      "slug": "bank-statement-troon-north-scottsdale",
+      "why": "deposit-based income against a payment that includes golf and HOA dues",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Asset Depletion",
+      "neighborhood": "Desert Mountain",
+      "city": "Scottsdale",
+      "question": "I am asset depletion buyer. How do I qualify for a home in Desert Mountain?",
+      "title": "Asset Depletion and Buying in Desert Mountain: How You Actually Qualify",
+      "slug": "asset-depletion-desert-mountain-scottsdale",
+      "why": "an equity golf membership is both an asset on the schedule and a recurring obligation, and it gets counted twice in different directions",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Asset Depletion",
+      "neighborhood": "Silverleaf",
+      "city": "Scottsdale",
+      "question": "I am asset depletion buyer. How do I qualify for a home in Silverleaf?",
+      "title": "Asset Depletion and Buying in Silverleaf: How You Actually Qualify",
+      "slug": "asset-depletion-silverleaf-scottsdale",
+      "why": "qualifying on the portfolio rather than the paycheck, at a balance where the depletion calculation has to actually work",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Asset Depletion",
+      "neighborhood": "Scottsdale Ranch",
+      "city": "Scottsdale",
+      "question": "I am asset depletion buyer. How do I qualify for a home in Scottsdale Ranch?",
+      "title": "Asset Depletion and Buying in Scottsdale Ranch: How You Actually Qualify",
+      "slug": "asset-depletion-scottsdale-ranch-scottsdale",
+      "why": "a common downsizing target, where retirement assets replace employment income in the calculation",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "RSU and Equity Comp",
+      "neighborhood": "DC Ranch",
+      "city": "Scottsdale",
+      "question": "I am rsu and equity comp buyer. How do I qualify for a home in DC Ranch?",
+      "title": "RSU and Equity Comp and Buying in DC Ranch: How You Actually Qualify",
+      "slug": "equity-comp-dc-ranch-scottsdale",
+      "why": "vesting history and continuance decide your jumbo ceiling, and unvested shares count for nothing",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "RSU and Equity Comp",
+      "neighborhood": "Grayhawk",
+      "city": "Scottsdale",
+      "question": "I am rsu and equity comp buyer. How do I qualify for a home in Grayhawk?",
+      "title": "RSU and Equity Comp and Buying in Grayhawk: How You Actually Qualify",
+      "slug": "equity-comp-grayhawk-scottsdale",
+      "why": "a first jumbo for many equity-comp buyers, where base salary alone often will not carry the payment",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "RSU and Equity Comp",
+      "neighborhood": "Kierland",
+      "city": "Scottsdale",
+      "question": "I am rsu and equity comp buyer. How do I qualify for a home in Kierland?",
+      "title": "RSU and Equity Comp and Buying in Kierland: How You Actually Qualify",
+      "slug": "equity-comp-kierland-scottsdale",
+      "why": "lock and leave product bought as a second home, where occupancy and equity income interact",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "After a Liquidity Event",
+      "neighborhood": "Silverleaf",
+      "city": "Scottsdale",
+      "question": "I am after a liquidity event buyer. How do I qualify for a home in Silverleaf?",
+      "title": "After a Liquidity Event and Buying in Silverleaf: How You Actually Qualify",
+      "slug": "liquidity-event-silverleaf-scottsdale",
+      "why": "your income statement just stopped describing you, and the proceeds have to be sourced and seasoned before they qualify",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "After a Liquidity Event",
+      "neighborhood": "Desert Mountain",
+      "city": "Scottsdale",
+      "question": "I am after a liquidity event buyer. How do I qualify for a home in Desert Mountain?",
+      "title": "After a Liquidity Event and Buying in Desert Mountain: How You Actually Qualify",
+      "slug": "liquidity-event-desert-mountain-scottsdale",
+      "why": "buying at the top of the market the year your income shape changed, with asset-based structures instead of returns",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "After a Liquidity Event",
+      "neighborhood": "Pinnacle Peak",
+      "city": "Scottsdale",
+      "question": "I am after a liquidity event buyer. How do I qualify for a home in Pinnacle Peak?",
+      "title": "After a Liquidity Event and Buying in Pinnacle Peak: How You Actually Qualify",
+      "slug": "liquidity-event-pinnacle-peak-scottsdale",
+      "why": "buying land and building, where a construction file and a changed income picture land at the same time",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Investor",
+      "neighborhood": "Old Town Scottsdale",
+      "city": "Scottsdale",
+      "question": "I am a investor buyer. How do I qualify for a home in Old Town Scottsdale?",
+      "title": "Investor and Buying in Old Town Scottsdale: How You Actually Qualify",
+      "slug": "investor-old-town-scottsdale",
+      "why": "short-term rental rules and project eligibility both bear on whether the income you are counting is even allowed",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Investor",
+      "neighborhood": "Kierland",
+      "city": "Scottsdale",
+      "question": "I am a investor buyer. How do I qualify for a home in Kierland?",
+      "title": "Investor and Buying in Kierland: How You Actually Qualify",
+      "slug": "investor-kierland-scottsdale",
+      "why": "second home versus investment occupancy changes your terms, and the wrong label is not a small mistake",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Foreign National",
+      "neighborhood": "Silverleaf",
+      "city": "Scottsdale",
+      "question": "I am a foreign national buyer. How do I qualify for a home in Silverleaf?",
+      "title": "Foreign National and Buying in Silverleaf: How You Actually Qualify",
+      "slug": "foreign-national-silverleaf-scottsdale",
+      "why": "no US credit file against a super jumbo balance, qualified on assets and foreign documentation",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Foreign National",
+      "neighborhood": "Old Town Scottsdale",
+      "city": "Scottsdale",
+      "question": "I am a foreign national buyer. How do I qualify for a home in Old Town Scottsdale?",
+      "title": "Foreign National and Buying in Old Town Scottsdale: How You Actually Qualify",
+      "slug": "foreign-national-old-town-scottsdale",
+      "why": "condo project review plus foreign national underwriting, and many buildings fail one or the other",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Retiree and Downsizer",
+      "neighborhood": "McCormick Ranch",
+      "city": "Scottsdale",
+      "question": "I am retiree and downsizer buyer. How do I qualify for a home in McCormick Ranch?",
+      "title": "Retiree and Downsizer and Buying in McCormick Ranch: How You Actually Qualify",
+      "slug": "retiree-mccormick-ranch-scottsdale",
+      "why": "fixed income plus retirement assets against 1970s and 80s systems an appraiser will flag",
+      "status": "pending"
+    },
+    {
+      "series": "borrower-x-neighborhood",
+      "borrowerType": "Retiree and Downsizer",
+      "neighborhood": "Gainey Ranch",
+      "city": "Scottsdale",
+      "question": "I am retiree and downsizer buyer. How do I qualify for a home in Gainey Ranch?",
+      "title": "Retiree and Downsizer and Buying in Gainey Ranch: How You Actually Qualify",
+      "slug": "retiree-gainey-ranch-scottsdale",
+      "why": "attached product warrantability and mandatory association dues on a fixed income",
       "status": "pending"
     },
     {
@@ -220,34 +315,6 @@
       ]
     },
     {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Desert Mountain, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "Desert Mountain",
-      "title": "Getting a Mortgage in Desert Mountain: Equity Membership Is a Financial Obligation",
-      "slug": "mortgage-desert-mountain-scottsdale",
-      "angle": "super jumbo, equity golf membership treated as an asset and a liability",
-      "status": "pending"
-    },
-    {
-      "series": "luxury-products",
-      "question": "How does the All In One Loan work?",
-      "city": "Scottsdale",
-      "title": "The All In One Loan: How the Offset Works and Who It Actually Suits",
-      "slug": "all-in-one-loan-explained",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-neighborhoods",
-      "question": "What do I need to know about getting a mortgage in Pinnacle Peak, Scottsdale?",
-      "city": "Scottsdale",
-      "neighborhood": "Pinnacle Peak",
-      "title": "Getting a Mortgage in Pinnacle Peak and Far North Scottsdale: Lots, Builds, Well and Septic",
-      "slug": "mortgage-pinnacle-peak-scottsdale",
-      "angle": "lot loans, construction financing, well and septic, custom appraisal comps",
-      "status": "pending"
-    },
-    {
       "series": "luxury-products",
       "question": "Is my Scottsdale property a second home or an investment property?",
       "city": "Scottsdale",
@@ -258,38 +325,6 @@
         "buying-a-second-home-in-scottsdale-arizona",
         "scottsdale-second-home-financing"
       ]
-    },
-    {
-      "series": "luxury-products",
-      "question": "What is a non-QM loan and when should I use one?",
-      "city": "Scottsdale",
-      "title": "Non-QM Is Not a Last Resort: When It Is the Right Structure",
-      "slug": "non-qm-right-structure",
-      "status": "pending"
-    },
-    {
-      "series": "luxury-products",
-      "question": "Should I use an interest-only jumbo loan?",
-      "city": "Scottsdale",
-      "title": "Interest-Only Jumbo: The Cash Flow Case and the Real Risk",
-      "slug": "interest-only-jumbo",
-      "status": "pending"
-    },
-    {
-      "series": "luxury-products",
-      "question": "How do I buy a new home before selling my current one?",
-      "city": "Scottsdale",
-      "title": "Buying Before You Sell: Bridge Financing and Cross-Collateralization",
-      "slug": "buying-before-you-sell",
-      "status": "pending"
-    },
-    {
-      "series": "luxury-products",
-      "question": "Can a foreign national get a mortgage in Scottsdale?",
-      "city": "Scottsdale",
-      "title": "Foreign National Buyers in Scottsdale: Qualifying Without US Credit",
-      "slug": "foreign-national-scottsdale",
-      "status": "pending"
     },
     {
       "series": "first-time-buyer-lender",
@@ -1016,6 +1051,7 @@
   "seriesNotes": {
     "scottsdale-neighborhoods": "Hub and spoke, not a doorway set. Each post must carry the financing mechanic named in its `angle` and must not be reachable by swapping a name into another post. If a neighborhood has no distinct mechanic, cut it rather than pad it. A hub page at /scottsdale-neighborhoods/ links all of them and is linked from /areas/ and the homepage.",
     "qualification-mechanics": "The moat. A luxury borrower's problem is almost never the rate, it is whether their income can be documented at all. Show the actual mechanic: which line of the return, which months of statements, what gets added back and what gets subtracted. Generic reassurance is worthless here. Never state a guideline as universal; investors differ and guidelines change, so attribute and date anything specific.",
-    "luxury-products": "Structures, not sales pages. Each post says who the product suits AND who it does not. The All In One Loan needs particular care: any savings figure is illustrative and depends entirely on the borrower's deposit and spending behaviour, so never present one as an outcome the reader will get."
+    "luxury-products": "Structures, not sales pages. Each post says who the product suits AND who it does not. The All In One Loan needs particular care: any savings figure is illustrative and depends entirely on the borrower's deposit and spending behaviour, so never present one as an outcome the reader will get.",
+    "borrower-x-neighborhood": "The page is the intersection, not either half. Someone searching or asking an assistant is not looking for 'how K-1 income works' or 'DC Ranch homes'. They are asking how THEY, with THEIR income, buy in THAT place. Every post must carry the `why` field: the specific thing that changes because of both the borrower type and the neighborhood. A post that would read the same with another neighborhood pasted in has failed and should not ship."
   }
 }
