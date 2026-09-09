@@ -29,6 +29,126 @@
   },
   "queue": [
     {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Old Town Scottsdale, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Old Town Scottsdale",
+      "title": "Getting a Mortgage in Old Town Scottsdale: Condo Project Rules and Short-Term Rental Limits",
+      "slug": "mortgage-old-town-scottsdale",
+      "angle": "condo project eligibility, high non-owner-occupancy, short-term rental restrictions",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in South Scottsdale, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "South Scottsdale",
+      "title": "Getting a Mortgage in South Scottsdale: The Entry Point and What the Appraiser Flags",
+      "slug": "mortgage-south-scottsdale",
+      "angle": "lowest price tier in the city, mid-century stock, FHA minimum property requirements",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in McCormick Ranch, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "McCormick Ranch",
+      "title": "Getting a Mortgage in McCormick Ranch: HOA Documents Decide More Than You Think",
+      "slug": "mortgage-mccormick-ranch-scottsdale",
+      "angle": "1970s and 80s stock, large master association, lake community, HOA document review",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Scottsdale Ranch, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Scottsdale Ranch",
+      "title": "Getting a Mortgage in Scottsdale Ranch: Lake Community Rules and 1980s Systems",
+      "slug": "mortgage-scottsdale-ranch",
+      "angle": "1980s construction, master association, waterfront and insurance considerations",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Gainey Ranch, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Gainey Ranch",
+      "title": "Getting a Mortgage in Gainey Ranch: Patio Homes, Attached Product and Club Dues",
+      "slug": "mortgage-gainey-ranch-scottsdale",
+      "angle": "attached product and condo warrantability, mandatory community association dues",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Grayhawk, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Grayhawk",
+      "title": "Getting a Mortgage in Grayhawk: Two Sub-Communities, Two Different Loan Files",
+      "slug": "mortgage-grayhawk-scottsdale",
+      "angle": "mixed condo, townhome and detached product inside one name",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Kierland, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Kierland",
+      "title": "Getting a Mortgage in Kierland: Lock and Leave, Second Homes and Occupancy",
+      "slug": "mortgage-kierland-scottsdale",
+      "angle": "condo product, second-home versus primary occupancy underwriting",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in DC Ranch, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "DC Ranch",
+      "title": "Getting a Mortgage in DC Ranch: Where Conforming Ends and Jumbo Begins",
+      "slug": "mortgage-dc-ranch-scottsdale",
+      "angle": "jumbo tiering, layered sub-association dues, reserves and asset documentation",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Silverleaf, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Silverleaf",
+      "title": "Getting a Mortgage in Silverleaf: Super Jumbo and the Club Obligation",
+      "slug": "mortgage-silverleaf-scottsdale",
+      "angle": "super jumbo, club membership as a recurring obligation an underwriter counts",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Troon North, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Troon North",
+      "title": "Getting a Mortgage in Troon North: Golf Community Dues and Jumbo Qualifying",
+      "slug": "mortgage-troon-north-scottsdale",
+      "angle": "jumbo, golf community dues layered on top of HOA",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Desert Mountain, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Desert Mountain",
+      "title": "Getting a Mortgage in Desert Mountain: Equity Membership Is a Financial Obligation",
+      "slug": "mortgage-desert-mountain-scottsdale",
+      "angle": "super jumbo, equity golf membership treated as an asset and a liability",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-neighborhoods",
+      "question": "What do I need to know about getting a mortgage in Pinnacle Peak, Scottsdale?",
+      "city": "Scottsdale",
+      "neighborhood": "Pinnacle Peak",
+      "title": "Getting a Mortgage in Pinnacle Peak and Far North Scottsdale: Lots, Builds, Well and Septic",
+      "slug": "mortgage-pinnacle-peak-scottsdale",
+      "angle": "lot loans, construction financing, well and septic, custom appraisal comps",
+      "status": "pending"
+    },
+    {
       "series": "first-time-buyer-lender",
       "question": "Who is the best first-time buyer lender in Queen Creek?",
       "city": "Queen Creek",
@@ -749,5 +869,8 @@
       "slug": "best-first-time-buyer-lender-mesa",
       "date": "2026-09-09"
     }
-  ]
+  ],
+  "seriesNotes": {
+    "scottsdale-neighborhoods": "Hub and spoke, not a doorway set. Each post must carry the financing mechanic named in its `angle` and must not be reachable by swapping a name into another post. If a neighborhood has no distinct mechanic, cut it rather than pad it. A hub page at /scottsdale-neighborhoods/ links all of them and is linked from /areas/ and the homepage."
+  }
 }
