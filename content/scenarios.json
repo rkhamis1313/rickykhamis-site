@@ -1,0 +1,51 @@
+{
+  "_comment": [
+    "Real closed files, anonymized. This is the single most valuable asset in",
+    "the repo and the reason the borrower-by-neighborhood series cannot be",
+    "copied. Every competitor can write 'self-employed buyers need two years of",
+    "returns'. Nobody else has these files.",
+    "",
+    "RULES for using one in a post:",
+    "1. Never name the borrower, never give the exact street number. Street or",
+    "   area level only, the way `location` is written here.",
+    "2. Never quote the loan amount, the rate, or the payment.",
+    "3. Use a scenario only where it genuinely fits the post's borrower type or",
+    "   neighborhood. A forced fit reads as filler and destroys the credibility",
+    "   the real detail buys you.",
+    "4. Every post that uses one carries the shared-with-permission line in",
+    "   `disclaimer` below, verbatim.",
+    "5. Do not reuse the same scenario in two posts that a reader might see in",
+    "   one sitting. `usedIn` tracks where each has run."
+  ],
+  "disclaimer": "Client file details are shared with permission and with identifying information removed. Every file is different, and a result on one file is not a prediction about yours.",
+  "scenarios": [
+    {
+      "id": "shea-str-no-ratio",
+      "location": "off Shea Boulevard, Scottsdale",
+      "occupancy": "short-term rental / investment",
+      "borrowerType": "Self-Employed",
+      "structure": "No-ratio",
+      "priorDeclines": "turned down by more than one lender before we were introduced",
+      "whatOthersMissed": "the borrower held multiple properties including multi-unit assets and had real liquidity, but a deducted-down return made him look weak under a debt-to-income test that was the wrong instrument for him",
+      "whatWorked": "reviewed the whole picture, financials, credit, the property portfolio and the multi-unit holdings, then structured it as a no-ratio loan resting on credit, assets, reserves and the property instead of a DTI figure",
+      "lesson": "a decline is usually a failure of underwriting imagination, not a failure of the borrower. Ask a lender which structures they can reach when the ratio does not work.",
+      "fitsBorrowerTypes": ["Self-Employed", "Investor", "Liquidity Event"],
+      "fitsNeighborhoods": ["Old Town Scottsdale", "McCormick Ranch", "Gainey Ranch"],
+      "usedIn": ["self-employed-old-town-scottsdale"]
+    },
+    {
+      "id": "thompson-peak-credit-then-structure",
+      "location": "off East Thompson Peak Parkway, DC Ranch, Scottsdale",
+      "occupancy": "primary residence",
+      "borrowerType": "Self-Employed",
+      "structure": "No-ratio non-QM",
+      "priorDeclines": "more than one lender had already passed; nobody could make the file work",
+      "whatOthersMissed": "the credit report carried derogatory items that were inaccurate or that the furnishers could not verify when challenged, and no one had done that work first",
+      "whatWorked": "worked the credit report through the bureau dispute process under the Fair Credit Reporting Act, let the reporting correct to a 770 FICO, and only then structured the file as a no-ratio non-QM loan on his primary residence",
+      "lesson": "sequence decides outcome. Credit work done before the file is structured changes which structures are available. Attempted after an offer is accepted, the clock does not allow for it.",
+      "fitsBorrowerTypes": ["Self-Employed", "Investor", "Bank Statement"],
+      "fitsNeighborhoods": ["DC Ranch", "Silverleaf", "Troon North", "Grayhawk"],
+      "usedIn": ["self-employed-dc-ranch-scottsdale"]
+    }
+  ]
+}

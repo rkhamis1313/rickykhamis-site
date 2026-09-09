@@ -17,7 +17,32 @@ markdown in `content/posts/` and rendered into the mirror by `gen/new_post.py`.
 | `gen/publish.py` | Gated publish: screen, render, verify, commit, push, confirm. |
 | `gen/review.py` | Monthly citation review driven by hand-checked results. |
 | `content/program-facts.json` | Verified DPA program terms and when they were checked. |
+| `content/author.json` | Ricky's credentials, awards and proof links. Renders into every post and into each page's Person schema. |
+| `content/scenarios.json` | Real closed files, anonymized. The moat. Read the rules at the top before using one. |
 | `scripts/mirror_site.py` | Re-mirrors the live site. See the warning below. |
+
+## The scenario bank
+
+`content/scenarios.json` holds real closed loan files, anonymized. Every
+competitor can write "self-employed buyers need two years of returns". Nobody
+else has these files, which is the entire reason the borrower by neighborhood
+series is defensible.
+
+Rules, which are also written into the file:
+
+- No borrower names. No exact street numbers. Street or area level only.
+- No loan amounts, no rates, no payments.
+- Use a scenario only where it genuinely fits the post's borrower type or
+  neighborhood. Check `fitsBorrowerTypes` and `fitsNeighborhoods`. A forced fit
+  reads as filler and destroys the credibility the real detail buys you.
+- Any post using one carries the file's `disclaimer` line verbatim.
+- Append the post's slug to that scenario's `usedIn`.
+- Never invent a client story. A fabricated file is the worst thing this system
+  could produce, and it would be indistinguishable from the real ones to a
+  reader. That is exactly why it must never happen.
+
+The bank runs down as the series publishes. When it is thin, ask Ricky for two
+more files rather than writing around it.
 
 ## Publishing
 
