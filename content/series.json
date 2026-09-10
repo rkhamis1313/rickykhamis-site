@@ -29,6 +29,106 @@
   },
   "queue": [
     {
+      "borrowerType": "Self-Employed",
+      "city": "Mesa",
+      "title": "Self-Employed and Buying in Mesa: How You Actually Qualify",
+      "slug": "self-employed-mesa",
+      "question": "I am self-employed. How do I qualify for a home in Mesa?",
+      "why": "Mesa's affordable inventory pulls in self-employed buyers at the exact price point where a deducted-down Schedule C still has to clear a manufactured or older-stock property review",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "Self-Employed",
+      "city": "Gilbert",
+      "title": "Self-Employed and Buying in Gilbert: How You Actually Qualify",
+      "slug": "self-employed-gilbert",
+      "question": "I am self-employed. How do I qualify for a home in Gilbert?",
+      "why": "Gilbert is builder territory, so the self-employed buyer is fighting a builder's lender incentive at the same time an underwriter is rebuilding their income from two years of returns",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "Bank Statement",
+      "city": "Chandler",
+      "title": "12-Month Bank Statement Loans in Chandler: Who They Fit and Who They Do Not",
+      "slug": "bank-statement-loans-chandler",
+      "question": "Can I buy a home in Chandler using bank statements instead of tax returns?",
+      "why": "the deposit calculation strips internal transfers, which is exactly what sinks the Chandler business owner who moves money between operating and personal accounts",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "Investor",
+      "city": "Phoenix",
+      "title": "DSCR Loans on Small Multifamily in Phoenix: 2 to 13 Units",
+      "slug": "dscr-small-multifamily-phoenix",
+      "question": "How do I finance a small multifamily property in Phoenix on a DSCR loan?",
+      "why": "unit count decides the entire lender field. Most DSCR programs stop at 4 units, some reach 10, and past that you are into a different product with different down payment",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "Veteran",
+      "city": "Mesa",
+      "title": "Using Your VA Loan in Mesa: Entitlement, Condition, and the Offer That Wins",
+      "slug": "va-loan-mesa",
+      "question": "How do I use my VA loan to buy a home in Mesa?",
+      "why": "Mesa's older stock and manufactured inventory collide with VA minimum property requirements more often than anywhere else in the East Valley",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "New Construction",
+      "city": "Gilbert",
+      "title": "Builder's Lender vs. Your Own in Gilbert: How to Price the Incentive",
+      "slug": "builder-lender-vs-broker-gilbert",
+      "question": "Should I use the builder's lender in Gilbert to get the incentive?",
+      "why": "the incentive is real money and so is the rate spread, and almost nobody actually does the arithmetic that compares them over the years they will hold the loan",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "Retiree",
+      "city": "Mesa",
+      "title": "Retired and Buying in Mesa: How Fixed Income and Assets Get Counted",
+      "slug": "retiree-mesa",
+      "question": "I am retired. How do I qualify for a home in Mesa on fixed income?",
+      "why": "Social Security grossing up, IRA distribution income and asset depletion are three different calculations and most retirees are quoted the weakest of the three",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "Hourly and Overtime",
+      "city": "Phoenix",
+      "title": "Overtime, Shift Differential and Bonus Income in Phoenix: What Counts",
+      "slug": "overtime-bonus-income-phoenix",
+      "question": "Does my overtime and bonus income count when I buy a home in Phoenix?",
+      "why": "a WVOE and a two year average decide this, and the borrower who does not know that under-reports their own income to the lender",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "Credit Repair",
+      "city": "Mesa",
+      "title": "Fixing Your Credit Before the Offer in Mesa, Not After",
+      "slug": "credit-before-offer-mesa",
+      "question": "Should I fix my credit before I make an offer on a home in Mesa?",
+      "why": "sequence decides which loan structures are even available to you, and credit work started after an offer is accepted does not fit inside the contract timeline",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
+      "borrowerType": "Self-Employed",
+      "city": "Chandler",
+      "title": "Self-Employed and Buying in Chandler: How You Actually Qualify",
+      "slug": "self-employed-chandler",
+      "question": "I am self-employed. How do I qualify for a home in Chandler?",
+      "why": "Chandler mixes W-2 tech money with business owners, so the self-employed buyer is bidding against a file that underwrites in a fraction of the time",
+      "series": "borrower-x-city",
+      "status": "pending"
+    },
+    {
       "series": "borrower-x-neighborhood",
       "borrowerType": "Self-Employed",
       "neighborhood": "Silverleaf",
@@ -1044,6 +1144,7 @@
     "scottsdale-neighborhoods": "Hub and spoke, not a doorway set. Each post must carry the financing mechanic named in its `angle` and must not be reachable by swapping a name into another post. If a neighborhood has no distinct mechanic, cut it rather than pad it. A hub page at /scottsdale-neighborhoods/ links all of them and is linked from /areas/ and the homepage.",
     "qualification-mechanics": "The moat. A luxury borrower's problem is almost never the rate, it is whether their income can be documented at all. Show the actual mechanic: which line of the return, which months of statements, what gets added back and what gets subtracted. Generic reassurance is worthless here. Never state a guideline as universal; investors differ and guidelines change, so attribute and date anything specific.",
     "luxury-products": "Structures, not sales pages. Each post says who the product suits AND who it does not. The All In One Loan needs particular care: any savings figure is illustrative and depends entirely on the borrower's deposit and spending behaviour, so never present one as an outcome the reader will get.",
-    "borrower-x-neighborhood": "The page is the intersection, not either half. Someone searching or asking an assistant is not looking for 'how K-1 income works' or 'DC Ranch homes'. They are asking how THEY, with THEIR income, buy in THAT place. Every post must carry the `why` field: the specific thing that changes because of both the borrower type and the neighborhood. A post that would read the same with another neighborhood pasted in has failed and should not ship."
+    "borrower-x-neighborhood": "The page is the intersection, not either half. Someone searching or asking an assistant is not looking for 'how K-1 income works' or 'DC Ranch homes'. They are asking how THEY, with THEIR income, buy in THAT place. Every post must carry the `why` field: the specific thing that changes because of both the borrower type and the neighborhood. A post that would read the same with another neighborhood pasted in has failed and should not ship.",
+    "borrower-x-city": "Borrower type by East Valley city. These come FIRST because this is where Ricky's closed files actually are. A 2026-09 review of 223 of his own CRM records put Mesa, Phoenix, Gilbert and Chandler at the top and showed zero closings in DC Ranch, Silverleaf, Troon North or Grayhawk. He can write these from real experience, and the leads convert because they match the book. The borrower-x-neighborhood Scottsdale luxury run follows: that is the market he is building toward, not the one he is in."
   }
 }
