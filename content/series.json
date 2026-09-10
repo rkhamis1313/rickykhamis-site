@@ -29,6 +29,402 @@
   },
   "queue": [
     {
+      "slug": "living-in-old-town-scottsdale-buyer-guide",
+      "title": "Buying in Old Town Scottsdale: Nightlife, Licensing, and What Lenders Actually Check",
+      "question": "What should I know before buying a home or condo in Old Town Scottsdale?",
+      "why": "the entertainment district is the draw and the complication. Noise, rental licensing, mixed-use buildings and commercial square footage caps all decide whether a unit is financeable",
+      "borrowerType": "All",
+      "neighborhood": "Old Town Scottsdale",
+      "series": "scottsdale-authority",
+      "city": "Scottsdale",
+      "status": "pending"
+    },
+    {
+      "slug": "scottsdale-hoa-club-dues-debt-to-income",
+      "title": "HOA Dues, Club Dues and Assessments: What Counts Against You in Scottsdale",
+      "question": "Do HOA and club dues count against my debt-to-income ratio in Scottsdale?",
+      "why": "Scottsdale buyers routinely carry a four figure monthly obligation stack before the mortgage payment, and most only learn how it is counted at underwriting",
+      "borrowerType": "All",
+      "neighborhood": "Scottsdale",
+      "series": "scottsdale-authority",
+      "city": "Scottsdale",
+      "status": "pending"
+    },
+    {
+      "slug": "scottsdale-jumbo-loan-guide",
+      "title": "Jumbo Loans in Scottsdale: Reserves, Appraisals, and Where Files Actually Die",
+      "question": "How do jumbo loans work in Scottsdale and what makes them fail?",
+      "why": "above the conforming limit the standard changes entirely: reserves after closing, second appraisals, and comp sets that get thin fast in the custom market",
+      "borrowerType": "All",
+      "neighborhood": "Scottsdale",
+      "series": "scottsdale-authority",
+      "city": "Scottsdale",
+      "status": "pending"
+    },
+    {
+      "slug": "scottsdale-second-home-vs-investment",
+      "title": "Second Home or Investment Property in Scottsdale? The Classification Decides Everything",
+      "question": "Is my Scottsdale property a second home or an investment property?",
+      "why": "occupancy classification changes down payment, pricing and whether rental income counts at all, and buyers near Kierland, Old Town and the golf communities get this wrong constantly",
+      "borrowerType": "Second Home",
+      "neighborhood": "Scottsdale",
+      "series": "scottsdale-authority",
+      "city": "Scottsdale",
+      "status": "pending"
+    },
+    {
+      "slug": "scottsdale-luxury-condo-project-approval",
+      "title": "Scottsdale Luxury Condo Financing: Why the Building Gets Approved Before You Do",
+      "question": "Why did my Scottsdale condo loan get denied when my credit is fine?",
+      "why": "owner-occupancy ratios, commercial square footage, reserves, litigation and condotel classification all fail projects, and the borrower never sees it coming",
+      "borrowerType": "All",
+      "neighborhood": "Scottsdale",
+      "series": "scottsdale-authority",
+      "city": "Scottsdale",
+      "status": "pending"
+    },
+    {
+      "slug": "moving-to-scottsdale-from-california",
+      "title": "Moving to Scottsdale from California: How Lenders Read an Out of State Buyer",
+      "question": "I am relocating to Scottsdale from California. How does that change my loan?",
+      "why": "departing residence treatment, relocation income, and whether the California home sells or rents are the three things that decide the Scottsdale approval",
+      "borrowerType": "Relocation",
+      "neighborhood": "Scottsdale",
+      "series": "scottsdale-authority",
+      "city": "Scottsdale",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Troon North",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Troon North?",
+      "title": "Self-Employed and Buying in Troon North, Scottsdale: How You Actually Qualify",
+      "slug": "self-employed-troon-north-scottsdale",
+      "why": "two championship courses and a club obligation an underwriter counts as recurring debt on top of a jumbo payment",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Silverleaf",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Silverleaf?",
+      "title": "Self-Employed and Buying in Silverleaf, Scottsdale: How You Actually Qualify",
+      "slug": "self-employed-silverleaf-scottsdale",
+      "why": "Silverleaf Club membership is an equity interest with an initiation deposit, and lenders treat the deposit and the dues very differently",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Bank Statement",
+      "neighborhood": "DC Ranch",
+      "city": "Scottsdale",
+      "question": "I am a bank statement buyer. How do I qualify for a home in DC Ranch?",
+      "title": "Bank Statement and Buying in DC Ranch, Scottsdale: How You Actually Qualify",
+      "slug": "bank-statement-dc-ranch-scottsdale",
+      "why": "the Country Club at DC Ranch sits inside a master-planned community with layered village and club obligations, all of which hit your ratio",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Asset Depletion",
+      "neighborhood": "Desert Mountain",
+      "city": "Scottsdale",
+      "question": "I am a asset depletion buyer. How do I qualify for a home in Desert Mountain?",
+      "title": "Asset Depletion and Buying in Desert Mountain, Scottsdale: How You Actually Qualify",
+      "slug": "asset-depletion-desert-mountain-scottsdale",
+      "why": "seven courses, a substantial membership, and buyers whose money is in assets rather than income",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Liquidity Event",
+      "neighborhood": "Estancia",
+      "city": "Scottsdale",
+      "question": "I am a liquidity event buyer. How do I qualify for a home in Estancia?",
+      "title": "Liquidity Event and Buying in Estancia, Scottsdale: How You Actually Qualify",
+      "slug": "liquidity-event-estancia-scottsdale",
+      "why": "a private club purchase priced where the file usually rests on a sale, an exit or a distribution rather than a paycheck",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Whisper Rock",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Whisper Rock?",
+      "title": "Self-Employed and Buying in Whisper Rock, Scottsdale: How You Actually Qualify",
+      "slug": "self-employed-whisper-rock-scottsdale",
+      "why": "an invitation-driven golf club where the membership question is settled before the loan question, and both need answering",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Asset Depletion",
+      "neighborhood": "Mirabel",
+      "city": "Scottsdale",
+      "question": "I am a asset depletion buyer. How do I qualify for a home in Mirabel?",
+      "title": "Asset Depletion and Buying in Mirabel, Scottsdale: How You Actually Qualify",
+      "slug": "asset-depletion-mirabel-scottsdale",
+      "why": "far north Scottsdale, thin comparable sales, and an appraisal that can decide the deal",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "RSU and Equity Comp",
+      "neighborhood": "Grayhawk",
+      "city": "Scottsdale",
+      "question": "I am a rsu and equity comp buyer. How do I qualify for a home in Grayhawk?",
+      "title": "RSU and Equity Comp and Buying in Grayhawk, Scottsdale: How You Actually Qualify",
+      "slug": "rsu-equity-comp-grayhawk-scottsdale",
+      "why": "Raptor and Talon draw tech and finance buyers whose income is half stock, and stock income has its own two-year rule",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Liquidity Event",
+      "neighborhood": "Desert Highlands",
+      "city": "Scottsdale",
+      "question": "I am a liquidity event buyer. How do I qualify for a home in Desert Highlands?",
+      "title": "Liquidity Event and Buying in Desert Highlands, Scottsdale: How You Actually Qualify",
+      "slug": "liquidity-event-desert-highlands-scottsdale",
+      "why": "one of the original Scottsdale golf communities, with a membership structure most lenders have never underwritten",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Retiree",
+      "neighborhood": "Terravita",
+      "city": "Scottsdale",
+      "question": "I am a retiree buyer. How do I qualify for a home in Terravita?",
+      "title": "Retiree and Buying in Terravita, Scottsdale: How You Actually Qualify",
+      "slug": "retiree-terravita-scottsdale",
+      "why": "a golf community that skews to buyers on distributions and assets rather than employment income",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "McCormick Ranch",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in McCormick Ranch?",
+      "title": "Self-Employed and Buying in McCormick Ranch, Scottsdale: How You Actually Qualify",
+      "slug": "self-employed-mccormick-ranch-scottsdale",
+      "why": "two courses and a price band that straddles the conforming limit, so the return analysis decides which side you land on",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Investor",
+      "neighborhood": "Gainey Ranch",
+      "city": "Scottsdale",
+      "question": "I am a investor buyer. How do I qualify for a home in Gainey Ranch?",
+      "title": "Investor and Buying in Gainey Ranch, Scottsdale: How You Actually Qualify",
+      "slug": "investor-gainey-ranch-scottsdale",
+      "why": "golf, a guard gate and a heavy second-home and rental mix, which changes both occupancy and project review",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Ancala",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Ancala?",
+      "title": "Self-Employed and Buying in Ancala, Scottsdale: How You Actually Qualify",
+      "slug": "self-employed-ancala-scottsdale",
+      "why": "east Scottsdale country club living where the HOA and club stack surprises buyers at underwriting",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Retiree",
+      "neighborhood": "Legend Trail",
+      "city": "Scottsdale",
+      "question": "I am a retiree buyer. How do I qualify for a home in Legend Trail?",
+      "title": "Retiree and Buying in Legend Trail, Scottsdale: How You Actually Qualify",
+      "slug": "retiree-legend-trail-scottsdale",
+      "why": "north Scottsdale golf at a price point where fixed income and asset qualifying both come into play",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Investor",
+      "neighborhood": "Scottsdale Country Club",
+      "city": "Scottsdale",
+      "question": "I am a investor buyer. How do I qualify for a home in Scottsdale Country Club?",
+      "title": "Investor and Buying in Scottsdale Country Club, Scottsdale: How You Actually Qualify",
+      "slug": "investor-scottsdale-country-club-scottsdale",
+      "why": "central Scottsdale golf with older stock and a strong rental market, so DSCR and occupancy both matter",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Foreign National",
+      "neighborhood": "Pinnacle Peak",
+      "city": "Scottsdale",
+      "question": "I am a foreign national buyer. How do I qualify for a home in Pinnacle Peak?",
+      "title": "Foreign National and Buying in Pinnacle Peak, Scottsdale: How You Actually Qualify",
+      "slug": "foreign-national-pinnacle-peak-scottsdale",
+      "why": "estate lots, international buyers, and a documentation path most lenders cannot run",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Investor",
+      "neighborhood": "Talking Stick",
+      "city": "Scottsdale",
+      "question": "I am a investor buyer. How do I qualify for a home in Talking Stick?",
+      "title": "Investor and Buying in Talking Stick, Scottsdale: How You Actually Qualify",
+      "slug": "investor-talking-stick-scottsdale",
+      "why": "golf beside the entertainment corridor, which is exactly where short-term rental income questions start",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Second Home",
+      "neighborhood": "Camelback Golf Club",
+      "city": "Scottsdale",
+      "question": "I am a second home buyer. How do I qualify for a home in Camelback Golf Club?",
+      "title": "Second Home and Buying in Camelback Golf Club, Scottsdale: How You Actually Qualify",
+      "slug": "second-home-camelback-golf-club-scottsdale",
+      "why": "a resort golf setting where the occupancy classification decides your down payment and your rate",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Troon Country Club",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Troon Country Club?",
+      "title": "Self-Employed and Buying in Troon Country Club, Scottsdale: How You Actually Qualify",
+      "slug": "self-employed-troon-country-club-scottsdale",
+      "why": "the original Troon, with an equity membership and a mature comp set that behaves differently than new construction",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-golf",
+      "borrowerType": "Liquidity Event",
+      "neighborhood": "Sereno Canyon",
+      "city": "Scottsdale",
+      "question": "I am a liquidity event buyer. How do I qualify for a home in Sereno Canyon?",
+      "title": "Liquidity Event and Buying in Sereno Canyon, Scottsdale: How You Actually Qualify",
+      "slug": "liquidity-event-sereno-canyon-scottsdale",
+      "why": "newer luxury inventory in north Scottsdale where thin comps and large loan amounts meet",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Investor",
+      "neighborhood": "Old Town Scottsdale",
+      "city": "Scottsdale",
+      "question": "I am a investor buyer. How do I qualify for a home in Old Town Scottsdale?",
+      "title": "Investor and Buying in Old Town Scottsdale: How You Actually Qualify",
+      "slug": "investor-old-town-scottsdale-scottsdale",
+      "why": "the short-term rental epicenter, where city licensing, the HOA rule and condo project review all have to line up",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Scottsdale Ranch",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Scottsdale Ranch?",
+      "title": "Self-Employed and Buying in Scottsdale Ranch: How You Actually Qualify",
+      "slug": "self-employed-scottsdale-ranch-scottsdale",
+      "why": "lake community with a wide price band and an HOA structure that catches buyers at the ratio",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "RSU and Equity Comp",
+      "neighborhood": "McDowell Mountain Ranch",
+      "city": "Scottsdale",
+      "question": "I am a rsu and equity comp buyer. How do I qualify for a home in McDowell Mountain Ranch?",
+      "title": "RSU and Equity Comp and Buying in McDowell Mountain Ranch: How You Actually Qualify",
+      "slug": "rsu-equity-comp-mcdowell-mountain-ranch-scottsdale",
+      "why": "a tech-heavy buyer pool where vesting schedules decide qualifying income",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Windgate Ranch",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Windgate Ranch?",
+      "title": "Self-Employed and Buying in Windgate Ranch: How You Actually Qualify",
+      "slug": "self-employed-windgate-ranch-scottsdale",
+      "why": "gated semi-custom inventory priced squarely in jumbo, where reserves stack on top of a deducted-down return",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Second Home",
+      "neighborhood": "Kierland",
+      "city": "Scottsdale",
+      "question": "I am a second home buyer. How do I qualify for a home in Kierland?",
+      "title": "Second Home and Buying in Kierland: How You Actually Qualify",
+      "slug": "second-home-kierland-scottsdale",
+      "why": "walkable luxury next to the Quarter and Commons, heavy on condos and second homes, so project review and occupancy both bite",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Investor",
+      "neighborhood": "Scottsdale Waterfront",
+      "city": "Scottsdale",
+      "question": "I am a investor buyer. How do I qualify for a home in Scottsdale Waterfront?",
+      "title": "Investor and Buying in Scottsdale Waterfront: How You Actually Qualify",
+      "slug": "investor-scottsdale-waterfront-scottsdale",
+      "why": "high-rise condo financing where the project fails or passes before you do",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Foreign National",
+      "neighborhood": "Optima Kierland",
+      "city": "Scottsdale",
+      "question": "I am a foreign national buyer. How do I qualify for a home in Optima Kierland?",
+      "title": "Foreign National and Buying in Optima Kierland: How You Actually Qualify",
+      "slug": "foreign-national-optima-kierland-scottsdale",
+      "why": "a high-rise where project eligibility, investor concentration and international buyers all intersect",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Self-Employed",
+      "neighborhood": "Arcadia",
+      "city": "Scottsdale",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Arcadia?",
+      "title": "Self-Employed and Buying in Arcadia: How You Actually Qualify",
+      "slug": "self-employed-arcadia-scottsdale",
+      "why": "the Scottsdale and Phoenix border, older custom stock, renovation money and appraisals that reward specificity",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Asset Depletion",
+      "neighborhood": "North Scottsdale",
+      "city": "Scottsdale",
+      "question": "I am a asset depletion buyer. How do I qualify for a home in North Scottsdale?",
+      "title": "Asset Depletion and Buying in North Scottsdale: How You Actually Qualify",
+      "slug": "asset-depletion-north-scottsdale-scottsdale",
+      "why": "the broad north corridor where large lots, well water and septic can all become underwriting conditions",
+      "status": "pending"
+    },
+    {
+      "series": "scottsdale-subdivision",
+      "borrowerType": "Retiree",
+      "neighborhood": "Bellasera",
+      "city": "Scottsdale",
+      "question": "I am a retiree buyer. How do I qualify for a home in Bellasera?",
+      "title": "Retiree and Buying in Bellasera: How You Actually Qualify",
+      "slug": "retiree-bellasera-scottsdale",
+      "why": "far north gated living at a price point where distributions and assets carry the file",
+      "status": "pending"
+    },
+    {
       "borrowerType": "Bank Statement",
       "city": "Chandler",
       "title": "12-Month Bank Statement Loans in Chandler: Who They Fit and Who They Do Not",
@@ -111,45 +507,12 @@
     {
       "series": "borrower-x-neighborhood",
       "borrowerType": "Self-Employed",
-      "neighborhood": "Silverleaf",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Silverleaf?",
-      "title": "Self-Employed and Buying in Silverleaf: How You Actually Qualify",
-      "slug": "self-employed-silverleaf-scottsdale",
-      "why": "super jumbo pricing tiers plus a club obligation an underwriter counts as a recurring liability against your K-1 income",
-      "status": "pending"
-    },
-    {
-      "series": "borrower-x-neighborhood",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "Troon North",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Troon North?",
-      "title": "Self-Employed and Buying in Troon North: How You Actually Qualify",
-      "slug": "self-employed-troon-north-scottsdale",
-      "why": "golf dues layered on HOA raise the payment underwriting tests your business income against",
-      "status": "pending"
-    },
-    {
-      "series": "borrower-x-neighborhood",
-      "borrowerType": "Self-Employed",
       "neighborhood": "Grayhawk",
       "city": "Scottsdale",
       "question": "I am a self-employed buyer. How do I qualify for a home in Grayhawk?",
       "title": "Self-Employed and Buying in Grayhawk: How You Actually Qualify",
       "slug": "self-employed-grayhawk-scottsdale",
       "why": "attached and detached product price into different tiers, so the same tax return supports very different homes here",
-      "status": "pending"
-    },
-    {
-      "series": "borrower-x-neighborhood",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "McCormick Ranch",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in McCormick Ranch?",
-      "title": "Self-Employed and Buying in McCormick Ranch: How You Actually Qualify",
-      "slug": "self-employed-mccormick-ranch-scottsdale",
-      "why": "conforming and jumbo both live here, so the return analysis decides which side of the line you land on",
       "status": "pending"
     },
     {
@@ -161,17 +524,6 @@
       "title": "Bank Statement and Buying in Silverleaf: How You Actually Qualify",
       "slug": "bank-statement-silverleaf-scottsdale",
       "why": "24 months of deposits against a super jumbo balance, where the expense factor decides the whole file",
-      "status": "pending"
-    },
-    {
-      "series": "borrower-x-neighborhood",
-      "borrowerType": "Bank Statement",
-      "neighborhood": "DC Ranch",
-      "city": "Scottsdale",
-      "question": "I am a bank statement buyer. How do I qualify for a home in DC Ranch?",
-      "title": "Bank Statement and Buying in DC Ranch: How You Actually Qualify",
-      "slug": "bank-statement-dc-ranch-scottsdale",
-      "why": "deposit analysis at jumbo size, where a single large non-business deposit can cost you months of qualifying income",
       "status": "pending"
     },
     {
@@ -194,17 +546,6 @@
       "title": "Bank Statement and Buying in Troon North: How You Actually Qualify",
       "slug": "bank-statement-troon-north-scottsdale",
       "why": "deposit-based income against a payment that includes golf and HOA dues",
-      "status": "pending"
-    },
-    {
-      "series": "borrower-x-neighborhood",
-      "borrowerType": "Asset Depletion",
-      "neighborhood": "Desert Mountain",
-      "city": "Scottsdale",
-      "question": "I am asset depletion buyer. How do I qualify for a home in Desert Mountain?",
-      "title": "Asset Depletion and Buying in Desert Mountain: How You Actually Qualify",
-      "slug": "asset-depletion-desert-mountain-scottsdale",
-      "why": "an equity golf membership is both an asset on the schedule and a recurring obligation, and it gets counted twice in different directions",
       "status": "pending"
     },
     {
@@ -1132,6 +1473,20 @@
       "question": "I am self-employed. How do I qualify for a home in Gilbert?",
       "slug": "self-employed-gilbert",
       "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-authority",
+      "question": "Can I use short-term rental income to qualify for a Scottsdale property?",
+      "slug": "scottsdale-short-term-rental-income-loan",
+      "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-authority",
+      "question": "Does a golf club membership affect my mortgage approval in Scottsdale?",
+      "slug": "golf-club-membership-mortgage-scottsdale",
+      "date": "2026-09-10"
     }
   ],
   "seriesNotes": {
@@ -1139,6 +1494,9 @@
     "qualification-mechanics": "The moat. A luxury borrower's problem is almost never the rate, it is whether their income can be documented at all. Show the actual mechanic: which line of the return, which months of statements, what gets added back and what gets subtracted. Generic reassurance is worthless here. Never state a guideline as universal; investors differ and guidelines change, so attribute and date anything specific.",
     "luxury-products": "Structures, not sales pages. Each post says who the product suits AND who it does not. The All In One Loan needs particular care: any savings figure is illustrative and depends entirely on the borrower's deposit and spending behaviour, so never present one as an outcome the reader will get.",
     "borrower-x-neighborhood": "The page is the intersection, not either half. Someone searching or asking an assistant is not looking for 'how K-1 income works' or 'DC Ranch homes'. They are asking how THEY, with THEIR income, buy in THAT place. Every post must carry the `why` field: the specific thing that changes because of both the borrower type and the neighborhood. A post that would read the same with another neighborhood pasted in has failed and should not ship.",
-    "borrower-x-city": "Borrower type by East Valley city. These come FIRST because this is where Ricky's closed files actually are. A 2026-09 review of 223 of his own CRM records put Mesa, Phoenix, Gilbert and Chandler at the top and showed zero closings in DC Ranch, Silverleaf, Troon North or Grayhawk. He can write these from real experience, and the leads convert because they match the book. The borrower-x-neighborhood Scottsdale luxury run follows: that is the market he is building toward, not the one he is in."
+    "borrower-x-city": "Borrower type by East Valley city. These come FIRST because this is where Ricky's closed files actually are. A 2026-09 review of 223 of his own CRM records put Mesa, Phoenix, Gilbert and Chandler at the top and showed zero closings in DC Ranch, Silverleaf, Troon North or Grayhawk. He can write these from real experience, and the leads convert because they match the book. The borrower-x-neighborhood Scottsdale luxury run follows: that is the market he is building toward, not the one he is in.",
+    "scottsdale-authority": "The pages that make Ricky the Scottsdale lender rather than a lender who works in Scottsdale. Golf club memberships, HOA and club dues against DTI, short-term rental income around spring training and the Open, Old Town licensing, jumbo reserves, second home versus investment, condo project review, and the California relocation file. Every one is a question a Scottsdale buyer actually asks and almost nobody answers properly. These run first because they are the pages the neighborhood posts link back to.",
+    "scottsdale-golf": "Golf community by borrower type. This is where Scottsdale luxury lending actually lives. The club obligation is the thread: an equity membership, an initiation deposit and mandatory monthly dues are three separate underwriting questions, and they land on top of a jumbo payment and an HOA. Name the courses. Name the club. Generic luxury copy is worthless here.",
+    "scottsdale-subdivision": "Scottsdale subdivisions and districts that are not golf-first: Old Town, the Waterfront and Optima high rises, Kierland, Arcadia, Scottsdale Ranch, McDowell Mountain Ranch, Windgate, north Scottsdale. Condo project review and short-term rental rules do most of the work in this group."
   }
 }
