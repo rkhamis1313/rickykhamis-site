@@ -29,26 +29,6 @@
   },
   "queue": [
     {
-      "borrowerType": "Self-Employed",
-      "city": "Mesa",
-      "title": "Self-Employed and Buying in Mesa: How You Actually Qualify",
-      "slug": "self-employed-mesa",
-      "question": "I am self-employed. How do I qualify for a home in Mesa?",
-      "why": "Mesa's affordable inventory pulls in self-employed buyers at the exact price point where a deducted-down Schedule C still has to clear a manufactured or older-stock property review",
-      "series": "borrower-x-city",
-      "status": "pending"
-    },
-    {
-      "borrowerType": "Self-Employed",
-      "city": "Gilbert",
-      "title": "Self-Employed and Buying in Gilbert: How You Actually Qualify",
-      "slug": "self-employed-gilbert",
-      "question": "I am self-employed. How do I qualify for a home in Gilbert?",
-      "why": "Gilbert is builder territory, so the self-employed buyer is fighting a builder's lender incentive at the same time an underwriter is rebuilding their income from two years of returns",
-      "series": "borrower-x-city",
-      "status": "pending"
-    },
-    {
       "borrowerType": "Bank Statement",
       "city": "Chandler",
       "title": "12-Month Bank Statement Loans in Chandler: Who They Fit and Who They Do Not",
@@ -1138,6 +1118,20 @@
       "question": "I am a self-employed buyer. How do I qualify for a home in DC Ranch?",
       "slug": "self-employed-dc-ranch-scottsdale",
       "date": "2026-09-09"
+    },
+    {
+      "city": "Mesa",
+      "series": "borrower-x-city",
+      "question": "I am self-employed. How do I qualify for a home in Mesa?",
+      "slug": "self-employed-mesa",
+      "date": "2026-09-10"
+    },
+    {
+      "city": "Gilbert",
+      "series": "borrower-x-city",
+      "question": "I am self-employed. How do I qualify for a home in Gilbert?",
+      "slug": "self-employed-gilbert",
+      "date": "2026-09-10"
     }
   ],
   "seriesNotes": {
