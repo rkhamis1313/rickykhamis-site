@@ -29,72 +29,6 @@
   },
   "queue": [
     {
-      "slug": "living-in-old-town-scottsdale-buyer-guide",
-      "title": "Buying in Old Town Scottsdale: Nightlife, Licensing, and What Lenders Actually Check",
-      "question": "What should I know before buying a home or condo in Old Town Scottsdale?",
-      "why": "the entertainment district is the draw and the complication. Noise, rental licensing, mixed-use buildings and commercial square footage caps all decide whether a unit is financeable",
-      "borrowerType": "All",
-      "neighborhood": "Old Town Scottsdale",
-      "series": "scottsdale-authority",
-      "city": "Scottsdale",
-      "status": "pending"
-    },
-    {
-      "slug": "scottsdale-hoa-club-dues-debt-to-income",
-      "title": "HOA Dues, Club Dues and Assessments: What Counts Against You in Scottsdale",
-      "question": "Do HOA and club dues count against my debt-to-income ratio in Scottsdale?",
-      "why": "Scottsdale buyers routinely carry a four figure monthly obligation stack before the mortgage payment, and most only learn how it is counted at underwriting",
-      "borrowerType": "All",
-      "neighborhood": "Scottsdale",
-      "series": "scottsdale-authority",
-      "city": "Scottsdale",
-      "status": "pending"
-    },
-    {
-      "slug": "scottsdale-jumbo-loan-guide",
-      "title": "Jumbo Loans in Scottsdale: Reserves, Appraisals, and Where Files Actually Die",
-      "question": "How do jumbo loans work in Scottsdale and what makes them fail?",
-      "why": "above the conforming limit the standard changes entirely: reserves after closing, second appraisals, and comp sets that get thin fast in the custom market",
-      "borrowerType": "All",
-      "neighborhood": "Scottsdale",
-      "series": "scottsdale-authority",
-      "city": "Scottsdale",
-      "status": "pending"
-    },
-    {
-      "slug": "scottsdale-second-home-vs-investment",
-      "title": "Second Home or Investment Property in Scottsdale? The Classification Decides Everything",
-      "question": "Is my Scottsdale property a second home or an investment property?",
-      "why": "occupancy classification changes down payment, pricing and whether rental income counts at all, and buyers near Kierland, Old Town and the golf communities get this wrong constantly",
-      "borrowerType": "Second Home",
-      "neighborhood": "Scottsdale",
-      "series": "scottsdale-authority",
-      "city": "Scottsdale",
-      "status": "pending"
-    },
-    {
-      "slug": "scottsdale-luxury-condo-project-approval",
-      "title": "Scottsdale Luxury Condo Financing: Why the Building Gets Approved Before You Do",
-      "question": "Why did my Scottsdale condo loan get denied when my credit is fine?",
-      "why": "owner-occupancy ratios, commercial square footage, reserves, litigation and condotel classification all fail projects, and the borrower never sees it coming",
-      "borrowerType": "All",
-      "neighborhood": "Scottsdale",
-      "series": "scottsdale-authority",
-      "city": "Scottsdale",
-      "status": "pending"
-    },
-    {
-      "slug": "moving-to-scottsdale-from-california",
-      "title": "Moving to Scottsdale from California: How Lenders Read an Out of State Buyer",
-      "question": "I am relocating to Scottsdale from California. How does that change my loan?",
-      "why": "departing residence treatment, relocation income, and whether the California home sells or rents are the three things that decide the Scottsdale approval",
-      "borrowerType": "Relocation",
-      "neighborhood": "Scottsdale",
-      "series": "scottsdale-authority",
-      "city": "Scottsdale",
-      "status": "pending"
-    },
-    {
       "series": "scottsdale-golf",
       "borrowerType": "Self-Employed",
       "neighborhood": "Troon North",
@@ -1486,6 +1420,48 @@
       "series": "scottsdale-authority",
       "question": "Does a golf club membership affect my mortgage approval in Scottsdale?",
       "slug": "golf-club-membership-mortgage-scottsdale",
+      "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-authority",
+      "question": "Is my Scottsdale property a second home or an investment property?",
+      "slug": "scottsdale-second-home-vs-investment",
+      "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-authority",
+      "question": "Why did my Scottsdale condo loan get denied when my credit is fine?",
+      "slug": "scottsdale-luxury-condo-project-approval",
+      "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-authority",
+      "question": "How do jumbo loans work in Scottsdale and what makes them fail?",
+      "slug": "scottsdale-jumbo-loan-guide",
+      "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-authority",
+      "question": "Do HOA and club dues count against my debt-to-income ratio in Scottsdale?",
+      "slug": "scottsdale-hoa-club-dues-debt-to-income",
+      "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-authority",
+      "question": "I am relocating to Scottsdale from California. How does that change my loan?",
+      "slug": "moving-to-scottsdale-from-california",
+      "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-authority",
+      "question": "What should I know before buying a home or condo in Old Town Scottsdale?",
+      "slug": "living-in-old-town-scottsdale-buyer-guide",
       "date": "2026-09-10"
     }
   ],
