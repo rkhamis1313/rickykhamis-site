@@ -30,28 +30,6 @@
   "queue": [
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "Troon North",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Troon North?",
-      "title": "Self-Employed and Buying in Troon North, Scottsdale: How You Actually Qualify",
-      "slug": "self-employed-troon-north-scottsdale",
-      "why": "two championship courses and a club obligation an underwriter counts as recurring debt on top of a jumbo payment",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "Silverleaf",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Silverleaf?",
-      "title": "Self-Employed and Buying in Silverleaf, Scottsdale: How You Actually Qualify",
-      "slug": "self-employed-silverleaf-scottsdale",
-      "why": "Silverleaf Club membership is an equity interest with an initiation deposit, and lenders treat the deposit and the dues very differently",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Bank Statement",
       "neighborhood": "DC Ranch",
       "city": "Scottsdale",
@@ -1463,6 +1441,20 @@
       "question": "What should I know before buying a home or condo in Old Town Scottsdale?",
       "slug": "living-in-old-town-scottsdale-buyer-guide",
       "date": "2026-09-10"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Troon North?",
+      "slug": "self-employed-troon-north-scottsdale",
+      "date": "2026-09-11"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Silverleaf?",
+      "slug": "self-employed-silverleaf-scottsdale",
+      "date": "2026-09-11"
     }
   ],
   "seriesNotes": {
