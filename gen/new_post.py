@@ -294,6 +294,39 @@ def build_jsonld(document: str, meta: dict, published: date, image: str,
     return document[: match.start()] + rebuilt + document[match.end() :]
 
 
+
+HEADERS_DIR = ROOT / "site" / "assets" / "images" / "headers"
+
+
+def attach_header(source: Path, meta: dict) -> str | None:
+    """Render this post's header image and return its site-relative path.
+
+    Kept optional on purpose. Header generation needs Pillow, and a missing
+    image must never be the reason a post fails to publish, so a failure here
+    falls back to the gradient thumbnail rather than stopping the run.
+    """
+    slug = meta.get("slug")
+    if not slug:
+        return None
+    dest = HEADERS_DIR / f"{slug}.jpg"
+    if not dest.exists():
+        try:
+            import make_header
+        except ImportError:
+            try:
+                sys.path.insert(0, str(Path(__file__).resolve().parent))
+                import make_header
+            except ImportError:
+                log(f"  ! no header for {slug}: Pillow not available")
+                return None
+        try:
+            make_header.render(source)
+        except Exception as exc:  # noqa: BLE001 - never block a publish on art
+            log(f"  ! no header for {slug}: {exc}")
+            return None
+    return f"/assets/images/headers/{slug}.jpg" if dest.exists() else None
+
+
 def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
                 older: dict | None, related: list[dict]) -> str:
     published = datetime.strptime(meta["date"], "%Y-%m-%d").date()
@@ -342,6 +375,21 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
     document = re.sub(
         r'<meta property="og:url" content="[^"]*">',
         f'<meta property="og:url" content="{url}">',
+        document,
+        count=1,
+    )
+    # Every post used to inherit the template's single default social image, so
+    # seventy different articles shared one preview card. Point each at its own
+    # generated header. Social scrapers need an absolute URL here.
+    document = re.sub(
+        r'<meta property="og:image" content="[^"]*">',
+        f'<meta property="og:image" content="{BASE_URL}{image}">',
+        document,
+        count=1,
+    )
+    document = re.sub(
+        r'<meta name="twitter:image" content="[^"]*">',
+        f'<meta name="twitter:image" content="{BASE_URL}{image}">',
         document,
         count=1,
     )
@@ -735,6 +783,14 @@ def publish(paths: list[Path], force: bool = False, due_only: bool = False) -> N
             log(f"  = {meta['slug']} already published; skipping "
                 "(use --force to re-render after an edit)")
             continue
+
+        # Give the post its own header image unless the front matter names one.
+        # Generated from the post's own fields, so it is specific to the place
+        # and the borrower rather than the one flat gradient every post shared.
+        if not meta.get("image"):
+            generated = attach_header(source, meta)
+            if generated:
+                meta["image"] = generated
 
         body_html = mdlite.convert(body)
         published_on = datetime.strptime(meta["date"], "%Y-%m-%d").date()

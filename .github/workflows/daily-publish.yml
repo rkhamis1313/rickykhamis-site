@@ -41,6 +41,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Pillow for header images
+        run: pip install --quiet Pillow
+
       - name: Screen every post for compliance
         run: python gen/compliance_check.py content/posts/*.md
 

@@ -251,3 +251,27 @@ status `review` do not move.
 - **Answer the question in the first two sentences.** Assistants quote the
   passage that answers the question. If the answer is the payoff at the bottom,
   there is nothing for them to quote.
+
+## Header images
+
+Every post gets its own generated header at `site/assets/images/headers/<slug>.jpg`,
+1200x630 so it doubles as the Open Graph card. `gen/new_post.py` makes one
+automatically at publish time; there is nothing to do by hand.
+
+They are generated rather than photographed on purpose. A photograph of a golf
+course we do not have rights to is a liability, and a generic stock desert is
+worse than a mark that states what the page is. Each header takes its headline
+from the post's `neighborhood` or `city`, its eyebrow from `borrowerType`, and
+its ridgeline silhouette from a hash of the slug, so the set is visibly varied
+but never off-brand and never random between runs.
+
+Before this existed, every post shared one flat gradient thumbnail and one
+default `og:image`, so seventy different articles produced the same preview
+card when shared. Each post now points at its own.
+
+    python gen/make_header.py --all              # every post with a markdown source
+    python gen/make_header.py --all --force      # redraw after a design change
+    python gen/make_header.py --page site/blog/<slug>/index.html   # mirrored posts
+
+Generation needs Pillow. It is installed in the publish workflow, and a failure
+falls back to the old gradient rather than blocking a post from going out.
