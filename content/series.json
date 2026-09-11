@@ -52,17 +52,6 @@
     },
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Liquidity Event",
-      "neighborhood": "Estancia",
-      "city": "Scottsdale",
-      "question": "I am a liquidity event buyer. How do I qualify for a home in Estancia?",
-      "title": "Liquidity Event and Buying in Estancia, Scottsdale: How You Actually Qualify",
-      "slug": "liquidity-event-estancia-scottsdale",
-      "why": "a private club purchase priced where the file usually rests on a sale, an exit or a distribution rather than a paycheck",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Self-Employed",
       "neighborhood": "Whisper Rock",
       "city": "Scottsdale",
@@ -107,17 +96,6 @@
     },
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Retiree",
-      "neighborhood": "Terravita",
-      "city": "Scottsdale",
-      "question": "I am a retiree buyer. How do I qualify for a home in Terravita?",
-      "title": "Retiree and Buying in Terravita, Scottsdale: How You Actually Qualify",
-      "slug": "retiree-terravita-scottsdale",
-      "why": "a golf community that skews to buyers on distributions and assets rather than employment income",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Self-Employed",
       "neighborhood": "McCormick Ranch",
       "city": "Scottsdale",
@@ -125,17 +103,6 @@
       "title": "Self-Employed and Buying in McCormick Ranch, Scottsdale: How You Actually Qualify",
       "slug": "self-employed-mccormick-ranch-scottsdale",
       "why": "two courses and a price band that straddles the conforming limit, so the return analysis decides which side you land on",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
-      "borrowerType": "Investor",
-      "neighborhood": "Gainey Ranch",
-      "city": "Scottsdale",
-      "question": "I am a investor buyer. How do I qualify for a home in Gainey Ranch?",
-      "title": "Investor and Buying in Gainey Ranch, Scottsdale: How You Actually Qualify",
-      "slug": "investor-gainey-ranch-scottsdale",
-      "why": "golf, a guard gate and a heavy second-home and rental mix, which changes both occupancy and project review",
       "status": "pending"
     },
     {
@@ -1454,6 +1421,34 @@
       "series": "scottsdale-golf",
       "question": "I am a self-employed buyer. How do I qualify for a home in Silverleaf?",
       "slug": "self-employed-silverleaf-scottsdale",
+      "date": "2026-09-11"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "slug": "rsu-and-equity-comp-grayhawk-scottsdale",
+      "date": "2026-09-11",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a retiree buyer. How do I qualify for a home in Terravita?",
+      "slug": "retiree-terravita-scottsdale",
+      "date": "2026-09-11"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a liquidity event buyer. How do I qualify for a home in Estancia?",
+      "slug": "liquidity-event-estancia-scottsdale",
+      "date": "2026-09-11"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a investor buyer. How do I qualify for a home in Gainey Ranch?",
+      "slug": "investor-gainey-ranch-scottsdale",
       "date": "2026-09-11"
     }
   ],
