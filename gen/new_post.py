@@ -694,8 +694,33 @@ def check() -> int:
 
 
 # ------------------------------------------------------------------------- main
-def publish(paths: list[Path], force: bool = False) -> None:
+def publish(paths: list[Path], force: bool = False, due_only: bool = False) -> None:
+    """Render posts into the site.
+
+    `due_only` is what lets a dumb scheduler run this. Posts can be written
+    ahead of time with a future `date`, and a daily job renders only the ones
+    whose date has arrived. No model has to be running at 6am for the site to
+    keep publishing, which is the whole point: every version of "a model wakes
+    up and writes today's posts" failed on credentials, and a cron that only
+    renders already-written markdown cannot fail that way.
+    """
     sources = sorted(paths, key=lambda p: p.name)
+    if due_only:
+        today = date.today()
+        held = []
+        keep = []
+        for source in sources:
+            meta, _ = parse_front_matter(read(source))
+            when = datetime.strptime(meta["date"], "%Y-%m-%d").date()
+            (keep if when <= today else held).append((source, meta["slug"], when))
+        if held:
+            log(f"{len(held)} post(s) scheduled for later, holding:")
+            for _, slug, when in sorted(held, key=lambda h: h[2])[:5]:
+                log(f"  . {when}  {slug}")
+            if len(held) > 5:
+                log(f"  . ...and {len(held) - 5} more")
+        sources = [s for s, _, _ in keep]
+
     existing = load_post_index()
     template = read(find_template())
     log(f"{len(existing)} posts already published.")
@@ -806,6 +831,12 @@ def main() -> int:
         "drop it from the index, sitemap and llms.txt",
     )
     parser.add_argument(
+        "--due-only",
+        action="store_true",
+        help="skip posts dated in the future. Lets posts be written ahead and "
+        "released on their own date by a scheduler that needs no model.",
+    )
+    parser.add_argument(
         "--force",
         action="store_true",
         help="re-render posts whose pages already exist. Needed to push a "
@@ -828,7 +859,7 @@ def main() -> int:
     if not sources:
         parser.error("give one or more markdown files, or --all-unpublished")
 
-    publish(sources, force=args.force)
+    publish(sources, force=args.force, due_only=args.due_only)
     return check()
 
 

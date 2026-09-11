@@ -51,6 +51,13 @@ def run(cmd: list[str], step: str, expect_zero: bool = True) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--due-only",
+        action="store_true",
+        help="render only posts whose date has arrived. This is what the daily "
+        "GitHub Action runs: posts are written ahead, the scheduler just "
+        "releases them. No model, no API key, nothing to fail on credentials.",
+    )
     args = parser.parse_args()
 
     try:
@@ -65,7 +72,10 @@ def main() -> int:
 
         # 2. Render. new_post.py runs its own --check and exits non-zero on a
         #    failed consistency pass.
-        render = run(["python3", "gen/new_post.py", "--all-unpublished"], "render")
+        render_cmd = ["python3", "gen/new_post.py", "--all-unpublished"]
+        if args.due_only:
+            render_cmd.append("--due-only")
+        render = run(render_cmd, "render")
         if "All consistent." not in render:
             raise StepFailed("render", "new_post.py did not report 'All consistent.'",
                              render[-1500:])

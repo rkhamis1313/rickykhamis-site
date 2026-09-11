@@ -1,0 +1,85 @@
+# Releases posts that were written ahead of time, on the date they are due.
+#
+# Why this exists: every attempt at "a model wakes up at 6am and writes today's
+# posts" failed on credentials. The scheduled session had no repository
+# attached, so it could not push, and it failed silently for days at a time.
+#
+# This job cannot fail that way. It runs no model and needs no API key. The
+# posts are already written and committed, each carrying a future `date` in its
+# front matter. All this does is render the ones whose date has arrived and
+# push them. GITHUB_TOKEN is provided by Actions automatically, so there is
+# nothing for anyone to manage or rotate.
+#
+# Writing ahead happens in a Claude session. Releasing happens here.
+
+name: Daily publish
+
+on:
+  schedule:
+    # 13:00 UTC is 06:00 in Phoenix. Arizona does not observe DST, so this
+    # stays at 6am year round with no adjustment.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/rickykhamis-daily-blog-automation-dovt88
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Screen every post for compliance
+        run: python gen/compliance_check.py content/posts/*.md
+
+      - name: Render posts that are due
+        run: python gen/new_post.py --all-unpublished --due-only
+
+      - name: Verify site consistency
+        run: python gen/new_post.py --check
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A content site
+          if git diff --cached --quiet; then
+            echo "Nothing due today. This is a normal, healthy no-op."
+            exit 0
+          fi
+          git commit -m "Publish scheduled posts ($(TZ=America/Phoenix date +%Y-%m-%d))"
+          git push origin HEAD:claude/rickykhamis-daily-blog-automation-dovt88
+          echo "Pushed $(git rev-parse --short HEAD)"
+
+      - name: Report how much runway is left
+        run: |
+          python - <<'PY'
+          import glob, re, datetime, pathlib
+          today = datetime.date.today()
+          ahead = []
+          for f in glob.glob("content/posts/*.md"):
+              m = re.search(r"^date:\s*(\d{4}-\d{2}-\d{2})\s*$",
+                            pathlib.Path(f).read_text(), re.M)
+              if m:
+                  d = datetime.date.fromisoformat(m.group(1))
+                  if d > today:
+                      ahead.append(d)
+          if not ahead:
+              print("::warning::No posts written ahead. The site will publish "
+                    "nothing tomorrow. Ask Claude to write the next batch.")
+          else:
+              print(f"{len(ahead)} post(s) queued, through {max(ahead)} "
+                    f"({(max(ahead) - today).days} days of runway).")
+          PY

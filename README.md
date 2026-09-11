@@ -44,6 +44,32 @@ Rules, which are also written into the file:
 The bank runs down as the series publishes. When it is thin, ask Ricky for two
 more files rather than writing around it.
 
+## How posts actually get published
+
+Posts are written ahead of time and released on their own date by a GitHub
+Action. No model runs on a schedule. This matters, because every version of
+"a scheduled Claude session writes today's posts" failed the same way: the
+fired session had no repository attached, so it could not push, and it failed
+silently for days. A guard was added so it failed loudly instead, which saved
+tokens and still published nothing.
+
+The split that works:
+
+- **Writing happens in a Claude session.** Posts go into `content/posts/` with
+  a future `date` in the front matter. Nothing is rendered yet.
+- **Releasing happens in `.github/workflows/daily-publish.yml`**, daily at
+  13:00 UTC, which is 6am Phoenix year round since Arizona skips DST. It runs
+  `gen/publish.py --due-only`, which renders only posts whose date has arrived,
+  then commits and pushes with the automatic `GITHUB_TOKEN`.
+
+There is no API key to manage and no credential to rotate. The scheduler runs
+no model, so it cannot fail on model access, and a day with nothing due is a
+healthy no-op rather than an error.
+
+The one failure mode left is running out of runway. The workflow prints how
+many days of posts remain and raises a warning annotation when none are
+written ahead. When that fires, write the next batch.
+
 ## Publishing
 
 ```bash
