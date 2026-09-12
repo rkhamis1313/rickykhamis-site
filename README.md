@@ -314,3 +314,31 @@ that republishing MLS data on a public website carries IDX licensing
 obligations from ARMLS, so confirm what the agreement permits before publishing
 an MLS-derived figure. County records are public and carry no such restriction,
 which makes them the safer source for last-sale data.
+
+## Contact card
+
+`gen/make_vcard.py` builds `site/assets/ricky-khamis.vcf` and a QR code from
+`content/author.json`. Generated rather than hand-written so the phone number,
+title, licences and NMLS live in one place: change `author.json` and the card,
+the QR and every post's About block all move together. A contact card that
+disagrees with the site is worse than no contact card.
+
+    python gen/make_vcard.py
+    python gen/add_contact_card.py     # nav link on every page, card on the homepage
+
+`add_contact_card.py` is idempotent. It checks for its own marker class before
+inserting, so running it after a publish is safe and never produces two links.
+
+Details worth keeping:
+
+- **vCard 3.0, not 4.0.** Wider support across phone contact apps.
+- **Lines folded at 74 characters** per RFC 2426. Not cosmetic: some importers
+  truncate or silently reject a vCard with overlong physical lines, and it
+  fails on the phone rather than at build time.
+- **The headshot is downscaled to 400px before embedding.** Full resolution
+  produced a 101 KB card, which some contact apps reject without saying so.
+  It is 13 KB now.
+- **`site/_headers` sets the Content-Type and Content-Disposition** so the file
+  downloads as `Ricky-Khamis.vcf` instead of rendering as text. Netlify
+  consumes `_headers` at deploy time and never serves it over HTTP, so a
+  re-mirror cannot recover it. Same caveat as `_redirects`.

@@ -1,0 +1,7 @@
+# Serve the contact card as a download with a sensible filename, rather than
+# letting a browser render it as plain text. Netlify consumes this file at
+# deploy time; it is never served over HTTP, so a re-mirror cannot recover it.
+/assets/ricky-khamis.vcf
+  Content-Type: text/vcard; charset=utf-8
+  Content-Disposition: attachment; filename="Ricky-Khamis.vcf"
+  Cache-Control: public, max-age=3600
