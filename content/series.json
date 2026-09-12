@@ -30,28 +30,6 @@
   "queue": [
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Bank Statement",
-      "neighborhood": "DC Ranch",
-      "city": "Scottsdale",
-      "question": "I am a bank statement buyer. How do I qualify for a home in DC Ranch?",
-      "title": "Bank Statement and Buying in DC Ranch, Scottsdale: How You Actually Qualify",
-      "slug": "bank-statement-dc-ranch-scottsdale",
-      "why": "the Country Club at DC Ranch sits inside a master-planned community with layered village and club obligations, all of which hit your ratio",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
-      "borrowerType": "Asset Depletion",
-      "neighborhood": "Desert Mountain",
-      "city": "Scottsdale",
-      "question": "I am a asset depletion buyer. How do I qualify for a home in Desert Mountain?",
-      "title": "Asset Depletion and Buying in Desert Mountain, Scottsdale: How You Actually Qualify",
-      "slug": "asset-depletion-desert-mountain-scottsdale",
-      "why": "seven courses, a substantial membership, and buyers whose money is in assets rather than income",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Self-Employed",
       "neighborhood": "Whisper Rock",
       "city": "Scottsdale",
@@ -1450,6 +1428,20 @@
       "question": "I am a investor buyer. How do I qualify for a home in Gainey Ranch?",
       "slug": "investor-gainey-ranch-scottsdale",
       "date": "2026-09-11"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a bank statement buyer. How do I qualify for a home in DC Ranch?",
+      "slug": "bank-statement-dc-ranch-scottsdale",
+      "date": "2026-09-12"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a asset depletion buyer. How do I qualify for a home in Desert Mountain?",
+      "slug": "asset-depletion-desert-mountain-scottsdale",
+      "date": "2026-09-12"
     }
   ],
   "seriesNotes": {
