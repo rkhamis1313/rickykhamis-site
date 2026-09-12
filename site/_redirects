@@ -74,3 +74,10 @@ http://www.khamisgroup.com/*   https://rickykhamis.com/:splat  301!
 /gilbert-arizona-realtors-mastering-the-first-quarter-of-2024-with-the-12-week-year-strategy/  /blog/gilbert-arizona-realtors-mastering-the-first-quarter-of-2024-with-the-12-week-year-strategy/  301
 /blog/mortgage-closing-costs-scottsdale-arizona/  /blog/mortgage-closing-costs-in-scottsdale-arizona/  301
 /blog/mortgage-pre-approval-in-scottsdale/  /blog/mortgage-pre-approval-in-scottsdale-arizona/  301
+
+# Legacy post URLs from the platform that preceded khamisgroup.com. Google still
+# has at least one of these indexed (/post/1238868/...), and a 404 throws away
+# whatever link equity it carries. Sending them to the blog index is a soft
+# landing rather than a dead end. Remove this if those URLs are ever mapped to
+# real destinations one by one, which is strictly better than a catch-all.
+/post/*    /blog/    301
