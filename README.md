@@ -275,3 +275,42 @@ card when shared. Each post now points at its own.
 
 Generation needs Pillow. It is installed in the publish workflow, and a failure
 falls back to the old gradient rather than blocking a post from going out.
+
+## Neighborhood facts and market data
+
+`content/neighborhoods.json` is what makes a post read as written by someone who
+knows the community rather than someone who knows its name. It holds two kinds
+of data, separated deliberately.
+
+**`facts` are stable and sourced.** Developer, course architect, opening year,
+acreage, villages, club structure. These do not change, every entry carries a
+`sources` list, and nothing goes in without one. Troon North's Monument opened
+in 1990 and the Pinnacle in 1995, both Weiskopf and Morrish, on 1,800 acres.
+That is checkable, and it is the kind of detail a competitor writing generic
+luxury copy cannot fake.
+
+**`market` is volatile and starts null.** Average sale price, last sale, days
+on market. Never populate this from memory or estimation. A stale figure on a
+licensed originator's site is worse than no figure, and an invented one is
+indefensible.
+
+Posts reference market data with a marker rather than hardcoded numbers:
+
+    [[MARKET:Troon North]]
+
+`gen/market_block.py` expands it at render time. Refreshing every post on the
+site is one edit to the data file, not seventy edits to markdown. Three
+behaviours, all tested:
+
+- **No data:** renders an honest line offering the current report by phone. It
+  never invents a range.
+- **Fresh data:** renders a sourced table with an `asOf` date and a reminder
+  that market data changes.
+- **Older than 75 days:** adds a visible notice saying exactly how old it is.
+
+**Where market data may come from.** An MLS subdivision report pulled by a
+licensed agent, or Maricopa County Assessor and Recorder public records. Note
+that republishing MLS data on a public website carries IDX licensing
+obligations from ARMLS, so confirm what the agreement permits before publishing
+an MLS-derived figure. County records are public and carry no such restriction,
+which makes them the safer source for last-sale data.

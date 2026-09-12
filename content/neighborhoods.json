@@ -1,0 +1,210 @@
+{
+  "_comment": [
+    "Verifiable facts about each community, so a post can say who developed it,",
+    "who designed the course and when it opened, rather than the interchangeable",
+    "luxury copy every competitor publishes. This is what makes Ricky read as the",
+    "expert on a specific place instead of a lender who mentions its name.",
+    "",
+    "TWO KINDS OF DATA, DELIBERATELY SEPARATED:",
+    "",
+    "1. `facts` are stable. A developer, an architect, an opening year and an",
+    "   acreage do not change. Each carries a `sources` list, and nothing goes in",
+    "   here without one. If it cannot be sourced it does not get written.",
+    "",
+    "2. `market` is volatile and is NULL until real data is supplied. Average sale",
+    "   price, last sale and days on market move every month. A stale number on a",
+    "   licensed MLO's site is worse than no number, and an invented one is",
+    "   indefensible. Never populate this from memory or estimation.",
+    "",
+    "WHERE MARKET DATA MUST COME FROM: an MLS subdivision report pulled by a",
+    "licensed agent, or Maricopa County Assessor and Recorder public records.",
+    "Note that republishing MLS data on a public website carries IDX licensing",
+    "obligations from ARMLS. Confirm what Ricky's agreement permits before any",
+    "MLS-derived figure is published. County records are public and carry no",
+    "such restriction, which makes them the safer source for last-sale data.",
+    "",
+    "Every published market figure must carry `asOf` and `source` in the post."
+  ],
+  "marketSchema": {
+    "asOf": "YYYY-MM-DD, the date the data was pulled. Required.",
+    "source": "Named, citable. 'ARMLS subdivision report' or 'Maricopa County Recorder'. Required.",
+    "medianSalePrice": "number or null",
+    "averageSalePrice": "number or null",
+    "pricePerSqFt": "number or null",
+    "lastSale": {
+      "date": "YYYY-MM-DD",
+      "price": "number",
+      "note": "optional"
+    },
+    "activeListings": "number or null",
+    "medianDaysOnMarket": "number or null",
+    "twelveMonthSales": "number or null",
+    "priceRange": {
+      "low": "number",
+      "high": "number"
+    }
+  },
+  "neighborhoods": {
+    "Silverleaf": {
+      "city": "Scottsdale",
+      "facts": {
+        "developer": "DMB",
+        "partOf": "DC Ranch",
+        "golfCourse": "Silverleaf Club",
+        "courseArchitect": "Tom Weiskopf",
+        "courseOpened": 2002,
+        "clubhouseOpened": 2004,
+        "clubhouseSize": "50,000 square feet",
+        "enclaves": [
+          "Upper Canyon",
+          "Horseshoe Canyon",
+          "The Summit",
+          "Silverleaf Village"
+        ],
+        "setting": "canyons of the McDowell Mountains, bordering the McDowell Sonoran Preserve",
+        "priorUse": "mining claim, then cattle ranch",
+        "masterPlanBegan": "late 1990s",
+        "firstHomes": "early 2000s",
+        "membershipType": "private equity club"
+      },
+      "sources": [
+        "https://dmbdevelopment.com/portfolio/silverleaf/",
+        "https://www.silverleafrealty.com/"
+      ],
+      "market": null
+    },
+    "DC Ranch": {
+      "city": "Scottsdale",
+      "facts": {
+        "developer": "DMB Associates",
+        "acres": 8300,
+        "openSpaceAcres": 4600,
+        "villages": [
+          "Country Club Village",
+          "Desert Camp Village",
+          "Desert Parks Village",
+          "Silverleaf Village"
+        ],
+        "firstHomeCompleted": 1997,
+        "planApproved": 1995,
+        "homes": 2800,
+        "residents": 7000,
+        "golfCourse": "The Country Club at DC Ranch",
+        "courseArchitect": "Scott Miller",
+        "courseOpened": "1997-04-24",
+        "clubhouseOpened": "1998-12-15",
+        "history": "Land claimed by E.O. Brown, who arrived from Wisconsin in 1901. Operated as a cattle ranch until the 1950s, at one point spanning 43,000 acres. Purchased by DMB in the 1990s."
+      },
+      "sources": [
+        "https://dcranch.com/about-us/dc-ranch-history/",
+        "https://dmbdevelopment.com/portfolio/dc-ranch/"
+      ],
+      "market": null
+    },
+    "Troon North": {
+      "city": "Scottsdale",
+      "facts": {
+        "acres": 1800,
+        "courses": [
+          {
+            "name": "Monument",
+            "architects": [
+              "Tom Weiskopf",
+              "Jay Morrish"
+            ],
+            "opened": 1990
+          },
+          {
+            "name": "Pinnacle",
+            "architects": [
+              "Tom Weiskopf",
+              "Jay Morrish"
+            ],
+            "opened": 1995
+          }
+        ],
+        "renovation": "Major renovation led by Tom Weiskopf in 2007, which also reconfigured the 36 holes across both courses",
+        "setting": "Sonoran Desert in the shadow of Pinnacle Peak",
+        "note": "Troon North Golf Club and the private Troon Country Club are different entities. Do not conflate them."
+      },
+      "sources": [
+        "https://www.top100golfcourses.com/golf-course/troon-north-pinnacle",
+        "https://golfscottsdale.org/courses/troon-north-golf-club"
+      ],
+      "market": null
+    },
+    "Grayhawk": {
+      "city": "Scottsdale",
+      "facts": {
+        "acres": 1615,
+        "clubOpened": 1994,
+        "courses": [
+          {
+            "name": "Talon",
+            "architects": [
+              "David Graham",
+              "Gary Panks"
+            ],
+            "opened": 1994
+          },
+          {
+            "name": "Raptor",
+            "architects": [
+              "Tom Fazio"
+            ],
+            "opened": 1995
+          }
+        ],
+        "amenities": "Pocket parks, city parks, playgrounds, picnic areas, greenbelts and the Grayhawk trail system"
+      },
+      "sources": [
+        "https://www.golfpass.com/travel-advisor/courses/15741-raptor-at-grayhawk-golf-club",
+        "https://scottsdalerealestate.com/neighborhoods/grayhawk"
+      ],
+      "market": null
+    },
+    "Desert Mountain": {
+      "city": "Scottsdale",
+      "facts": {
+        "developer": "Lyle Anderson",
+        "founded": 1986,
+        "courseDesigner": "Jack Nicklaus",
+        "courseNote": "The largest collection of Jack Nicklaus Signature courses in the world",
+        "courses": [
+          {
+            "name": "Renegade",
+            "opened": 1987,
+            "note": "Two greens on every hole"
+          },
+          {
+            "name": "Cochise",
+            "opened": 1988,
+            "note": "Former site of The Tradition on PGA Tour Champions"
+          },
+          {
+            "name": "Geronimo",
+            "opened": 1989
+          },
+          {
+            "name": "Apache",
+            "opened": 1996
+          },
+          {
+            "name": "Chiricahua",
+            "opened": 1999
+          },
+          {
+            "name": "Outlaw",
+            "opened": 2003
+          }
+        ],
+        "membershipType": "private equity club"
+      },
+      "sources": [
+        "https://www.desertmountain.com/history/",
+        "https://nicklausdesign.com/course/desertmountain-geronimo/"
+      ],
+      "market": null
+    }
+  }
+}

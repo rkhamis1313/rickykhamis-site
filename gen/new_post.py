@@ -414,6 +414,20 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
             'style="border-radius:18px;margin-bottom:32px;aspect-ratio:16/9;'
             'object-fit:cover;width:100%">'
         )
+    # Expand any <!-- MARKET:Community --> markers from the neighborhood data.
+    # Kept out of the markdown on purpose: sale prices go stale in weeks, and a
+    # hardcoded figure would be wrong by the next quarter and stay wrong.
+    try:
+        import market_block
+    except ImportError:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        try:
+            import market_block
+        except ImportError:
+            market_block = None
+    if market_block is not None:
+        body_html = market_block.expand(body_html)
+
     citation = render_author_block(load_author(), published, meta["title"])
 
     buttons = []

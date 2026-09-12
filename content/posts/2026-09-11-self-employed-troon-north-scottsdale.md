@@ -37,17 +37,31 @@ Three rules that outweigh the arithmetic:
 2. **Declining income becomes the baseline.** Year two lower than year one usually means year two is your qualifying income. Averaging is for rising income.
 3. **A K-1 without distributions is paper.** Retained earnings are not spendable income, and underwriting frequently agrees.
 
-## What Troon North specifically adds
+## Troon North itself, and why it matters to your loan
 
-Troon North sits in far north Scottsdale against the Boulders and Pinnacle Peak, built around two Weiskopf and Morrish designs, the Monument and the Pinnacle courses. Four things there change the math.
+Troon North is an 1,800 acre master-planned community in the Sonoran Desert, north Scottsdale, laid out in the shadow of Pinnacle Peak.
 
-**You are in jumbo territory.** Above the conforming loan limit the standard changes: reserves held in verifiable assets **after** closing, tighter debt-to-income tolerances, full documentation, and often a second appraisal or desk review. For a self-employed borrower the reserve requirement is the sharp edge, because money sitting in a business operating account does not automatically count as yours, and moving it out has tax consequences your CPA should see first. The full picture is in [Jumbo Loans in Scottsdale](/blog/scottsdale-jumbo-loan-guide/).
+**The golf.** Two courses, both designed by Tom Weiskopf and Jay Morrish. The [Monument opened in 1990](https://golfscottsdale.org/courses/troon-north-golf-club), built around the granite outcropping it is named for. The [Pinnacle followed in 1995](https://www.top100golfcourses.com/golf-course/troon-north-pinnacle), running through steeper canyon terrain with forced carries and hidden greens. Weiskopf led a major renovation in 2007 that also reconfigured the routing across both 36 holes.
 
-**The obligation stack is layered.** A community association, potentially a sub-association depending on which enclave you buy in, and separately the club. Ask specifically how many associations bill the address, because buyers routinely quote one number and meet the second at underwriting. See [HOA Dues, Club Dues and Assessments](/blog/scottsdale-hoa-club-dues-debt-to-income/).
+**One distinction that costs people money.** Troon North Golf Club and the private Troon Country Club are different entities with different membership structures. Buyers conflate them constantly, then discover at underwriting that the obligation they assumed was optional is not, or that the one they budgeted for is at the other club. Confirm in writing which club, if any, attaches to your specific address.
 
-**The club question has to be answered in writing.** Troon North Golf Club and the private Troon Country Club nearby are different entities with different structures, and membership arrangements vary and change. The underwriting fork is simple: **if membership is mandatory, the dues and minimums are counted against your ratio like a car payment. If it is optional and you have not joined, generally nothing is counted.** An initiation deposit, refundable or not, is cash out of your accounts and usually does **not** count toward your reserve requirement. That combination, dues in the ratio and deposit out of reserves, is the most common way a Troon North file gets smaller than expected. Full mechanics in [How a Scottsdale Golf Club Membership Affects Your Mortgage Approval](/blog/golf-club-membership-mortgage-scottsdale/).
+### What the community does to your qualifying number
 
-**Appraisals reward specificity.** Custom homes on large desert lots against the boulder outcroppings are not interchangeable with production product elsewhere in the community. Thin or poorly matched comparable sales are a real timeline risk on a jumbo file, which is why the appraisal should be ordered early rather than treated as a formality. Well and septic appear in parts of far north Scottsdale and carry their own inspections on some programs.
+**You are almost certainly in jumbo territory.** Above the conforming loan limit the standard changes: reserves held in verifiable assets **after** closing, tighter debt-to-income tolerances, full documentation, and often a second appraisal or desk review. For a self-employed borrower the reserve requirement is the sharp edge, because money sitting in a business operating account does not automatically count as yours, and moving it out has tax consequences your CPA should see first. See [Jumbo Loans in Scottsdale](/blog/scottsdale-jumbo-loan-guide/).
+
+**The obligation stack is layered.** A community association, potentially a sub-association depending on which enclave you buy in, and separately any club obligation. Ask specifically how many associations bill the address, because buyers routinely quote one number and meet the second at underwriting. See [HOA Dues, Club Dues and Assessments](/blog/scottsdale-hoa-club-dues-debt-to-income/).
+
+**The club question decides your ratio.** If membership is mandatory at your address, the dues and minimums are counted against your debt-to-income like a car payment. An initiation deposit, refundable or not, is cash out of your accounts and generally does **not** count toward your reserve requirement. That combination, dues in the ratio and deposit out of reserves, is the most common way a Troon North file comes back smaller than expected. Full mechanics in [How a Scottsdale Golf Club Membership Affects Your Mortgage Approval](/blog/golf-club-membership-mortgage-scottsdale/).
+
+**Appraisals here reward specificity.** Custom homes on large desert lots against the boulder formations are not interchangeable with production product. In a submarket where few directly comparable homes sell in a year, an appraiser reaches further in distance and further back in time, and adjustments grow. On a jumbo file that is real timeline risk, so order the appraisal early. Well and septic appear in parts of far north Scottsdale and carry their own inspections on some programs.
+
+### Current Troon North market
+
+I publish live numbers for this community, pulled from the source and dated, rather than a range I remembered. If the figures below are not showing, they are being refreshed.
+
+[[MARKET:Troon North]]
+
+Ask me for the current subdivision report before you write an offer. What a home sold for last month decides your appraisal risk more than any national headline does.
 
 ## The structures that work when the returns do not
 
