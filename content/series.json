@@ -1442,6 +1442,13 @@
       "question": "I am a asset depletion buyer. How do I qualify for a home in Desert Mountain?",
       "slug": "asset-depletion-desert-mountain-scottsdale",
       "date": "2026-09-12"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "old-town-scottsdale",
+      "slug": "old-town-scottsdale-guide",
+      "date": "2026-09-13",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
