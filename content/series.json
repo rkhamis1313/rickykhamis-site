@@ -1449,6 +1449,13 @@
       "slug": "old-town-scottsdale-guide",
       "date": "2026-09-13",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "old-town-scottsdale",
+      "slug": "old-town-scottsdale-restaurants",
+      "date": "2026-09-14",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
