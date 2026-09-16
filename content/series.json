@@ -1463,6 +1463,13 @@
       "slug": "old-town-scottsdale-nightlife",
       "date": "2026-09-15",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "old-town-scottsdale",
+      "slug": "old-town-scottsdale-hotels",
+      "date": "2026-09-16",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
