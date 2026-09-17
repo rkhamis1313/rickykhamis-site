@@ -1470,6 +1470,13 @@
       "slug": "old-town-scottsdale-hotels",
       "date": "2026-09-16",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "old-town-scottsdale",
+      "slug": "golf-near-old-town-scottsdale",
+      "date": "2026-09-17",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
