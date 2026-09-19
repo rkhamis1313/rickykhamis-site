@@ -30,17 +30,6 @@
   "queue": [
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "Whisper Rock",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Whisper Rock?",
-      "title": "Self-Employed and Buying in Whisper Rock, Scottsdale: How You Actually Qualify",
-      "slug": "self-employed-whisper-rock-scottsdale",
-      "why": "an invitation-driven golf club where the membership question is settled before the loan question, and both need answering",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Asset Depletion",
       "neighborhood": "Mirabel",
       "city": "Scottsdale",
@@ -1484,6 +1473,13 @@
       "slug": "things-to-do-old-town-scottsdale",
       "date": "2026-09-18",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Whisper Rock?",
+      "slug": "self-employed-whisper-rock-scottsdale",
+      "date": "2026-09-19"
     }
   ],
   "seriesNotes": {
