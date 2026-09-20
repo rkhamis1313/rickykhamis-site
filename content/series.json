@@ -30,17 +30,6 @@
   "queue": [
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Asset Depletion",
-      "neighborhood": "Mirabel",
-      "city": "Scottsdale",
-      "question": "I am a asset depletion buyer. How do I qualify for a home in Mirabel?",
-      "title": "Asset Depletion and Buying in Mirabel, Scottsdale: How You Actually Qualify",
-      "slug": "asset-depletion-mirabel-scottsdale",
-      "why": "far north Scottsdale, thin comparable sales, and an appraisal that can decide the deal",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "RSU and Equity Comp",
       "neighborhood": "Grayhawk",
       "city": "Scottsdale",
@@ -1480,6 +1469,13 @@
       "question": "I am a self-employed buyer. How do I qualify for a home in Whisper Rock?",
       "slug": "self-employed-whisper-rock-scottsdale",
       "date": "2026-09-19"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a asset depletion buyer. How do I qualify for a home in Mirabel?",
+      "slug": "asset-depletion-mirabel-scottsdale",
+      "date": "2026-09-20"
     }
   ],
   "seriesNotes": {
