@@ -41,17 +41,6 @@
     },
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Liquidity Event",
-      "neighborhood": "Desert Highlands",
-      "city": "Scottsdale",
-      "question": "I am a liquidity event buyer. How do I qualify for a home in Desert Highlands?",
-      "title": "Liquidity Event and Buying in Desert Highlands, Scottsdale: How You Actually Qualify",
-      "slug": "liquidity-event-desert-highlands-scottsdale",
-      "why": "one of the original Scottsdale golf communities, with a membership structure most lenders have never underwritten",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Self-Employed",
       "neighborhood": "McCormick Ranch",
       "city": "Scottsdale",
@@ -1476,6 +1465,13 @@
       "question": "I am a asset depletion buyer. How do I qualify for a home in Mirabel?",
       "slug": "asset-depletion-mirabel-scottsdale",
       "date": "2026-09-20"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a liquidity event buyer. How do I qualify for a home in Desert Highlands?",
+      "slug": "liquidity-event-desert-highlands-scottsdale",
+      "date": "2026-09-21"
     }
   ],
   "seriesNotes": {
