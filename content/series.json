@@ -42,17 +42,6 @@
     {
       "series": "scottsdale-golf",
       "borrowerType": "Self-Employed",
-      "neighborhood": "McCormick Ranch",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in McCormick Ranch?",
-      "title": "Self-Employed and Buying in McCormick Ranch, Scottsdale: How You Actually Qualify",
-      "slug": "self-employed-mccormick-ranch-scottsdale",
-      "why": "two courses and a price band that straddles the conforming limit, so the return analysis decides which side you land on",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
-      "borrowerType": "Self-Employed",
       "neighborhood": "Ancala",
       "city": "Scottsdale",
       "question": "I am a self-employed buyer. How do I qualify for a home in Ancala?",
@@ -1472,6 +1461,13 @@
       "question": "I am a liquidity event buyer. How do I qualify for a home in Desert Highlands?",
       "slug": "liquidity-event-desert-highlands-scottsdale",
       "date": "2026-09-21"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a self-employed buyer. How do I qualify for a home in McCormick Ranch?",
+      "slug": "self-employed-mccormick-ranch-scottsdale",
+      "date": "2026-09-22"
     }
   ],
   "seriesNotes": {
