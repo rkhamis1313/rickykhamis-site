@@ -41,17 +41,6 @@
     },
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "Ancala",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Ancala?",
-      "title": "Self-Employed and Buying in Ancala, Scottsdale: How You Actually Qualify",
-      "slug": "self-employed-ancala-scottsdale",
-      "why": "east Scottsdale country club living where the HOA and club stack surprises buyers at underwriting",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Retiree",
       "neighborhood": "Legend Trail",
       "city": "Scottsdale",
@@ -81,17 +70,6 @@
       "title": "Foreign National and Buying in Pinnacle Peak, Scottsdale: How You Actually Qualify",
       "slug": "foreign-national-pinnacle-peak-scottsdale",
       "why": "estate lots, international buyers, and a documentation path most lenders cannot run",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
-      "borrowerType": "Investor",
-      "neighborhood": "Talking Stick",
-      "city": "Scottsdale",
-      "question": "I am a investor buyer. How do I qualify for a home in Talking Stick?",
-      "title": "Investor and Buying in Talking Stick, Scottsdale: How You Actually Qualify",
-      "slug": "investor-talking-stick-scottsdale",
-      "why": "golf beside the entertainment corridor, which is exactly where short-term rental income questions start",
       "status": "pending"
     },
     {
@@ -1468,6 +1446,20 @@
       "question": "I am a self-employed buyer. How do I qualify for a home in McCormick Ranch?",
       "slug": "self-employed-mccormick-ranch-scottsdale",
       "date": "2026-09-22"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Ancala?",
+      "slug": "self-employed-ancala-scottsdale",
+      "date": "2026-09-23"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a investor buyer. How do I qualify for a home in Talking Stick?",
+      "slug": "investor-talking-stick-scottsdale",
+      "date": "2026-09-23"
     }
   ],
   "seriesNotes": {
