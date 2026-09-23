@@ -56,7 +56,27 @@ p{margin:0 0 1em}.lead{font-size:1.15rem;color:var(--muted)}
 .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;align-items:center;justify-content:center}
 .burger span{display:block;width:20px;height:2px;background:var(--ink);position:relative}.burger span:before,.burger span:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}.burger span:before{top:-6px}.burger span:after{top:6px}
 @media(max-width:1180px){.nav{display:none}.burger{display:flex}.hdr .cta .btn-outline{display:none}}
-@media(max-width:480px){.hdr .cta .btn{padding:10px 14px;font-size:.8rem}}
+/* Header row at phone widths. The logo (174px at height:44) plus Apply Now
+   plus the burger needed 355px inside a 305px content box at 345px viewport,
+   and nothing was allowed to shrink, so every page scrolled sideways. Shrink
+   the header logo, tighten the header gutter and the button so the row fits
+   down to 320px. Footer and mobile-menu logos are untouched. */
+@media(max-width:560px){
+  .hdr .wrap{gap:10px;padding-left:16px;padding-right:16px}
+  .hdr .logo svg{height:32px}
+  .hdr .cta{flex:0 0 auto}
+  .hdr .cta .btn{padding:9px 12px;font-size:.78rem;white-space:nowrap}
+}
+@media(max-width:400px){
+  /* A nowrap .btn with a long label cannot fit a 320px screen. Let it wrap
+     there rather than push the page sideways. */
+  .btn{white-space:normal;text-align:center}
+  .hdr .cta .btn{white-space:nowrap}
+  .hdr .logo svg{height:30px}
+  .burger{width:40px;height:40px}
+  .hdr .cta{gap:8px}
+  .hdr .cta .btn{padding:8px 10px;font-size:.75rem}
+}
 /* mobile nav */
 .mnav{display:none;position:fixed;inset:0;z-index:100;background:#fff;overflow:auto;padding:16px 20px 40px}
 .mnav.open{display:block}
@@ -103,13 +123,20 @@ p{margin:0 0 1em}.lead{font-size:1.15rem;color:var(--muted)}
 .step h3{margin-bottom:4px}.step p{color:var(--muted);margin:0}.step ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
 .quote{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px}
 .quote .stars{color:var(--orange);letter-spacing:2px;font-size:.95rem}.quote p{margin:0;color:var(--text);font-size:.97rem}.quote .who{font-weight:700;font-size:.9rem;color:var(--ink)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}@media(max-width:860px){.split{grid-template-columns:1fr;gap:28px}}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.split>*{min-width:0}
+@media(max-width:860px){.split{grid-template-columns:minmax(0,1fr);gap:28px}}
 .split img{border-radius:18px}
 .band{background:var(--orange);color:#fff}.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:44px;padding-bottom:44px;flex-wrap:wrap}
 .band h2{color:#fff;margin:0}.band p{margin:4px 0 0;color:#fff3ea}
 .prose{max-width:780px}.prose h2{margin-top:2em;font-size:1.6rem}.prose h3{margin-top:1.6em}.prose ul,.prose ol{padding-left:22px}.prose li{margin-bottom:6px}.prose img{border-radius:14px;margin:24px 0}.prose blockquote{border-left:4px solid var(--orange);margin:20px 0;padding:6px 18px;color:var(--muted)}
 .prose table{border-collapse:collapse;width:100%;font-size:.95rem}.prose td,.prose th{border:1px solid var(--line);padding:8px 10px;text-align:left}
-.two{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start}@media(max-width:900px){.two{grid-template-columns:1fr}}
+/* minmax(0,1fr) not 1fr: a plain 1fr track refuses to shrink below its
+   content min-content width, which pushed /contact/ and /about/ sideways on a
+   320px phone. */
+.two{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:start}
+.two>*{min-width:0}
+@media(max-width:900px){.two{grid-template-columns:minmax(0,1fr)}}
 .aside .card{position:sticky;top:96px}
 .tag{display:inline-block;background:#fff1e9;color:var(--orange-d);font-weight:700;font-size:.75rem;padding:4px 10px;border-radius:999px;letter-spacing:.04em;text-transform:uppercase}
 .post{display:flex;flex-direction:column;overflow:hidden;padding:0}.post img{aspect-ratio:16/9;object-fit:cover;width:100%}.post .b{padding:20px}.post .d{font-size:.8rem;color:var(--muted);margin-bottom:6px}.post h3{font-size:1.05rem}.post h3 a{color:var(--ink)}
