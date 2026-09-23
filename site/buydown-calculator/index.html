@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rate Buydown Calculator: 3-2-1, 2-1, 1-1 vs. Permanent | Ricky Khamis, EPiQ Lending</title>
+<meta name="description" content="Compare 3-2-1, 2-1 and 1-1 temporary buydowns against a 30-year fixed and a permanent buydown funded by the same seller concession. Full payment with taxes, insurance, MI and HOA, cash to close, break-even, and a shareable PDF presentation.">
+<link rel="canonical" href="https://rickykhamis.com/buydown-calculator/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["MortgageLender", "FinancialService", "LocalBusiness"], "@id": "https://rickykhamis.com/#business", "name": "Ricky Khamis, EPiQ Lending", "legalName": "EVO Home Loans, LLC dba EPiQ Lending", "url": "https://rickykhamis.com/", "logo": "https://rickykhamis.com/assets/images/epiq-logo.png", "image": "https://rickykhamis.com/assets/images/ricky-khamis.jpg", "telephone": "+1-480-999-9842", "email": "ricky.khamis@epiqlending.com", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "7975 N. Hayden Road, Suite A-101", "addressLocality": "Scottsdale", "addressRegion": "AZ", "postalCode": "85258", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.5539, "longitude": -111.9024}, "areaServed": [{"@type": "State", "name": "Arizona"}, {"@type": "City", "name": "Scottsdale"}, {"@type": "City", "name": "Gilbert"}, {"@type": "City", "name": "Chandler"}, {"@type": "City", "name": "Mesa"}, {"@type": "City", "name": "Phoenix"}, {"@type": "City", "name": "Paradise Valley"}, {"@type": "City", "name": "Queen Creek"}, {"@type": "City", "name": "Tempe"}, {"@type": "State", "name": "California"}, {"@type": "State", "name": "Colorado"}, {"@type": "State", "name": "Florida"}, {"@type": "State", "name": "Nevada"}, {"@type": "State", "name": "Texas"}, {"@type": "State", "name": "Utah"}, {"@type": "State", "name": "Indiana"}], "founder": {"@id": "https://rickykhamis.com/#ricky"}, "employee": {"@id": "https://rickykhamis.com/#ricky"}, "identifier": [{"@type": "PropertyValue", "propertyID": "NMLS", "value": "1936984"}, {"@type": "PropertyValue", "propertyID": "Branch NMLS", "value": "1942720"}], "openingHours": "Mo-Fr 08:00-18:00", "sameAs": ["https://www.epiqlending.com"]}, {"@type": "Person", "@id": "https://rickykhamis.com/#ricky", "name": "Ricky Khamis", "jobTitle": "President, Certified Mortgage Planner", "url": "https://rickykhamis.com/about/", "image": "https://rickykhamis.com/assets/images/ricky-khamis.jpg", "telephone": "+1-480-999-9842", "email": "ricky.khamis@epiqlending.com", "identifier": {"@type": "PropertyValue", "propertyID": "NMLS", "value": "173141"}, "worksFor": {"@id": "https://rickykhamis.com/#business"}, "sameAs": ["https://www.facebook.com/RickyKhamis", "https://www.instagram.com/rickykhamis/", "https://www.linkedin.com/in/rickykhamis", "https://twitter.com/ricky_khamis", "https://www.youtube.com/rickykhamis", "https://open.spotify.com/show/4vReL1xqYtRWdqcgfEBWzt", "https://a.co/d/hfV66it", "https://www.nmlsconsumeraccess.org/"], "knowsAbout": ["Mortgage lending", "VA loans", "FHA loans", "Jumbo loans", "Conventional loans", "DSCR investor loans", "All In One Loan", "Refinancing", "Arizona real estate", "Scottsdale mortgages", "Gilbert mortgages"], "alumniOf": {"@type": "Organization", "name": "82nd Airborne Division, U.S. Army"}, "description": "Ricky Khamis is President of EPiQ Lending, a Certified Mortgage Planner (NMLS #173141), 82nd Airborne veteran, author of Just Win The Day, and host of the Life Mastery Unleashed podcast. Based in Scottsdale, Arizona, lending since 1999."}, {"@type": "WebSite", "@id": "https://rickykhamis.com/#website", "url": "https://rickykhamis.com/", "name": "Ricky Khamis | EPiQ Lending", "publisher": {"@id": "https://rickykhamis.com/#business"}}]}</script>
+<meta property="og:title" content="Rate Buydown Calculator: 3-2-1, 2-1, 1-1 vs. Permanent | Ricky Khamis, EPiQ Lending"><meta property="og:description" content="Compare 3-2-1, 2-1 and 1-1 temporary buydowns against a 30-year fixed and a permanent buydown funded by the same seller concession. Full payment with taxes, insurance, MI and HOA, cash to close, break-even, and a shareable PDF presentation."><meta property="og:type" content="website"><meta property="og:url" content="https://rickykhamis.com/buydown-calculator/"><meta property="og:image" content="https://rickykhamis.com/assets/images/og-default.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WR14TTJDL0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-WR14TTJDL0');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a 2-1 buydown?", "acceptedAnswer": {"@type": "Answer", "text": "Your rate starts 2% below the note rate in year one, 1% below in year two, and sits at the full note rate from year three on. The seller, builder or another party deposits the payment difference into an account at closing, and that account covers the gap each month."}}, {"@type": "Question", "name": "How is a 3-2-1 or 1-1 different?", "acceptedAnswer": {"@type": "Answer", "text": "A 3-2-1 starts 3% below the note rate and steps up 1% a year for three years. A 1-1 holds the rate 1% below the note rate for two full years. Bigger early savings cost more to fund. Availability depends on the loan program and investor, so confirm it before it goes into a contract."}}, {"@type": "Question", "name": "Do I qualify at the lower payment?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no. On temporary buydowns you qualify at the full note rate payment. Plan your budget around the year-three payment, not the year-one payment."}}, {"@type": "Question", "name": "Temporary or permanent: which is better?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on how long you keep the loan. A temporary buydown puts the savings up front. A permanent buydown uses points to lower the rate for the life of the loan, so the savings are smaller each month but never stop. If you expect to refinance or sell early, temporary often wins. If you plan to hold the loan, permanent usually catches up and passes it. The chart above shows the exact crossover month for your numbers."}}, {"@type": "Question", "name": "Does a buydown count against seller concession limits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Buydown funds from the seller count toward interested party contribution limits. Those limits depend on the program and your down payment, for example 3%, 6% or 9% on conventional loans, 6% on FHA and 4% on VA (VA treats normal closing costs separately). The calculator flags your scenario if it looks over."}}, {"@type": "Question", "name": "What happens if I refinance or sell during the buydown?", "acceptedAnswer": {"@type": "Answer", "text": "Unused buydown funds do not disappear. They are generally applied to your loan balance or credited to you, per the buydown agreement and program rules."}}]}, {"@type": "WebApplication", "name": "Rate Buydown Calculator", "url": "https://rickykhamis.com/buydown-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "provider": {"@id": "https://rickykhamis.com/#business"}, "author": {"@id": "https://rickykhamis.com/#ricky"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rickykhamis.com/"}, {"@type": "ListItem", "position": 2, "name": "Mortgage Calculator", "item": "https://rickykhamis.com/calculator/"}, {"@type": "ListItem", "position": 3, "name": "Buydown Calculator", "item": "https://rickykhamis.com/buydown-calculator/"}]}]}</script>
+<style>
+/* Buydown calculator page. Scoped under .bd and #deck. */
+.bd .grid2{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:start}
+.bd .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.bd .card h2{font-size:1.25rem;margin:0 0 4px}
+.bd .card .sub{color:var(--muted);font-size:.9rem;margin:0 0 18px}
+.bd .fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.bd .fgrid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.bd .fgrid label{display:block;font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:6px}
+.bd .fgrid input,.bd .fgrid select,.bd .fgrid textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:.95rem;background:#fff;color:var(--text)}
+.bd .fgrid input:focus,.bd .fgrid select:focus,.bd .fgrid textarea:focus{outline:2px solid var(--orange);outline-offset:0;border-color:var(--orange)}
+.bd .hint{display:block;font-size:.75rem;color:var(--muted);margin-top:4px;min-height:1em}
+.bd .grp{grid-column:1/-1;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:10px 0 -4px;padding-top:10px;border-top:1px solid var(--line)}
+.bd .grp:first-child{border-top:0;padding-top:0;margin-top:0}
+.bd .warn{background:#fff6ef;border:1px solid #f9c9ab;color:#8a3a0c;border-radius:12px;padding:12px 14px;font-size:.88rem;margin-top:14px}
+.bd .warn:empty{display:none}
+.bd .kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.bd .kpi{background:var(--ink);color:#fff;border-radius:16px;padding:18px}
+.bd .kpi .l{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#a9adb5}
+.bd .kpi .v{font-size:1.7rem;font-weight:800;margin-top:4px;line-height:1.1}
+.bd .kpi .s{font-size:.82rem;color:#c8cbd1;margin-top:4px}
+.bd .kpi.o{background:var(--orange)}
+.bd .kpi.o .l,.bd .kpi.o .s{color:#fff3ea}
+.bd .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.bd table.cmp{width:100%;border-collapse:collapse;font-size:.92rem;min-width:680px}
+.bd table.cmp th,.bd table.cmp td{padding:11px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bd table.cmp th:first-child,.bd table.cmp td:first-child{text-align:left}
+.bd table.cmp thead th{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);vertical-align:bottom}
+.bd table.cmp tr.sec td{background:var(--soft);font-weight:800;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left}
+.bd table.cmp tr.hl td{font-weight:800}
+.bd .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:middle}
+.bd .pos{color:#0b7a4b}.bd .neg{color:#b3261e}
+.bd .chart{position:relative}
+.bd .chart svg{display:block;width:100%;height:auto}
+.bd .legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.85rem;color:var(--text);margin:0 0 10px}
+.bd .legend span{display:inline-flex;align-items:center}
+.bd .tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;border-radius:10px;padding:10px 12px;font-size:.8rem;line-height:1.5;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transition:opacity .12s;z-index:5;min-width:170px}
+.bd .tip b{display:block;margin-bottom:2px}
+.bd .tip .r{display:flex;justify-content:space-between;gap:14px}
+.bd .insight{border-left:4px solid var(--orange);background:var(--soft);padding:14px 16px;border-radius:0 12px 12px 0;font-size:.95rem;margin-top:16px}
+.bd .insight p{margin:0 0 6px}.bd .insight p:last-child{margin:0}
+.bd .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.bd .actions .btn-outline{display:inline-flex}
+.bd .faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.bd .faq summary{font-weight:700;cursor:pointer;font-size:1.02rem}
+.bd .faq p{margin:10px 0 0;color:var(--muted)}
+.bdtoast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;font-size:.9rem;opacity:0;transition:.2s;z-index:1000;pointer-events:none}
+.bdtoast.on{opacity:1}
+@media (max-width:960px){.bd .grid2{grid-template-columns:1fr}}
+@media (max-width:560px){.bd .fgrid,.bd .fgrid.c3{grid-template-columns:1fr}.bd .kpis{grid-template-columns:1fr}.bd .card{padding:18px}}
+
+/* ---------- Presentation deck ---------- */
+#deck{display:none}
+body.pres{background:#2a2e36}
+body.pres .topbar,body.pres .hdr,body.pres .mnav,body.pres main,body.pres .ftr{display:none!important}
+body.pres #deck{display:block}
+#deck .dbar{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;padding:12px 16px;background:rgba(14,16,19,.94);backdrop-filter:blur(6px)}
+#deck .dbar .btn{padding:10px 16px;font-size:.85rem}
+#deck .dbar .btn-outline{display:inline-flex;border-color:#fff;color:#fff}
+#deck .slides{padding:24px 0 60px}
+#deck .slide{width:11in;height:8.5in;margin:0 auto 24px;background:#fff;color:var(--text);position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#deck .sin{position:absolute;inset:0;padding:.55in .6in .75in;display:flex;flex-direction:column}
+#deck .s-eye{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+#deck h2.s-h{font-size:30px;line-height:1.15;margin:0 0 6px;color:var(--ink);letter-spacing:-.01em}
+#deck .s-sub{font-size:14px;color:var(--muted);margin:0 0 18px;max-width:8.5in}
+#deck .sfoot{position:absolute;left:.6in;right:.6in;bottom:.28in;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#8a8e96;border-top:1px solid var(--line);padding-top:8px}
+#deck .sfoot b{color:var(--orange)}
+#deck .dark{background:var(--ink);color:#d7d9de}
+#deck .dark h2.s-h,#deck .dark h1{color:#fff}
+#deck .dark .sfoot{border-color:rgba(255,255,255,.12);color:#8a8e96}
+#deck .cover .glow{position:absolute;right:-160px;top:-160px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(243,107,36,.5),transparent 65%)}
+#deck .cover h1{font-size:52px;line-height:1.02;margin:10px 0 14px;letter-spacing:-.02em;max-width:6.4in}
+#deck .cover .who{font-size:18px;color:#c8cbd1;max-width:6in}
+#deck .cover .who b{color:#fff}
+#deck .cover .photo{position:absolute;right:.6in;bottom:.75in;width:3.1in;height:3.9in;border-radius:18px;object-fit:cover;object-position:center top;border:3px solid rgba(255,255,255,.08)}
+#deck .cover .stats{display:flex;gap:26px;margin-top:auto;margin-bottom:.1in}
+#deck .cover .stats div{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#a9adb5}
+#deck .cover .stats b{display:block;font-size:22px;letter-spacing:0;text-transform:none;color:#fff;margin-top:4px}
+#deck table.st{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+#deck table.st th,#deck table.st td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+#deck table.st th:first-child,#deck table.st td:first-child{text-align:left}
+#deck table.st thead th{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--ink)}
+#deck table.st tr.hl td{font-weight:800;background:#fff6ef}
+#deck table.st tr.sec td{background:var(--soft);font-weight:800;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left}
+#deck table.cmp4 th,#deck table.cmp4 td{padding:5px 10px;font-size:12px}
+#deck table.cmp4 tr.sec td{padding:5px 10px;font-size:9.5px}
+#deck .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:middle}
+#deck .pos{color:#0b7a4b}#deck .neg{color:#b3261e}
+#deck .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+#deck .g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+#deck .box{border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+#deck .box .l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+#deck .box .v{font-size:22px;font-weight:800;color:var(--ink);margin-top:3px}
+#deck .box .s{font-size:11px;color:var(--muted);margin-top:2px}
+#deck .box.o{background:var(--orange);border-color:var(--orange)}
+#deck .box.o .l,#deck .box.o .s{color:#fff3ea}#deck .box.o .v{color:#fff}
+#deck .box.k{background:var(--ink);border-color:var(--ink)}
+#deck .box.k .l,#deck .box.k .s{color:#a9adb5}#deck .box.k .v{color:#fff}
+#deck .legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:11px;margin-bottom:6px}
+#deck .legend span{display:inline-flex;align-items:center}
+#deck .chart svg{display:block;width:100%;height:auto}
+#deck ul.pts{margin:0;padding-left:18px;font-size:13.5px;line-height:1.55}
+#deck ul.pts li{margin-bottom:6px}
+#deck .callout{border-left:4px solid var(--orange);background:var(--soft);padding:12px 14px;border-radius:0 10px 10px 0;font-size:13.5px;line-height:1.5}
+#deck .fine{font-size:9.5px;line-height:1.45;color:#8a8e96}
+#deck .contact{display:flex;gap:22px;align-items:center}
+#deck .contact img{width:1.5in;height:1.5in;border-radius:50%;object-fit:cover;object-position:center top}
+#deck .contact .n{font-size:24px;font-weight:800;color:#fff}
+#deck .contact .t{font-size:13px;color:#c8cbd1;line-height:1.6}
+#deck .contact a{color:#ffb088}
+@media print{
+  @page{size:11in 8.5in;margin:0}
+  html,body{background:#fff!important}
+  #deck .dbar{display:none!important}
+  #deck .slides{padding:0}
+  #deck .slide{margin:0;box-shadow:none;zoom:1!important;page-break-after:always;break-after:page}
+  #deck .slide:last-child{page-break-after:auto;break-after:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div class="nmls">Ricky Khamis &nbsp;·&nbsp; NMLS #173141 &nbsp;·&nbsp; <a href="tel:+14809999842">(480) 999-9842</a></div>
+  <div class="social"><a href="https://www.facebook.com/RickyKhamis" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v9h4v-9h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg></a><a href="https://www.instagram.com/rickykhamis/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5.5-8.5a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM21 8c-.1-1.6-.4-3-1.6-4.2S16.6 2.1 15 2c-2-.1-8-.1-10 0-1.6.1-3 .4-4.2 1.6S.1 6.4 0 8c-.1 2-.1 8 0 10 .1 1.6.4 3 1.6 4.2S4.4 23.9 6 24c2 .1 8 .1 10 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-2 .1-8 0-10zm-2.4 12.2c-.4.9-1 1.5-1.9 1.9-1.3.5-4.4.4-5.8.4s-4.5.1-5.8-.4c-.9-.4-1.5-1-1.9-1.9C2.7 18.9 2.8 15.8 2.8 14.4s-.1-4.5.4-5.8c.4-.9 1-1.5 1.9-1.9 1.3-.5 4.4-.4 5.8-.4s4.5-.1 5.8.4c.9.4 1.5 1 1.9 1.9.5 1.3.4 4.4.4 5.8s.1 4.5-.4 5.8z"/></svg></a><a href="https://www.linkedin.com/in/rickykhamis" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.5 8.5h-4V21h4V8.5zM4.5 2.5a2.3 2.3 0 1 0 0 4.6 2.3 2.3 0 0 0 0-4.6zM21.5 13.3c0-3.6-1.9-5.2-4.5-5.2-2 0-2.9 1.1-3.4 1.9V8.5H9.7V21h4V14.5c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h4v-7.7z"/></svg></a><a href="https://twitter.com/ricky_khamis" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.5L4.5 21h-3l7.5-8.6L1.2 3h6.6l4.5 6L17.5 3zm-1.1 16.2h1.7L6.9 4.7H5.1l11.3 14.5z"/></svg></a><a href="https://www.youtube.com/rickykhamis" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2c-.3-1-1-1.8-2-2C19.2 4.7 12 4.7 12 4.7s-7.2 0-9 .5c-1 .3-1.7 1-2 2C.5 9 .5 12 .5 12s0 3 .5 4.8c.3 1 1 1.8 2 2 1.8.5 9 .5 9 .5s7.2 0 9-.5c1-.3 1.7-1 2-2 .5-1.8.5-4.8.5-4.8s0-3-.5-4.8zM9.7 15.1V8.9l6 3.1-6 3.1z"/></svg></a></div>
+</div></div>
+<header class="hdr"><div class="wrap">
+  <a class="logo" href="/" aria-label="EPiQ Lending home"><svg viewBox="0 0 300 76" role="img" aria-label="EPiQ Lending" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="4" width="68" height="68" rx="16" fill="#F36B24"/>
+<text x="34" y="54" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="40" fill="#fff">iQ</text>
+<text x="82" y="46" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="44" letter-spacing="-1" fill="#F36B24">EPiQ</text>
+<text x="84" y="68" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="15" letter-spacing="6" fill="#818285">LENDING</text>
+</svg></a>
+  <nav aria-label="Main"><ul class="nav"><li><a href="/all-in-one-loan/">All In One Loan</a></li><li><a href="/rates/">Rates</a></li><li><a href="/purchase/">Purchase</a></li><li><a href="/refinance/">Refinance</a></li><li><button type="button" aria-expanded="false">Real Estate<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button><div class="dd"><a href="/listings/">Listings</a><a href="/home-search/">Home Search</a><a href="/home-values/">Home Values</a><a href="/find-a-realtor/">Find A Realtor</a></div></li><li><button type="button" aria-expanded="false">Resources<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button><div class="dd wide"><div class="col"><div class="grp">Loan Programs</div><a href="/loan-programs/">All Loan Programs</a><a href="/loan-programs/conventional-loans/">Conventional Loans</a><a href="/loan-programs/fha-loans/">FHA Loans</a><a href="/loan-programs/va-loans/">VA Loans</a><a href="/loan-programs/jumbo-loans/">Jumbo Loans</a><a href="/loan-programs/fha-203k-loan/">FHA 203k Loan</a><a href="/loan-programs/mortgage-refinance/">Mortgage Refinance</a><a href="/loan-programs/down-payment-assistance/">Down Payment Assistance</a><a href="/all-in-one-loan/">All In One Loan</a></div><div class="col"><div class="grp">Tools & Guides</div><a href="/calculator/">Mortgage Calculator</a><a href="/areas/">Areas We Serve</a><a href="/mortgage-process/">Mortgage Process</a><a href="/loans-for-heroes/">Loans for Heroes</a><a href="/glossary/">Mortgage Glossary</a><a href="/ask-a-professional/">Ask A Professional</a><a href="https://www.affiliatecreditrepairportal.com/Home/AddNewReferral?crepto=LdMKgAGmy58rPkmuVwrAuw%3d%3d" target="_blank" rel="noopener">Credit Restoration</a><a href="/local-resources/">Local Resources</a><a href="/recommended-professionals/">Recommended Professionals</a><a href="/success-center/">Professional Success Center</a></div></div></li><li><button type="button" aria-expanded="false">Company<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button><div class="dd"><a href="/about/">About Ricky</a><a href="/blog/">Blog</a><a href="/podcast/">Podcast</a><a href="/books/">Books</a><a href="/events/">Events</a><a href="https://khamisgroup.zoom.us/meeting/register/tZIsc-ChrzwrEtNeh_FHOOSGMHZZVKSmdZrk#/registration" target="_blank" rel="noopener">Realtor Originator</a><a href="/business-card/">Business Card</a><a href="/contact/">Contact</a></div></li><li><a class="js-save-contact" href="/assets/ricky-khamis.vcf" download="Ricky-Khamis.vcf">Save My Contact</a></li></ul></nav>
+  <div class="cta">
+    <a class="btn btn-outline btn-sm" href="/book-appointment/">Book a Call</a>
+    <a class="btn btn-primary btn-sm" href="https://my.epiqlending.com/dr/c/21104" target="_blank" rel="noopener">Apply Now</a>
+    <button class="burger" type="button" aria-label="Open menu" id="burger"><span></span></button>
+  </div>
+</div></header>
+<div class="mnav" id="mnav" aria-hidden="true">
+  <div class="top"><a class="logo" href="/"><svg viewBox="0 0 300 76" role="img" aria-label="EPiQ Lending" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="4" width="68" height="68" rx="16" fill="#F36B24"/>
+<text x="34" y="54" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="40" fill="#fff">iQ</text>
+<text x="82" y="46" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="44" letter-spacing="-1" fill="#F36B24">EPiQ</text>
+<text x="84" y="68" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="15" letter-spacing="6" fill="#818285">LENDING</text>
+</svg></a><button class="close" type="button" id="mclose" aria-label="Close menu">×</button></div>
+  <a href="/all-in-one-loan/">All In One Loan</a><a href="/rates/">Rates</a><a href="/purchase/">Purchase</a><a href="/refinance/">Refinance</a><button type="button">Real Estate ▾</button><div class="sub"><a href="/listings/">Listings</a><a href="/home-search/">Home Search</a><a href="/home-values/">Home Values</a><a href="/find-a-realtor/">Find A Realtor</a></div><button type="button">Resources ▾</button><div class="sub"><a href="/loan-programs/">All Loan Programs</a><a href="/loan-programs/conventional-loans/">Conventional Loans</a><a href="/loan-programs/fha-loans/">FHA Loans</a><a href="/loan-programs/va-loans/">VA Loans</a><a href="/loan-programs/jumbo-loans/">Jumbo Loans</a><a href="/loan-programs/fha-203k-loan/">FHA 203k Loan</a><a href="/loan-programs/mortgage-refinance/">Mortgage Refinance</a><a href="/loan-programs/down-payment-assistance/">Down Payment Assistance</a><a href="/all-in-one-loan/">All In One Loan</a><a href="/calculator/">Mortgage Calculator</a><a href="/areas/">Areas We Serve</a><a href="/mortgage-process/">Mortgage Process</a><a href="/loans-for-heroes/">Loans for Heroes</a><a href="/glossary/">Mortgage Glossary</a><a href="/ask-a-professional/">Ask A Professional</a><a href="https://www.affiliatecreditrepairportal.com/Home/AddNewReferral?crepto=LdMKgAGmy58rPkmuVwrAuw%3d%3d" target="_blank" rel="noopener">Credit Restoration</a><a href="/local-resources/">Local Resources</a><a href="/recommended-professionals/">Recommended Professionals</a><a href="/success-center/">Professional Success Center</a></div><button type="button">Company ▾</button><div class="sub"><a href="/about/">About Ricky</a><a href="/blog/">Blog</a><a href="/podcast/">Podcast</a><a href="/books/">Books</a><a href="/events/">Events</a><a href="https://khamisgroup.zoom.us/meeting/register/tZIsc-ChrzwrEtNeh_FHOOSGMHZZVKSmdZrk#/registration" target="_blank" rel="noopener">Realtor Originator</a><a href="/business-card/">Business Card</a><a href="/contact/">Contact</a></div>
+  <div class="mbtns"><a class="btn btn-primary" href="https://my.epiqlending.com/dr/c/21104" target="_blank" rel="noopener">Apply Now</a><a class="btn btn-outline" href="/book-appointment/">Book a Call</a><a class="btn btn-outline" href="tel:+14809999842">Call (480) 999-9842</a></div>
+</div>
+
+<main id="main">
+<section class="phero"><div class="wrap"><div class="crumbs"><a href="/">Home</a> / Resources / <a href="/calculator/">Calculators</a> / Buydown Calculator</div><span class="eyebrow">Free tool</span><h1>Rate Buydown Calculator: 3-2-1, 2-1 and 1-1 vs. Permanent</h1><p>See what each temporary buydown costs, what your full payment looks like every year, and whether the same seller concession works harder as a permanent rate buydown. Then turn it into a presentation you can send as a link or PDF.</p></div></section>
+
+<div class="bd">
+<section class="section tight"><div class="wrap"><div class="grid2">
+
+<div class="card">
+ <h2>Your scenario</h2>
+ <p class="sub">Change any number. Everything updates instantly.</p>
+ <div class="fgrid">
+  <div class="grp">Loan</div>
+  <div><label for="i-price">Purchase price ($)</label><input id="i-price" type="number" inputmode="decimal" min="0" step="1000" value="500000"></div>
+  <div><label for="i-down">Down payment (%)</label><input id="i-down" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="5"><span class="hint" id="h-down"></span></div>
+  <div><label for="i-type">Loan type</label><select id="i-type"><option value="c">Conventional</option><option value="f">FHA</option><option value="v">VA</option></select></div>
+  <div><label for="i-rate">Note rate, 30-yr fixed (%)</label><input id="i-rate" type="number" inputmode="decimal" min="0" max="20" step="0.125" value="6.5"><span class="hint">Hypothetical. Enter the rate you were quoted.</span></div>
+  <div><label for="i-uf">Upfront fee financed (%)</label><input id="i-uf" type="number" inputmode="decimal" min="0" max="5" step="0.05" value="0"><span class="hint" id="h-uf">FHA UFMIP or VA funding fee</span></div>
+  <div><label for="i-mi">Mortgage insurance (annual %)</label><input id="i-mi" type="number" inputmode="decimal" min="0" max="2" step="0.01" value="0.45"><span class="hint" id="h-mi"></span></div>
+
+  <div class="grp">Monthly housing costs</div>
+  <div><label for="i-tax">Property tax ($/year)</label><input id="i-tax" type="number" inputmode="decimal" min="0" step="100" value="2400"></div>
+  <div><label for="i-ins">Homeowners insurance ($/year)</label><input id="i-ins" type="number" inputmode="decimal" min="0" step="100" value="1500"></div>
+  <div><label for="i-hoa">HOA ($/month)</label><input id="i-hoa" type="number" inputmode="decimal" min="0" step="5" value="85"></div>
+  <div></div>
+
+  <div class="grp">Closing costs and seller concession</div>
+  <div><label for="i-cc">Closing costs ($)</label><input id="i-cc" type="number" inputmode="decimal" min="0" step="100" value="9000"><span class="hint">Lender, title, escrow, recording</span></div>
+  <div><label for="i-pre">Prepaids and escrow setup ($)</label><input id="i-pre" type="number" inputmode="decimal" min="0" step="100" value="4000"><span class="hint">Prepaid interest, insurance, tax reserves</span></div>
+  <div><label for="i-sc">Seller concession ($)</label><input id="i-sc" type="number" inputmode="decimal" min="0" step="500" value="14000"><span class="hint" id="h-sc"></span></div>
+  <div><label for="i-ppr">Rate drop per 1 point (%)</label><input id="i-ppr" type="number" inputmode="decimal" min="0" max="1" step="0.025" value="0.25"><span class="hint">1 point = 1% of the loan. Use your lender's pricing.</span></div>
+  <div style="grid-column:1/-1"><label for="i-match">Permanent buydown is funded with</label><select id="i-match"><option value="b21">The same dollars the 2-1 costs</option><option value="b321">The same dollars the 3-2-1 costs</option><option value="b11">The same dollars the 1-1 costs</option><option value="all">The full seller concession</option></select></div>
+ </div>
+ <div class="warn" id="warn"></div>
+</div>
+
+<div>
+ <div class="kpis" id="kpis"></div>
+ <div class="insight" id="insight"></div>
+ <div class="card" style="margin-top:16px">
+  <h2>Monthly payment by year</h2>
+  <p class="sub">Principal, interest, taxes, insurance, mortgage insurance and HOA.</p>
+  <div class="legend" id="lg1"></div>
+  <div class="chart" id="ch1"></div>
+ </div>
+</div>
+
+</div></div></section>
+
+<section class="section tight" style="padding-top:0"><div class="wrap">
+ <div class="card">
+  <h2>Side by side</h2>
+  <p class="sub">What each option costs to set up, what you bring to closing, and what you pay each year.</p>
+  <div class="tblwrap"><table class="cmp" id="tbl"></table></div>
+ </div>
+</div></section>
+
+<section class="section tight" style="padding-top:0"><div class="wrap">
+ <div class="card">
+  <h2>Temporary vs. permanent over time</h2>
+  <p class="sub">Cumulative dollars ahead of (or behind) the plain 30-year fixed, counting cash to close plus every payment. Above zero means you are ahead.</p>
+  <div class="legend" id="lg2"></div>
+  <div class="chart" id="ch2"></div>
+  <div class="insight" id="insight2"></div>
+ </div>
+</div></section>
+
+<section class="section tight soft"><div class="wrap">
+ <div class="card">
+  <h2>Build the presentation</h2>
+  <p class="sub">Add names, then open it, share the link, or save it as a PDF. The link carries every number above, so whoever opens it sees the exact same deck.</p>
+  <div class="fgrid c3">
+   <div><label for="i-bn">Prepared for</label><input id="i-bn" type="text" placeholder="Buyer name(s)"></div>
+   <div><label for="i-ad">Property</label><input id="i-ad" type="text" placeholder="Address or area"></div>
+   <div><label for="i-ag">Real estate agent (optional)</label><input id="i-ag" type="text" placeholder="Agent name"></div>
+  </div>
+  <div class="actions">
+   <button class="btn btn-primary" type="button" id="b-open">Open presentation</button>
+   <button class="btn btn-outline" type="button" id="b-link">Copy share link</button>
+   <button class="btn btn-outline" type="button" id="b-pdf">Save as PDF</button>
+  </div>
+  <p class="fine" style="margin-top:12px;color:var(--muted);font-size:.8rem">PDF tip: in the print window choose "Save as PDF", Landscape, Margins: None, and turn on Background graphics.</p>
+ </div>
+</div></section>
+
+<section class="section tight"><div class="wrap faq" style="max-width:860px">
+ <span class="eyebrow">Straight answers</span>
+ <h2>Buydown questions buyers ask</h2>
+ <details><summary>What is a 2-1 buydown?</summary><p>Your rate starts 2% below the note rate in year one, 1% below in year two, and sits at the full note rate from year three on. The seller, builder or another party deposits the payment difference into an account at closing, and that account covers the gap each month.</p></details>
+ <details><summary>How is a 3-2-1 or 1-1 different?</summary><p>A 3-2-1 starts 3% below the note rate and steps up 1% a year for three years. A 1-1 holds the rate 1% below the note rate for two full years. Bigger early savings cost more to fund. Availability depends on the loan program and investor, so confirm it before it goes into a contract.</p></details>
+ <details><summary>Do I qualify at the lower payment?</summary><p>Generally no. On temporary buydowns you qualify at the full note rate payment. Plan your budget around the year-three payment, not the year-one payment.</p></details>
+ <details><summary>Temporary or permanent: which is better?</summary><p>It depends on how long you keep the loan. A temporary buydown puts the savings up front. A permanent buydown uses points to lower the rate for the life of the loan, so the savings are smaller each month but never stop. If you expect to refinance or sell early, temporary often wins. If you plan to hold the loan, permanent usually catches up and passes it. The chart above shows the exact crossover month for your numbers.</p></details>
+ <details><summary>Does a buydown count against seller concession limits?</summary><p>Yes. Buydown funds from the seller count toward interested party contribution limits. Those limits depend on the program and your down payment, for example 3%, 6% or 9% on conventional loans, 6% on FHA and 4% on VA (VA treats normal closing costs separately). The calculator flags your scenario if it looks over.</p></details>
+ <details><summary>What happens if I refinance or sell during the buydown?</summary><p>Unused buydown funds do not disappear. They are generally applied to your loan balance or credited to you, per the buydown agreement and program rules.</p></details>
+</div></section>
+
+<section class="band"><div class="wrap"><div><h2>Want real numbers on a real house?</h2><p>Send me the address and the seller's offer. I'll run every option and tell you which one I'd take.</p></div><div class="btns"><a class="btn btn-white" href="/book-appointment/">Book a Call</a><a class="btn btn-ghost" href="tel:+14809999842">(480) 999-9842</a></div></div></section>
+
+</div>
+</main>
+<div id="deck" aria-label="Buydown presentation"><div class="dbar"><button class="btn btn-outline" type="button" id="d-edit">Edit numbers</button><button class="btn btn-white" type="button" id="d-link">Copy share link</button><button class="btn btn-primary" type="button" id="d-pdf">Save as PDF</button></div><div class="slides" id="deckSlides"></div></div>
+<div class="bdtoast" id="bdtoast" role="status" aria-live="polite"></div>
+
+
+<footer class="ftr"><div class="wrap">
+  <div class="top">
+    <div>
+      <a class="logo" href="/"><svg viewBox="0 0 300 76" role="img" aria-label="EPiQ Lending" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="4" width="68" height="68" rx="16" fill="#F36B24"/>
+<text x="34" y="54" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="40" fill="#fff">iQ</text>
+<text x="82" y="46" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="44" letter-spacing="-1" fill="#fff">EPiQ</text>
+<text x="84" y="68" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="15" letter-spacing="6" fill="#c8cbd1">LENDING</text>
+</svg></a>
+      <p style="margin-top:16px;max-width:320px">The Ricky Khamis Team at EPiQ Lending. Purchase, refinance, and specialty home financing for Arizona and beyond, led by a 25-year mortgage veteran and 82nd Airborne alum.</p>
+      <div class="social"><a href="https://www.facebook.com/RickyKhamis" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v9h4v-9h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg></a><a href="https://www.instagram.com/rickykhamis/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5.5-8.5a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM21 8c-.1-1.6-.4-3-1.6-4.2S16.6 2.1 15 2c-2-.1-8-.1-10 0-1.6.1-3 .4-4.2 1.6S.1 6.4 0 8c-.1 2-.1 8 0 10 .1 1.6.4 3 1.6 4.2S4.4 23.9 6 24c2 .1 8 .1 10 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-2 .1-8 0-10zm-2.4 12.2c-.4.9-1 1.5-1.9 1.9-1.3.5-4.4.4-5.8.4s-4.5.1-5.8-.4c-.9-.4-1.5-1-1.9-1.9C2.7 18.9 2.8 15.8 2.8 14.4s-.1-4.5.4-5.8c.4-.9 1-1.5 1.9-1.9 1.3-.5 4.4-.4 5.8-.4s4.5-.1 5.8.4c.9.4 1.5 1 1.9 1.9.5 1.3.4 4.4.4 5.8s.1 4.5-.4 5.8z"/></svg></a><a href="https://www.linkedin.com/in/rickykhamis" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.5 8.5h-4V21h4V8.5zM4.5 2.5a2.3 2.3 0 1 0 0 4.6 2.3 2.3 0 0 0 0-4.6zM21.5 13.3c0-3.6-1.9-5.2-4.5-5.2-2 0-2.9 1.1-3.4 1.9V8.5H9.7V21h4V14.5c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h4v-7.7z"/></svg></a><a href="https://twitter.com/ricky_khamis" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-5-6.5L4.5 21h-3l7.5-8.6L1.2 3h6.6l4.5 6L17.5 3zm-1.1 16.2h1.7L6.9 4.7H5.1l11.3 14.5z"/></svg></a><a href="https://www.youtube.com/rickykhamis" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2c-.3-1-1-1.8-2-2C19.2 4.7 12 4.7 12 4.7s-7.2 0-9 .5c-1 .3-1.7 1-2 2C.5 9 .5 12 .5 12s0 3 .5 4.8c.3 1 1 1.8 2 2 1.8.5 9 .5 9 .5s7.2 0 9-.5c1-.3 1.7-1 2-2 .5-1.8.5-4.8.5-4.8s0-3-.5-4.8zM9.7 15.1V8.9l6 3.1-6 3.1z"/></svg></a></div>
+    </div>
+    <div><h4>Loans</h4><ul>
+      <li><a href="/loan-programs/conventional-loans/">Conventional</a></li><li><a href="/loan-programs/fha-loans/">FHA</a></li><li><a href="/loan-programs/va-loans/">VA</a></li><li><a href="/loan-programs/jumbo-loans/">Jumbo</a></li><li><a href="/loan-programs/mortgage-refinance/">Refinance</a></li><li><a href="/loan-programs/down-payment-assistance/">Down Payment Assistance</a></li><li><a href="/all-in-one-loan/">All In One Loan</a></li><li><a href="/loans-for-heroes/">Loans for Heroes</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="/calculator/">Mortgage Calculator</a></li><li><a href="/mortgage-process/">Mortgage Process</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/rates/">Today's Rates</a></li><li><a href="/areas/">Areas We Serve</a></li><li><a href="/blog/">Blog</a></li><li><a href="/podcast/">Podcast</a></li><li><a href="/books/">Books</a></li><li><a href="/ask-a-professional/">Ask A Professional</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li>Ricky Khamis, President<br>NMLS #173141</li>
+      <li><a href="tel:+14809999842">(480) 999-9842</a></li>
+      <li><a href="mailto:ricky.khamis@epiqlending.com">ricky.khamis@epiqlending.com</a></li>
+      <li>7975 N. Hayden Road<br>Suite A-101<br>Scottsdale, AZ 85258</li>
+      <li><a href="/book-appointment/">Book an appointment →</a></li>
+    </ul></div>
+  </div>
+  <div class="disc">
+    <div class="ehl"><svg width="34" height="34" viewBox="0 0 24 24" fill="#fff" aria-label="Equal Housing Lender"><path d="M12 2 1 10h3v10h16V10h3L12 2zm-6 8.9 6-4.6 6 4.6V18H6v-7.1zM8 12h8v1.5H8zm0 3h8v1.5H8z"/></svg><span>Equal Housing Lender</span></div>
+    <p>Ricky Khamis NMLS #173141 · EPiQ Lending NMLS #1936984 · Branch NMLS #1942720 · <a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener">nmlsconsumeraccess.org</a></p>
+    <p>EVO Home Loans, LLC, dba EPiQ Lending™ is an equal opportunity lender, NMLS# 1936984. Loans made or arranged pursuant to California Finance Lenders License No 60DBO-109420. Licensed by the Department of Financial Protection and Innovation (DFPI) under the California Residential Mortgage Lending Act No. 41DBO-156930. AZ license #1008731. Regulated by the Division of Real Estate. Registered Mortgage Company with the Texas Department of Savings and Mortgage Lending. To verify our complete list of state licenses, please visit <a href="https://epiqlending.com/corporate/licensing" target="_blank" rel="noopener">epiqlending.com/corporate/licensing</a>.</p>
+    <p>Rates change constantly. This is not a commitment to lend. All loans subject to credit approval. Contact a licensed loan officer for a personalized quote.</p>
+  </div>
+  <div class="bottom">
+    <div>© <span id="yr">2026</span> Ricky Khamis · rickykhamis.com · Loans by EPiQ Lending, <a href="https://www.epiqlending.com" target="_blank" rel="noopener">epiqlending.com</a></div>
+    <div><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-use/">Terms of Use</a> · <a href="/ccpa/">CCPA Disclosure</a></div>
+  </div>
+</div></footer>
+
+<script src="/assets/site.js"></script>
+<script>
+(function(){
+'use strict';
+var $=function(i){return document.getElementById(i)};
+var SC=[
+ {k:'fixed',name:'30-Yr Fixed',sub:'No buydown',red:[],color:'#5d6169',dash:'6 5'},
+ {k:'b321',name:'3-2-1 Buydown',sub:'Temporary',red:[3,2,1],color:'#2a78d6'},
+ {k:'b21',name:'2-1 Buydown',sub:'Temporary',red:[2,1],color:'#F36B24'},
+ {k:'b11',name:'1-1 Buydown',sub:'Temporary',red:[1,1],color:'#1baf7a'},
+ {k:'perm',name:'Permanent Buydown',sub:'Points',red:null,color:'#c98500'}
+];
+var FIELDS={price:'i-price',dp:'i-down',t:'i-type',r:'i-rate',uf:'i-uf',mi:'i-mi',tx:'i-tax',ins:'i-ins',hoa:'i-hoa',cc:'i-cc',pre:'i-pre',sc:'i-sc',ppr:'i-ppr',m:'i-match',bn:'i-bn',ad:'i-ad',ag:'i-ag'};
+var TEXT={t:1,m:1,bn:1,ad:1,ag:1};
+
+function money(n){var s=Math.round(Math.abs(n)).toLocaleString('en-US');return (n<-0.5?'-$':'$')+s}
+function signed(n){return Math.abs(n)<0.5?'$0':(n>0?'+':'-')+'$'+Math.round(Math.abs(n)).toLocaleString('en-US')}
+function pct(n,d){d=d==null?3:d;var s=(+n).toFixed(d);s=s.replace(/0+$/,'').replace(/\.$/,'');return s+'%'}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function num(id){var v=parseFloat($(id).value);return isFinite(v)?v:0}
+function pmt(L,rate){var i=rate/1200;return i>0?L*i/(1-Math.pow(1+i,-360)):L/360}
+function shortN(o){return o.sc.name.replace(' Buydown','')}
+function bestAt(R,m){var min=Infinity;SC.forEach(function(sc){min=Math.min(min,R.S[sc.k].cum[m])});var w=SC.filter(function(sc){return R.S[sc.k].cum[m]-min<1}).map(function(sc){return R.S[sc.k]});return {list:w,name:w.map(shortN).join(', ')+(w.length>1?' (tied)':''),ahead:w[0].ahead[m]}}
+function monthsTxt(m){if(m==null)return 'never within 30 years';var y=Math.floor(m/12),mo=m%12;var a=[];if(y)a.push(y+(y==1?' year':' years'));if(mo)a.push(mo+(mo==1?' month':' months'));return a.join(', ')||'right away'}
+
+/* ---------- core math ---------- */
+function compute(){
+ var I={price:num('i-price'),dp:num('i-down'),type:$('i-type').value,rate:num('i-rate'),uf:num('i-uf'),miPct:num('i-mi'),tax:num('i-tax'),ins:num('i-ins'),hoa:num('i-hoa'),cc:num('i-cc'),pre:num('i-pre'),sc:num('i-sc'),ppr:num('i-ppr'),match:$('i-match').value,
+  bn:$('i-bn').value.trim(),ad:$('i-ad').value.trim(),ag:$('i-ag').value.trim()};
+ var down=I.price*I.dp/100, base=Math.max(I.price-down,0), loan=base*(1+I.uf/100), ltv=I.price>0?base/I.price:0;
+ var mi=0;
+ if(I.type==='c') mi=ltv>0.8?loan*I.miPct/100/12:0;
+ else if(I.type==='f') mi=loan*I.miPct/100/12;
+ var escrow=I.tax/12+I.ins/12, other=escrow+mi+I.hoa, closing=I.cc+I.pre, piNote=pmt(loan,I.rate);
+ var res={I:I,down:down,base:base,loan:loan,ltv:ltv,mi:mi,escrow:escrow,other:other,closing:closing,piNote:piNote,S:{}};
+ function build(sc,rates,cost,extra){
+  var o={k:sc.k,sc:sc,rates:rates,cost:cost};
+  o.toBd=Math.min(I.sc,cost); o.bBd=cost-o.toBd;
+  o.toCC=Math.min(I.sc-o.toBd,closing); o.unused=I.sc-o.toBd-o.toCC;
+  o.cash=down+closing+cost-o.toBd-o.toCC;
+  o.pi=[];o.pay=[];
+  for(var y=0;y<30;y++){var r=rates[Math.min(y,rates.length-1)];var p=pmt(loan,r);o.pi.push(p);o.pay.push(p+other)}
+  o.cum=[o.cash];for(var m=1;m<=360;m++)o.cum.push(o.cum[m-1]+o.pay[Math.floor((m-1)/12)]);
+  for(var k in extra)o[k]=extra[k];
+  return o;
+ }
+ SC.forEach(function(sc){
+  if(sc.k==='perm')return;
+  var rates=[],cost=0;
+  if(!sc.red.length)rates=[I.rate];
+  else{sc.red.forEach(function(d){var r=Math.max(I.rate-d,0);rates.push(r);cost+=12*(piNote-pmt(loan,r))});rates.push(I.rate)}
+  res.S[sc.k]=build(sc,rates,cost,{});
+ });
+ var spend=I.match==='all'?I.sc:res.S[I.match].cost;
+ var pts=loan>0?spend/loan*100:0, pr=Math.max(I.rate-pts*I.ppr,0);
+ res.S.perm=build(SC[4],[pr],spend,{points:pts,matchK:I.match});
+ var fx=res.S.fixed;
+ SC.forEach(function(sc){var o=res.S[sc.k];o.ahead=o.cum.map(function(c,i){return fx.cum[i]-c})});
+ // permanent vs matched temp crossover
+ var tK=I.match==='all'?'b21':I.match, t=res.S[tK], p=res.S.perm, be=null;
+ for(var m=360;m>=0;m--){if(p.cum[m]>t.cum[m]){be=m<360?m+1:null;break}if(m===0)be=0}
+ res.cross={tK:tK,month:be};
+ // perm vs fixed breakeven
+ var bf=null;for(m=360;m>=0;m--){if(p.cum[m]>fx.cum[m]){bf=m<360?m+1:null;break}if(m===0)bf=0}
+ res.permFixed=bf;
+ // IPC limit
+ var lim,limTxt;
+ if(I.type==='c'){lim=ltv>0.9?3:ltv>0.75?6:9;limTxt='Conventional at '+pct(ltv*100,1)+' LTV'}
+ else if(I.type==='f'){lim=6;limTxt='FHA'}else{lim=4;limTxt='VA'}
+ res.lim=lim;res.limTxt=limTxt;res.scPct=I.price>0?I.sc/I.price*100:0;
+ return res;
+}
+
+/* ---------- charts (inline SVG) ---------- */
+var NS='http://www.w3.org/2000/svg';
+function barChart(res,opt){
+ opt=opt||{};var W=opt.w||720,H=opt.h||320,pl=64,pr=12,pt=14,pb=38;
+ var groups=['Year 1','Year 2','Year 3','Year 4+'],idx=[0,1,2,3];
+ var vals=[];SC.forEach(function(sc){idx.forEach(function(y){vals.push(res.S[sc.k].pay[y])})});
+ var mx=Math.max.apply(null,vals),mn=Math.min.apply(null,vals);
+ var lo=Math.max(0,Math.floor((mn*0.8)/500)*500),hi=Math.ceil(mx/250)*250;if(hi<=lo)hi=lo+500;
+ var ticks=niceTicks(lo,hi,5);lo=ticks[0];hi=ticks[ticks.length-1];
+ var cw=W-pl-pr,ch=H-pt-pb,gw=cw/4,bw=Math.min(30,(gw-24)/5-2);
+ var y=function(v){return pt+ch-(v-lo)/(hi-lo)*ch};
+ var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Monthly payment by year for each option">';
+ ticks.forEach(function(t){s+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+y(t)+'" y2="'+y(t)+'" stroke="#e6e7ea" stroke-width="1"/><text x="'+(pl-8)+'" y="'+(y(t)+4)+'" text-anchor="end" font-size="11" fill="#5d6169">'+money(t)+'</text>'});
+ groups.forEach(function(g,gi){
+  var gx=pl+gi*gw,x0=gx+(gw-(bw*5+2*4))/2;
+  SC.forEach(function(sc,si){
+   var v=res.S[sc.k].pay[idx[gi]],x=x0+si*(bw+2),yy=y(v),h=pt+ch-yy;
+   s+='<path d="M'+x+','+(pt+ch)+'V'+(yy+4)+'q0,-4 4,-4h'+(bw-8)+'q4,0 4,4V'+(pt+ch)+'Z" fill="'+sc.color+'" data-g="'+gi+'" data-s="'+si+'"/>';
+   if(opt.labels){s+='<text x="'+(x+bw/2)+'" y="'+(yy-5)+'" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1b1e24">'+(Math.round(v/10)/100).toFixed(2).replace(/^/,'$')+'k</text>'}
+  });
+  s+='<text x="'+(gx+gw/2)+'" y="'+(H-12)+'" text-anchor="middle" font-size="12" font-weight="700" fill="#1b1e24">'+g+'</text>';
+  if(!opt.labels)s+='<rect x="'+gx+'" y="'+pt+'" width="'+gw+'" height="'+ch+'" fill="transparent" data-hit="'+gi+'"/>';
+ });
+ s+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+(pt+ch)+'" y2="'+(pt+ch)+'" stroke="#1b1e24" stroke-width="1"/></svg>';
+ return s;
+}
+function niceTicks(lo,hi,n){var span=hi-lo,step=Math.pow(10,Math.floor(Math.log10(span/n)));var err=span/n/step;if(err>=7.5)step*=10;else if(err>=3.5)step*=5;else if(err>=1.5)step*=2;var a=Math.floor(lo/step)*step,b=Math.ceil(hi/step)*step,t=[];for(var v=a;v<=b+1e-9;v+=step)t.push(Math.round(v));return t}
+function lineChart(res,opt){
+ opt=opt||{};var W=opt.w||1000,H=opt.h||340,pl=70,pr=opt.pr||190,pt=16,pb=34,M=opt.months||120;
+ var keys=['b321','b21','b11','perm'],all=[0];
+ keys.forEach(function(k){for(var m=0;m<=M;m++)all.push(res.S[k].ahead[m])});
+ var ticks=niceTicks(Math.min.apply(null,all),Math.max.apply(null,all),5),lo=ticks[0],hi=ticks[ticks.length-1];
+ var cw=W-pl-pr,ch=H-pt-pb,x=function(m){return pl+m/M*cw},y=function(v){return pt+ch-(v-lo)/(hi-lo)*ch};
+ var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Cumulative dollars ahead of a 30-year fixed, by month">';
+ ticks.forEach(function(t){s+='<line x1="'+pl+'" x2="'+(pl+cw)+'" y1="'+y(t)+'" y2="'+y(t)+'" stroke="'+(t===0?'#5d6169':'#e6e7ea')+'" stroke-width="1"'+(t===0?' stroke-dasharray="6 5"':'')+'/><text x="'+(pl-8)+'" y="'+(y(t)+4)+'" text-anchor="end" font-size="11" fill="#5d6169">'+signed(t)+'</text>'});
+ for(var yr=0;yr<=M/12;yr++){if(M/12>12&&yr%2)continue;s+='<text x="'+x(yr*12)+'" y="'+(H-10)+'" text-anchor="middle" font-size="11" fill="#5d6169">'+(yr===0?'Close':'Yr '+yr)+'</text>'}
+  var ends=[];
+ keys.forEach(function(k){var o=res.S[k],d='';for(var m=0;m<=M;m++)d+=(m?'L':'M')+x(m).toFixed(1)+','+y(o.ahead[m]).toFixed(1);
+  s+='<path d="'+d+'" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/><path d="'+d+'" fill="none" stroke="'+o.sc.color+'" stroke-width="2.25" stroke-linejoin="round"/>';
+  ends.push({k:k,y:y(o.ahead[M]),v:o.ahead[M],c:o.sc.color,n:o.sc.name.replace(' Buydown','')})});
+ var mg=[];ends.forEach(function(e){var h=mg.filter(function(g){return Math.abs(g.v-e.v)<1})[0];if(h){h.n+=', '+e.n;h.ks.push(e.k)}else{e.ks=[e.k];mg.push(e)}});ends=mg;ends.sort(function(a,b){return a.y-b.y});for(var i=1;i<ends.length;i++)if(ends[i].y-ends[i-1].y<14)ends[i].y=ends[i-1].y+14;
+ ends.forEach(function(e){e.ks.forEach(function(k){s+='<circle cx="'+x(M)+'" cy="'+y(res.S[k].ahead[M])+'" r="4" fill="'+res.S[k].sc.color+'" stroke="#fff" stroke-width="2"/>'});s+='<text x="'+(pl+cw+8)+'" y="'+(e.y+4)+'" font-size="11" font-weight="700" fill="#1b1e24">'+e.n+' '+signed(e.v)+'</text>'});
+ if(res.cross.month!=null&&res.cross.month>0&&res.cross.month<=M){var cx=x(res.cross.month);s+='<line x1="'+cx+'" x2="'+cx+'" y1="'+pt+'" y2="'+(pt+ch)+'" stroke="#c98500" stroke-width="1" stroke-dasharray="3 3"/><text x="'+(cx+5)+'" y="'+(pt+12)+'" font-size="11" font-weight="700" fill="#8a5c00">Permanent passes '+res.S[res.cross.tK].sc.name.replace(' Buydown','')+'</text>'}
+ if(!opt.print)s+='<line id="xh" x1="0" x2="0" y1="'+pt+'" y2="'+(pt+ch)+'" stroke="#1b1e24" stroke-width="1" opacity="0"/><rect x="'+pl+'" y="'+pt+'" width="'+cw+'" height="'+ch+'" fill="transparent" id="hit2"/>';
+ s+='</svg>';
+ return {svg:s,x:x,pl:pl,cw:cw,M:M,W:W};
+}
+function legend(keys,wrap){return keys.map(function(k){var sc=SC.filter(function(s){return s.k===k})[0];return '<span><i class="sw" style="background:'+sc.color+'"></i>'+sc.name+'</span>'}).join('')}
+
+/* ---------- tooltips ---------- */
+var tip;
+function showTip(host,html,px,py){if(!tip){tip=document.createElement('div');tip.className='tip'}if(tip.parentNode!==host)host.appendChild(tip);tip.innerHTML=html;tip.style.opacity=1;var w=tip.offsetWidth,hw=host.clientWidth;var l=px+14;if(l+w>hw)l=px-w-14;if(l<0)l=0;tip.style.left=l+'px';tip.style.top=Math.max(0,py-20)+'px'}
+function hideTip(){if(tip)tip.style.opacity=0}
+
+/* ---------- web render ---------- */
+var last;
+function render(){
+ var R=compute();last=R;var I=R.I,S=R.S,fx=S.fixed,p=S.perm;
+ $('h-down').textContent=money(R.down)+' down · base loan '+money(R.base);
+ $('h-uf').textContent=I.type==='f'?'FHA upfront MIP (1.75% typical)':I.type==='v'?'VA funding fee (2.15% first use, under 5% down)':'None on conventional';
+ $('h-mi').textContent=I.type==='c'?(R.ltv>0.8?'PMI applies above 80% LTV: '+money(R.mi)+'/mo':'No PMI at '+pct(R.ltv*100,1)+' LTV'):I.type==='f'?'FHA annual MIP (0.55% typical): '+money(R.mi)+'/mo':'VA has no monthly MI';
+ $('h-sc').textContent=pct(R.scPct,2)+' of price';
+ var w=[];
+ if(R.scPct>R.lim+1e-9)w.push('Seller concession is '+pct(R.scPct,2)+' of price. Typical limit for '+R.limTxt+' is '+R.lim+'%. Anything over the limit usually has to come off the price.');
+ if(S.b321.bBd>0.5)w.push('The concession does not fully cover the 3-2-1. The buyer would pay '+money(S.b321.bBd)+' of it at closing.');
+ if(p.points>4)w.push('The permanent buydown works out to '+p.points.toFixed(2)+' points. Most programs cap discount points and pricing gets less efficient at that level. Confirm with real pricing.');
+ if(I.type==='v'&&I.sc>0)w.push('VA: the 4% concession cap excludes normal closing costs, so actual room may be larger than shown. Confirm with your loan officer.');
+ $('warn').innerHTML=w.map(function(t){return '<div>'+esc(t)+'</div>'}).join('<div style="height:6px"></div>');
+
+ var b21=S.b21;
+ $('kpis').innerHTML=
+  kpi('Loan amount',money(R.loan),pct(I.rate)+' note rate · '+(I.type==='c'?'Conventional':I.type==='f'?'FHA':'VA'))+
+  kpi('Full payment, 30-yr fixed',money(fx.pay[0]),'P&amp;I '+money(fx.pi[0])+' + tax, ins, MI, HOA '+money(R.other))+
+  kpi('2-1 buydown, year 1',money(b21.pay[0]),'Saves '+money(fx.pay[0]-b21.pay[0])+'/mo · costs '+money(b21.cost),'o')+
+  kpi('Permanent buydown',money(p.pay[0]),pct(p.rates[0])+' for 30 yrs · '+p.points.toFixed(2)+' pts');
+ function kpi(l,v,s,c){return '<div class="kpi '+(c||'')+'"><div class="l">'+l+'</div><div class="v">'+v+'</div><div class="s">'+s+'</div></div>'}
+
+ $('insight').innerHTML=insightHTML(R);
+ $('lg1').innerHTML=legend(['fixed','b321','b21','b11','perm']);
+ $('ch1').innerHTML=barChart(R,{w:640,h:300});
+ $('tbl').innerHTML=tableHTML(R);
+ $('lg2').innerHTML=legend(['b321','b21','b11','perm'])+'<span><i class="sw" style="background:transparent;border:1.5px dashed #5d6169"></i>30-Yr Fixed (zero line)</span>';
+ var lc=lineChart(R,{w:1000,h:340});$('ch2').innerHTML=lc.svg;wireLine(lc,R);wireBars(R);
+ $('insight2').innerHTML=insight2HTML(R);
+}
+function insightHTML(R){var S=R.S,fx=S.fixed,p=S.perm,t=S[R.cross.tK];
+ var s1=fx.pay[0]-S.b21.pay[0],s3=fx.pay[0]-S.b321.pay[0];
+ return '<p><b>Year one:</b> the 3-2-1 drops the payment '+money(s3)+'/mo and the 2-1 drops it '+money(s1)+'/mo. From year '+(S.b321.rates.length)+' on, every temporary option is back at '+money(fx.pay[3])+'/mo.</p>'+
+ '<p><b>Permanent:</b> '+money(p.cost)+' in points takes the rate to '+pct(p.rates[0])+' and saves '+money(fx.pay[0]-p.pay[0])+'/mo for as long as you keep the loan. It passes the '+t.sc.name.replace(' Buydown','')+' after '+monthsTxt(R.cross.month)+'.</p>'}
+function timingNote(R){var S=R.S,full=['b321','b21','b11'].filter(function(k){return S[k].bBd<0.5});if(!full.length)return '';return 'A seller-paid temporary buydown gives back exactly what it costs, just spread over the first '+(full.length>1?'few years':'years')+'. Compared with putting the same money on closing costs, it is a timing choice (less cash now vs. lower payments early), not extra money. The permanent buydown is the only option that keeps paying after year '+S.b321.rates.length+'.'}
+function insight2HTML(R){var S=R.S,h=[36,60,84,120];
+ return '<p><b>Lowest total cost</b> (cash to close plus payments): '+h.map(function(m){return (m/12)+' yrs: '+bestAt(R,m).name}).join(' · ')+'.</p>'+(timingNote(R)?'<p>'+timingNote(R)+'</p>':'')+
+ '<p>Keep the loan past '+monthsTxt(R.cross.month)+' and the permanent buydown beats the '+S[R.cross.tK].sc.name.replace(' Buydown','')+'. Plan to refinance or sell before that and the temporary buydown keeps more money in your pocket.</p>'}
+function tableHTML(R,deck){var S=R.S,keys=['fixed','b321','b21','b11','perm'],fx=S.fixed;
+ var h='<thead><tr><th></th>'+keys.map(function(k){return '<th><i class="sw" style="background:'+S[k].sc.color+'"></i>'+S[k].sc.name.replace(' Buydown','')+'</th>'}).join('')+'</tr></thead><tbody>';
+ function row(label,f,cls){return '<tr'+(cls?' class="'+cls+'"':'')+'><td>'+label+'</td>'+keys.map(function(k){return '<td>'+f(S[k],k)+'</td>'}).join('')+'</tr>'}
+ function sec(t){return '<tr class="sec"><td colspan="6">'+t+'</td></tr>'}
+ var yrs=[0,1,2,3];
+ h+=sec('Interest rate');
+ yrs.forEach(function(y){h+=row(y<3?'Year '+(y+1):'Year 4+',function(o){return pct(o.rates[Math.min(y,o.rates.length-1)])})});
+ h+=sec('Full monthly payment (PITI + MI + HOA)');
+ yrs.forEach(function(y){h+=row(y<3?'Year '+(y+1):'Year 4+',function(o){return money(o.pay[y])},y===0?'hl':'')});
+ h+=sec('Cost and cash to close');
+ h+=row('Cost of the buydown',function(o){return o.cost?money(o.cost):'-'});
+ h+=row('Seller pays toward buydown',function(o){return o.cost?money(o.toBd):'-'});
+ h+=row('Seller pays toward closing costs',function(o){return money(o.toCC)});
+ h+=row('Buyer pays toward buydown',function(o){return o.bBd>0.5?money(o.bBd):'-'});
+ if(keys.some(function(k){return S[k].unused>0.5}))h+=row('Concession left unused',function(o){return o.unused>0.5?money(o.unused):'-'});
+ h+=row('Cash to close',function(o){return money(o.cash)},'hl');
+ h+=sec('Ahead (+) or behind (-) the 30-yr fixed, all-in');
+ [36,60,84,120].forEach(function(m){h+=row('After '+(m/12)+' years',function(o,k){if(k==='fixed')return '-';var v=o.ahead[m];return '<span class="'+(v>0.5?'pos':v<-0.5?'neg':'')+'">'+signed(v)+'</span>'})});
+ return h+'</tbody>';
+}
+function wireLine(lc,R){var host=$('ch2'),svg=host.querySelector('svg'),hit=svg.querySelector('#hit2'),xh=svg.querySelector('#xh');if(!hit)return;
+ function mv(e){var r=svg.getBoundingClientRect(),sx=lc.W/r.width,px=(e.clientX-r.left)*sx,m=Math.round((px-lc.pl)/lc.cw*lc.M);m=Math.max(0,Math.min(lc.M,m));var X=lc.x(m);xh.setAttribute('x1',X);xh.setAttribute('x2',X);xh.setAttribute('opacity',.35);
+  var html='<b>'+(m===0?'At closing':'Month '+m+' ('+monthsTxt(m)+')')+'</b>';['b321','b21','b11','perm'].forEach(function(k){var o=R.S[k];html+='<div class="r"><span><i class="sw" style="background:'+o.sc.color+'"></i>'+o.sc.name.replace(' Buydown','')+'</span><span>'+signed(o.ahead[m])+'</span></div>'});
+  showTip(host,html,X/sx,(e.clientY-r.top))}
+ hit.addEventListener('mousemove',mv);hit.addEventListener('mouseleave',function(){xh.setAttribute('opacity',0);hideTip()});
+}
+function wireBars(R){var host=$('ch1'),svg=host.querySelector('svg');var lab=['Year 1','Year 2','Year 3','Year 4+'];
+ svg.querySelectorAll('[data-hit]').forEach(function(el){el.addEventListener('mousemove',function(e){var g=+el.getAttribute('data-hit'),r=host.getBoundingClientRect();var html='<b>'+lab[g]+' monthly payment</b>';SC.forEach(function(sc){var o=R.S[sc.k];html+='<div class="r"><span><i class="sw" style="background:'+sc.color+'"></i>'+sc.name.replace(' Buydown','')+'</span><span>'+money(o.pay[g])+'</span></div>'});showTip(host,html,e.clientX-r.left,e.clientY-r.top)});el.addEventListener('mouseleave',hideTip)});
+}
+
+/* ---------- state in URL ---------- */
+function params(){var q=new URLSearchParams();for(var k in FIELDS){var v=$(FIELDS[k]).value;if(v!=='')q.set(k,v)}return q}
+function shareURL(){var q=params();q.set('view','deck');return location.origin+location.pathname+'?'+q.toString()}
+function load(){var q=new URLSearchParams(location.search);for(var k in FIELDS){if(q.has(k)){var el=$(FIELDS[k]),v=q.get(k);if(!TEXT[k]&&!isFinite(parseFloat(v)))continue;if(el.tagName==='SELECT'&&![].some.call(el.options,function(o){return o.value===v}))continue;el.value=v.slice(0,120)}}return q.get('view')==='deck'}
+function toast(t){var el=$('bdtoast');el.textContent=t;el.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(function(){el.classList.remove('on')},2200)}
+function copyLink(){var u=shareURL();var done=function(){toast('Link copied')};if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(u).then(done,function(){prompt('Copy this link:',u)})}else{prompt('Copy this link:',u)}}
+
+/* ---------- deck ---------- */
+function deckHTML(R){var I=R.I,S=R.S,fx=S.fixed,p=S.perm,t=S[R.cross.tK];
+ var today=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+ var tn=I.type==='c'?'Conventional':I.type==='f'?'FHA':'VA';
+ var foot=function(n){return '<div class="sfoot"><span><b>Ricky Khamis</b> · President, Certified Mortgage Planner · NMLS #173141 · EPiQ Lending NMLS #1936984 · (480) 999-9842 · rickykhamis.com</span><span>'+n+'</span></div>'};
+ var d='';
+ // 1 cover
+ d+='<section class="slide dark cover"><div class="glow"></div><div class="sin">'+
+  '<svg viewBox="0 0 300 76" width="190" aria-label="EPiQ Lending"><rect x="0" y="4" width="68" height="68" rx="16" fill="#F36B24"/><text x="34" y="54" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="40" fill="#fff">iQ</text><text x="82" y="46" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="44" letter-spacing="-1" fill="#fff">EPiQ</text><text x="84" y="68" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="15" letter-spacing="6" fill="#c8cbd1">LENDING</text></svg>'+
+  '<div style="margin-top:.55in" class="s-eye">Rate buydown analysis</div><h1>Your Buydown Options, Side by Side</h1>'+
+  '<div class="who">'+(I.bn?'Prepared for <b>'+esc(I.bn)+'</b><br>':'')+(I.ad?esc(I.ad)+'<br>':'')+(I.ag?'Real estate agent: '+esc(I.ag)+'<br>':'')+'<span style="color:#8a8e96">'+today+'</span></div>'+
+  '<div class="stats"><div>Price<b>'+money(I.price)+'</b></div><div>Loan<b>'+money(R.loan)+'</b></div><div>Note rate<b>'+pct(I.rate)+'</b></div><div>Seller concession<b>'+money(I.sc)+'</b></div></div>'+
+  '</div><img class="photo" src="/assets/images/ricky-khamis.jpg" alt="Ricky Khamis">'+foot('1')+'</section>';
+ // 2 setup
+ d+='<section class="slide"><div class="sin"><div class="s-eye">The setup</div><h2 class="s-h">Same house. Same seller money. Five ways to use it.</h2><p class="s-sub">Every option below starts from these numbers. The only thing that changes is where the seller concession goes.</p>'+
+  '<div class="g3">'+box('Purchase price',money(I.price),pct(I.dp,2)+' down ('+money(R.down)+')')+box('Loan amount',money(R.loan),tn+(I.uf?' · includes '+pct(I.uf,2)+' upfront fee':''))+box('Note rate',pct(I.rate),'30-year fixed, hypothetical')+
+  box('Taxes + insurance',money(R.escrow)+'/mo',money(I.tax)+'/yr tax · '+money(I.ins)+'/yr ins')+box('Mortgage insurance + HOA',money(R.mi+I.hoa)+'/mo','MI '+money(R.mi)+' · HOA '+money(I.hoa))+box('Closing costs + prepaids',money(R.closing),money(I.cc)+' costs · '+money(I.pre)+' prepaids')+'</div>'+
+  '<div class="g2" style="margin-top:14px">'+box('Seller concession',money(I.sc),pct(R.scPct,2)+' of price · typical limit '+R.lim+'% ('+esc(R.limTxt)+')','o')+box('Permanent buydown budget',money(p.cost),p.points.toFixed(2)+' points at '+pct(I.ppr,3)+' per point = '+pct(p.rates[0])+' rate','k')+'</div>'+
+  '<div class="callout" style="margin-top:16px"><b>How to read this:</b> with no buydown, the seller money goes to your closing costs. With a buydown, it pays for the buydown first and anything left goes to closing costs. That trade-off is built into every number that follows.</div>'+
+  '</div>'+foot('2')+'</section>';
+ // 3 payments
+ d+='<section class="slide"><div class="sin"><div class="s-eye">Monthly payment</div><h2 class="s-h">What you actually pay each month, every year</h2><p class="s-sub">Principal, interest, taxes, insurance, mortgage insurance and HOA. Temporary buydowns step back up to the full payment by year '+(S.b321.rates.length)+'.</p>'+
+  '<div class="legend">'+legend(['fixed','b321','b21','b11','perm'])+'</div><div class="chart">'+barChart(R,{w:980,h:300,labels:true})+'</div>'+
+  '<table class="st" style="margin-top:10px"><thead><tr><th>Full payment</th><th>Year 1</th><th>Year 2</th><th>Year 3</th><th>Year 4+</th><th>Year 1 savings vs. fixed</th></tr></thead><tbody>'+
+  ['fixed','b321','b21','b11','perm'].map(function(k){var o=S[k];return '<tr'+(k==='b21'?' class="hl"':'')+'><td><i class="sw" style="background:'+o.sc.color+'"></i>'+o.sc.name+'</td><td>'+money(o.pay[0])+'</td><td>'+money(o.pay[1])+'</td><td>'+money(o.pay[2])+'</td><td>'+money(o.pay[3])+'</td><td>'+(k==='fixed'?'-':money(fx.pay[0]-o.pay[0])+'/mo')+'</td></tr>'}).join('')+'</tbody></table>'+
+  '</div>'+foot('3')+'</section>';
+ // 4 cost
+ d+='<section class="slide"><div class="sin"><div class="s-eye">Cost to do it</div><h2 class="s-h">What each option costs and what you bring to closing</h2><p class="s-sub">A temporary buydown costs exactly the payment difference it covers. The permanent buydown spends '+(I.match==='all'?'the full seller concession':'the same dollars as the '+S[I.match].sc.name)+' on points.</p>'+
+  '<table class="st cmp4"><thead><tr><th></th>'+['fixed','b321','b21','b11','perm'].map(function(k){return '<th><i class="sw" style="background:'+S[k].sc.color+'"></i>'+S[k].sc.name.replace(' Buydown','')+'</th>'}).join('')+'</tr></thead><tbody>'+
+  crow('Rate, year 1',function(o){return pct(o.rates[0])})+crow('Rate, year 4+',function(o){return pct(o.rates[o.rates.length-1])})+
+  '<tr class="sec"><td colspan="6">Where the '+money(I.sc)+' seller concession goes</td></tr>'+
+  crow('Cost of the buydown',function(o){return o.cost?money(o.cost):'-'})+crow('Seller pays toward buydown',function(o){return o.cost?money(o.toBd):'-'})+crow('Seller pays toward closing costs',function(o){return money(o.toCC)})+crow('Buyer pays toward buydown',function(o){return o.bBd>0.5?money(o.bBd):'-'})+
+  (['fixed','b321','b21','b11','perm'].some(function(k){return S[k].unused>0.5})?crow('Concession left unused',function(o){return o.unused>0.5?money(o.unused):'-'}):'')+
+  '<tr class="sec"><td colspan="6">Cash to close</td></tr>'+
+  crow('Down payment',function(){return money(R.down)})+crow('Closing costs + prepaids',function(){return money(R.closing)})+crow('Buydown',function(o){return o.cost?money(o.cost):'-'})+crow('Less seller concession',function(o){return money(-(o.toBd+o.toCC))})+
+  '<tr class="hl"><td>Total cash to close</td>'+['fixed','b321','b21','b11','perm'].map(function(k){return '<td>'+money(S[k].cash)+'</td>'}).join('')+'</tr>'+
+  '</tbody></table>'+
+  '<div class="callout" style="margin-top:10px;font-size:12.5px">'+(S.b21.cash>fx.cash+0.5?'Using the concession for a 2-1 means '+money(S.b21.cash-fx.cash)+' more cash at closing than putting it toward closing costs, in exchange for '+money((fx.pay[0]-S.b21.pay[0])*12+(fx.pay[1]-S.b21.pay[1])*12)+' of payment relief over two years.':'Your concession covers both the 2-1 and your closing costs, so the buydown costs you nothing extra at the table.')+' '+timingNote(R)+'</div>'+
+  '</div>'+foot('4')+'</section>';
+ function crow(l,f){return '<tr><td>'+l+'</td>'+['fixed','b321','b21','b11','perm'].map(function(k){return '<td>'+f(S[k])+'</td>'}).join('')+'</tr>'}
+ // 5 over time
+ var lc=lineChart(R,{w:980,h:330,print:true,pr:190});
+ d+='<section class="slide"><div class="sin"><div class="s-eye">Temporary vs. permanent</div><h2 class="s-h">'+(R.cross.month!=null?'Permanent passes the '+t.sc.name.replace(' Buydown','')+' after '+monthsTxt(R.cross.month):'The '+t.sc.name.replace(' Buydown','')+' stays ahead for the full 30 years')+'</h2><p class="s-sub">Dollars ahead of the plain 30-year fixed over 10 years, counting cash to close plus every payment. Above the dashed line means you are ahead.</p>'+
+  '<div class="legend">'+legend(['b321','b21','b11','perm'])+'</div><div class="chart">'+lc.svg+'</div>'+
+  '<table class="st" style="margin-top:8px"><thead><tr><th>Ahead of fixed after</th><th>3 years</th><th>5 years</th><th>7 years</th><th>10 years</th></tr></thead><tbody>'+
+  ['b321','b21','b11','perm'].map(function(k){var o=S[k];return '<tr><td><i class="sw" style="background:'+o.sc.color+'"></i>'+o.sc.name+'</td>'+[36,60,84,120].map(function(m){var v=o.ahead[m];return '<td class="'+(v>0.5?'pos':v<-0.5?'neg':'')+'">'+signed(v)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table>'+
+  '</div>'+foot('5')+'</section>';
+ // 6 straight talk
+ d+='<section class="slide"><div class="sin"><div class="s-eye">Straight talk</div><h2 class="s-h">Which one fits you</h2><p class="s-sub">The right answer comes down to one question: how long will you keep this loan?</p>'+
+  '<div class="g2"><div class="box"><div class="l" style="color:#2a78d6">Choose a temporary buydown if</div><ul class="pts" style="margin-top:8px">'+
+  '<li>You expect to refinance or sell within '+monthsTxt(R.cross.month)+'.</li><li>You want the lowest payment in the first year or two while income grows or other costs settle.</li><li>You are comfortable with the full '+money(fx.pay[3])+' payment by year '+(S.b321.rates.length)+'. You qualify at that payment anyway.</li><li>Unused funds generally go toward your loan balance if you refinance or sell early.</li></ul></div>'+
+  '<div class="box"><div class="l" style="color:#8a5c00">Choose the permanent buydown if</div><ul class="pts" style="margin-top:8px">'+
+  '<li>You plan to keep the loan past '+monthsTxt(R.cross.month)+'.</li><li>You want a lower payment that never steps up: '+money(p.pay[0])+'/mo instead of '+money(fx.pay[0])+'.</li><li>You would rather lock in '+money(fx.pay[0]-p.pay[0])+'/mo of savings for 30 years than front-load it.</li><li>You want the lowest total interest if rates do not drop enough to refinance.</li></ul></div></div>'+
+  '<div class="g3" style="margin-top:14px">'+[36,60,120].map(function(m){var b=bestAt(R,m);return box('Lowest all-in cost at '+(m/12)+' years','<span style="font-size:'+(b.list.length>1?'16px':'22px')+'">'+b.name+'</span>',signed(b.ahead)+' vs. 30-yr fixed',m===60?'o':'')}).join('')+'</div>'+
+  '<div class="callout" style="margin-top:14px"><b>My take:</b> budget for the full payment, not the teaser. Then pick the option that wins over the time you realistically expect to keep the loan. If rates drop and you refinance early, a temporary buydown usually wins. If you hold, permanent wins.</div>'+
+  '</div>'+foot('6')+'</section>';
+ // 7 contact
+ d+='<section class="slide dark"><div class="sin"><div class="s-eye">Next step</div><h2 class="s-h" style="font-size:36px;max-width:8in">Let\'s run it on the real contract before you sign.</h2><p class="s-sub" style="color:#c8cbd1">Send me the address and the seller\'s offer. I will price every option with live pricing, confirm program limits, and tell you which one I would take.</p>'+
+  '<div class="contact" style="margin-top:.2in"><img src="/assets/images/ricky-khamis.jpg" alt="Ricky Khamis"><div><div class="n">Ricky Khamis</div><div class="t">President, Certified Mortgage Planner · NMLS #173141<br>EPiQ Lending · 7975 N. Hayden Rd., Suite A-101, Scottsdale, AZ 85258<br>(480) 999-9842 · ricky.khamis@epiqlending.com<br><a href="https://rickykhamis.com/book-appointment/">rickykhamis.com/book-appointment</a> · <a href="https://www.epiqlending.com">epiqlending.com</a></div></div></div>'+
+  '<p class="fine" style="margin-top:auto;color:#8a8e96">This presentation is an illustration based on the hypothetical figures entered, not a loan offer, commitment to lend, or Loan Estimate. Rates, points, fees and payments are examples only and will change. Temporary buydown borrowers generally must qualify at the full note rate. Buydown availability, seller concession limits and discount point pricing depend on program, investor, occupancy, credit and loan-to-value. Mortgage insurance is held constant for comparison and may cancel or change. Taxes and insurance are estimates. All loans subject to credit approval and underwriting. Ricky Khamis NMLS #173141. EVO Home Loans, LLC dba EPiQ Lending, NMLS #1936984, Branch NMLS #1942720, AZ license #1008731. Equal Housing Lender. nmlsconsumeraccess.org.</p>'+
+  '</div>'+foot('7')+'</section>';
+ return d;
+ function box(l,v,s,c){return '<div class="box '+(c||'')+'"><div class="l">'+l+'</div><div class="v">'+v+'</div><div class="s">'+s+'</div></div>'}
+}
+function fitSlides(){var w=Math.min(window.innerWidth-24,1056);var z=w/1056;document.querySelectorAll('#deck .slide').forEach(function(s){s.style.zoom=z<1?z:1})}
+function openDeck(push){var R=compute();$('deckSlides').innerHTML=deckHTML(R);document.body.classList.add('pres');fitSlides();window.scrollTo(0,0);
+ if(push){var q=params();q.set('view','deck');history.pushState({deck:1},'','?'+q.toString())}
+ document.title='Buydown Options'+(R.I.bn?' for '+R.I.bn:'')+' | Ricky Khamis, EPiQ Lending';}
+function closeDeck(push){document.body.classList.remove('pres');document.title=baseTitle;if(push){var q=params();history.pushState({},'','?'+q.toString())}render();window.scrollTo(0,0)}
+function printDeck(){if(!document.body.classList.contains('pres'))openDeck(true);var imgs=[].slice.call(document.querySelectorAll('#deck img'));Promise.all(imgs.map(function(i){return i.complete?1:new Promise(function(r){i.onload=i.onerror=r})})).then(function(){setTimeout(function(){window.print()},150)})}
+
+var baseTitle=document.title;
+var isDeck=load();
+Object.keys(FIELDS).forEach(function(k){var el=$(FIELDS[k]);el.addEventListener('input',render);el.addEventListener('change',render)});
+$('i-type').addEventListener('change',function(){var t=this.value;$('i-uf').value=t==='f'?1.75:t==='v'?2.15:0;$('i-mi').value=t==='f'?0.55:t==='v'?0:0.45;render()});
+$('b-open').addEventListener('click',function(){openDeck(true)});
+$('b-link').addEventListener('click',copyLink);
+$('b-pdf').addEventListener('click',printDeck);
+$('d-edit').addEventListener('click',function(){closeDeck(true)});
+$('d-link').addEventListener('click',copyLink);
+$('d-pdf').addEventListener('click',printDeck);
+window.addEventListener('resize',fitSlides);
+window.addEventListener('popstate',function(){var d=load();if(d)openDeck(false);else closeDeck(false)});
+window.addEventListener('beforeprint',function(){document.querySelectorAll('#deck .slide').forEach(function(s){s.style.zoom=1})});
+window.addEventListener('afterprint',fitSlides);
+render();
+if(isDeck)openDeck(false);
+window.__bd={compute:compute};
+})();
+</script>
+</body>
+</html>

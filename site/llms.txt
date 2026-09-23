@@ -23,6 +23,10 @@
 - [Queen Creek](https://rickykhamis.com/areas/)
 - [Tempe](https://rickykhamis.com/areas/)
 
+## Tools
+- [Rate Buydown Calculator](https://rickykhamis.com/buydown-calculator/): Compares 3-2-1, 2-1 and 1-1 temporary buydowns against a 30-year fixed and a permanent buydown funded with the same seller concession. Shows the full payment each year (principal, interest, taxes, insurance, mortgage insurance, HOA), cost of each buydown, cash to close, and the month a permanent buydown passes a temporary one. Builds a shareable presentation link and PDF.
+- [Mortgage Calculator](https://rickykhamis.com/calculator/)
+
 ## For Realtor Partners
 - [The 2-24-48 Mortgage Standard](https://rickykhamis.com/perfectloanprocess/): The service standard EPiQ Lending runs for Realtor partners, named for its three clocks: credit reviewed within 2 hours of application, a signed AAR Pre-Qualification Form in the agent’s hands within 24 hours, and the buyer consultation booked within 48. From there, a Loan Status Update every Tuesday at 9am with the signed AAR LSU attached, a same-day update at every milestone, and a fixed rule for who hears what when the appraisal lands. Every promise has a time on it.
 
