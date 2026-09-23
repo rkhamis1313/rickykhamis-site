@@ -50,12 +50,33 @@ p{margin:0 0 1em}.lead{font-size:1.15rem;color:var(--muted)}
 .nav li.open>.dd{display:block}
 .nav .dd a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);font-weight:600;font-size:.9rem}.nav .dd a:hover{background:var(--soft);text-decoration:none;color:var(--orange-d)}
 .nav .dd .grp{padding:10px 12px 4px;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
-.nav .dd.wide{min-width:560px;display:none;grid-template-columns:1fr 1fr;gap:4px}.nav li.open>.dd.wide{display:grid}
+/* The 560px mega panel ran off the right edge of the screen. Anchor it to
+   the right of its trigger instead of the left. */
+.nav .dd.wide{min-width:560px;left:auto;right:0;display:none;grid-template-columns:1fr 1fr;gap:4px}.nav li.open>.dd.wide{display:grid}
 .nav .dd.wide .col{padding:4px}
 .hdr .cta{display:flex;gap:10px;align-items:center}
 .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;align-items:center;justify-content:center}
 .burger span{display:block;width:20px;height:2px;background:var(--ink);position:relative}.burger span:before,.burger span:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}.burger span:before{top:-6px}.burger span:after{top:6px}
 @media(max-width:1180px){.nav{display:none}.burger{display:flex}.hdr .cta .btn-outline{display:none}}
+/* Desktop header budget. .wrap is capped at --max:1180px, so the header row
+   has 1140px of content at EVERY viewport width, never more. Logo 174 + nav
+   1025 + CTA 249 + gaps 36 = 1484, so Book a Call and Apply Now were clipped
+   off the right edge on every desktop screen. Drop the Save My Contact nav
+   item, which the CTA buttons and the footer already cover, and tighten the
+   remaining items so the row fits inside 1140. */
+@media(min-width:1181px){
+  .nav>li:has(>a.js-save-contact){display:none}
+  .nav{gap:0}
+  .nav>li>a,.nav>li>button{padding:10px 6px;font-size:.72rem;letter-spacing:0}
+  .nav .caret{width:11px;height:11px}
+  .hdr .cta{gap:8px}
+  .hdr .cta .btn-sm{padding:10px 13px;font-size:.8rem}
+  /* Safety net: if a label is ever longer than planned, the nav gives way
+     before the Book a Call and Apply Now buttons get pushed off screen. */
+  .hdr .wrap{flex-wrap:nowrap}
+  .hdr .cta{flex:0 0 auto}
+  .nav{min-width:0}
+}
 /* Header row at phone widths. The logo (174px at height:44) plus Apply Now
    plus the burger needed 355px inside a 305px content box at 345px viewport,
    and nothing was allowed to shrink, so every page scrolled sideways. Shrink
