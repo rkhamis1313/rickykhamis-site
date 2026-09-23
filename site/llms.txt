@@ -25,6 +25,7 @@
 
 ## Tools
 - [Rate Buydown Calculator](https://rickykhamis.com/buydown-calculator/): Compares 3-2-1, 2-1 and 1-1 temporary buydowns against a 30-year fixed and a permanent buydown funded with the same seller concession. Shows the full payment each year (principal, interest, taxes, insurance, mortgage insurance, HOA), cost of each buydown, cash to close, and the month a permanent buydown passes a temporary one. Builds a shareable presentation link and PDF.
+- [Cash-Out Refinance Calculator](https://rickykhamis.com/cash-out-refinance-calculator/): Enter every loan secured by the home and every debt to be paid off, each with its balance, rate and payment. Returns the balance-weighted blended rate being carried today, the new loan amount and loan-to-value, and the new payment priced at the latest Freddie Mac Primary Mortgage Market Survey 30-year average, which the page refreshes daily and shows dated. Also shows total interest on the current path against the new loan, the payoff horizon being restarted, and what happens if the borrower keeps paying the old total after refinancing. Flags cash-out LTV limits, debts whose payment does not cover their interest, and the fact that consolidating unsecured debt secures it against the home.
 - [Mortgage Calculator](https://rickykhamis.com/calculator/)
 
 ## For Realtor Partners
