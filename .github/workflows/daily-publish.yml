@@ -79,10 +79,22 @@ jobs:
                   d = datetime.date.fromisoformat(m.group(1))
                   if d > today:
                       ahead.append(d)
+          import collections
+          by_day = collections.Counter(ahead)
           if not ahead:
               print("::warning::No posts written ahead. The site will publish "
                     "nothing tomorrow. Ask Claude to write the next batch.")
           else:
-              print(f"{len(ahead)} post(s) queued, through {max(ahead)} "
-                    f"({(max(ahead) - today).days} days of runway).")
+              days = sorted(by_day)
+              # The cadence is TWO posts per day. A batch dated one per day
+              # silently halves output and looks like the scheduler failing,
+              # which is exactly what happened over 2026-09-13 to 09-22.
+              thin = [str(d) for d in days if by_day[d] < 2]
+              print(f"{len(ahead)} post(s) queued across {len(days)} day(s), "
+                    f"through {days[-1]}.")
+              for d in days:
+                  print(f"  {d}: {by_day[d]}")
+              if thin:
+                  print(f"::warning::Cadence is 2 posts/day. These days have "
+                        f"fewer: {', '.join(thin)}")
           PY

@@ -66,6 +66,13 @@ There is no API key to manage and no credential to rotate. The scheduler runs
 no model, so it cannot fail on model access, and a day with nothing due is a
 healthy no-op rather than an error.
 
+**The cadence is TWO posts per day.** Date each batch two to a day, not one.
+A batch dated one per day silently halves output and looks exactly like the
+scheduler failing, which is what happened across 2026-09-13 to 09-22: the
+workflow ran correctly every single morning and published one post because
+one post was due. The workflow now prints the per-day count and raises a
+warning on any day carrying fewer than two.
+
 The one failure mode left is running out of runway. The workflow prints how
 many days of posts remain and raises a warning annotation when none are
 written ahead. When that fires, write the next batch.
