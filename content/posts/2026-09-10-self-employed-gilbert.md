@@ -58,6 +58,8 @@ Do this comparison, in writing, before you sign anything:
 
 Two things a self-employed buyer specifically should weigh. First, a captive lender knows you are unlikely to walk late in a build, which is not a position of strength when a condition comes up. Second, if your file needs a structure outside agency guidelines, the builder's lender may simply not have it, and you will find that out at the worst possible moment.
 
+If the incentive takes the form of a rate buydown, the [rate buydown calculator](/buydown-calculator/) does step three for you. It shows what a 3-2-1, a 2-1 or a 1-1 does to the payment year by year, what each costs to fund, and whether the same money works harder bought into the rate permanently. Run it over five and seven years, not thirty.
+
 None of this means the builder's lender is the wrong answer. Sometimes the incentive genuinely wins. It means you should know which is true before you commit, not after.
 
 ## When the returns do not support the purchase
