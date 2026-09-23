@@ -44,12 +44,18 @@ jobs:
       - name: Install Pillow for header images
         run: pip install --quiet Pillow
 
-      - name: Refresh the Freddie Mac survey rate
-        # Feeds /cash-out-refinance-calculator/. Never fails the run: the script
-        # exits 0 on an unreachable source and leaves the existing file alone,
-        # and the page handles the file being missing or stale on its own.
+      - name: Refresh the rate sheet
+        # Feeds /cash-out-refinance-calculator/. The EPiQ sheet is the real
+        # pricing and carries an APR beside every rate; the Freddie Mac survey
+        # stays as a backstop for the day the sheet cannot be read. Neither can
+        # fail this run: both exit 0 on an unreachable or unparseable source and
+        # leave the previous file alone, and the page copes with having neither.
+        # The selftests run first so a silently broken parser is caught here
+        # rather than by publishing a wrong number.
         run: |
+          python gen/update_rates.py --selftest
           python gen/update_pmms.py --selftest
+          python gen/update_rates.py
           python gen/update_pmms.py
 
       - name: Screen every post for compliance

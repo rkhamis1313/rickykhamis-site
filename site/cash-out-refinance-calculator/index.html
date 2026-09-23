@@ -49,6 +49,7 @@
 .co .kpi .l{font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-bottom:6px}
 .co .kpi .v{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;line-height:1.05}
 .co .kpi .s{font-size:.78rem;opacity:.8;margin-top:6px;line-height:1.35}
+.co .kpi .v2{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin-top:2px}
 .co .note{background:var(--soft);border-left:3px solid var(--orange);border-radius:0 12px 12px 0;padding:14px 16px;margin-top:16px;font-size:.92rem}
 .co .note p{margin:0 0 8px}.co .note p:last-child{margin:0}
 .co .note b{color:var(--ink)}
@@ -167,6 +168,7 @@ body.deck #deck{display:block;background:var(--soft);padding:22px 0}
   <div class="rows" id="debts"></div>
 
   <div class="grp">The new loan</div>
+  <div style="grid-column:1/-1"><label for="i-scn">Priced from</label><select id="i-scn"><option value="-1">Loading today's rate sheet</option></select><span class="hint" id="h-scn"></span></div>
   <div><label for="i-rate">New rate (%)</label><input id="i-rate" type="number" inputmode="decimal" min="0" max="20" step="0.125"><span class="hint" id="h-rate">Loading the latest survey rate</span></div>
   <div><label for="i-term">Term</label><select id="i-term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option></select></div>
   <div><label for="i-cc">Closing costs rolled in ($)</label><input id="i-cc" type="number" inputmode="decimal" min="0" step="250" value="8000"><span class="hint">Lender, title, escrow, prepaids</span></div>
@@ -333,43 +335,87 @@ function read(kind){
  return out;
 }
 
-/* ---------- the survey rate ---------- */
-var PMMS=null;
-function applyPMMS(){
+/* ---------- the rate sheet ---------- */
+/* Ricky's own sheet is the real pricing and publishes an APR beside every rate,
+   which is what makes it publishable here. The Freddie Mac survey stays as a
+   backstop for the day the sheet cannot be read, and is labelled as the
+   national average it is. If neither loads the page asks for a rate rather
+   than inventing one. */
+var RATES=null,PMMS=null,SCN=-1;
+
+function activeRow(){return (RATES&&RATES.rows&&SCN>=0&&SCN<RATES.rows.length)?RATES.rows[SCN]:null}
+function rateIsScenario(){
+ var r=activeRow();
+ return !!r&&Math.abs((parseFloat($('i-rate').value)||0)-r.rate)<0.0005;
+}
+function currentAPR(){return rateIsScenario()?activeRow().apr:null}
+
+function fillScenarios(){
+ var sel=$('i-scn');
+ if(!RATES||!RATES.rows||!RATES.rows.length){
+  sel.innerHTML='<option value="-1">Rate sheet unavailable, enter a rate</option>';
+  sel.disabled=true;
+  $('h-scn').textContent='';
+  return;
+ }
+ sel.disabled=false;
+ sel.innerHTML=RATES.rows.map(function(r,i){
+  return '<option value="'+i+'">'+esc(r.label)+' \u2014 '+r.rate.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')+'% / '+r.apr.toFixed(3).replace(/0+$/,'').replace(/\.$/,'')+'% APR</option>';
+ }).join('');
+ if(SCN<0)SCN=(typeof RATES.defaultIndex==='number'?RATES.defaultIndex:0);
+ sel.value=String(SCN);
+ $('h-scn').textContent='Every scenario on the sheet is a purchase. There is no cash-out row, so this is the closest proxy and a real cash-out normally prices higher.';
+}
+function applyScenario(force){
+ var r=activeRow();
+ if(!r)return;
+ if(force||!$('i-rate').value)$('i-rate').value=r.rate;
+}
+function applyRateSource(){
  var el=$('i-rate'),hint=$('h-rate');
+ if(RATES&&RATES.rows&&RATES.rows.length){
+  fillScenarios();applyScenario(false);
+  hint.textContent='From the EPiQ sheet dated '+RATES.asOf+'. Editable, and the published APR only applies to the rate as listed.';
+  return;
+ }
+ fillScenarios();
  if(PMMS&&PMMS.rate){
   if(!el.value)el.value=PMMS.rate;
-  hint.textContent='Freddie Mac survey average, week of '+PMMS.surveyDate+'. Editable. Not a quote.';
- }else{
-  if(!el.value)el.value='';
-  hint.textContent='Enter the rate you were quoted. The survey figure could not be loaded.';
-  el.setAttribute('placeholder','e.g. 6.5');
+  hint.textContent='Rate sheet unavailable, so this is the Freddie Mac survey average for the week of '+PMMS.surveyDate+'. A national purchase average, not a quote.';
+  return;
  }
+ hint.textContent='Enter the rate you were quoted. No rate sheet could be loaded.';
+ el.setAttribute('placeholder','e.g. 7.125');
 }
-function loadPMMS(cb){
+function getJSON(url,cb){
  try{
   var x=new XMLHttpRequest();
-  x.open('GET','/assets/pmms.json?v='+Math.floor(Date.now()/36e5),true);
+  x.open('GET',url+'?v='+Math.floor(Date.now()/36e5),true);
   x.timeout=6000;
   x.onreadystatechange=function(){
    if(x.readyState!==4)return;
-   if(x.status>=200&&x.status<300){
-    try{
-     var d=JSON.parse(x.responseText);
-     if(d&&typeof d.rate==='number'&&d.rate>0&&d.rate<20)PMMS=d;
-    }catch(e){}
-   }
-   cb();
+   var out=null;
+   if(x.status>=200&&x.status<300){try{out=JSON.parse(x.responseText)}catch(e){out=null}}
+   cb(out);
   };
-  x.ontimeout=x.onerror=function(){cb()};
+  x.ontimeout=x.onerror=function(){cb(null)};
   x.send();
- }catch(e){cb()}
+ }catch(e){cb(null)}
 }
-function surveyAgeDays(){
- if(!PMMS||!PMMS.surveyDate)return null;
- var t=Date.parse(PMMS.surveyDate+'T00:00:00Z');
- if(isNaN(t))return null;
- return Math.floor((Date.now()-t)/864e5);
+function loadRates(done){
+ getJSON('/assets/rates.json',function(d){
+  if(d&&d.rows&&d.rows.length)RATES=d;
+  getJSON('/assets/pmms.json',function(p){
+   if(p&&typeof p.rate==='number'&&p.rate>0&&p.rate<20)PMMS=p;
+   done();
+  });
+ });
+}
+function sheetAgeDays(){
+ var iso=RATES?RATES.asOf:(PMMS?PMMS.surveyDate:null);
+ if(!iso)return null;
+ var t=Date.parse(iso+'T00:00:00Z');
+ return isNaN(t)?null:Math.floor((Date.now()-t)/864e5);
 }
 
 /* ---------- the maths ---------- */
@@ -528,7 +574,7 @@ function tableHTML(R){
 
 /* ---------- copy ---------- */
 function kpiHTML(R){
- function k(cls,l,v,s){return '<div class="kpi '+cls+'"><div class="l">'+l+'</div><div class="v">'+v+'</div><div class="s">'+s+'</div></div>'}
+ function k(cls,l,v,s,v2){return '<div class="kpi '+cls+'"><div class="l">'+l+'</div><div class="v">'+v+'</div>'+(v2?'<div class="v2">'+v2+'</div>':'')+'<div class="s">'+s+'</div></div>'}
  if(!R.ready){
   return k('','Blended rate today',R.bal>0?pct(R.blended,2):'--',money(R.bal)+' across '+R.all.length+' balance'+(R.all.length===1?'':'s'))+
    k('accent','New rate','--','Enter a rate to price the new loan')+
@@ -537,7 +583,10 @@ function kpiHTML(R){
  }
  var cheaper=R.I.rate<R.blended;
  return k('','Blended rate today',pct(R.blended,2),money(R.bal)+' across '+R.all.length+' balance'+(R.all.length===1?'':'s'))+
-  k(cheaper?'good':'accent','New rate',pct(R.I.rate,3),(cheaper?'Below':'Above')+' your blended rate'+(PMMS?', survey average':''))+
+  k(cheaper?'good':'accent','New rate and APR',pct(R.I.rate,3),
+    (currentAPR()!=null?'Rate and APR as published'+(RATES?' on the EPiQ sheet dated '+RATES.asOf:''):'APR is not published for a rate you typed in')+
+    '. '+(cheaper?'Below':'Above')+' your blended rate.',
+    currentAPR()!=null?pct(currentAPR(),3)+' APR':'APR n/a')+
   k('','Paying now',money(R.pay)+'/mo','Every loan and debt added up')+
   k('accent','New payment',money(R.newPay)+'/mo',deltaTxt(R.diff)+', principal and interest only');
 }
@@ -577,19 +626,24 @@ function truthHTML(R,cross){
 }
 
 function fineHTML(R){
- var age=surveyAgeDays(),parts=[];
+ var age=sheetAgeDays(),parts=[];
  parts.push('Estimates for discussion, not a loan offer, commitment to lend, or Loan Estimate.');
  parts.push('Payments shown are principal and interest only and exclude property taxes, homeowners insurance, mortgage insurance and HOA dues, which are not changed by paying off these balances.');
- if(PMMS){
-  parts.push('The default rate is the '+PMMS.source+' 30-year fixed average for the week of '+PMMS.surveyDate+(age!=null?', '+age+' days ago':'')+'. That survey reflects purchase loans with strong credit and low loan-to-value, and a cash-out refinance typically prices higher. It is not a quote.');
+ if(RATES){
+  parts.push('Rates and APRs are taken from the EPiQ Lending rate sheet published at '+RATES.sourceUrl+', dated '+RATES.asOf+(age!=null?', '+age+' day(s) ago':'')+', and are shown together as published.');
+  parts.push('Every scenario on that sheet is purchase pricing. It publishes no cash-out refinance scenario, and a cash-out refinance normally prices above a purchase, so the payment shown here should be treated as a floor rather than an estimate of your cash-out rate.');
+  if(RATES.aprNote)parts.push(RATES.aprNote);
+  parts.push('The published APR is calculated on the assumptions in that notice and does not apply to the loan amount in this calculator, to a rate typed in by hand, or to a cash-out refinance. Your APR will differ.');
+ }else if(PMMS){
+  parts.push('The rate sheet could not be loaded, so the default is the Freddie Mac Primary Mortgage Market Survey 30-year average for the week of '+PMMS.surveyDate+'. That is a national average for purchase loans with strong credit and low loan-to-value, it carries no APR, and a cash-out refinance typically prices higher. It is not a quote.');
  }else{
-  parts.push('The rate used is the one entered above and is not a quote.');
+  parts.push('The rate used is the one entered above. It is not a quote and no APR is shown for it.');
  }
- parts.push('Your rate and costs depend on credit, loan-to-value, occupancy, loan amount, program and the day you lock.');
+ parts.push('Your rate, APR and costs depend on credit, loan-to-value, occupancy, loan amount, program and the day you lock.');
  parts.push('Payoff figures assume the payments entered stay the same and no new balances are added.');
  parts.push('Consolidating debt into a mortgage secures previously unsecured balances against your home and can increase the total interest paid over the life of the loan.');
  parts.push('Cash-out limits vary by program and investor and change over time. All loans subject to credit approval and underwriting.');
- parts.push('Ricky Khamis NMLS #173141. EVO Home Loans, LLC dba EPiQ Lending, NMLS #1936984, Branch NMLS #1942720, AZ license #1008731. Equal Housing Lender. nmlsconsumeraccess.org.');
+ parts.push('Ricky Khamis NMLS #173141. EVO Home Loans, LLC dba EPiQ Lending, NMLS #1936984. Equal Housing Lender. nmlsconsumeraccess.org.');
  return parts.join(' ');
 }
 
@@ -607,10 +661,12 @@ function render(){
  $('truth').innerHTML=truthHTML(R,cross);
  $('fine').textContent=fineHTML(R);
 
- var age=surveyAgeDays(),sl=$('srcline');
- if(PMMS&&age!=null&&age>14){sl.className='srcline stale';sl.textContent='Survey rate is from '+PMMS.surveyDate+', '+age+' days ago. Confirm before quoting.'}
- else if(PMMS){sl.className='srcline';sl.textContent='Rate source: '+PMMS.source+', week of '+PMMS.surveyDate+'. A national average, not a quote.'}
- else{sl.className='srcline stale';sl.textContent='Survey rate unavailable. The rate above is whatever you entered.'}
+ var age=sheetAgeDays(),sl=$('srcline');
+ if(RATES&&age!=null&&age>3){sl.className='srcline stale';sl.textContent='EPiQ rate sheet is dated '+RATES.asOf+', '+age+' day(s) ago. Pricing moves daily, so confirm before quoting.'}
+ else if(RATES){sl.className='srcline';sl.textContent='Rate source: EPiQ Lending rate sheet, '+RATES.asOf+'. Purchase pricing shown with its APR. Not a quote or commitment to lend.'}
+ else if(PMMS&&age!=null&&age>14){sl.className='srcline stale';sl.textContent='Rate sheet unavailable. Survey rate is from '+PMMS.surveyDate+', '+age+' days ago. Confirm before quoting.'}
+ else if(PMMS){sl.className='srcline';sl.textContent='Rate sheet unavailable, using the Freddie Mac survey average for the week of '+PMMS.surveyDate+'. A national purchase average, not a quote.'}
+ else{sl.className='srcline stale';sl.textContent='No rate sheet loaded. The rate above is whatever you entered.'}
 
  $('h-val').textContent=R.ltv>0?('New loan would be '+pct(R.ltv*100,1)+' of value'):'';
  $('h-type').textContent=R.limitTxt;
@@ -713,9 +769,13 @@ document.addEventListener('click',function(e){
  }
 });
 
+document.addEventListener('change',function(e){
+ if(e.target&&e.target.id==='i-scn'){SCN=parseInt(e.target.value,10);applyScenario(true);render()}
+});
+
 restore();
 if(new URLSearchParams(location.search).get('view')==='deck')document.body.classList.add('deck');
-loadPMMS(function(){applyPMMS();render()});
+loadRates(function(){applyRateSource();render()});
 })();
 </script>
 </body>
