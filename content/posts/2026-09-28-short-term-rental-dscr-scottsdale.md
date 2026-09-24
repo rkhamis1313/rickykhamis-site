@@ -8,6 +8,7 @@ borrowerType: Investor
 program: Short-Term Rental DSCR
 motif: rental
 series: lending-programs
+form: investor
 tags:
   - DSCR Loans
   - Short-Term Rental

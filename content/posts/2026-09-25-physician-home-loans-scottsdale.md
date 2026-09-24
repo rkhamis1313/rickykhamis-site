@@ -8,6 +8,7 @@ borrowerType: Physician
 program: Physician Loans
 motif: physician
 series: lending-programs
+form: physician
 tags:
   - Physician Loans
   - Doctor Loans

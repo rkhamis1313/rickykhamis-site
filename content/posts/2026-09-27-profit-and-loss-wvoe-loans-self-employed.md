@@ -8,6 +8,7 @@ borrowerType: Self-Employed
 program: P&L and WVOE Loans
 motif: statements
 series: lending-programs
+form: self-employed
 tags:
   - P&L Loans
   - WVOE

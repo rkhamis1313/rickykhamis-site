@@ -8,6 +8,7 @@ borrowerType: Professional
 program: Graduate Degree Loans
 motif: graduate
 series: lending-programs
+form: physician
 tags:
   - Professional Loans
   - Attorney Loans

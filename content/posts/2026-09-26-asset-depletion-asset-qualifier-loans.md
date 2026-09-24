@@ -8,6 +8,7 @@ borrowerType: Asset Based
 program: Asset Depletion
 motif: assets
 series: lending-programs
+form: self-employed
 tags:
   - Asset Depletion
   - Asset Qualifier

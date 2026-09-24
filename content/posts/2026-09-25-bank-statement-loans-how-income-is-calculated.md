@@ -8,6 +8,7 @@ borrowerType: Self-Employed
 program: Bank Statement Loans
 motif: statements
 series: lending-programs
+form: self-employed
 tags:
   - Bank Statement Loans
   - Self-Employed

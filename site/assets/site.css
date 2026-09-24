@@ -183,3 +183,30 @@ p{margin:0 0 1em}.lead{font-size:1.15rem;color:var(--muted)}
 .ftr .bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:0 0 28px;font-size:.8rem}
 .ftr .logo svg{height:40px}
 .ftr .social{display:flex;gap:8px;margin-top:14px}.ftr .social a{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}.ftr .social a:hover{background:var(--orange)}.ftr .social svg{width:16px;height:16px;fill:#fff}
+
+/* Post navigation buttons carry a neighbouring post's title, so their text is
+   long and arbitrary. A nowrap .btn with that inside overflowed every post
+   between 401px and 620px; the earlier fix only reached 400px. These wrap at
+   any width, while the header CTAs keep their single line. */
+.prose .btns .btn{white-space:normal;max-width:100%;text-align:left;line-height:1.25}
+
+/* In-post lead form. Sits inside .prose, so it has to break out of the article
+   rhythm enough to read as a thing you act on rather than another paragraph. */
+.leadform{margin:44px 0;scroll-margin-top:90px}
+.leadform .form{background:var(--ink);color:#fff;border-radius:18px;padding:30px;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.leadform h3{color:#fff;margin:0 0 6px;font-size:1.35rem}
+.leadform .sub{color:#c8cbd1;margin:0 0 22px;font-size:.95rem;max-width:62ch}
+.leadform .fg{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.leadform label{display:block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#a9adb5;margin-bottom:6px}
+.leadform input,.leadform select{width:100%;padding:12px 14px;border:1px solid #3a3f48;border-radius:10px;font:inherit;font-size:.95rem;background:#15181d;color:#fff}
+.leadform select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#a9adb5 50%),linear-gradient(135deg,#a9adb5 50%,transparent 50%);background-position:calc(100% - 20px) 52%,calc(100% - 14px) 52%;background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:38px}
+.leadform input:focus,.leadform select:focus{outline:2px solid var(--orange);border-color:var(--orange)}
+.leadform .actions{margin-top:20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.leadform .actions .btn{flex:0 0 auto}
+.leadform .fine{font-size:.76rem;color:#9aa0a8;margin:0;max-width:52ch;line-height:1.5}
+.leadform .hp{position:absolute;left:-9999px}
+@media(max-width:620px){
+  .leadform .form{padding:22px 18px}
+  .leadform .fg{grid-template-columns:minmax(0,1fr)}
+  .leadform .actions .btn{width:100%}
+}

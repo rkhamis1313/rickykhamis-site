@@ -8,6 +8,7 @@ borrowerType: First-Time Buyer
 program: The VA Alternative
 motif: keys
 series: lending-programs
+form: zero-down
 tags:
   - Zero Down
   - FHA
@@ -138,7 +139,7 @@ Getting the keys is the start. Staying a successful homeowner is the goal.
 
 EPiQ Lending is NMLS #1936984, at 7975 N. Hayden Road, Suite A-101 in Scottsdale. Verify all of it before you trust any of it: [Ricky's EPiQ Lending profile](https://www.epiqlending.com/mysite/Ricky-Khamis), the [Scottsdale branch](https://www.epiqlending.com/branch/1936984/7975-N-Hayden-Rd-Ste-A101-Scottsdale-AZ-85258), and the license itself at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/). Hold every lender to that standard, including us.
 
-Tell me what you have saved and what you earn, and I will tell you whether this structure beats simply waiting six months and putting money down.
+The VA Alternative has its own site, with the HOPER details and the application in one place: [vaalternative.com](https://vaalternative.com/). Start there, or tell me what you have saved and what you earn and I will tell you whether this structure beats simply waiting six months and putting money down.
 
 *Program terms verified as of September 2026 and subject to change. Assistance program terms, availability and funding change without notice; confirm current terms and eligible uses directly with the program before you rely on them.*
 

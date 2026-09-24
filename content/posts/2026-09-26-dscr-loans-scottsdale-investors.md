@@ -8,6 +8,7 @@ borrowerType: Investor
 program: DSCR Loans
 motif: dscr
 series: lending-programs
+form: investor
 tags:
   - DSCR Loans
   - Investor

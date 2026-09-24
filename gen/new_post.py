@@ -428,6 +428,22 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
     if market_block is not None:
         body_html = market_block.expand(body_html)
 
+    # An in-post lead form, when the post opts in with `form:` in front matter.
+    # Kept optional and failure-tolerant for the same reason the header image is:
+    # a post must still publish if this cannot be built.
+    lead = ""
+    if meta.get("form"):
+        try:
+            try:
+                from . import lead_form  # type: ignore
+            except ImportError:
+                import lead_form
+            lead = lead_form.render(meta["form"])
+            if not lead:
+                log(f"  ! unknown form type {meta['form']!r}, no form rendered")
+        except Exception as exc:  # noqa: BLE001
+            log(f"  ! no lead form: {exc}")
+
     citation = render_author_block(load_author(), published, meta["title"])
 
     buttons = []
@@ -448,7 +464,7 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
     )
 
     article = (
-        f'<article class="prose">{hero_img}{body_html}{citation}{nav}</article>'
+        f'<article class="prose">{hero_img}{body_html}{lead}{citation}{nav}</article>'
     )
     document = re.sub(
         r'<article class="prose">.*?</article>', lambda _: article, document,

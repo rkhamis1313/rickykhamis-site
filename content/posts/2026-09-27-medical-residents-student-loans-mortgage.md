@@ -8,6 +8,7 @@ borrowerType: Resident
 program: Resident and Fellow Loans
 motif: physician
 series: lending-programs
+form: physician
 tags:
   - Physician Loans
   - Residents

@@ -8,6 +8,7 @@ borrowerType: Condo Buyer
 program: Non-Warrantable Condos
 motif: condo
 series: lending-programs
+form: physician
 tags:
   - Condo Financing
   - Non-Warrantable
