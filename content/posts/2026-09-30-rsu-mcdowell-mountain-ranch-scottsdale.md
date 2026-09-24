@@ -2,7 +2,7 @@
 title: "RSU and Equity Comp and Buying in McDowell Mountain Ranch, Scottsdale: How You Actually Qualify"
 slug: rsu-mcdowell-mountain-ranch-scottsdale
 description: "Vested stock that already ran through your W-2 usually counts. Unvested shares generally do not. In a community that draws tech and finance buyers, the vesting schedule is the document nobody brings and everybody needs."
-date: 2026-09-25
+date: 2026-09-30
 city: Scottsdale
 neighborhood: McDowell Mountain Ranch
 borrowerType: RSU and Equity Comp

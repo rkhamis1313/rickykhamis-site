@@ -136,6 +136,90 @@ def wrap(draw, text: str, f, max_w: int) -> list[str]:
     return lines
 
 
+def mark(d: ImageDraw.ImageDraw, kind: str, cx: int, cy: int, r: int) -> None:
+    """Draw a loan-type mark on the right of the frame.
+
+    The neighborhood series is identified by place, so a place name carries the
+    header. A product series is identified by the product, and ten pages that
+    all say Scottsdale would be ten pages that look identical. These are drawn
+    rather than stock, for the same reason the ridgelines are: a licensed photo
+    of a stethoscope is a cost and a liability, and a geometric mark in the
+    site's own accent reads as deliberate at thumbnail size.
+    """
+    glow = (*WHITE, 26)
+    line = (*WHITE, 62)
+    hot = (*ORANGE, 70)
+
+    if kind == "physician":
+        # Medical cross inside a ring.
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=line, width=9)
+        a = r * 0.46
+        b = r * 0.16
+        d.rectangle([cx - b, cy - a, cx + b, cy + a], fill=hot)
+        d.rectangle([cx - a, cy - b, cx + a, cy + b], fill=hot)
+
+    elif kind == "graduate":
+        # Mortarboard: a diamond cap over a short tassel.
+        w = r * 1.05
+        d.polygon([(cx, cy - r * 0.62), (cx + w, cy - r * 0.1),
+                   (cx, cy + r * 0.42), (cx - w, cy - r * 0.1)], fill=hot)
+        d.line([(cx + w * 0.62, cy - r * 0.28), (cx + w * 0.62, cy + r * 0.5)],
+               fill=line, width=8)
+        d.line([(cx - r * 0.5, cy + r * 0.1), (cx - r * 0.5, cy + r * 0.62)], fill=line, width=8)
+        d.line([(cx + r * 0.5, cy + r * 0.1), (cx + r * 0.5, cy + r * 0.62)], fill=line, width=8)
+        d.arc([cx - r * 0.5, cy + r * 0.34, cx + r * 0.5, cy + r * 0.9], 0, 180, fill=line, width=8)
+
+    elif kind == "statements":
+        # Stacked statement pages with ruled lines.
+        for i, off in enumerate((r * 0.5, r * 0.1, -r * 0.3)):
+            x0, y0 = cx - r * 0.72 + i * 10, cy - r * 0.8 + off
+            x1, y1 = x0 + r * 1.2, y0 + r * 1.25
+            d.rectangle([x0, y0, x1, y1], outline=line, width=7,
+                        fill=(glow if i < 2 else (*ORANGE, 34)))
+            for k in range(3):
+                ly = y0 + r * 0.32 + k * r * 0.26
+                d.line([(x0 + r * 0.18, ly), (x1 - r * 0.22, ly)], fill=line, width=6)
+
+    elif kind == "assets":
+        # Stacked reserves, tallest at the back.
+        bw = r * 0.44
+        for i, h in enumerate((0.55, 0.95, 1.35)):
+            x0 = cx - r * 0.85 + i * (bw + 10)
+            d.rectangle([x0, cy + r * 0.62 - r * h, x0 + bw, cy + r * 0.62],
+                        fill=(hot if i == 2 else glow), outline=line, width=6)
+
+    elif kind == "dscr":
+        # Rent over payment: a bar pair with the coverage line above it.
+        d.line([(cx - r, cy + r * 0.72), (cx + r, cy + r * 0.72)], fill=line, width=7)
+        d.rectangle([cx - r * 0.68, cy - r * 0.42, cx - r * 0.16, cy + r * 0.72],
+                    fill=hot, outline=line, width=6)
+        d.rectangle([cx + r * 0.16, cy + r * 0.06, cx + r * 0.68, cy + r * 0.72],
+                    fill=glow, outline=line, width=6)
+        d.line([(cx - r * 0.42, cy - r * 0.72), (cx + r * 0.42, cy - r * 0.72)],
+               fill=line, width=7)
+
+    elif kind == "rental":
+        # A roof over a clock face: short-term rental, income by the night.
+        d.polygon([(cx, cy - r), (cx + r, cy - r * 0.16), (cx - r, cy - r * 0.16)], fill=hot)
+        d.ellipse([cx - r * 0.5, cy - r * 0.06, cx + r * 0.5, cy + r * 0.94],
+                  outline=line, width=8)
+        d.line([(cx, cy + r * 0.44), (cx, cy + r * 0.12)], fill=line, width=7)
+        d.line([(cx, cy + r * 0.44), (cx + r * 0.3, cy + r * 0.44)], fill=line, width=7)
+
+    elif kind == "condo":
+        # A tower with a lit grid, for project eligibility.
+        d.rectangle([cx - r * 0.62, cy - r, cx + r * 0.62, cy + r], outline=line, width=8)
+        for row in range(4):
+            for col in range(3):
+                x0 = cx - r * 0.42 + col * r * 0.34
+                y0 = cy - r * 0.76 + row * r * 0.42
+                d.rectangle([x0, y0, x0 + r * 0.2, y0 + r * 0.24],
+                            fill=(hot if (row + col) % 3 == 0 else glow))
+
+    else:
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=line, width=9)
+
+
 def build(meta: dict) -> Image.Image:
     slug = meta.get("slug", "post")
     seed = seed_of(slug)
@@ -145,9 +229,15 @@ def build(meta: dict) -> Image.Image:
     d = ImageDraw.Draw(img, "RGBA")
 
     pad = 72
-    # Headline: the place. That is what the reader is searching for.
-    place = meta.get("neighborhood") or meta.get("city") or "Scottsdale"
-    f_place = fit(d, place, BOLD, 92, W - pad * 2)
+    # Headline: the product on a product post, the place on a neighborhood post.
+    # A reader searching "bank statement loan" is not searching "Scottsdale",
+    # and ten product posts headlined Scottsdale would be ten identical cards.
+    motif = (meta.get("motif") or "").strip().lower()
+    program = (meta.get("program") or "").strip()
+    place = program or meta.get("neighborhood") or meta.get("city") or "Scottsdale"
+    # A mark needs room, so the headline gets a narrower column when one is drawn.
+    head_w = W - pad * 2 - (300 if motif else 0)
+    f_place = fit(d, place, BOLD, 92, head_w)
     # Eyebrow: who the page is for.
     kicker = (meta.get("borrowerType") or "").upper()
     if kicker in ("ALL", ""):
@@ -160,15 +250,19 @@ def build(meta: dict) -> Image.Image:
     d.line([(pad, y), (pad + 74, y)], fill=(*ORANGE, 255), width=5)
     y += 34
 
-    d.text((pad, y), place, font=f_place, fill=WHITE)
-    y += f_place.size + 20
+    if motif:
+        mark(d, motif, W - 250, int(H * 0.44), 118)
+    for hline in wrap(d, place, f_place, head_w)[:2]:
+        d.text((pad, y), hline, font=f_place, fill=WHITE)
+        y += f_place.size + 6
+    y += 16
 
     # Subhead: the actual subject, wrapped.
     title = meta.get("title", "")
     sub = re.sub(r"^.*?:\s*", "", title) if ":" in title else title
     sub = re.sub(r"\s*\(.*?\)\s*", " ", sub).strip()
     f_sub = font(REG, 34)
-    for line in wrap(d, sub, f_sub, W - pad * 2 - 40)[:2]:
+    for line in wrap(d, sub, f_sub, head_w - 20)[:2]:
         d.text((pad, y), line, font=f_sub, fill=(226, 228, 232, 255))
         y += 46
 

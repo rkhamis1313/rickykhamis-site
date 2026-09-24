@@ -29,6 +29,116 @@
   },
   "queue": [
     {
+      "series": "lending-programs",
+      "borrowerType": "Self-Employed",
+      "program": "Bank Statement Loans",
+      "city": "Scottsdale",
+      "question": "How Lenders Actually Turn Your Deposits Into Qualifying Income?",
+      "title": "Bank Statement Loans: How Lenders Actually Turn Your Deposits Into Qualifying Income",
+      "slug": "bank-statement-loans-how-income-is-calculated",
+      "why": "Bank Statement Loans is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Physician",
+      "program": "Physician Loans",
+      "city": "Scottsdale",
+      "question": "How Doctors Buy With No Down Payment and No Mortgage Insurance?",
+      "title": "Physician Home Loans in Scottsdale: How Doctors Buy With No Down Payment and No Mortgage Insurance",
+      "slug": "physician-home-loans-scottsdale",
+      "why": "Physician Loans is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Asset Based",
+      "program": "Asset Depletion",
+      "city": "Scottsdale",
+      "question": "How a Portfolio Becomes Qualifying Income?",
+      "title": "Asset Depletion and Asset Qualifier Loans: How a Portfolio Becomes Qualifying Income",
+      "slug": "asset-depletion-asset-qualifier-loans",
+      "why": "Asset Depletion is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Investor",
+      "program": "DSCR Loans",
+      "city": "Scottsdale",
+      "question": "How Investors Qualify on the Rent Instead of Their Tax Returns?",
+      "title": "DSCR Loans in Scottsdale: How Investors Qualify on the Rent Instead of Their Tax Returns",
+      "slug": "dscr-loans-scottsdale-investors",
+      "why": "DSCR Loans is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Resident",
+      "program": "Resident and Fellow Loans",
+      "city": "Scottsdale",
+      "question": "How Student Loan Payments Are Excluded From Your Mortgage Qualification?",
+      "title": "Medical Residents and Fellows: How Student Loan Payments Are Excluded From Your Mortgage Qualification",
+      "slug": "medical-residents-student-loans-mortgage",
+      "why": "Resident and Fellow Loans is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Self-Employed",
+      "program": "P&L and WVOE Loans",
+      "city": "Scottsdale",
+      "question": "Qualifying Without Tax Returns or Bank Statements?",
+      "title": "12-Month P&L Loans and Written Verification of Employment: Qualifying Without Tax Returns or Bank Statements",
+      "slug": "profit-and-loss-wvoe-loans-self-employed",
+      "why": "P&L and WVOE Loans is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Professional",
+      "program": "Graduate Degree Loans",
+      "city": "Scottsdale",
+      "question": "The Graduate Degree Programs Nobody Tells You About?",
+      "title": "Home Loans for Lawyers, Engineers, Architects and CPAs: The Graduate Degree Programs Nobody Tells You About",
+      "slug": "graduate-professional-home-loans-scottsdale",
+      "why": "Graduate Degree Loans is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Investor",
+      "program": "Short-Term Rental DSCR",
+      "city": "Scottsdale",
+      "question": "Qualifying an Airbnb on Its Nightly Income?",
+      "title": "Short-Term Rental DSCR Loans in Scottsdale: Qualifying an Airbnb on Its Nightly Income",
+      "slug": "short-term-rental-dscr-scottsdale",
+      "why": "Short-Term Rental DSCR is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Condo Buyer",
+      "program": "Non-Warrantable Condos",
+      "city": "Scottsdale",
+      "question": "Why the Building Gets Declined and How the Loan Still Closes?",
+      "title": "Non-Warrantable Condo Financing in Scottsdale: Why the Building Gets Declined and How the Loan Still Closes",
+      "slug": "non-warrantable-condo-financing-scottsdale",
+      "why": "Non-Warrantable Condos is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
+      "series": "lending-programs",
+      "borrowerType": "Self-Employed",
+      "program": "Bank Statement Options",
+      "city": "Scottsdale",
+      "question": "Which One Qualifies a Self-Employed Borrower for More?",
+      "title": "Personal or Business Bank Statements: Which One Qualifies a Self-Employed Borrower for More",
+      "slug": "personal-vs-business-bank-statements",
+      "why": "Bank Statement Options is a named product search with real intent and almost no local competition writing the mechanics",
+      "status": "pending"
+    },
+    {
       "series": "scottsdale-golf",
       "borrowerType": "RSU and Equity Comp",
       "neighborhood": "Grayhawk",
@@ -1470,6 +1580,7 @@
     "borrower-x-city": "Borrower type by East Valley city. These come FIRST because this is where Ricky's closed files actually are. A 2026-09 review of 223 of his own CRM records put Mesa, Phoenix, Gilbert and Chandler at the top and showed zero closings in DC Ranch, Silverleaf, Troon North or Grayhawk. He can write these from real experience, and the leads convert because they match the book. The borrower-x-neighborhood Scottsdale luxury run follows: that is the market he is building toward, not the one he is in.",
     "scottsdale-authority": "The pages that make Ricky the Scottsdale lender rather than a lender who works in Scottsdale. Golf club memberships, HOA and club dues against DTI, short-term rental income around spring training and the Open, Old Town licensing, jumbo reserves, second home versus investment, condo project review, and the California relocation file. Every one is a question a Scottsdale buyer actually asks and almost nobody answers properly. These run first because they are the pages the neighborhood posts link back to.",
     "scottsdale-golf": "Golf community by borrower type. This is where Scottsdale luxury lending actually lives. The club obligation is the thread: an equity membership, an initiation deposit and mandatory monthly dues are three separate underwriting questions, and they land on top of a jumbo payment and an HOA. Name the courses. Name the club. Generic luxury copy is worthless here.",
-    "scottsdale-subdivision": "Scottsdale subdivisions and districts that are not golf-first: Old Town, the Waterfront and Optima high rises, Kierland, Arcadia, Scottsdale Ranch, McDowell Mountain Ranch, Windgate, north Scottsdale. Condo project review and short-term rental rules do most of the work in this group."
+    "scottsdale-subdivision": "Scottsdale subdivisions and districts that are not golf-first: Old Town, the Waterfront and Optima high rises, Kierland, Arcadia, Scottsdale Ranch, McDowell Mountain Ranch, Windgate, north Scottsdale. Condo project review and short-term rental rules do most of the work in this group.",
+    "lending-programs": "Loan products for borrowers agency underwriting handles badly: physicians and residents, graduate degree professionals, the self-employed on bank statements or a third-party P&L, asset-based borrowers on depletion or asset qualifier, and investors on DSCR including short-term rental. Written from investor guideline sets rather than from general knowledge, and every program figure is attributed to the named guideline and its revision date, because these move. Re-verify before refreshing a post: a stale LTV or FICO floor here is the same class of error as a stale down payment assistance figure."
   }
 }
