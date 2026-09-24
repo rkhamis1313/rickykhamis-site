@@ -151,17 +151,6 @@
     },
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Retiree",
-      "neighborhood": "Legend Trail",
-      "city": "Scottsdale",
-      "question": "I am a retiree buyer. How do I qualify for a home in Legend Trail?",
-      "title": "Retiree and Buying in Legend Trail, Scottsdale: How You Actually Qualify",
-      "slug": "retiree-legend-trail-scottsdale",
-      "why": "north Scottsdale golf at a price point where fixed income and asset qualifying both come into play",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Investor",
       "neighborhood": "Scottsdale Country Club",
       "city": "Scottsdale",
@@ -257,17 +246,6 @@
       "title": "Self-Employed and Buying in Windgate Ranch: How You Actually Qualify",
       "slug": "self-employed-windgate-ranch-scottsdale",
       "why": "gated semi-custom inventory priced squarely in jumbo, where reserves stack on top of a deducted-down return",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-subdivision",
-      "borrowerType": "Second Home",
-      "neighborhood": "Kierland",
-      "city": "Scottsdale",
-      "question": "I am a second home buyer. How do I qualify for a home in Kierland?",
-      "title": "Second Home and Buying in Kierland: How You Actually Qualify",
-      "slug": "second-home-kierland-scottsdale",
-      "why": "walkable luxury next to the Quarter and Commons, heavy on condos and second homes, so project review and occupancy both bite",
       "status": "pending"
     },
     {
@@ -1570,6 +1548,20 @@
       "question": "I am a investor buyer. How do I qualify for a home in Talking Stick?",
       "slug": "investor-talking-stick-scottsdale",
       "date": "2026-09-23"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "question": "I am a second home buyer. How do I qualify for a home in Kierland?",
+      "slug": "second-home-kierland-scottsdale",
+      "date": "2026-09-24"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a retiree buyer. How do I qualify for a home in Legend Trail?",
+      "slug": "retiree-legend-trail-scottsdale",
+      "date": "2026-09-24"
     }
   ],
   "seriesNotes": {
