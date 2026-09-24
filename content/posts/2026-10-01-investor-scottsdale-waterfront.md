@@ -2,7 +2,7 @@
 title: "Investor Buying at the Scottsdale Waterfront: How You Actually Qualify"
 slug: investor-scottsdale-waterfront
 description: "High-rise condo financing where the project is approved or denied before you are. Owner-occupancy ratios, commercial square footage and condotel classification decide Waterfront deals, not your credit score."
-date: 2026-09-30
+date: 2026-10-01
 city: Scottsdale
 neighborhood: Scottsdale Waterfront
 borrowerType: Investor

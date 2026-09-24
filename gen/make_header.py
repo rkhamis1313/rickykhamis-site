@@ -206,6 +206,16 @@ def mark(d: ImageDraw.ImageDraw, kind: str, cx: int, cy: int, r: int) -> None:
         d.line([(cx, cy + r * 0.44), (cx, cy + r * 0.12)], fill=line, width=7)
         d.line([(cx, cy + r * 0.44), (cx + r * 0.3, cy + r * 0.44)], fill=line, width=7)
 
+    elif kind == "keys":
+        # A key over a threshold: the down payment is not the obstacle.
+        d.ellipse([cx - r * 0.86, cy - r * 0.34, cx - r * 0.18, cy + r * 0.34],
+                  outline=line, width=10)
+        d.line([(cx - r * 0.2, cy), (cx + r * 0.86, cy)], fill=hot, width=12)
+        d.line([(cx + r * 0.46, cy), (cx + r * 0.46, cy + r * 0.34)], fill=hot, width=11)
+        d.line([(cx + r * 0.74, cy), (cx + r * 0.74, cy + r * 0.26)], fill=hot, width=11)
+        d.line([(cx - r * 0.95, cy + r * 0.78), (cx + r * 0.95, cy + r * 0.78)],
+               fill=line, width=7)
+
     elif kind == "condo":
         # A tower with a lit grid, for project eligibility.
         d.rectangle([cx - r * 0.62, cy - r, cx + r * 0.62, cy + r], outline=line, width=8)
