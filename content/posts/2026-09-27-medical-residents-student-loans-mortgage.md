@@ -17,13 +17,17 @@ tags:
   - First Time Buyer
 ---
 
-A medical resident carrying a large student loan balance can still qualify, because physician loan programs will **exclude the student loan payment from your debt-to-income ratio entirely** under defined conditions. That exclusion, not the down payment, is usually what makes the file work.
+Every lender conversation ends at the same number. It is sitting on your student loan statement, it has six figures in front of the decimal, and the moment anyone sees it the tone of the call changes.
 
-The conditions are narrow, and they are the first thing to check.
+You are working eighty hour weeks. You have a signed offer for what comes after. You are being told to rent for another four years and try again.
+
+**Physician loan programs will exclude that student loan payment from your debt-to-income ratio entirely under defined conditions.** That exclusion, not the down payment, is usually what actually makes a resident's file work.
+
+The conditions are narrow, they are written down, and they are the first thing to check on your file rather than the last.
 
 ## The exclusion, as written
 
-Under CMG Financial's MedPro Premier guidelines (NMLS #1820, revised 09/08/2026), student loan payments that are in deferment, in forbearance, or reporting as $0 due to an income-based repayment plan may be excluded from the borrower's debt-to-income ratio **if** the borrower is currently in residency, or currently in training in a medical clinical fellowship program.
+Under CMG Financial's MedPro Premier guidelines (NMLS #1820, revised 09/11/2026), student loan payments that are in deferment, in forbearance, or reporting as $0 due to an income-based repayment plan may be excluded from the borrower's debt-to-income ratio **if** the borrower is currently in residency, or currently in training in a medical clinical fellowship program.
 
 That is the gate. Residency or clinical fellowship. Not "recently finished." Not "starting soon."
 

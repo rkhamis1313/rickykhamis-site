@@ -50,9 +50,12 @@ p{margin:0 0 1em}.lead{font-size:1.15rem;color:var(--muted)}
 .nav li.open>.dd{display:block}
 .nav .dd a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink);font-weight:600;font-size:.9rem}.nav .dd a:hover{background:var(--soft);text-decoration:none;color:var(--orange-d)}
 .nav .dd .grp{padding:10px 12px 4px;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+/* A column can carry more than one group now, so the second heading needs
+   air above it or it reads as a link in the list above. */
+.nav .dd .grp:not(:first-child){margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,.08)}
 /* The 560px mega panel ran off the right edge of the screen. Anchor it to
    the right of its trigger instead of the left. */
-.nav .dd.wide{min-width:560px;left:auto;right:0;display:none;grid-template-columns:1fr 1fr;gap:4px}.nav li.open>.dd.wide{display:grid}
+.nav .dd.wide{min-width:560px;left:auto;right:0;display:none;grid-template-columns:1fr 1fr;gap:4px;max-height:calc(100vh - 120px);overflow-y:auto;overscroll-behavior:contain}.nav li.open>.dd.wide{display:grid}
 .nav .dd.wide .col{padding:4px}
 .hdr .cta{display:flex;gap:10px;align-items:center}
 .burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;align-items:center;justify-content:center}

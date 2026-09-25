@@ -17,9 +17,13 @@ tags:
   - Scottsdale
 ---
 
-Asset based lending converts a portfolio into qualifying income without requiring you to sell anything, liquidate a position or show employment. The mechanic is simple arithmetic: qualifying assets divided by **84 months**, and the result is treated as monthly income.
+You are worth considerably more than the house you are trying to buy. The statement in your hand proves it.
 
-The part that catches people is that "qualifying assets" is not your account balance. Each asset class takes a haircut first.
+And you were declined, because a brokerage account with seven figures in it is not "income," you have no employer for anyone to call, and the last two years of tax returns show dividends and capital gains rather than a salary. You were told, politely, to sell some positions and come back with a bigger down payment. Which would trigger a tax bill you have spent years structuring around.
+
+**Asset based lending converts a portfolio into qualifying income without requiring you to sell anything, liquidate a position, or show employment.** The mechanic is plain arithmetic: qualifying assets divided by **84 months**, and the result is treated as monthly income.
+
+The part that catches people is that "qualifying assets" is not your account balance. Each asset class takes a haircut first, and knowing the haircut before you shop is the difference between a comfortable approval and a short conversation.
 
 ## The haircut schedule
 

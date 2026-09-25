@@ -17,9 +17,13 @@ tags:
   - Scottsdale
 ---
 
-If your tax returns understate your income because of legitimate write-offs, and your bank statements understate it because of how money moves through the business, there is a third path: qualify on a **third-party prepared 12-month profit and loss statement**, validated against your business bank statements.
+You have been turned down twice now.
 
-It is the least understood of the self-employed options and, for some businesses, the one that produces the highest qualifying income.
+Once on your tax returns, because your accountant did the job you hired them to do. Once on your bank statements, because your business runs through a merchant processor that nets out fees before a dollar ever lands in the account. Both times you were told the numbers do not support the loan. Both times you knew the numbers were wrong, and had no way to say so that anyone would act on.
+
+**There is a third path: qualify on a third-party prepared 12-month profit and loss statement**, validated against your business bank statements.
+
+It is the least understood of the self-employed options and, for a certain kind of business, the one that produces meaningfully higher qualifying income than either of the two that already told you no.
 
 ## How the P&L option works
 

@@ -17,9 +17,13 @@ tags:
   - Jumbo
 ---
 
-Physician loan programs will finance up to 100% of a primary residence with **no mortgage insurance at any loan-to-value**, and they let a doctor qualify on a fully executed employment contract instead of pay history. In CMG Financial's MedPro Premier guidelines (NMLS #1820, revised 09/08/2026), that is 100% financing to $1,500,000 with a 680 score, or to $2,000,000 with a 720, on a one-unit primary residence.
+You finished residency. You have a signed contract that pays more than anyone in your family has ever earned. You also have six figures of student loan debt, nothing saved for a down payment, and a start date that is still weeks away.
 
-That is the headline. The part that decides your file is narrower, and it is worth understanding before you fall in love with a house.
+The lender your agent recommended looked at all of that and told you the same thing everyone else did: come back when you have two pay stubs and twenty percent down.
+
+That answer is wrong, and it is wrong for a reason worth understanding. **Physician loan programs will finance up to 100% of a primary residence with no mortgage insurance at any loan-to-value, and they let a doctor qualify on a fully executed employment contract instead of pay history.** In CMG Financial's MedPro Premier guidelines (NMLS #1820, revised 09/11/2026), that is 100% financing to $1,500,000 with a 680 score, or to $2,000,000 with a 720, on a one-unit primary residence.
+
+The programs exist because the underwriting math on physicians is genuinely different, not because anyone is doing you a favor. The part that decides your file is narrower than the headline, and it is worth understanding before you fall in love with a house.
 
 ## Who actually counts as a physician
 

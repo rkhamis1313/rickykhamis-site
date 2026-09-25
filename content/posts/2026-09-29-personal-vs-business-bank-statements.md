@@ -16,9 +16,13 @@ tags:
   - Scottsdale
 ---
 
-Choosing between personal and business bank statements is not an administrative preference. It determines **whether an expense factor is applied to your deposits at all**, and for many self-employed borrowers that single choice moves qualifying income by a wide margin.
+Two self-employed borrowers. Same trade, same revenue, same credit score, same down payment. One of them qualifies for substantially more house than the other.
 
-It is also a choice you can accidentally lose by running personal spending through a business account.
+The difference is not the business. It is which set of bank statements they handed the lender, and whether they ever ran a personal charge through the business account.
+
+**Choosing between personal and business bank statements is not an administrative preference.** It determines whether an expense factor is applied to your deposits at all, and for many self-employed borrowers that single choice moves qualifying income by a wide margin.
+
+It is also a choice you can lose by accident, months before you ever speak to a lender.
 
 ## The structural difference
 

@@ -17,9 +17,13 @@ tags:
   - Investor
 ---
 
-A Scottsdale short-term rental can be qualified on its nightly income under a DSCR loan, but the terms tighten when you do it. Leverage is capped at **70% combined loan-to-value**, the coverage floor rises to **1.00x**, and the maximum loan size drops to **$2,000,000**.
+The property earns more across spring training and tournament season than most Scottsdale rentals collect in a year. You have the platform statements. You have the calendar. You have the deposits.
 
-That is the trade. Short-term rent is usually the higher number, and the program charges you for using it in the form of a larger down payment and a stricter ratio.
+Your lender's answer was to ignore every bit of it and qualify you on what a long-term tenant would pay, which is not the business you are in and not the number the deal was underwritten on when you bought it.
+
+**A Scottsdale short-term rental can be qualified on its nightly income under a DSCR loan.** The terms tighten when you do it: leverage is capped at **70% combined loan-to-value**, the coverage floor rises to **1.00x**, and the maximum loan size drops to **$2,000,000**.
+
+That is the trade, and it is worth naming plainly. Short-term rent is usually the higher number, and the program charges you for using it in the form of a larger down payment and a stricter ratio.
 
 ## The rules, as written
 

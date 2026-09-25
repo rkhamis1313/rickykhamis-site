@@ -16,9 +16,13 @@ tags:
   - Scottsdale
 ---
 
-A bank statement loan does not treat your deposits as income. It multiplies your average deposits by an **expense factor** determined by what your business does and how many people it employs, and the remainder is what you qualify on. A consultant working alone and a restaurant with eight employees can deposit the same money and be handed radically different qualifying income.
+Your accountant did exactly what you paid them to do. Every legitimate deduction, every write-off, every dollar of depreciation, and the bottom line of your return shows a fraction of what actually moved through your business last year.
 
-That factor is the whole game, and almost nobody explains it before you apply.
+Then you applied for a mortgage. A stranger read that bottom line back to you and told you that you could not afford a house you have been paying for in cash, in full, every month, for six years.
+
+**There is an entire class of loan that never opens your tax return.** A bank statement loan looks at deposits instead, and it does not treat those deposits as income either. It multiplies your average deposits by an **expense factor** set by what your business does and how many people it employs, and the remainder is what you qualify on.
+
+A consultant working alone and a restaurant with eight employees can deposit exactly the same money and be handed radically different qualifying income. That factor is the whole game, and almost nobody explains it to you before you apply.
 
 ## The table that decides your loan
 

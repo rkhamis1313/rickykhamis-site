@@ -19,6 +19,16 @@ on:
     # 13:00 UTC is 06:00 in Phoenix. Arizona does not observe DST, so this
     # stays at 6am year round with no adjustment.
     - cron: "0 13 * * *"
+    # The safety net. GitHub's scheduler is best effort: it ran this job four
+    # and a half hours late on 2026-09-24 and skipped 2026-09-25 outright, so
+    # two posts sat written and unpublished until someone noticed. A second
+    # run at 21:00 UTC (14:00 Phoenix) catches a morning that never fired.
+    #
+    # Running twice is safe. The job renders only posts whose date has
+    # arrived, and the commit step exits 0 when the tree is unchanged, so the
+    # second run is a no-op on any day the first one worked. The `publish`
+    # concurrency group queues the runs rather than overlapping them.
+    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -63,6 +73,12 @@ jobs:
 
       - name: Render posts that are due
         run: python gen/new_post.py --all-unpublished --due-only
+
+      - name: Rebuild the topic hubs
+        # The four cluster hubs link only posts that have actually rendered,
+        # so they have to be rebuilt after the day's posts go out. Skipping
+        # this does not break the site, it just leaves the hub a day stale.
+        run: python gen/build_hubs.py
 
       - name: Verify site consistency
         run: python gen/new_post.py --check

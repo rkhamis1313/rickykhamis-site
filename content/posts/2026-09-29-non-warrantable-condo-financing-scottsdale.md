@@ -17,7 +17,11 @@ tags:
   - Jumbo
 ---
 
-When a Scottsdale condo purchase falls apart at the financing stage, the buyer is usually fine. It is the **project** that failed, and the buyer never hears the real reason.
+You were pre-approved. Then you went under contract on a condo in Old Town and the loan quietly died.
+
+Nobody gave you a straight answer. Your income did not change. Your credit did not change. Your down payment did not change. The same lender who pre-approved you three weeks earlier now will not do this loan, and the explanation you got was something vague about waiting on HOA documents.
+
+Here is what actually happened, and it has nothing to do with you. **It is the project that failed, not the buyer.**
 
 Conventional agency financing requires a condominium project to be warrantable, meaning it satisfies a list of conditions about the building and the association. Fail any one of them and the unit becomes unfinanceable by most lenders, regardless of your income, credit or down payment. Non-warrantable condo programs exist precisely for those projects.
 

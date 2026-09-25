@@ -17,7 +17,11 @@ tags:
   - Rental Property
 ---
 
-A DSCR loan qualifies the property, not you. There is no personal income used, no tax returns, no debt-to-income ratio. The lender divides the property's gross rent by its payment, and that single number decides whether the file works.
+You own four properties. All four are rented. All four are making money. The fifth one just got declined.
+
+Not because the deal is bad. Because your debt-to-income ratio counts every mortgage you carry at full weight and gives you partial credit at best for the rent that pays them. The better you get at this, the harder conventional financing makes it to continue. That is not a bug in your file. It is what happens when a consumer lending formula is pointed at a business.
+
+**A DSCR loan qualifies the property, not you.** No personal income, no tax returns, no debt-to-income ratio at all. The lender divides the property's gross rent by its payment, and that single number decides whether the file works.
 
 The calculation, from CMG Financial's Non-QM Sharp Series guidelines (NMLS #1820, revised 09/21/2026), is exactly this: **DSCR = Gross Rental Income / PITIA**, or Gross Rental Income / ITIA on an interest-only loan. DSCR loans are qualified at the original note rate.
 

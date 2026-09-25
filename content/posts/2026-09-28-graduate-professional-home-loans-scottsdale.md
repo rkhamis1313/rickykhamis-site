@@ -17,7 +17,11 @@ tags:
   - No MI
 ---
 
-If you are an attorney, engineer, architect or CPA, you have probably been told that doctor loan programs are not available to you. That is true, and it is not the end of the conversation. A separate class of program finances **graduate and post-graduate degree holders** with no mortgage insurance at any loan-to-value, and qualifies you on future income from a signed contract.
+You asked your lender about one of those physician loan programs. The ones your friends from graduate school used to buy houses before they had savings, with no mortgage insurance and nothing down.
+
+The answer was no. Not for attorneys. Not for engineers. Not for architects or CPAs. You bill more than half the doctors on the street you are trying to buy on, and the program is closed to you because of the letters after your name.
+
+That answer is only half right. **A separate class of program finances graduate and post-graduate degree holders with no mortgage insurance at any loan-to-value, and qualifies you on future income from a fully executed contract.** It is not the physician program. It is the one built for everybody the physician program leaves out, and almost nobody mentions it because almost nobody sells it.
 
 ## What the program does
 
@@ -51,7 +55,7 @@ Side by side, for a primary residence purchase:
 
 **The graduate program** reaches 90% loan-to-value, to $1,500,000, at a 720 score, with debt-to-income to 50%, and it accepts a much wider set of professions.
 
-**The physician programs** reach higher. MedPro Premier (revised 09/08/2026) runs to 100% to $1,500,000 at 680, or to $2,000,000 at 720, and MedPro Advantage (revised 07/16/2025) runs to 95% on an ARM structure with a 43% debt-to-income ceiling and six months of reserves. Both are restricted to the specific medical designations.
+**The physician programs** reach higher. MedPro Premier (revised 09/11/2026) runs to 100% to $1,500,000 at 680, or to $2,000,000 at 720, and MedPro Advantage (revised 07/16/2025) runs to 95% on an ARM structure with a 43% debt-to-income ceiling and six months of reserves. Both are restricted to the specific medical designations.
 
 So the trade is leverage for eligibility. A physician gets a higher loan-to-value ceiling. A graduate-degree professional gets access to a no-mortgage-insurance structure at all, which conventional financing above 80% will not give you.
 
