@@ -52,7 +52,15 @@ jobs:
           python-version: "3.11"
 
       - name: Install Pillow for header images
-        run: pip install --quiet Pillow
+        # The import check matters. `import PIL` succeeds even when the
+        # compiled _imaging extension is missing, and header generation is
+        # deliberately non-fatal, so a half-installed Pillow publishes posts
+        # with no header image and only a warning in the log. That happened
+        # on 2026-09-25 and cost 44 images. Fail here instead.
+        run: |
+          pip install --quiet Pillow
+          python -c "from PIL import Image, ImageDraw, ImageFont; print('Pillow OK')"
+
 
       - name: Refresh the rate sheet
         # Feeds /cash-out-refinance-calculator/. The EPiQ sheet is the real
