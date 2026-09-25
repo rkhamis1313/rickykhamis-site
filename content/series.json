@@ -30,28 +30,6 @@
   "queue": [
     {
       "series": "lending-programs",
-      "borrowerType": "Self-Employed",
-      "program": "Bank Statement Loans",
-      "city": "Scottsdale",
-      "question": "How Lenders Actually Turn Your Deposits Into Qualifying Income?",
-      "title": "Bank Statement Loans: How Lenders Actually Turn Your Deposits Into Qualifying Income",
-      "slug": "bank-statement-loans-how-income-is-calculated",
-      "why": "Bank Statement Loans is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
-      "borrowerType": "Physician",
-      "program": "Physician Loans",
-      "city": "Scottsdale",
-      "question": "How Doctors Buy With No Down Payment and No Mortgage Insurance?",
-      "title": "Physician Home Loans in Scottsdale: How Doctors Buy With No Down Payment and No Mortgage Insurance",
-      "slug": "physician-home-loans-scottsdale",
-      "why": "Physician Loans is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
       "borrowerType": "Asset Based",
       "program": "Asset Depletion",
       "city": "Scottsdale",
@@ -1562,6 +1540,20 @@
       "question": "I am a retiree buyer. How do I qualify for a home in Legend Trail?",
       "slug": "retiree-legend-trail-scottsdale",
       "date": "2026-09-24"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "How Doctors Buy With No Down Payment and No Mortgage Insurance?",
+      "slug": "physician-home-loans-scottsdale",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "How Lenders Actually Turn Your Deposits Into Qualifying Income?",
+      "slug": "bank-statement-loans-how-income-is-calculated",
+      "date": "2026-09-25"
     }
   ],
   "seriesNotes": {
