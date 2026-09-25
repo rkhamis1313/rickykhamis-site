@@ -772,6 +772,48 @@ def check() -> int:
 
 
 # ------------------------------------------------------------------------- main
+def cluster_map() -> dict[str, tuple[str, str]]:
+    """slug -> (series, form), for picking Read next cards.
+
+    Read from the markdown rather than the rendered index pages, because the
+    index cards carry only a title and a date and say nothing about what a
+    post is about.
+    """
+    out: dict[str, tuple[str, str]] = {}
+    for source in POSTS_DIR.glob("*.md"):
+        try:
+            meta, _ = parse_front_matter(read(source))
+        except ValueError:
+            continue
+        slug = meta.get("slug")
+        if slug:
+            out[slug] = (meta.get("series", ""), meta.get("form", ""))
+    return out
+
+
+def pick_related(entry: dict, ordered: list[dict], clusters: dict,
+                 position: int) -> list[dict]:
+    """Three Read next cards, from the same cluster where one exists.
+
+    Taking the top of the list gave every post in a batch the same three
+    cards, which is tolerable when a batch is two posts and useless when it
+    is fifty-five. Same series and lead form first, rotated by position so
+    neighbouring posts in one cluster do not all point at the same places,
+    then the newest posts to fill any gap.
+    """
+    pool = [p for p in ordered if p["slug"] != entry["slug"]]
+    key = clusters.get(entry["slug"])
+    same = [p for p in pool if key and key != ("", "") and clusters.get(p["slug"]) == key]
+    if same:
+        offset = position % len(same)
+        same = same[offset:] + same[:offset]
+    chosen = same[:3]
+    if len(chosen) < 3:
+        taken = {p["slug"] for p in chosen}
+        chosen += [p for p in pool if p["slug"] not in taken][: 3 - len(chosen)]
+    return chosen
+
+
 def publish(paths: list[Path], force: bool = False, due_only: bool = False) -> None:
     """Render posts into the site.
 
@@ -862,10 +904,12 @@ def publish(paths: list[Path], force: bool = False, due_only: bool = False) -> N
     # itself part of the batch, which is exactly what a --force correction does.
     previous_newest = next((p for p in existing if p["slug"] not in fresh), None)
 
+    clusters = cluster_map()
+
     for position, entry in enumerate(rendered):
         newer = ordered[position - 1] if position > 0 else None
         older = ordered[position + 1] if position + 1 < len(ordered) else None
-        related = [p for p in ordered if p["slug"] != entry["slug"]][:3]
+        related = pick_related(entry, ordered, clusters, position)
         document = render_post(
             entry["meta"], entry["body_html"], template, newer, older, related
         )

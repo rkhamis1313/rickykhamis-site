@@ -29,94 +29,6 @@
   },
   "queue": [
     {
-      "series": "lending-programs",
-      "borrowerType": "Asset Based",
-      "program": "Asset Depletion",
-      "city": "Scottsdale",
-      "question": "How a Portfolio Becomes Qualifying Income?",
-      "title": "Asset Depletion and Asset Qualifier Loans: How a Portfolio Becomes Qualifying Income",
-      "slug": "asset-depletion-asset-qualifier-loans",
-      "why": "Asset Depletion is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
-      "borrowerType": "Investor",
-      "program": "DSCR Loans",
-      "city": "Scottsdale",
-      "question": "How Investors Qualify on the Rent Instead of Their Tax Returns?",
-      "title": "DSCR Loans in Scottsdale: How Investors Qualify on the Rent Instead of Their Tax Returns",
-      "slug": "dscr-loans-scottsdale-investors",
-      "why": "DSCR Loans is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
-      "borrowerType": "Resident",
-      "program": "Resident and Fellow Loans",
-      "city": "Scottsdale",
-      "question": "How Student Loan Payments Are Excluded From Your Mortgage Qualification?",
-      "title": "Medical Residents and Fellows: How Student Loan Payments Are Excluded From Your Mortgage Qualification",
-      "slug": "medical-residents-student-loans-mortgage",
-      "why": "Resident and Fellow Loans is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
-      "borrowerType": "Self-Employed",
-      "program": "P&L and WVOE Loans",
-      "city": "Scottsdale",
-      "question": "Qualifying Without Tax Returns or Bank Statements?",
-      "title": "12-Month P&L Loans and Written Verification of Employment: Qualifying Without Tax Returns or Bank Statements",
-      "slug": "profit-and-loss-wvoe-loans-self-employed",
-      "why": "P&L and WVOE Loans is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
-      "borrowerType": "Professional",
-      "program": "Graduate Degree Loans",
-      "city": "Scottsdale",
-      "question": "The Graduate Degree Programs Nobody Tells You About?",
-      "title": "Home Loans for Lawyers, Engineers, Architects and CPAs: The Graduate Degree Programs Nobody Tells You About",
-      "slug": "graduate-professional-home-loans-scottsdale",
-      "why": "Graduate Degree Loans is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
-      "borrowerType": "Investor",
-      "program": "Short-Term Rental DSCR",
-      "city": "Scottsdale",
-      "question": "Qualifying an Airbnb on Its Nightly Income?",
-      "title": "Short-Term Rental DSCR Loans in Scottsdale: Qualifying an Airbnb on Its Nightly Income",
-      "slug": "short-term-rental-dscr-scottsdale",
-      "why": "Short-Term Rental DSCR is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
-      "borrowerType": "Condo Buyer",
-      "program": "Non-Warrantable Condos",
-      "city": "Scottsdale",
-      "question": "Why the Building Gets Declined and How the Loan Still Closes?",
-      "title": "Non-Warrantable Condo Financing in Scottsdale: Why the Building Gets Declined and How the Loan Still Closes",
-      "slug": "non-warrantable-condo-financing-scottsdale",
-      "why": "Non-Warrantable Condos is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
-      "series": "lending-programs",
-      "borrowerType": "Self-Employed",
-      "program": "Bank Statement Options",
-      "city": "Scottsdale",
-      "question": "Which One Qualifies a Self-Employed Borrower for More?",
-      "title": "Personal or Business Bank Statements: Which One Qualifies a Self-Employed Borrower for More",
-      "slug": "personal-vs-business-bank-statements",
-      "why": "Bank Statement Options is a named product search with real intent and almost no local competition writing the mechanics",
-      "status": "pending"
-    },
-    {
       "series": "scottsdale-golf",
       "borrowerType": "RSU and Equity Comp",
       "neighborhood": "Grayhawk",
@@ -1554,6 +1466,391 @@
       "question": "How Lenders Actually Turn Your Deposits Into Qualifying Income?",
       "slug": "bank-statement-loans-how-income-is-calculated",
       "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "veterinarian-home-loans-dvm",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "va-alternative-zero-down-arizona",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "trust-and-inherited-assets-mortgage",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "Qualifying an Airbnb on Its Nightly Income?",
+      "slug": "short-term-rental-dscr-scottsdale",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "self-employed-jumbo-loans",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "self-employed-home-loan-faq",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "self-employed-cash-out-refinance",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "second-year-attending-mortgage",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "slug": "rsu-mcdowell-mountain-ranch-scottsdale",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "retiree-mortgage-no-paycheck",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "restaurant-hospitality-owner-mortgage",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "reserves-vs-depletion-double-count",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "recently-self-employed-mortgage",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "realtor-commission-income-mortgage",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "Qualifying Without Tax Returns or Bank Statements?",
+      "slug": "profit-and-loss-wvoe-loans-self-employed",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "post-liquidity-event-mortgage",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Phoenix",
+      "series": "lending-programs",
+      "slug": "physician-loans-phoenix-chandler-gilbert",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-loan-vs-conventional",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-loan-reserves-requirements",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-loan-refinance",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-loan-mistakes",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-loan-down-payment-options",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-loan-credit-score-requirements",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-loan-before-start-date",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-jumbo-loans-arizona",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "physician-home-loan-faq",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "pharmacist-home-loans-pharmd",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "Which One Qualifies a Self-Employed Borrower for More?",
+      "slug": "personal-vs-business-bank-statements",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "Why the Building Gets Declined and How the Loan Still Closes?",
+      "slug": "non-warrantable-condo-financing-scottsdale",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "no-ratio-dscr-loans",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "How Student Loan Payments Are Excluded From Your Mortgage Qualification?",
+      "slug": "medical-residents-student-loans-mortgage",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "large-deposits-nsf-bank-statements",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "slug": "investor-scottsdale-waterfront",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "how-to-calculate-dscr",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "housing-history-tiers-non-qm",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "The Graduate Degree Programs Nobody Tells You About?",
+      "slug": "graduate-professional-home-loans-scottsdale",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "first-time-investor-dscr",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "expense-factor-by-business-type",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "dscr-vs-conventional-investment",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "How Investors Qualify on the Rent Instead of Their Tax Returns?",
+      "slug": "dscr-loans-scottsdale-investors",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "dscr-loan-faq",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "dscr-llc-vesting",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "dscr-credit-reserves-requirements",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "dscr-cash-out-refinance",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "dscr-2-4-unit-properties",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "dentist-home-loans-dds-dmd",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "crna-nurse-practitioner-home-loans",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "business-owner-write-offs-mortgage",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "building-a-rental-portfolio-dscr",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "asset-depletion-vs-asset-qualifier",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "question": "How a Portfolio Becomes Qualifying Income?",
+      "slug": "asset-depletion-asset-qualifier-loans",
+      "date": "2026-09-25"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "asset-based-home-loan-faq",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "12-vs-24-month-bank-statements",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "1099-locum-tenens-physician-loans",
+      "date": "2026-09-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "lending-programs",
+      "slug": "1099-contractor-gig-mortgage",
+      "date": "2026-09-25",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
