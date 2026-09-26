@@ -213,3 +213,120 @@ p{margin:0 0 1em}.lead{font-size:1.15rem;color:var(--muted)}
   .leadform .fg{grid-template-columns:minmax(0,1fr)}
   .leadform .actions .btn{width:100%}
 }
+
+/* ---------------------------------------------------------------- /reviews/
+   Ricky supplied this page as a standalone document with its own fonts and
+   colour system. These rules rebuild its layout using the site's own tokens
+   so it reads as part of the site rather than a visitor from another one.
+   Everything is namespaced .rk- so it cannot leak into other pages. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* The portrait is cut out on pure black and the page hero is not, so an
+   unmasked photo shows as a rectangle a few shades off. Rather than fight it
+   with a mask, the hero paints a pool of true black exactly where the photo
+   sits and fades that into the normal gradient. The photo's own background
+   then matches its surroundings precisely and the edges disappear. */
+.rk-hero{padding-bottom:0;
+  background:
+    radial-gradient(ellipse 30% 82% at 80% 52%,#000 0%,#000 58%,rgba(0,0,0,0) 100%),
+    linear-gradient(180deg,#14171c,#0e1013)}
+.rk-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:40px;align-items:end}
+.rk-hero-grid>div{padding-bottom:56px}
+.rk-hero h1{font-size:clamp(2.6rem,6vw,4.2rem);line-height:1.02;letter-spacing:-.02em;margin-bottom:14px}
+/* Only the bottom needs a fade, where the photo is cropped mid-thigh and the
+   black pool gives way to the stat bar. The sides are handled by the hero. */
+.rk-portrait{width:100%;max-width:420px;height:auto;display:block;justify-self:end;align-self:end;
+  -webkit-mask-image:linear-gradient(180deg,#000 84%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 84%,transparent 100%)}
+.rk-pull{margin:26px 0 24px;padding-left:18px;border-left:3px solid var(--orange)}
+.rk-pull p{color:#fff;font-size:1.15rem;font-weight:600;margin:0 0 6px;max-width:34em}
+.rk-pull cite{color:#9ea2aa;font-style:normal;font-size:.85rem;font-weight:700;letter-spacing:.04em}
+
+/* .phero paints an orange glow in the top right corner, which is exactly
+   where the portrait sits, and that layer is above the hero background so the
+   pool of black cannot cover it. On this page the glow moves to the lower left
+   instead: away from the photo, and away from the headline it would wash out. */
+.rk-hero:after{right:auto;left:-180px;top:auto;bottom:-220px;width:560px;height:560px;
+  background:radial-gradient(circle,rgba(243,107,36,.30),transparent 66%)}
+
+.rk-statbar{background:var(--char);color:#d7d9de;border-top:1px solid rgba(255,255,255,.08)}
+.rk-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:22px 0}
+.rk-stat{display:flex;flex-direction:column;gap:2px;min-width:0}
+.rk-stat strong{color:#fff;font-size:.95rem}
+.rk-stat span{color:#9ea2aa;font-size:.85rem}
+
+.rk-lede{color:var(--muted);max-width:60ch;margin:0 0 28px;font-size:1.05rem}
+.section.dark .rk-lede{color:#b9bcc3}
+
+.rk-rescues{gap:22px}
+.rk-rescue h3{font-size:1.12rem;line-height:1.3}
+.rk-rescue p{font-style:italic}
+.rk-src{font-weight:700;font-size:.85rem;color:var(--orange-d)}
+
+.rk-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:18px}
+.rk-search{flex:1 1 260px;min-width:0}
+.rk-search input{width:100%;padding:12px 16px;border:1px solid var(--line);border-radius:999px;
+  background:#fff;font:inherit;font-size:.95rem;color:var(--text)}
+.rk-search input:focus{outline:2px solid var(--orange);outline-offset:1px}
+.rk-chips{display:flex;flex-wrap:wrap;gap:8px}
+.rk-chip{padding:10px 15px;border:1px solid var(--line);border-radius:999px;background:#fff;
+  font:inherit;font-size:.85rem;font-weight:700;color:var(--ink);cursor:pointer;transition:.15s;white-space:nowrap}
+.rk-chip:hover{border-color:var(--ink)}
+.rk-chip.is-on{background:var(--orange);border-color:var(--orange);color:#fff}
+.rk-n{font-weight:600;opacity:.7;font-size:.78rem;margin-left:2px}
+
+.rk-count{color:var(--muted);font-size:.85rem;margin:0 0 18px}
+.rk-none{color:var(--muted);margin:20px 0 0}
+.rk-more{margin-top:28px;text-align:center}
+
+/* A 1fr track will not shrink below its widest unbreakable token, and one
+   review runs "knowledgeable....helpful...quick...and" together with no
+   spaces, which pushed the whole page sideways on a phone. min-width:0 lets
+   the track shrink and anywhere lets that token break. */
+.rk-review{break-inside:avoid;min-width:0}
+.rk-review .rk-text p{overflow-wrap:anywhere}
+/* Grid rows stretch every card to the tallest in the row. Pushing the name to
+   the bottom fills a short review's card instead of leaving it half empty. */
+.rk-review .who{margin-top:auto;padding-top:4px}
+/* .quote sets display:flex, and an author display rule beats the user agent's
+   [hidden]{display:none}. Without this the script hides reviews that stay
+   perfectly visible, which is how all 206 rendered on a page meant to show 18. */
+.rk-review[hidden]{display:none}
+.rk-text{margin:0}
+.rk-text p{margin:0}
+/* Until the script runs, nothing is hidden and nothing is clamped, so the
+   page is complete for a crawler and for anyone whose JavaScript failed. */
+.rk-grid.is-enhanced .rk-long .rk-text{display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
+.rk-grid.is-enhanced .rk-long.is-open .rk-text{display:block;overflow:visible}
+.rk-toggle{align-self:flex-start;background:none;border:0;padding:0;font:inherit;font-size:.85rem;
+  font-weight:700;color:var(--orange-d);cursor:pointer}
+.rk-toggle:hover{text-decoration:underline}
+
+.rk-bio{align-items:center}
+.rk-bio .prose p{margin-bottom:14px}
+.rk-bio-img{width:100%;height:auto;border-radius:var(--r);display:block}
+
+.rk-lines{gap:18px;margin:8px 0 28px}
+.rk-lines>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.rk-lines span{color:#9ea2aa;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.rk-lines a{color:#fff;font-size:1.15rem;font-weight:700;word-break:break-word}
+.rk-lines a:hover{color:var(--orange)}
+.rk-fine{color:#8a8e96;font-size:.78rem;line-height:1.6;margin:26px 0 0;max-width:80ch}
+
+@media(max-width:900px){
+  .rk-hero-grid{grid-template-columns:minmax(0,1fr);gap:0}
+  .rk-hero-grid>div{padding-bottom:0}
+  .rk-hero{background:
+    radial-gradient(ellipse 76% 46% at 40% 88%,#000 0%,#000 64%,rgba(0,0,0,0) 100%),
+    linear-gradient(180deg,#14171c,#0e1013)}
+  .rk-portrait{max-width:280px;justify-self:start;margin-top:24px}
+  .rk-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rk-rescues{grid-template-columns:minmax(0,1fr)}
+  .rk-lines{grid-template-columns:minmax(0,1fr)}
+  .rk-bio{grid-template-columns:minmax(0,1fr)}
+  .rk-bio-img{max-width:320px}
+}
+@media(max-width:560px){
+  .rk-stats{grid-template-columns:minmax(0,1fr)}
+  .rk-tools{flex-direction:column;align-items:stretch}
+}
