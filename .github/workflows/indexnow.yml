@@ -46,7 +46,9 @@ jobs:
           python-version: "3.11"
 
       - name: Check the key file and the sitemap before sending anything
-        run: python gen/indexnow.py --selftest
+        run: |
+          python gen/indexnow.py --selftest
+          python gen/indexnow.py --verify
 
       - name: Submit
         # --strict here, unlike the daily job. This run exists only to submit,

@@ -121,6 +121,32 @@ def payload(key: str, key_location: str, urls: list[str]) -> dict:
     }
 
 
+def verify_key(key: str, key_location: str) -> bool:
+    """Fetch the key file the way the search engine will, and say what came back.
+
+    A 403 from the endpoint means "the key did not validate", which is the same
+    answer whether the file is missing, redirected, served as the wrong type or
+    simply not deployed yet. Checking it directly turns one opaque status code
+    into something actionable, and costs one request.
+    """
+    req = urllib.request.Request(key_location, headers={"User-Agent": "indexnow-check"})
+    try:
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
+            body = resp.read().decode("utf-8", "replace").strip()
+            ctype = resp.headers.get("Content-Type", "?")
+            log(f"  key file: HTTP {resp.status}, {ctype}, {len(body)} byte(s)")
+            if body != key:
+                log(f"  ! key file content does not match its name: {body[:64]!r}")
+                return False
+            log("  key file verified")
+            return True
+    except urllib.error.HTTPError as exc:
+        log(f"  ! key file returned HTTP {exc.code} at {key_location}")
+    except Exception as exc:  # noqa: BLE001
+        log(f"  ! key file unreachable: {exc}")
+    return False
+
+
 def submit(body: dict, strict: bool) -> bool:
     data = json.dumps(body).encode("utf-8")
     req = urllib.request.Request(
@@ -202,6 +228,8 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--strict", action="store_true",
                     help="exit non-zero when the submission fails")
+    ap.add_argument("--verify", action="store_true",
+                    help="fetch the key file over HTTP and report, then stop")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
 
@@ -224,6 +252,12 @@ def main() -> int:
         return 0
 
     log(f"IndexNow: {len(urls)} URL(s) via {ENDPOINT}")
+    if args.verify or not args.dry_run:
+        # Always check before a real send. If this fails the submission will
+        # come back 403 and the log would otherwise say only that.
+        verify_key(key, key_location)
+    if args.verify:
+        return 0
     if args.dry_run:
         body = payload(key, key_location, urls[:BATCH])
         log(json.dumps({**body, "urlList": body["urlList"][:5]}, indent=2))
