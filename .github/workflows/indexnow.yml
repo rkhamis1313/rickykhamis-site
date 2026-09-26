@@ -1,0 +1,59 @@
+# Submit URLs to IndexNow on demand.
+#
+# The daily publish job already pings the pages it just released. This is for
+# the other cases: a first run that has to tell Bing about a site it has never
+# seen, a batch of pages changed outside the publish cycle, or re-submitting
+# after a key rotation.
+#
+# Nothing here needs a secret. IndexNow authenticates by a public key file at
+# the site root, so the only credential is something already served to anyone
+# who asks for it.
+
+name: IndexNow submit
+
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "Which URLs to submit"
+        type: choice
+        default: all
+        options:
+          - all
+          - today
+      dry_run:
+        description: "Print the payload without sending it"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/rickykhamis-daily-blog-automation-dovt88
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check the key file and the sitemap before sending anything
+        run: python gen/indexnow.py --selftest
+
+      - name: Submit
+        # --strict here, unlike the daily job. This run exists only to submit,
+        # so a failure is the result rather than a footnote, and it should show
+        # up red in the Actions list.
+        run: |
+          ARGS=""
+          if [ "${{ inputs.scope }}" = "all" ]; then ARGS="--all"; fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python gen/indexnow.py $ARGS --strict

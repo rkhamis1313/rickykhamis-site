@@ -92,17 +92,40 @@ jobs:
         run: python gen/new_post.py --check
 
       - name: Commit and push
+        id: publish
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A content site
           if git diff --cached --quiet; then
             echo "Nothing due today. This is a normal, healthy no-op."
+            echo "published=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "Publish scheduled posts ($(TZ=America/Phoenix date +%Y-%m-%d))"
           git push origin HEAD:claude/rickykhamis-daily-blog-automation-dovt88
           echo "Pushed $(git rev-parse --short HEAD)"
+          echo "published=true" >> "$GITHUB_OUTPUT"
+
+      - name: Tell Bing about the new pages
+        # IndexNow, which Bing, Yandex, Seznam and Naver all read from one
+        # submission. Bing's index is what Copilot answers from and what
+        # ChatGPT's search reads, so being in it quickly is the difference
+        # between an article existing and an article being quotable.
+        #
+        # Runs only when something was actually pushed, and only after the
+        # push, because telling a crawler to fetch a page that is not live yet
+        # earns a 404 and a wasted submission. The sleep gives Netlify time to
+        # finish the deploy; it typically takes about fifteen seconds.
+        #
+        # Not allowed to fail the run. A search engine being unreachable is not
+        # a reason to mark a successful publish as broken, so the script exits 0
+        # on network trouble unless --strict is passed.
+        if: steps.publish.outputs.published == 'true'
+        run: |
+          sleep 90
+          python gen/indexnow.py --selftest
+          python gen/indexnow.py
 
       - name: Report how much runway is left
         run: |
