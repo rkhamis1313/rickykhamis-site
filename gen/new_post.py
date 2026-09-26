@@ -538,10 +538,34 @@ def rewrite_index_pages(posts: list[dict]) -> list[Path]:
     return written
 
 
+def sync_index_pages(text: str, stamp: str) -> str:
+    """Make the sitemap's /blog/page/N/ entries match the pages on disk.
+
+    rewrite_index_pages happily creates page 6 through 12 as the blog grows,
+    and nothing ever told the sitemap. Publishing 55 posts in one morning took
+    the blog from 5 index pages to 12 and left seven of them unlisted, which
+    is seven pages of links to older posts that a crawler has to find some
+    other way. Rebuilt from disk every run so the two cannot drift again.
+    """
+    numbers = sorted(int(d.parent.name) for d in BLOG.glob("page/*/index.html")
+                     if d.parent.name.isdigit())
+    text = re.sub(r"^<url><loc>[^<]*/blog/page/\d+/</loc>[^\n]*\n?", "", text, flags=re.M)
+    entries = "".join(
+        f"<url><loc>{BASE_URL}/blog/page/{n}/</loc><lastmod>{stamp}</lastmod></url>\n"
+        for n in numbers
+    )
+    anchor = re.search(rf"^<url><loc>{re.escape(BASE_URL)}/blog/</loc>[^\n]*\n", text, re.M)
+    if not anchor:
+        raise ValueError("sitemap has no /blog/ entry to anchor pagination on")
+    return text[:anchor.end()] + entries + text[anchor.end():]
+
+
 def update_sitemap(new_posts: list[dict], today: date) -> None:
     path = SITE / "sitemap.xml"
     text = read(path)
     stamp = today.isoformat()
+
+    text = sync_index_pages(text, stamp)
 
     # Re-rendering a post must not add a second <url> for it. Drop any existing
     # entry for these slugs first, then insert one each.
