@@ -30,7 +30,11 @@ import sys
 from datetime import date
 from pathlib import Path
 
-ROOT = Path('/home/user/rickykhamis-site')
+# Relative to this file, not to wherever it happens to be run from. This was
+# an absolute path carried over from the prototype, which worked only inside
+# the container it was written in and failed every scheduled run for five
+# days on the GitHub runner.
+ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / 'content' / 'posts'
 SITE = ROOT / 'site'
 TEMPLATE = SITE / 'blog' / 'mortgage-rate-buydowns-scottsdale-arizona' / 'index.html'
@@ -441,18 +445,34 @@ def update_sitemap(paths):
 
 
 def update_llms(hubs):
+    """Ensure each hub is listed once, under Programs.
+
+    These used to get their own "Topic guides" section, which duplicated every
+    URL once they were also added to Programs, and new_post.py --check fails on
+    a URL that appears twice in llms.txt. Programs is the right home: it is the
+    section an assistant reads to answer what a lender offers.
+
+    An existing line for a hub is left alone, so hand-written copy survives a
+    rebuild. Only a hub with no line at all gets one.
+    """
     p = SITE / 'llms.txt'
     s = io.open(p, encoding='utf-8').read()
-    if '## Topic guides' in s:
-        s = re.sub(r'\n## Topic guides\n.*?(?=\n## |\Z)', '', s, flags=re.S)
-    lines = ['', '## Topic guides', '']
+    s = re.sub(r'\n## Topic guides\n.*?(?=\n## |\Z)', '\n', s, flags=re.S)
+
+    added = 0
     for h in hubs:
-        lines.append(f'- [{h["h1"]}]({BASE}/{h["path"]}/): {h["description"]}')
-    block = '\n'.join(lines) + '\n'
-    # Sit above the article list, which is long and changes every day.
-    s = s.replace('\n## Articles', block + '\n## Articles', 1)
+        url = f'{BASE}/{h["path"]}/'
+        if url in s:
+            continue
+        line = f'- [{h["h1"]}]({url}): {h["description"]}\n'
+        anchor = re.search(r'^## Programs\n', s, re.M)
+        if not anchor:
+            raise ValueError('llms.txt has no ## Programs section')
+        s = s[:anchor.end()] + line + s[anchor.end():]
+        added += 1
+
     io.open(p, 'w', encoding='utf-8').write(s)
-    print('  llms.txt: topic guides section written')
+    print(f'  llms.txt: {added} hub line(s) added, {len(hubs) - added} already present')
 
 
 def main() -> int:

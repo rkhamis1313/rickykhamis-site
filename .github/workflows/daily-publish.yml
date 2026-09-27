@@ -62,6 +62,19 @@ jobs:
           python -c "from PIL import Image, ImageDraw, ImageFont; print('Pillow OK')"
 
 
+      - name: Refuse to run a script that only works on one machine
+        # gen/build_hubs.py shipped with ROOT hardcoded to an absolute path it
+        # inherited from the prototype. It worked in the container it was
+        # written in and failed every scheduled run for five days here, which
+        # nobody saw because the job had nothing to publish anyway. One grep
+        # is cheaper than another five days.
+        run: |
+          if grep -n "Path('/home/\|Path(\"/home/\|= '/home/\|= \"/home/" gen/*.py; then
+            echo "::error::A gen script has a hardcoded absolute path. Use Path(__file__).resolve().parent.parent."
+            exit 1
+          fi
+          echo "No hardcoded paths."
+
       - name: Refresh the rate sheet
         # Feeds /cash-out-refinance-calculator/. The EPiQ sheet is the real
         # pricing and carries an APR beside every rate; the Freddie Mac survey
