@@ -429,25 +429,43 @@ def build(hub: dict, template: str) -> Path:
 
     target = SITE / hub['path'] / 'index.html'
     target.parent.mkdir(parents=True, exist_ok=True)
+    before = io.open(target, encoding='utf-8').read() if target.exists() else None
     io.open(target, 'w', encoding='utf-8').write(doc)
-    print(f'  /{hub["path"]}/  {len(linked)} posts  {len(doc)//1024} KB')
-    return target
+    changed = doc != before
+    print(f'  /{hub["path"]}/  {len(linked)} posts  {len(doc)//1024} KB'
+          f'{"" if changed else "  (unchanged)"}')
+    return target, changed
 
 
-def update_sitemap(paths):
+def update_sitemap(changed_by_path):
+    """Add missing hub entries, and restamp lastmod on the hubs that changed.
+
+    A hub gains a card every morning its next article renders, so it changes
+    far more often than the posts on it. Only adding new entries left these
+    four pages claiming a lastmod from the day they were created, which tells
+    a crawler not to bother with the four pages most worth recrawling.
+    """
     p = SITE / 'sitemap.xml'
     s = io.open(p, encoding='utf-8').read()
     today = date.today().isoformat()
-    added = 0
-    for path in paths:
+    added = restamped = 0
+    for path, changed in changed_by_path.items():
         loc = f'{BASE}/{path}/'
-        if loc in s:
+        if loc not in s:
+            entry = f'<url><loc>{loc}</loc><lastmod>{today}</lastmod></url>\n'
+            s = s.replace('</urlset>', entry + '</urlset>')
+            added += 1
             continue
-        entry = f'<url><loc>{loc}</loc><lastmod>{today}</lastmod></url>\n'
-        s = s.replace('</urlset>', entry + '</urlset>')
-        added += 1
+        if not changed:
+            continue
+        pat = re.compile(
+            r'(<url><loc>' + re.escape(loc) + r'</loc><lastmod>)[^<]*(</lastmod>)')
+        s, n = pat.subn(lambda m: m.group(1) + today + m.group(2), s, count=1)
+        if n != 1:
+            raise ValueError(f'could not restamp lastmod for {loc}')
+        restamped += 1
     io.open(p, 'w', encoding='utf-8').write(s)
-    print(f'  sitemap: +{added}')
+    print(f'  sitemap: +{added}, {restamped} restamped')
 
 
 def update_llms(hubs):
@@ -484,9 +502,11 @@ def update_llms(hubs):
 def main() -> int:
     template = io.open(TEMPLATE, encoding='utf-8').read()
     print('Hubs:')
+    changed = {}
     for hub in HUBS:
-        build(hub, template)
-    update_sitemap([h['path'] for h in HUBS])
+        _, did = build(hub, template)
+        changed[hub['path']] = did
+    update_sitemap(changed)
     update_llms(HUBS)
     return 0
 
