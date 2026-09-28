@@ -47,7 +47,7 @@ For an occupying spouse this restriction does not apply, which is the usual Chan
 
 ## The threshold that actually decides your price range
 
-Chandler spans a wide band, from established central neighbourhoods to the newer south and the Ocotillo area with its golf-community associations.
+Chandler spans a wide band, from established central neighborhoods to the newer south and the Ocotillo area with its golf-community associations.
 
 Which means the **720 line** is a live question here in a way it is not in Mesa. At 680 you reach **100% financing to $1,500,000**. At 720 you reach **$2,000,000**. Forty points of score, five hundred thousand dollars of loan amount.
 

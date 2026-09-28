@@ -47,7 +47,7 @@ That is the single most useful thing a Mesa physician can know, and it runs exac
 
 The exclusion that carries residents is narrow. Student loan payments in deferment, in forbearance, or reporting $0 under an income-based repayment plan may be excluded from the ratio **only if you are currently in residency, or currently in training in a medical clinical fellowship program.**
 
-Mesa's hospital base means both sides of that line are well represented. Banner Desert has been a tertiary referral centre for close to forty years and Banner Baywood has run since 1984 as a 342 bed acute care hospital, with Banner Heart Hospital on Baywood Avenue alongside them. That is a large and varied physician population: people still in training, people a year out, and people who have been attending for a decade.
+Mesa's hospital base means both sides of that line are well represented. Banner Desert has been a tertiary referral center for close to forty years and Banner Baywood has run since 1984 as a 342 bed acute care hospital, with Banner Heart Hospital on Baywood Avenue alongside them. That is a large and varied physician population: people still in training, people a year out, and people who have been attending for a decade.
 
 If you are in training, the exclusion is likely available and your qualifying picture is much better than you think. If you finished, a payment **must** be included, and if the credit report shows none or shows $0, one is calculated another way.
 

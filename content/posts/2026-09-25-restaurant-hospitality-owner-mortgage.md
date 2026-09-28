@@ -41,7 +41,7 @@ Compare that to a consultant working alone, whose 15% factor leaves them **eight
 
 It is not arbitrary. A restaurant genuinely does run on thin margins with enormous cost of goods sold, and a table that has to work for every food service business in the country will be set where most of them are.
 
-The problem is that it is a blunt instrument applied to a specific business. A well-run restaurant with real margin, a catering operation, a bar with a favourable cost structure, a hospitality business whose deposits include pass-through items: all of them get the same 85%.
+The problem is that it is a blunt instrument applied to a specific business. A well-run restaurant with real margin, a catering operation, a bar with a favorable cost structure, a hospitality business whose deposits include pass-through items: all of them get the same 85%.
 
 That is why the guidelines do not stop at the table.
 

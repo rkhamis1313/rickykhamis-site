@@ -64,7 +64,7 @@ You are underwritten continuously, not once. Between approval and closing, do no
 
 Judge a lender on the property, not the quote.
 
-- **We say what we can finance, on the first call.** Manufactured on owned land with a proper foundation certification is a normal file here, not a favour.
+- **We say what we can finance, on the first call.** Manufactured on owned land with a proper foundation certification is a normal file here, not a favor.
 - **Broker model.** Multiple investors rather than one bank's shelf, which is exactly what an unusual property needs.
 - **Underwritten pre-approvals** before you shop, with written cost to close.
 - **You talk to the principal.** Ricky Khamis is President of EPiQ Lending, NMLS #173141, lending in Arizona since 1999. Direct line: (480) 999-9842.

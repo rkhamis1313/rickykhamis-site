@@ -86,7 +86,7 @@ Small sentence, real consequence.
 
 When calculating residual income, the guidelines say not to impute tax deductions. So the calculation runs on the gross monthly figure the 84 month divisor produces, rather than reducing it for an assumed tax burden on withdrawals.
 
-In practice that is favourable to the borrower, and it is worth knowing so you can check that the calculation you are shown was run that way.
+In practice that is favorable to the borrower, and it is worth knowing so you can check that the calculation you are shown was run that way.
 
 ## What to do before you apply
 

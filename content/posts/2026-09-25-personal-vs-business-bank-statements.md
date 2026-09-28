@@ -38,7 +38,7 @@ If you use business bank statements and own at least 25% but less than 100% of t
 
 Minimum ownership is 25%, documented by CPA letter, operating agreement or equivalent.
 
-For a minority partner in a profitable firm, that multiplication can be brutal on the business statement route while the personal deposits tell a much more favourable story, because your draws are what actually reach you.
+For a minority partner in a profitable firm, that multiplication can be brutal on the business statement route while the personal deposits tell a much more favorable story, because your draws are what actually reach you.
 
 ## The co-mingling rule
 

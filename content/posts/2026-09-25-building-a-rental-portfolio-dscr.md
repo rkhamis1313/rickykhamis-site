@@ -101,7 +101,7 @@ Two smaller properties frequently consume less cash and produce more total rent 
 
 ## Operational discipline that protects the engine
 
-Since the portfolio no longer gates itself, the things that gate you are behavioural:
+Since the portfolio no longer gates itself, the things that gate you are behavioral:
 
 - **Autopay every mortgage**, including your own home. 0x30x12 is the whole program.
 - **Protect the score.** Keep revolving balances low before any application.

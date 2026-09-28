@@ -54,7 +54,7 @@ Take those one at a time, because each solves a real problem.
 
 **Seasoning does not apply.** Normally a cash-out requires six or more months of ownership. On an inherited property buyout it does not. You do not wait half a year to buy your siblings out.
 
-**Current appraised value is used.** Not the value at date of death, not the price you are paying your co-heirs. The current appraisal. If the house appreciated, that works in your favour on leverage.
+**Current appraised value is used.** Not the value at date of death, not the price you are paying your co-heirs. The current appraisal. If the house appreciated, that works in your favor on leverage.
 
 **Equity owners must be paid through settlement.** The money goes to your siblings through the closing, not from you privately afterward. Structure it that way from the start.
 

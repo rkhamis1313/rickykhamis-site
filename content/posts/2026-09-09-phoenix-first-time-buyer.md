@@ -69,7 +69,7 @@ You are underwritten continuously. Between approval and closing, do not open new
 
 ## So who should you choose in Phoenix?
 
-Judge a lender on whether they bring you the assistance program before you ask, and whether they price the neighbourhood rather than the city.
+Judge a lender on whether they bring you the assistance program before you ask, and whether they price the neighborhood rather than the city.
 
 - **We run both programs against your actual numbers**, census tract and profession included, and tell you which one wins and why.
 - **Broker model.** Multiple investors instead of one bank's shelf, which matters on older homes and thin comps.
@@ -78,6 +78,6 @@ Judge a lender on whether they bring you the assistance program before you ask, 
 
 EPiQ Lending is NMLS #1936984. Verify all of it before you trust any of it: [Ricky's EPiQ Lending profile](https://www.epiqlending.com/mysite/Ricky-Khamis), the [Scottsdale branch](https://www.epiqlending.com/branch/1936984/7975-N-Hayden-Rd-Ste-A101-Scottsdale-AZ-85258) at 7975 N. Hayden Road, Suite A-101, and the license itself at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/). That is the standard to hold any lender to, including us.
 
-Tell me your target neighbourhood and your household income and I will tell you which assistance program you actually qualify for.
+Tell me your target neighborhood and your household income and I will tell you which assistance program you actually qualify for.
 
 *Equal Housing Opportunity. This is general information, not a commitment to lend or an offer to extend credit. Rates, terms, and program guidelines change and depend on credit approval, property appraisal, and other qualifying factors. Not all applicants will qualify.*

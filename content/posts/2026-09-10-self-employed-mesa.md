@@ -110,7 +110,7 @@ Before you write on a specific property:
 Judge a lender on what they will finance and whether they can read a return, not on the number they quote.
 
 - **We read the returns ourselves.** Schedule C, 1120S, K-1, Schedule E, add-backs and all, before you go looking at houses.
-- **We say what we can finance on the first call.** Manufactured on owned land with a proper foundation certification is a normal file here, not a favour.
+- **We say what we can finance on the first call.** Manufactured on owned land with a proper foundation certification is a normal file here, not a favor.
 - **Broker model.** Multiple investors rather than one bank's shelf, which is exactly what a file with two hard gates needs.
 - **The full toolkit**, agency through bank statement, asset depletion, DSCR and no-ratio non-QM, chosen on the file rather than on inventory.
 - **You talk to the principal.** Ricky Khamis is President of EPiQ Lending, NMLS #173141, lending in Arizona since 1999 and a 2025 Presidents Club Winner at CMG Home Loans. Direct line: (480) 999-9842.

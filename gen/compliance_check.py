@@ -40,6 +40,11 @@ ERRORS: list[tuple[str, str]] = [
     (r"\byou\s+will\s+(?:save|qualify|be\s+approved)\b", "promises an outcome"),
     (r"\bno\s+(?:closing\s+)?costs?\b(?!\s*\?)", "claims no costs"),
     (r"\$\d[\d,]*\s*(?:/|per\s+)mo(?:nth)?\b", "quotes a specific monthly payment"),
+    # US English. This is a Scottsdale lender writing for Arizona borrowers, and
+    # a British spelling reads as content written by someone who is not here.
+    # Fourteen of them reached the site before anyone looked.
+    (r"\b\w*(?:neighbour|behaviour|favour|colour|centre|metre|licence|organis|"
+     r"recognis|analyse|whilst|amongst)\w*\b", "uses a British spelling"),
 ]
 
 WARNINGS: list[tuple[str, str]] = [

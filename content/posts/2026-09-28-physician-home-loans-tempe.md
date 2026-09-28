@@ -25,7 +25,7 @@ Nobody gave you a straight answer. Something about waiting on HOA documents.
 
 ## Why Tempe specifically
 
-Tempe is the densest of the East Valley cities, built around Arizona State University and hemmed in by its neighbours, so it has far more attached housing than Mesa, Gilbert or Chandler. It also has, for the same reason, an unusually high share of units held as rentals rather than lived in by their owners.
+Tempe is the densest of the East Valley cities, built around Arizona State University and hemmed in by its neighbors, so it has far more attached housing than Mesa, Gilbert or Chandler. It also has, for the same reason, an unusually high share of units held as rentals rather than lived in by their owners.
 
 That combination is exactly what agency guidelines were not written to accommodate. Conventional financing requires a condominium project to be **warrantable**, and the common failure points are:
 
@@ -70,7 +70,7 @@ Associations vary enormously in how fast they produce these. In a student-adjace
 
 Worth saying plainly: many physicians live in Tempe and work somewhere else. HonorHealth Tempe Medical Center, the 74 bed full-service hospital formerly known as Tempe St. Luke's, has operated under HonorHealth since 2024, and it is the hospital in town. But Banner Desert is a short drive east, Chandler Regional is south, and the central Phoenix campuses are a straight run up the 143 or the light rail.
 
-So Tempe is frequently the compromise in a two-career household: central to everything, denser than its neighbours, and priced accordingly. If that is your situation, the property question above is the one that decides your search, not the program question.
+So Tempe is frequently the compromise in a two-career household: central to everything, denser than its neighbors, and priced accordingly. If that is your situation, the property question above is the one that decides your search, not the program question.
 
 And if you are looking at detached Tempe housing rather than attached, most of this page stops applying and the ordinary rules take over: ratio capped at **50% at 95% loan-to-value or below and 45% above it**, reserves of **zero months at 95% or below** to $1,500,000 and **three months above 95%**, and a **90.01% minimum loan-to-value** that makes a large down payment disqualifying rather than helpful.
 

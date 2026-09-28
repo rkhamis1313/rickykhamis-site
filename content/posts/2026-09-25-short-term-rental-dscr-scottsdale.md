@@ -79,7 +79,7 @@ Do not treat this as paperwork you handle after closing. If the property cannot 
 
 - **We use the rent the guidelines will accept**, not the projection in a listing pro forma, so the approval does not move late.
 - **We know the leverage changes.** Short-term rental income tightens the loan-to-value and raises the coverage floor, and that reshapes the down payment.
-- **Scottsdale specifics.** Event-driven seasonality and municipal rules are part of the underwrite here, not background colour.
+- **Scottsdale specifics.** Event-driven seasonality and municipal rules are part of the underwrite here, not background color.
 - **Broker model.** Multiple investors rather than one bank's shelf, which is what a file like this needs when the first answer is no.
 - **You talk to the principal.** Ricky Khamis is President of EPiQ Lending, NMLS #173141, lending in Arizona since 1999. Direct line: (480) 999-9842.
 

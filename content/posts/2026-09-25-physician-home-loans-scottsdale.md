@@ -60,7 +60,7 @@ For a program that qualifies you on future income, the document set is smaller t
 
 Scottsdale's physician population is concentrated across three HonorHealth campuses, and where you land changes the commute and therefore the search.
 
-**HonorHealth Scottsdale Osborn Medical Center** sits in south Scottsdale near Old Town, with over three hundred beds, a Level 1 trauma centre and one of the largest military trauma training programmes based at a civilian hospital in the country.
+**HonorHealth Scottsdale Osborn Medical Center** sits in south Scottsdale near Old Town, with over three hundred beds, a Level 1 trauma center and one of the largest military trauma training programmes based at a civilian hospital in the country.
 
 **HonorHealth Scottsdale Shea Medical Center** is on Shea Boulevard, central to the Shea corridor and McCormick Ranch.
 
