@@ -190,6 +190,17 @@ def load_author() -> dict:
     return json.loads(read(AUTHOR_FILE)) if AUTHOR_FILE.exists() else {}
 
 
+# The one CTA every post carries. A reader who just finished two thousand words
+# on how a program works is the most qualified traffic this site gets, and until
+# now the only ask at the bottom was "apply" or "book a call". Sending an address
+# is a smaller ask than either, so it gets asked here, on every post.
+ANALYZE_CTA = (
+    '<p class="analyze-cta" style="margin-top:36px;padding:16px 18px;'
+    'border-left:4px solid var(--orange);background:var(--soft);font-size:1.02rem">'
+    'Looking at a specific home? Send me the address and I will run the numbers: '
+    '<a href="/analyze/"><strong>rickykhamis.com/analyze</strong></a></p>'
+)
+
 def render_author_block(author: dict, published: date, title: str) -> str:
     """The E-E-A-T block. Every claim in it is checkable, which is the point:
     an assistant deciding whether to name a source weighs verifiable credentials,
@@ -464,7 +475,8 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
     )
 
     article = (
-        f'<article class="prose">{hero_img}{body_html}{lead}{citation}{nav}</article>'
+        f'<article class="prose">{hero_img}{body_html}{lead}{citation}{nav}'
+        f'{ANALYZE_CTA}</article>'
     )
     document = re.sub(
         r'<article class="prose">.*?</article>', lambda _: article, document,
