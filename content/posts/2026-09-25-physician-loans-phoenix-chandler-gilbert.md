@@ -1,7 +1,7 @@
 ---
-title: "Physician Loans Near Banner, Mayo and HonorHealth: Buying in Phoenix, Chandler and Gilbert"
+title: "Physician Loans in the Phoenix Metro: Pick the Campus, Then the Neighborhood, Then the Loan"
 slug: physician-loans-phoenix-chandler-gilbert
-description: "Where you work in the Valley changes the commute, the price point and frequently the loan structure. A guide to buying as a physician around the major Phoenix metro health systems, with the program rules that apply to each situation."
+description: "A metro level map for physicians relocating to the Valley: which health systems sit where, what housing costs near each one, and which loan rules the distance and the price point trigger. City by city guides link out from here."
 date: 2026-09-25
 city: Phoenix
 borrowerType: Physician
@@ -12,16 +12,15 @@ form: physician
 tags:
   - Physician Loans
   - Phoenix
-  - Chandler
-  - Gilbert
   - Relocation
+  - Doctor Loans
 ---
 
 You matched, or you signed, and you are moving to a metro area you have visited exactly once, for an interview, in February, when it was beautiful.
 
 Now you have to pick a place to live near a campus you have not started at, on a timeline set by someone else, while finishing your current job.
 
-Here is the practical version, with the loan rules that attach to each situation. Program figures are from CMG Financial's MedPro Premier guidelines (NMLS #1820, revised 09/11/2026).
+Here is the metro level version, with the loan rules that attach to each situation, and a link out to the city you end up shopping in. Program figures are from CMG Financial's MedPro Premier guidelines (NMLS #1820, revised 09/11/2026).
 
 ## The geography, honestly
 
@@ -31,9 +30,19 @@ The Phoenix metro is large and flat and the commute is the whole decision. Physi
 
 **Central Phoenix.** Banner University Medical Center Phoenix, Phoenix Children's and Valleywise Health anchor the central corridor. The historic districts near midtown put you close to work in a way nothing else in the Valley does, and the housing stock is older, smaller and characterful rather than new and large.
 
-**The East Valley.** Chandler Regional and Mercy Gilbert serve the southeast Valley, and Banner Gateway sits in Gilbert. This is where the newer, larger, better-value housing is, and where a physician's dollar goes furthest. The trade is distance from the central and north campuses.
+**The East Valley.** Banner Desert and Banner Baywood anchor Mesa, Banner Gateway and Mercy Gilbert sit in Gilbert, Chandler Regional and Banner Ocotillo serve Chandler, and HonorHealth Tempe Medical Center sits next to the university. This is where the newer, larger, better-value housing is, and where a physician's dollar goes furthest. The trade is distance from the central and north campuses.
 
 Pick the campus first, drive it on a weekday, then shop. In that order.
+
+## Then read the city you are actually buying in
+
+The metro view gets you to a short list. It does not tell you what an appraiser will flag in west Mesa, how a Gilbert builder's completion date interacts with a 150 day contract window, or why a Tempe condo can be ineligible for the exact program you were sold on. Each of those is a different problem with a different answer.
+
+- [Scottsdale](/blog/physician-home-loans-scottsdale/), if you are at HonorHealth Osborn, Shea or Thompson Peak, or the Mayo campus in north Phoenix. Highest price points in the series, so the leverage tier and the score threshold do the deciding.
+- [Mesa](/blog/physician-home-loans-mesa/), if you are at Banner Desert, Baywood or Heart. The loan amount stops being the constraint here and the debt-to-income ceiling becomes it.
+- [Gilbert](/blog/physician-home-loans-gilbert/), if you are at Banner Gateway, Banner MD Anderson or Mercy Gilbert. Mostly a new construction timing problem, and gap reserves are where it bites.
+- [Chandler](/blog/physician-home-loans-chandler/), if you are at Chandler Regional or Banner Ocotillo. This is the dual income file, and how the second income is documented changes the answer.
+- [Tempe](/blog/physician-home-loans-tempe/), if you are at HonorHealth Tempe Medical Center or commuting out from near the university. Condo warrantability is the whole conversation.
 
 ## The timeline problem, and the rule that sets it
 
@@ -104,9 +113,9 @@ No. These files are routinely written for physicians who have not moved yet. Fro
 ## Related reading
 
 - [Physician and medical professional home loans](/physician-home-loans/), the full index for this topic
-- [Physician Home Loans in Scottsdale: How Doctors Buy With No Down Payment and No Mortgage Insurance](/blog/physician-home-loans-scottsdale/)
 - [Buying Before Your Start Date: The Contract and Reserve Rules for Physicians](/blog/physician-loan-before-start-date/)
 - [Physician Jumbo Loans to $2,000,000: Where the Leverage Stops and Why](/blog/physician-jumbo-loans-arizona/)
+- The city guides: [Scottsdale](/blog/physician-home-loans-scottsdale/), [Mesa](/blog/physician-home-loans-mesa/), [Gilbert](/blog/physician-home-loans-gilbert/), [Chandler](/blog/physician-home-loans-chandler/), [Tempe](/blog/physician-home-loans-tempe/)
 
 ## Why bring this file to us
 

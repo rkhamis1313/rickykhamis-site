@@ -130,8 +130,14 @@ HUBS = [
      '1099-locum-tenens-physician-loans',
      'second-year-attending-mortgage',
    ]),
-   ('Buying in the Valley', [
+   ('Buying by city', [
      'physician-loans-phoenix-chandler-gilbert',
+     'physician-home-loans-mesa',
+     'physician-home-loans-gilbert',
+     'physician-home-loans-chandler',
+     'physician-home-loans-tempe',
+   ]),
+   ('Refinancing and property types', [
      'physician-loan-refinance',
      'non-warrantable-condo-financing-scottsdale',
    ]),

@@ -1851,6 +1851,34 @@
       "slug": "1099-contractor-gig-mortgage",
       "date": "2026-09-25",
       "offQueue": true
+    },
+    {
+      "city": "Tempe",
+      "series": "lending-programs",
+      "slug": "physician-home-loans-tempe",
+      "date": "2026-09-28",
+      "offQueue": true
+    },
+    {
+      "city": "Mesa",
+      "series": "lending-programs",
+      "slug": "physician-home-loans-mesa",
+      "date": "2026-09-28",
+      "offQueue": true
+    },
+    {
+      "city": "Gilbert",
+      "series": "lending-programs",
+      "slug": "physician-home-loans-gilbert",
+      "date": "2026-09-28",
+      "offQueue": true
+    },
+    {
+      "city": "Chandler",
+      "series": "lending-programs",
+      "slug": "physician-home-loans-chandler",
+      "date": "2026-09-28",
+      "offQueue": true
     }
   ],
   "seriesNotes": {

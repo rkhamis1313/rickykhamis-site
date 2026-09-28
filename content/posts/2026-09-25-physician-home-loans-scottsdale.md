@@ -56,13 +56,43 @@ For a program that qualifies you on future income, the document set is smaller t
 3. **Your student loan detail**, including whether anything sits in deferment, forbearance or an income-based repayment plan showing zero. Residents and fellows get specific treatment there, and it is significant enough that it has its own post in this series.
 4. **Reserves documentation**, because the ARM structure in particular requires six months and that is verified, not asserted.
 
+## Where you will actually be working
+
+Scottsdale's physician population is concentrated across three HonorHealth campuses, and where you land changes the commute and therefore the search.
+
+**HonorHealth Scottsdale Osborn Medical Center** sits in south Scottsdale near Old Town, with over three hundred beds, a Level 1 trauma centre and one of the largest military trauma training programmes based at a civilian hospital in the country.
+
+**HonorHealth Scottsdale Shea Medical Center** is on Shea Boulevard, central to the Shea corridor and McCormick Ranch.
+
+**HonorHealth Scottsdale Thompson Peak Medical Center** is a 120 bed facility north of Loop 101 and Scottsdale Road, which is the campus that pulls buyers toward Grayhawk, DC Ranch and north Scottsdale generally.
+
+Mayo Clinic's Phoenix campus is a short run west from north Scottsdale and draws a large share of the physicians who end up buying here.
+
+That geography matters because Scottsdale is long. South Scottsdale and north Scottsdale are a different commute, a different housing stock and a different price band, and a file built for one is not built for the other.
+
 ## Where Scottsdale buyers get caught
 
-Two things, repeatedly.
+Three things, repeatedly, and all three are local.
 
-The first is property type. These programs are written around one-unit primary residences, attached or detached, including condos, townhomes and PUDs, but each has its own condo overlay. A Scottsdale luxury condo with heavy commercial space, an investor concentration problem or pending litigation can be ineligible on a physician program and perfectly financeable on a different one. Find that out before the appraisal, not after.
+**The price point runs into the ceiling.** This is the Scottsdale problem specifically. In Mesa or Gilbert the program limits are academic. Here they are the live question. 100% financing reaches $1,500,000 at a 680 score and $2,000,000 at a 720, and north Scottsdale routinely prices past both. Above $2,000,000 the program ends and you are in true jumbo with a different set of investors, larger down payments and a longer approval. Start that conversation before the offer, not after.
 
-The second is timing against a start date. Qualifying on a contract means the lender is underwriting a job you have not started. There are rules about how far ahead of the start date you can close, and they vary by program and by investor. If you are relocating to a Scottsdale or Phoenix practice, that timeline drives when you write the offer.
+Which makes the **720 threshold** worth real effort here. Forty points of credit score is five hundred thousand dollars of loan amount, and rescores are expressly permitted provided the file documents the change and still meets the asset requirements.
+
+**The saved down payment disqualifies you.** The program notes set a **minimum loan-to-value of 90.01%**. Scottsdale attracts physicians arriving with equity from a house somewhere else, and a buyer bringing twenty percent is below the floor and not eligible. That is not a disadvantage, it usually means conventional is the cheaper loan, but it needs saying before anyone runs credit.
+
+**Condos and the association stack.** Scottsdale has a great deal of attached product, and two separate things bite. First, **100% financing is one unit only.** Second, a luxury condominium project with substantial commercial space, high investor concentration, single-entity ownership or pending litigation can be unfinanceable on an agency basis regardless of your file. Old Town and the Scottsdale Road corridor are full of exactly the mixed-use buildings that fail warrantability, and non-warrantable programs exist for them at reduced leverage.
+
+Association dues deserve their own line. Scottsdale HOA and club dues can be substantial, they sit inside PITIA, and they push directly against a ratio capped at **50% at 95% loan-to-value or below and 45% above it**. Two identical incomes buying two identically priced homes can land on opposite sides of that ceiling on dues alone.
+
+**Acreage, if you are looking north.** On ARM and 15-year fixed rate loans there is a **maximum of 10 acres** alongside a 45% ratio cap. Past the 101 and out toward Rio Verde, parcels that size are real, and the product choice and the lot become one decision.
+
+## Timing against a start date
+
+Qualifying on a contract means the lender is underwriting a job you have not started. The start date must be **no more than 150 days after the note date**, or **within 60 days of closing** for a 1099 contractor position.
+
+And closing early is not free: you must document the full housing payment for **every month between the note date and your start date**, rounded up, **in addition to** the program minimum. At Scottsdale payment sizes those months are large. A physician closing three months early at high leverage can be documenting six months of a Scottsdale housing payment, liquid, at the same moment they are paying to move across the country.
+
+Count that in March rather than discovering it in May.
 
 ## Why bring this file to us
 
