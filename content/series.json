@@ -1883,6 +1883,13 @@
       "slug": "investor-scottsdale-country-club",
       "date": "2026-09-29",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "market",
+      "slug": "higher-rates-sellers-price-cut-vs-buydown",
+      "date": "2026-10-01",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
