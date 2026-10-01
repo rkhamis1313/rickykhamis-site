@@ -52,28 +52,6 @@
     },
     {
       "series": "scottsdale-golf",
-      "borrowerType": "Foreign National",
-      "neighborhood": "Pinnacle Peak",
-      "city": "Scottsdale",
-      "question": "I am a foreign national buyer. How do I qualify for a home in Pinnacle Peak?",
-      "title": "Foreign National and Buying in Pinnacle Peak, Scottsdale: How You Actually Qualify",
-      "slug": "foreign-national-pinnacle-peak-scottsdale",
-      "why": "estate lots, international buyers, and a documentation path most lenders cannot run",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
-      "borrowerType": "Second Home",
-      "neighborhood": "Camelback Golf Club",
-      "city": "Scottsdale",
-      "question": "I am a second home buyer. How do I qualify for a home in Camelback Golf Club?",
-      "title": "Second Home and Buying in Camelback Golf Club, Scottsdale: How You Actually Qualify",
-      "slug": "second-home-camelback-golf-club-scottsdale",
-      "why": "a resort golf setting where the occupancy classification decides your down payment and your rate",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-golf",
       "borrowerType": "Self-Employed",
       "neighborhood": "Troon Country Club",
       "city": "Scottsdale",
@@ -140,17 +118,6 @@
     },
     {
       "series": "scottsdale-subdivision",
-      "borrowerType": "Foreign National",
-      "neighborhood": "Optima Kierland",
-      "city": "Scottsdale",
-      "question": "I am a foreign national buyer. How do I qualify for a home in Optima Kierland?",
-      "title": "Foreign National and Buying in Optima Kierland: How You Actually Qualify",
-      "slug": "foreign-national-optima-kierland-scottsdale",
-      "why": "a high-rise where project eligibility, investor concentration and international buyers all intersect",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-subdivision",
       "borrowerType": "Asset Depletion",
       "neighborhood": "North Scottsdale",
       "city": "Scottsdale",
@@ -158,17 +125,6 @@
       "title": "Asset Depletion and Buying in North Scottsdale: How You Actually Qualify",
       "slug": "asset-depletion-north-scottsdale-scottsdale",
       "why": "the broad north corridor where large lots, well water and septic can all become underwriting conditions",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-subdivision",
-      "borrowerType": "Retiree",
-      "neighborhood": "Bellasera",
-      "city": "Scottsdale",
-      "question": "I am a retiree buyer. How do I qualify for a home in Bellasera?",
-      "title": "Retiree and Buying in Bellasera: How You Actually Qualify",
-      "slug": "retiree-bellasera-scottsdale",
-      "why": "far north gated living at a price point where distributions and assets carry the file",
       "status": "pending"
     },
     {
@@ -1871,6 +1827,62 @@
       "question": "I am a self-employed buyer. How do I qualify for a home in Arcadia?",
       "slug": "self-employed-arcadia-scottsdale",
       "date": "2026-09-30"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "question": "I am a foreign national buyer. How do I qualify for a home in Optima Kierland?",
+      "slug": "foreign-national-optima-kierland-scottsdale",
+      "date": "2026-10-03"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "slug": "asset-depletion-sereno-canyon-scottsdale",
+      "date": "2026-10-03",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "question": "I am a retiree buyer. How do I qualify for a home in Bellasera?",
+      "slug": "retiree-bellasera-scottsdale",
+      "date": "2026-10-02"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "slug": "liquidity-event-troon-country-club-scottsdale",
+      "date": "2026-10-02",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a second home buyer. How do I qualify for a home in Camelback Golf Club?",
+      "slug": "second-home-camelback-golf-club-scottsdale",
+      "date": "2026-10-01"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "question": "I am a foreign national buyer. How do I qualify for a home in Pinnacle Peak?",
+      "slug": "foreign-national-pinnacle-peak-scottsdale",
+      "date": "2026-10-01"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "slug": "self-employed-scottsdale-ranch",
+      "date": "2026-09-29",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "slug": "investor-scottsdale-country-club",
+      "date": "2026-09-29",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
