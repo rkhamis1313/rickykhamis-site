@@ -129,17 +129,6 @@
     },
     {
       "series": "scottsdale-subdivision",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "Windgate Ranch",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Windgate Ranch?",
-      "title": "Self-Employed and Buying in Windgate Ranch: How You Actually Qualify",
-      "slug": "self-employed-windgate-ranch-scottsdale",
-      "why": "gated semi-custom inventory priced squarely in jumbo, where reserves stack on top of a deducted-down return",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-subdivision",
       "borrowerType": "Investor",
       "neighborhood": "Scottsdale Waterfront",
       "city": "Scottsdale",
@@ -158,17 +147,6 @@
       "title": "Foreign National and Buying in Optima Kierland: How You Actually Qualify",
       "slug": "foreign-national-optima-kierland-scottsdale",
       "why": "a high-rise where project eligibility, investor concentration and international buyers all intersect",
-      "status": "pending"
-    },
-    {
-      "series": "scottsdale-subdivision",
-      "borrowerType": "Self-Employed",
-      "neighborhood": "Arcadia",
-      "city": "Scottsdale",
-      "question": "I am a self-employed buyer. How do I qualify for a home in Arcadia?",
-      "title": "Self-Employed and Buying in Arcadia: How You Actually Qualify",
-      "slug": "self-employed-arcadia-scottsdale",
-      "why": "the Scottsdale and Phoenix border, older custom stock, renovation money and appraisals that reward specificity",
       "status": "pending"
     },
     {
@@ -1879,6 +1857,20 @@
       "slug": "physician-home-loans-chandler",
       "date": "2026-09-28",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Windgate Ranch?",
+      "slug": "self-employed-windgate-ranch-scottsdale",
+      "date": "2026-09-30"
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "question": "I am a self-employed buyer. How do I qualify for a home in Arcadia?",
+      "slug": "self-employed-arcadia-scottsdale",
+      "date": "2026-09-30"
     }
   ],
   "seriesNotes": {
