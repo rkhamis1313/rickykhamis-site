@@ -439,6 +439,20 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
     if market_block is not None:
         body_html = market_block.expand(body_html)
 
+    # Expand any [[FIGURE:name]] markers into real chart figures. Same reason as
+    # the market markers: mdlite escapes raw HTML, so a chart written inline
+    # reaches the page as visible angle brackets.
+    try:
+        import figures
+    except ImportError:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        try:
+            import figures
+        except ImportError:
+            figures = None
+    if figures is not None:
+        body_html = figures.expand(body_html)
+
     # An in-post lead form, when the post opts in with `form:` in front matter.
     # Kept optional and failure-tolerant for the same reason the header image is:
     # a post must still publish if this cannot be built.

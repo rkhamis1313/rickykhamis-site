@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 240" width="840" height="240" role="img" aria-label="18.8 percent of newly built home listings advertise a buyer incentive, and 13.8 percent specifically advertise a reduced mortgage rate." style="font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif">
+<text x="0" y="24" font-size="16" font-weight="700" fill="#1b1e24">What builders are advertising</text>
+<rect x="0" y="48" width="410.0" height="150" rx="14" fill="#f4f5f7"/>
+<rect x="0" y="48" width="5" height="150" rx="2.5" fill="#F36B24"/>
+<text x="26" y="118" font-size="52" font-weight="800" fill="#F36B24">18.8%</text>
+<text x="26" y="148" font-size="13.5" fill="#5d6169">of new-build listings carry an advertised</text>
+<text x="26" y="167" font-size="13.5" fill="#5d6169">buyer incentive</text>
+<rect x="430.0" y="48" width="410.0" height="150" rx="14" fill="#f4f5f7"/>
+<rect x="430.0" y="48" width="5" height="150" rx="2.5" fill="#2a78d6"/>
+<text x="456.0" y="118" font-size="52" font-weight="800" fill="#2a78d6">13.8%</text>
+<text x="456.0" y="148" font-size="13.5" fill="#5d6169">advertise a reduced mortgage rate</text>
+<text x="456.0" y="167" font-size="13.5" fill="#5d6169">specifically</text>
+<text x="0" y="232" font-size="12" fill="#5d6169">Source: Realtor.com, September 2026.</text>
+</svg>

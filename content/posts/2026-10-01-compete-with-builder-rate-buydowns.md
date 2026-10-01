@@ -25,7 +25,13 @@ A price reduction lowers the buyer's **loan balance.** A buydown lowers their **
 
 Dollar for dollar, the rate is the stronger lever. That is not a sales argument, it is arithmetic. And more importantly: **the builder is advertising a rate, so a rate is what you have to answer with.** A price cut does not show up on the flyer the buyer is comparing you against.
 
-The market is already reaching for the wrong tool. Per the [Realtor.com September 2026 housing report](https://www.realtor.com/research/), **20.8% of active listings carried a price cut**, the highest September share since 2018. Inventory rose 5.4% year over year while homes under contract fell 4.1%. More sellers are cutting, and it is not restarting demand.
+This is not anecdotal. Per [Realtor.com](https://www.realtor.com/research/), nearly one in five newly built homes advertises a buyer incentive up front, and the most common incentive is a reduced rate.
+
+[[FIGURE:builder-incentives]]
+
+Builders can do this because they have the margin, a captive lender, and a reason to move inventory this quarter. It is working. Logan Mohtashami, Chief Economist at HousingWire, has pointed out that new-home sales have been running near 2019 levels while existing-home sales sit roughly a million short of them. Robert Dietz, Chief Economist at the National Association of Home Builders, put the pressure on resale sellers plainly: existing homeowners now have to do the price discovery that builders have been doing since 2022.
+
+Meanwhile the resale market is reaching for the wrong tool. **20.8% of active listings carried a price cut** in September, the highest September share since 2018. Inventory rose 5.4% year over year while homes under contract fell 4.1%. More sellers are cutting, and it is not restarting demand.
 
 Meanwhile Freddie Mac's [Primary Mortgage Market Survey](https://www.freddiemac.com/pmms) put the 30-year fixed average at **7.03 percent on September 24, 2026**, up from 6.95 the week prior, with daily trackers running higher into month end.
 
@@ -50,6 +56,10 @@ Here is what that means in practice. Work from a note rate in the high sevens, w
 | **1-0** | ~6.75 | note rate | note rate | note rate |
 
 *Illustrative only, derived from the structure applied to an assumed note rate. Your buyer's actual note rate depends on their credit, loan program, occupancy, loan amount, down payment and market pricing on the day they lock.*
+
+[[FIGURE:buydown-ladder]]
+
+**A note on the assumption.** The table and chart work from a note rate near 7.75, which is closer to what a real file prices at than the survey average. Freddie Mac's survey number reflects a specific profile: conforming balance, strong credit, substantial down payment. An actual quote moves with the borrower's program, credit, occupancy and loan size, and on most of the files I see it runs above the headline. Use the structure, not my assumed starting point, and have the real one run on the real buyer.
 
 **A first year in the fours.** That is the number that competes with the model home, and it is produced by money you were probably about to take off your price anyway.
 
@@ -82,6 +92,8 @@ The builder advertises a rate. You should too.
 **Work it into the listing remarks and the marketing**, not just into a counteroffer. "Seller offering a 2-1 buydown" is a headline. "Seller will consider concessions" is wallpaper that every listing says.
 
 **Give agents the actual number.** An agent who can tell a buyer "your first year is in the fives here" will bring that buyer. An agent holding a vague concession offer will not, because they cannot do the math standing in your kitchen.
+
+**And answer the builder on their own terms.** Joel Berner, Senior Economist at Realtor.com, makes the point that resale sellers should lead with what the neighborhood offers against the more suburban and exurban locations where most new construction gets built. That is true, and it is only half of it. Location is your structural advantage. The buydown is how you stop losing on payment while you make the location argument.
 
 **Have a lender run it before you list**, so the figure in your marketing is real and defensible rather than a hope.
 

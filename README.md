@@ -349,3 +349,38 @@ Details worth keeping:
   downloads as `Ricky-Khamis.vcf` instead of rendering as text. Netlify
   consumes `_headers` at deploy time and never serves it over HTTP, so a
   re-mirror cannot recover it. Same caveat as `_redirects`.
+
+## Charts in posts
+
+`gen/figures.py` draws charts as hand-written SVG and expands a `[[FIGURE:name]]`
+marker into a real `<figure>` at render time.
+
+Markers rather than inline HTML for the same reason market data uses them: mdlite
+escapes raw HTML and mangles markdown image syntax, so a chart written inline
+reaches the page as visible angle brackets.
+
+SVG rather than a rendered PNG because these are charts of numbers, not
+photographs. They stay crisp at any width, weigh a few kilobytes, and the text
+inside them is real text rather than pixels.
+
+The palette is the brand orange plus two hues from the validated reference set,
+checked with the data-viz validator against the light surface:
+
+    #F36B24 orange · #2a78d6 blue · #1baf7a aqua
+    worst adjacent pair deltaE 23.1 protan, 24.0 normal vision, all checks pass
+
+That run returns a contrast warning against the surface, which obligates visible
+labels rather than relying on colour alone, so every series is directly labelled
+as well as named.
+
+Two things that will waste an hour if you hit them cold:
+
+- **Do not put `width:100%` in the SVG's own style attribute.** It overrides the
+  intrinsic size and some renderers compute a zero-width canvas and emit a blank
+  image. The SVG declares `width`/`height`; the `<img>` wrapper makes it
+  responsive.
+- **Draw a reference line last.** On the buydown chart every series returns to the
+  note rate, so a reference line drawn first is completely covered by them and
+  reads as broken.
+
+    python gen/figures.py        # rebuild every figure
