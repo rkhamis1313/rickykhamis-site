@@ -1,7 +1,7 @@
 ---
 title: "Builders Are Buying Rates Down. Here Is How You Match Them Without Cutting Your Price"
 slug: compete-with-builder-rate-buydowns
-description: "A seller concession pointed at a 3-2-1 or 2-1 buydown can put a buyer's first-year rate in the fours or fives while the market sits near seven. That is how a resale listing competes with the builder down the street."
+description: "A seller concession pointed at a 3-2-1 or 2-1 buydown can put a buyer's first-year rate in the fours or fives while the market sits near seven. With List and Lock the buyer qualifies at that rate, not the market rate. That is how a resale listing beats the builder down the street."
 date: 2026-10-01
 city: Scottsdale
 borrowerType: All
@@ -17,7 +17,7 @@ You are not losing buyers to the house down the street. You are losing them to t
 
 Builders have been buying rates down for two years. They have the margin, they have a captive lender, and they advertise the result as a rate rather than a discount. A buyer walks your open house, then walks a model home, and the model home comes with a number in the fives. Your listing comes with a number near seven.
 
-**That gap is matchable.** Not with a price cut. With the same money pointed at the rate instead.
+**That gap is matchable.** Not with a price cut. With the same money pointed at the rate instead, locked at your property before you list, and advertised in your remarks exactly the way the builder advertises theirs.
 
 ## Why cutting your price loses this fight
 
@@ -95,9 +95,39 @@ The builder advertises a rate. You should too.
 
 **And answer the builder on their own terms.** Joel Berner, Senior Economist at Realtor.com, makes the point that resale sellers should lead with what the neighborhood offers against the more suburban and exurban locations where most new construction gets built. That is true, and it is only half of it. Location is your structural advantage. The buydown is how you stop losing on payment while you make the location argument.
 
-**Have a lender run it before you list**, so the figure in your marketing is real and defensible rather than a hope.
+**Have a lender run it before you list**, so the figure in your marketing is real and defensible rather than a hope. That is the entire design of [List & Lock](https://www.epiqlending.com/mysite/Ricky-Khamis/listnlock): the rate is locked at the property before the sign goes in the yard, so the number in your remarks is a locked rate rather than a maybe.
 
-One honest caution: **the buyer still has to qualify.** Guidelines govern how a temporary buydown is underwritten, and on most programs the buyer must qualify at the note rate rather than the subsidized rate. The buydown is a payment benefit, not a qualifying shortcut. A buyer who cannot afford the house at the note rate is not helped into it by a 3-2-1, and should not be.
+One honest caution, and it is the limitation that matters most: **on a standard temporary buydown the buyer generally still has to qualify at the note rate, not the subsidized rate.** The buydown lowers the payment they make. It does not usually lower the payment they are underwritten against. A buyer who cannot afford the house at the note rate is not helped into it by a 3-2-1, and should not be.
+
+That single constraint is why a lot of sellers offer a buydown and still lose the buyer. The payment got better. The approval did not.
+
+## List & Lock, and why it is a different animal
+
+There is a version of this that removes that constraint, and it is the one I use.
+
+[List & Lock](https://www.epiqlending.com/mysite/Ricky-Khamis/listnlock) is an EPiQ Lending program built for exactly this problem. The sequence runs backwards from a normal concession:
+
+1. **You decide what you are willing to contribute** toward a lower rate, before you list.
+2. **The rate gets locked, at your property**, at a discount to the market.
+3. **You advertise that rate in your listing**, the same way the builder down the street advertises theirs.
+4. **The lock transfers to your buyer** when they go under contract.
+
+The difference that matters:
+
+| | Standard temporary buydown | List & Lock |
+|---|---|---|
+| Buyer's payment | Reduced in the early years | Reduced |
+| **Buyer qualifies at** | **Generally the note rate** | **The List & Lock rate** |
+| Advertisable before an offer | Not really | Yes, it is the point |
+| When it is arranged | In negotiation, after an offer | **Before you list** |
+
+**Buyers qualify on the List & Lock rate rather than the market rate.** That is not a payment improvement, it is a qualifying improvement, and it widens the pool of buyers who can actually get approved on your house rather than just the pool who like the payment.
+
+It works across Conventional, VA and select adjustable-rate products, so it is not a narrow niche tool.
+
+Two things to know before you plan around it. **The lock is tied to your property and cannot be moved to a different address**, so it is a commitment to the listing rather than a portable asset. And **it is not a guarantee to lend**: your buyer still has to qualify, underwrite and close like any other borrower, and the program is subject to its own terms.
+
+One more piece worth knowing if you are selling to buy: sellers who use List & Lock are **eligible to receive up to $5,000 back toward closing costs on their next purchase loan with EPiQ**, subject to program terms. If you are moving up or moving across town, that is real money on the other side of the transaction.
 
 ## The four questions to ask before you reduce
 
@@ -107,6 +137,7 @@ Ask your lender, not just your agent:
 2. **What does that identical amount do as a 2-1 or 3-2-1 buydown?**
 3. **What is the maximum concession the buyer's loan type actually permits?**
 4. **For this buyer, is a permanent buydown the better use of the money than a temporary one?**
+5. **Can we lock the rate at the property before listing, so the buyer qualifies on it rather than on the market rate?**
 
 Most sellers never ask any of them, and reduce instead. That is the opening.
 
@@ -124,6 +155,6 @@ Send me the buyer's loan type and the amount you are considering taking off your
 
 Verify all of it before you trust any of it: [Ricky's EPiQ Lending profile](https://www.epiqlending.com/mysite/Ricky-Khamis), the [Scottsdale branch](https://www.epiqlending.com/branch/1936984/7975-N-Hayden-Rd-Ste-A101-Scottsdale-AZ-85258), and the license itself at [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/).
 
-*Buydown structures and the figures in the table above are illustrative, derived from the structure applied to an assumed note rate, and are not an offer or a quote. Actual rates depend on credit approval, loan program, occupancy, loan amount, down payment, property type and market pricing at lock. Seller contribution limits vary by loan type, occupancy and loan-to-value and change over time; confirm current limits against the buyer's specific loan. Market figures are from Freddie Mac's Primary Mortgage Market Survey dated September 24, 2026 and the Realtor.com September 2026 housing report; market data changes continuously.*
+*List & Lock is an EPiQ Lending program. Participation is subject to program terms and eligibility; the rate lock is tied to a specific property address and cannot be transferred to another address; and the program is not a guarantee to lend. Buyers must still qualify, and closing is subject to credit approval, underwriting and property eligibility. The closing cost benefit on a subsequent purchase is subject to program terms and conditions. Buydown structures and the figures in the table above are illustrative, derived from the structure applied to an assumed note rate, and are not an offer or a quote. Actual rates depend on credit approval, loan program, occupancy, loan amount, down payment, property type and market pricing at lock. Seller contribution limits vary by loan type, occupancy and loan-to-value and change over time; confirm current limits against the buyer's specific loan. Market figures are from Freddie Mac's Primary Mortgage Market Survey dated September 24, 2026 and the Realtor.com September 2026 housing report; market data changes continuously.*
 
 *Equal Housing Opportunity. This is general information, not a commitment to lend or an offer to extend credit. Rates, terms, and program guidelines change and depend on credit approval, property appraisal, and other qualifying factors. Not all applicants will qualify.*
