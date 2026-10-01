@@ -1890,6 +1890,13 @@
       "slug": "higher-rates-sellers-price-cut-vs-buydown",
       "date": "2026-10-01",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "market",
+      "slug": "compete-with-builder-rate-buydowns",
+      "date": "2026-10-01",
+      "offQueue": true
     }
   ],
   "seriesNotes": {

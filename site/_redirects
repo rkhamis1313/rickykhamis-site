@@ -81,3 +81,4 @@ http://www.khamisgroup.com/*   https://rickykhamis.com/:splat  301!
 # landing rather than a dead end. Remove this if those URLs are ever mapped to
 # real destinations one by one, which is strictly better than a catch-all.
 /post/*    /blog/    301
+/blog/higher-rates-sellers-price-cut-vs-buydown/  /blog/compete-with-builder-rate-buydowns/  301
