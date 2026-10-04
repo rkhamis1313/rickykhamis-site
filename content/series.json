@@ -1897,6 +1897,48 @@
       "slug": "compete-with-builder-rate-buydowns",
       "date": "2026-10-01",
       "offQueue": true
+    },
+    {
+      "city": "Carefree",
+      "series": "scottsdale-golf",
+      "slug": "retiree-the-boulders-carefree",
+      "date": "2026-10-06",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "slug": "investor-scottsdale-mountain",
+      "date": "2026-10-06",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-golf",
+      "slug": "second-home-troon-village-scottsdale",
+      "date": "2026-10-05",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "slug": "bank-statement-stonegate-scottsdale",
+      "date": "2026-10-05",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "scottsdale-subdivision",
+      "slug": "self-employed-north-scottsdale",
+      "date": "2026-10-04",
+      "offQueue": true
+    },
+    {
+      "city": "Paradise Valley",
+      "series": "scottsdale-subdivision",
+      "slug": "liquidity-event-paradise-valley",
+      "date": "2026-10-04",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
