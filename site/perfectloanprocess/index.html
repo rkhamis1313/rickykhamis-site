@@ -140,6 +140,30 @@
     @keyframes rise{from{opacity:.001;transform:translateY(10px)}to{opacity:1;transform:none}}
   }
   a:focus-visible,button:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+
+/* Run-a-deal form. The page was 1,778 words of Realtor recruiting with no way
+   to respond except booking a calendar slot or sending a text, so an agent who
+   wanted to hand over a live file had nowhere to put it. */
+.deal{background:var(--ink3);border:1px solid var(--line);border-radius:10px;padding:26px}
+.deal h3{font-family:var(--serif);font-size:24px;margin:0 0 6px;color:var(--paper)}
+.deal .sub{font-size:14.5px;color:var(--mute);margin:0 0 20px}
+.deal label{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mute2);display:block;margin-bottom:6px}
+.deal .row{display:grid;gap:14px;margin-bottom:14px}
+.deal .two{grid-template-columns:1fr 1fr}
+@media (max-width:620px){.deal .two{grid-template-columns:1fr}}
+.deal input,.deal select,.deal textarea{width:100%;box-sizing:border-box;background:var(--ink);
+  border:1px solid var(--line2);border-radius:6px;color:var(--paper);font-family:var(--sans);
+  font-size:15px;padding:11px 12px}
+.deal textarea{min-height:76px;resize:vertical}
+.deal input:focus,.deal select:focus,.deal textarea:focus{outline:none;border-color:var(--orange)}
+.deal button{width:100%;margin-top:6px;background:var(--orange);color:#111;border:1px solid var(--orange);
+  border-radius:6px;font-family:var(--sans);font-weight:700;font-size:15px;padding:14px 20px;cursor:pointer}
+.deal button:hover{background:var(--orange2)}
+.deal .fine{font-size:11.5px;color:var(--mute2);margin:14px 0 0}
+.deal .hp{position:absolute;left:-9999px}
+.cta-band .wrap{grid-template-columns:.95fr 1.05fr}
+@media (max-width:900px){.cta-band .wrap{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -292,12 +316,54 @@
     <h2 style="margin-top:12px">Send us one buyer. Watch how it feels.</h2>
     <p class="lede" style="margin-top:14px">Fifteen minutes with Ricky and you'll know exactly what your buyers get, what you get, and when. No pitch. Bring a live deal if you have one and we'll run it on the call.</p>
     <div class="actions" style="margin-top:26px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn primary" href="https://calendly.com/ricky-khamis">Book 15 minutes</a><a class="btn ghost" href="sms:+14809999842">Text Ricky</a></div>
+    <div class="contact" style="margin-top:28px">
+      <div><span class="k">Call or text</span><a href="tel:+14809999842">(480) 999-9842</a></div>
+      <div><span class="k">Email</span><a href="mailto:ricky.khamis@epiqlending.com">ricky.khamis@epiqlending.com</a></div>
+      <div><span class="k">Office</span>7975 N. Hayden Road, Suite A-101, Scottsdale, AZ 85258</div>
+    </div>
   </div>
-  <div class="contact">
-    <div><span class="k">Call or text</span><a href="tel:+14809999842">(480) 999-9842</a></div>
-    <div><span class="k">Email</span><a href="mailto:ricky.khamis@epiqlending.com">ricky.khamis@epiqlending.com</a></div>
-    <div><span class="k">Office</span>7975 N. Hayden Road, Suite A-101, Scottsdale, AZ 85258</div>
-    <div><span class="k">Web</span><a href="https://epiqlending.com">epiqlending.com</a></div>
+  <div class="deal">
+    <h3>Or hand me the deal right now</h3>
+    <p class="sub">No call required. Send the scenario and you get a straight answer back the same business day, in writing, whether it works or it does not.</p>
+    <form action="/thank-you/" method="POST" name="plan-realtor" data-netlify="true" data-netlify-honeypot="company-website">
+      <input type="hidden" name="form-name" value="plan-realtor">
+      <input type="hidden" name="source" value="2-24-48 Realtor page">
+      <p class="hp"><label>Leave this empty: <input name="company-website" tabindex="-1"></label></p>
+      <div class="row two">
+        <div><label for="d-deal">What you have</label>
+          <select id="d-deal" name="deal_type" required>
+            <option value="">Select&#8230;</option>
+            <option value="A buyer who needs a pre-qual">A buyer who needs a pre-qual</option>
+            <option value="A deal another lender declined">A deal another lender declined</option>
+            <option value="A listing I want priced with financing in mind">A listing I want priced with financing in mind</option>
+            <option value="A buydown or concession question">A buydown or concession question</option>
+            <option value="Self-employed or investor file">Self-employed or investor file</option>
+            <option value="No live deal, just evaluating you">No live deal, just evaluating you</option>
+          </select></div>
+        <div><label for="d-coe">Close of escrow, if there is one</label>
+          <input id="d-coe" type="text" name="coe" placeholder="Date, or none yet"></div>
+      </div>
+      <div class="row">
+        <div><label for="d-scenario">The scenario</label>
+          <textarea id="d-scenario" name="scenario" required placeholder="Price, down payment, income type, credit, and what the problem is. One paragraph is plenty."></textarea></div>
+      </div>
+      <div class="row two">
+        <div><label for="d-name">Your name</label>
+          <input id="d-name" type="text" name="name" autocomplete="name" required></div>
+        <div><label for="d-brokerage">Brokerage</label>
+          <input id="d-brokerage" type="text" name="brokerage" autocomplete="organization"></div>
+      </div>
+      <div class="row two">
+        <div><label for="d-phone">Mobile</label>
+          <input id="d-phone" type="tel" name="phone" autocomplete="tel" required></div>
+        <div><label for="d-email">Email</label>
+          <input id="d-email" type="email" name="email" autocomplete="email" required></div>
+      </div>
+      <button type="submit">Send it to Ricky</button>
+      <p class="fine">Sending this means Ricky Khamis and EPiQ Lending may contact you about this
+        scenario by phone, text or email. Nothing here is a commitment to lend. Your information is
+        never sold.</p>
+    </form>
   </div>
 </div></div>
 

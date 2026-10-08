@@ -155,6 +155,28 @@ FORMS: dict[str, dict] = {
              ["760 or better", "700 to 759", "640 to 699", "Under 640", "Not sure"]),
         ],
     },
+    "aio": {
+        "name": "qualify",
+        "heading": "Find out whether your cash flow is big enough to make this work",
+        "blurb": (
+            "The All In One wins or loses on how much cash sits in the account and how long it "
+            "sits there, not on the rate. Tell me the shape of your month and I will run it "
+            "against a fixed loan with the difference paid as extra principal."
+        ),
+        "cta": "Test it on my numbers",
+        "fields": [
+            ("loan_type", "Purchase or refinance", "select",
+             ["Refinance my current mortgage", "Buying a home", "Either, show me both"]),
+            ("loan_amount", "Mortgage amount, roughly", "select",
+             ["Under $300,000", "$300,000 to $500,000", "$500,000 to $832,750",
+              "Over $832,750"]),
+            ("monthly_float", "Cash that typically sits in your checking account", "select",
+             ["Under $5,000", "$5,000 to $20,000", "$20,000 to $50,000", "More than $50,000",
+              "It swings a lot"]),
+            ("credit", "Credit, roughly", "select",
+             ["760 or better", "700 to 759", "640 to 699", "Under 640", "Not sure"]),
+        ],
+    },
 }
 
 

@@ -739,4 +739,187 @@ PROGRAMS = [
     'of FHA.'),
   ],
  ),
+# --------------------------------------------------------------- ALL IN ONE
+ dict(
+  path='all-in-one-loan',
+  title='The All In One Loan: How a First-Lien HELOC Actually Works, and the Rate Premium Nobody Mentions',
+  h1='All In One Loan',
+  lede=('A thirty-year first-lien line of credit with a checking account attached, where every '
+        'dollar you deposit sits against the principal until you spend it. It is a real advantage '
+        'for the right cash flow and a waste of money for the wrong one.'),
+  description=('How the All In One Loan works: interest computed on the daily balance, deposits '
+               'that stay accessible instead of being locked in the house, the variable rate '
+               'premium you pay for the mechanism, who it fits, and who should not touch it.'),
+  form='aio',
+  hook=('You have been sending extra principal to the mortgage every month, and you cannot touch '
+        'a dollar of it without refinancing or qualifying all over again.'),
+  sections=[
+   ('What it actually is', [
+     'The All In One Loan is a thirty-year, first-lien home equity line of credit with a sweep '
+     'checking account built into it. That phrase does a lot of work, so take it apart.',
+     '<strong>First lien</strong> means this is not a second mortgage or a HELOC bolted onto a '
+     'conventional loan. It is the mortgage. There is nothing underneath it.',
+     '<strong>Line of credit</strong> means the balance is something you move up and down rather '
+     'than a fixed amortizing debt. Your paycheck lands and the balance drops. You pay the '
+     'mortgage, the groceries and the taxes out of the same account and the balance comes back up.',
+     '<strong>Sweep checking</strong> means this is where you actually bank. Direct deposit, bill '
+     'pay, checks, debit cards. The account and the mortgage are the same instrument.',
+   ]),
+   ('The mechanism, which is the whole product', [
+     'Interest is computed on each day\'s ending balance, not on an original loan amount and not '
+     'on a monthly average. So the number that decides what this loan costs you is your '
+     '<strong>average daily balance</strong> over the year.',
+     'Put it concretely. Two households carry the same mortgage balance. One keeps a few thousand '
+     'dollars in checking and spends to near zero by the end of the month. The other holds forty '
+     'thousand in operating cash and runs fifteen thousand a month through the account. The second '
+     'household\'s average daily balance is tens of thousands of dollars lower every single day of '
+     'the year, and the interest follows. Same house, same loan amount, materially different cost.',
+     'That is the entire pitch, and it is legitimate. It is also the reason this product is wrong '
+     'for a large number of the people it gets sold to.',
+   ]),
+   ('The rate is higher. That is the trade, and it is the part to be honest about', [
+     'The All In One carries a <strong>variable rate</strong>, set from an index plus a margin, '
+     'which moves over the life of the loan. It is typically priced above a comparable thirty-year '
+     'fixed rate at the same time on the same file.',
+     'So you are not getting a cheaper rate. You are buying a mechanism, and paying a rate premium '
+     'for it. The question is whether the interest the mechanism saves you is larger than the '
+     'premium the rate costs you.',
+     'For a household with real float, it is not close, and the All In One wins decisively. For a '
+     'household with a thin cushion that spends to near zero every month, the mechanism has almost '
+     'nothing to work with, and that borrower pays the premium and receives very little back. That '
+     'is a worse outcome than a plain fixed loan, and it is a predictable one.',
+     'Nobody can tell you which household you are without looking at twelve months of your actual '
+     'account balances. That is the test, and it takes about twenty minutes. Anyone who recommends '
+     'this product before running it is selling, not advising.',
+   ]),
+   ('Why this is not the same as paying extra principal', [
+     'This is the structural argument, and it is the one that actually distinguishes the product.',
+     'Send an extra payment to a conventional mortgage and the money is gone. It reduced your '
+     'balance, which is good, and it is now illiquid. To get it back you refinance, or you open a '
+     'home equity line, and either way you re-qualify, re-document your income and pay for the '
+     'privilege. If your income has changed in the meantime, you may not get it back at all.',
+     'Deposit the same dollar into an All In One and it does the same work against the balance, '
+     'and it is still yours. Spend it next week and nothing had to be approved.',
+     'For a salaried household with a stable job and an emergency fund, that reversibility is nice '
+     'but not decisive. For a business owner whose working capital has to stay reachable, for a '
+     'commissioned borrower whose income arrives in lumps, or for anyone whose next twelve months '
+     'are genuinely uncertain, it is the whole decision. They cannot afford to lock cash in the '
+     'house, so under a conventional mortgage they keep it in savings earning almost nothing while '
+     'paying mortgage interest on the full balance. The All In One ends that trade.',
+   ]),
+   ('Who this fits', [
+     '<strong>Business owners who hold operating cash.</strong> Money that has to be available for '
+     'payroll or inventory, parked in an account, offsetting the mortgage every day instead of '
+     'sitting idle.',
+     '<strong>Commissioned and bonus-paid earners.</strong> A large irregular deposit sits against '
+     'the principal for the weeks or months before it is spent, and that idle time is where the '
+     'interest reduction comes from.',
+     '<strong>Households with a deliberately large cash reserve.</strong> If you keep six or twelve '
+     'months of expenses liquid on purpose, this is where that money should live.',
+     '<strong>Borrowers who want access to equity without re-qualifying.</strong> The line is '
+     'already open. There is no new application to tap it.',
+     'What all four have in common is not income. It is <strong>float</strong>: how much cash sits '
+     'still, and for how long.',
+   ]),
+   ('Who should not do this', [
+     'Say this part out loud before you sign anything.',
+     '<strong>If your reserves are thin and you spend to near zero every month,</strong> the '
+     'mechanism has nothing to work with and you will pay the rate premium for nothing.',
+     '<strong>If a rising rate would genuinely hurt you,</strong> this is a variable rate product '
+     'and a fixed loan is the better instrument. Payment certainty is worth paying for when you '
+     'need it.',
+     '<strong>If you would spend the line,</strong> the product turns a mortgage you were paying '
+     'down into a balance you keep refilling. The discipline is not optional. It is the engine.',
+     '<strong>If you are selling in two or three years,</strong> there is not enough time for the '
+     'mechanism to overcome the rate premium and the cost of the transaction.',
+     'We will tell you if you are in this group. A loan that is wrong for you is not a win for '
+     'anybody, and it is a referral we never get.',
+   ]),
+   ('The terms to confirm on your own disclosure', [
+     'Four things on this product are specific, material, and worth reading on the paperwork '
+     'rather than taking from any web page, including this one.',
+     '<strong>The index, the margin and the rate caps.</strong> This is a variable rate loan. Know '
+     'what it is tied to, what is added to it and how far it can move.',
+     '<strong>The draw period and what happens after it.</strong> The term is thirty years. How '
+     'much of that is draw access, and whether any remaining balance amortizes over a tail at the '
+     'end, is set by the current program documents. Published descriptions of this product have '
+     'differed on that point, so read yours.',
+     '<strong>Whether the credit limit holds for the full term.</strong> It does not necessarily. '
+     'Program documentation has described the limit holding for an initial period and then '
+     'reducing on a monthly schedule after that. Confirm the schedule on your disclosure, because '
+     'it changes what the line is worth to you in year fifteen.',
+     '<strong>Prepayment and what happens at a zero balance.</strong> Documentation for the '
+     'program describes no prepayment penalty, and the line remaining open and available if the '
+     'balance reaches zero. Both matter, and both are worth seeing in writing.',
+     'This product is offered through CMG Financial, NMLS #1820, which is the parent company of '
+     'EPiQ Lending. Program terms change without notice. Nothing here is an offer of any specific '
+     'program or terms.',
+   ]),
+   ('How to test it before you commit', [
+     'Run the simulator below, and run it honestly. It needs three real numbers, not optimistic '
+     'ones: the average balance that actually sat in your checking account over the last twelve '
+     'months, the income that actually gets deposited each month, and what you actually spend.',
+     'Then do the comparison that matters. Price a thirty-year fixed on the same purchase or '
+     'refinance, take the difference in payment, and assume you paid it toward principal every '
+     'month. That is the real alternative, and it is the one the All In One has to beat. If it '
+     'does not beat it on your numbers, you have learned something valuable for twenty minutes of '
+     'work.',
+     'Bring us the output either way and we will check the inputs with you. We would rather tell '
+     'you no now than put you in the wrong instrument for thirty years.',
+   ]),
+  ],
+  geo_heading=None,
+  geo_intro=None,
+  cities=None,
+  scripts='aio_loader.html',
+  extra=(
+    '<section class="section"><div class="wrap">'
+    '<h2 style="margin-bottom:16px">Run the simulator</h2>'
+    '<div id="aio-simulator" class="embed" style="min-height:600px;padding:8px"></div>'
+    '<p class="fine" style="font-size:.8rem;color:var(--muted);margin-top:12px">'
+    'Simulator provided by All In One Loan. Results are illustrative, depend entirely on the '
+    'inputs you give it, and are not a commitment to lend. If the simulator does not load, '
+    '<a href="https://allinoneloan.com/" target="_blank" rel="noopener">open it at '
+    'allinoneloan.com</a> or call us.</p>'
+    '</div></section>'
+  ),
+  faq=[
+   ('Is the All In One Loan a HELOC or a mortgage?',
+    'Both, in the sense that matters: it is a home equity line of credit recorded in first lien '
+    'position, so it is the only loan on the property rather than a second behind a conventional '
+    'mortgage.'),
+   ('Is the rate fixed?',
+    'No. It is a variable rate set from an index plus a margin, and it moves over the life of the '
+    'loan. If payment certainty matters more to you than the interest mechanism, a fixed loan is '
+    'the better instrument.'),
+   ('Is the rate lower than a thirty-year fixed?',
+    'Typically not. It is usually priced above a comparable fixed rate. You are paying a premium '
+    'for the daily-balance mechanism, and whether that trade pays depends on how much cash sits '
+    'in the account and for how long.'),
+   ('How is this different from just making extra principal payments?',
+    'Extra principal on a conventional loan is a one-way door: the money reduces your balance and '
+    'becomes illiquid, and getting it back means refinancing or qualifying for a new line. '
+    'Deposits into an All In One do the same work and stay accessible.'),
+   ('What kind of borrower does this actually suit?',
+    'One with float. Business owners holding operating cash, commissioned or bonus-paid earners, '
+    'and households keeping a large deliberate reserve. Income level is not the test. How much '
+    'cash sits still, and for how long, is the test.'),
+   ('Who should avoid it?',
+    'Anyone with thin reserves who spends to near zero each month, anyone a rising rate would '
+    'genuinely hurt, anyone who would spend the line down, and anyone selling within a few years.'),
+   ('Can I pay it off early?',
+    'Program documentation describes no prepayment penalty, and the line staying open and '
+    'available even at a zero balance. Confirm both on your own disclosure.'),
+  ],
+  related=[
+   ('/loan-programs/mortgage-refinance/', 'Refinance and cash-out',
+    'The conventional alternatives, including why a second lien frequently beats a full '
+    'refinance.'),
+   ('/self-employed-home-loans/', 'Self-employed home loans',
+    'Documentation routes for the business owner who is also the most common All In One '
+    'candidate.'),
+   ('/analyze/', 'Send me an address',
+    'One address in, a full written analysis back within 24 hours at no charge.'),
+  ],
+ ),
 ]

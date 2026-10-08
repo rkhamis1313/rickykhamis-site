@@ -129,13 +129,16 @@ def build_main(p: dict) -> str:
         body.append(f'<h2>{esc(heading)}</h2>')
         body.extend(f'<p>{t}</p>' for t in paras)
 
-    # The geography the retired city pages were supposed to carry.
-    body.append(f'<h2>{esc(p["geo_heading"])}</h2>')
-    body.append(f'<p>{p["geo_intro"]}</p>')
-    body.append('<ul>')
-    for city in CITIES:
-        body.append(f'<li><strong>{esc(city)}.</strong> {p["cities"][city]}</li>')
-    body.append('</ul>')
+    # The geography the retired city pages were supposed to carry. Optional:
+    # a product whose fit is decided by cash flow rather than by location does
+    # not get a city list invented for it.
+    if p.get('cities'):
+        body.append(f'<h2>{esc(p["geo_heading"])}</h2>')
+        body.append(f'<p>{p["geo_intro"]}</p>')
+        body.append('<ul>')
+        for city in CITIES:
+            body.append(f'<li><strong>{esc(city)}.</strong> {p["cities"][city]}</li>')
+        body.append('</ul>')
 
     body.append('<h2>Common questions</h2>')
     for q, a in p['faq']:
@@ -163,6 +166,11 @@ def build_main(p: dict) -> str:
 
     out.append('<section class="section"><div class="wrap"><article class="prose">'
                + ''.join(body) + '</article></div></section>')
+
+    # A raw block some pages need verbatim, such as the All In One simulator,
+    # whose loader script lives outside <main> and must find its container.
+    if p.get('extra'):
+        out.append(p['extra'])
 
     out.append('<section class="section soft"><div class="wrap">')
     out.append(lead_form.render(p['form']))
@@ -251,6 +259,15 @@ def build(p: dict, template: str) -> tuple[Path, bool]:
                      doc, count=1, flags=re.S)
     if n != 1:
         raise ValueError('<main> block not found in template')
+
+    # Scripts a page needs that the chrome template does not carry. The All In
+    # One simulator's loader lives outside <main>, so replacing <main> silently
+    # dropped it the first time this ran and the page rendered an empty box.
+    if p.get('scripts'):
+        blob = io.open(ROOT / 'gen' / p['scripts'], encoding='utf-8').read()
+        doc, n = re.subn(r'</body>', blob + '</body>', doc, count=1)
+        if n != 1:
+            raise ValueError('no </body> to attach scripts to')
 
     problems = screen(f'/{p["path"]}/', doc)
     if problems:
