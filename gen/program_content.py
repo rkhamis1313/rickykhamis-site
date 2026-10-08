@@ -1130,6 +1130,11 @@ PROGRAMS = [
      'It is delivered on our lending partner\'s digital platform. EPiQ Lending originates it. The '
      'terms below are the partner\'s, they are subject to change, and you should confirm them on '
      'your own disclosure rather than from this page.',
+     'One thing worth knowing before you click: because this is originated through us as a broker, '
+     'the application portal and your loan documents will carry the name of the technology partner '
+     'and of the issuing bank alongside ours. That is normal and it is how a broker-originated loan '
+     'works. Nobody should meet a name for the first time at the closing table, which is why it is '
+     'on this page instead of in a footnote.',
    ]),
    ('Why it is fast, and what fast actually means', [
      'The application takes about a minute. Prequalification runs on a <strong>soft credit pull '
@@ -1137,10 +1142,12 @@ PROGRAMS = [
      'decision immediately.',
      'After you submit, income verification, property valuation and title review run <strong>in '
      'parallel</strong> rather than one after another. That is the single biggest reason a bank '
-     'second mortgage takes six weeks and this one averages <strong>about six days</strong>. '
-     'Closing documents are system-generated, most states close by remote online notarization, and '
-     'funding can land on a weekend.',
-     'Six days is an average, not a promise. What stretches it: payoffs that need coordinating with '
+     'second mortgage takes six weeks and this one does not. The partner reports an average of '
+     '<strong>six days from accepted offer to closing</strong> as of 30 April 2026, with many '
+     'straightforward files closing in as little as a day. Closing documents are system-generated, '
+     'most states close by remote online notarization, and funding can land on a weekend.',
+     'That is a reported average rather than a promise, and it is measured from accepted offer, not '
+     'from the minute you apply. What stretches it: payoffs that need coordinating with '
      'your existing creditors, complicated income, title that needs curative work, a full appraisal '
      '(required over $500,000 or when the automated valuation is not confident enough), and how '
      'fast you return documents. The last one is the only one you control, and it is usually the '
@@ -1174,6 +1181,23 @@ PROGRAMS = [
      'If your income is not a W-2, verification runs through several paths rather than one. That is '
      'why self-employed borrowers clear this product more often than they clear a bank second: when '
      'one path cannot verify you, there is another behind it.',
+   ]),
+   ('Who you actually deal with', [
+     'A digital process usually means nobody answers the phone. This one is built the other way '
+     'round, and that is worth knowing before you compare it with a bank second mortgage.',
+     'Once your loan is accepted, a <strong>dedicated customer experience manager</strong> owns the '
+     'file from that point through funding. Their job is the pace of the loan: moving it every day, '
+     'surfacing what is needed and chasing whatever stalls. Specialists work behind them on income, '
+     'title and closing, and you do not have to track any of it.',
+     'Communication runs through <strong>one conversation thread</strong> for the whole loan rather '
+     'than separate channels. You, I and the partner team are all in it, so nothing is lost in a '
+     'handoff and you never explain your situation twice. Where automation cannot resolve '
+     'something, there is a route to a person.',
+     'After funding, support continues through an assisted chat for payment and servicing '
+     'questions, with a path to a human when it is needed. You are not handed to a call center the '
+     'day the money lands.',
+     'And you are not dealing with a platform instead of me. These loans are originated only '
+     'through a licensed originator. I am on the file and in the thread.',
    ]),
    ('When this beats a cash-out refinance', [
      'This is the comparison that decides it, and it is arithmetic rather than opinion.',
@@ -1244,7 +1268,9 @@ PROGRAMS = [
     'No. Prequalification uses a soft credit inquiry with no impact to your score, requires no '
     'documents, and returns a decision immediately.'),
    ('How fast does it really fund?',
-    'About six days on average. A full appraisal (required over $500,000 or when the automated '
+    'The partner reports an average of six days from accepted offer to closing as of 30 April 2026, '
+    'and many straightforward files close in about a day. A full appraisal (required over $500,000 '
+    'or when the automated '
     'valuation is not confident enough), creditor payoffs, complex income and title curative work '
     'all extend it.'),
    ('Can I use it to buy a home, or to refinance my first mortgage?',
