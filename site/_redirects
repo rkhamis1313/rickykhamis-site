@@ -134,5 +134,10 @@ http://www.khamisgroup.com/*   https://rickykhamis.com/:splat  301!
 /va-loans-scottsdale/  /loan-programs/va-loans/  301
 /va-loans-tempe/  /loan-programs/va-loans/  301
 
+
+# Short links. "rickykhamis.com/heloc" is what you say on a phone call.
+/heloc/  /loan-programs/heloc/  301
+/second-mortgage/  /loan-programs/heloc/  301
+
 /post/*    /blog/    301
 /blog/higher-rates-sellers-price-cut-vs-buydown/  /blog/compete-with-builder-rate-buydowns/  301

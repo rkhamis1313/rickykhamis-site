@@ -1102,4 +1102,170 @@ PROGRAMS = [
     'Send the address of the house that needs work and I will tell you whether a 203(k) fits it.'),
   ],
  ),
+# ---------------------------------------------------- EPiQ ADVANTAGE HELOC
+ dict(
+  path='loan-programs/heloc',
+  title='EPiQ Advantage Simplified HELOC: A Second Mortgage That Funds in About a Week',
+  h1='EPiQ Advantage Simplified HELOC',
+  lede=('A revolving line of credit behind the mortgage you already have, applied for in about a '
+        'minute and funded in about six days. It leaves your first mortgage rate untouched, which '
+        'is the entire point.'),
+  description=('The EPiQ Advantage Simplified HELOC: a second-lien revolving line to $750,000 and '
+               'up to 90% combined loan-to-value, a three-year interest-only draw then a '
+               'seventeen-year repayment, a variable rate of WSJ Prime plus a margin fixed at '
+               'origination, and the mandatory 75% draw to understand before you apply.'),
+  form='refinance',
+  hook=('You are sitting on equity and carrying a card balance at a rate that is a multiple of your '
+        'mortgage rate, and the only fix anyone has offered means giving up the first mortgage rate '
+        'you have.'),
+  sections=[
+   ('What it is, in one paragraph', [
+     'The EPiQ Advantage Simplified HELOC is a <strong>revolving line of credit in second lien '
+     'position</strong>. Your existing first mortgage stays exactly where it is, at the rate you '
+     'have. The line sits behind it. You draw what you need, you pay interest on what you drew, and '
+     'you can pay it back down and draw again.',
+     'The structure is a <strong>three-year draw period with interest-only payments</strong>, '
+     'followed by a <strong>seventeen-year repayment period</strong> of principal and interest. '
+     'Twenty years, start to finish.',
+     'It is delivered on our lending partner\'s digital platform. EPiQ Lending originates it. The '
+     'terms below are the partner\'s, they are subject to change, and you should confirm them on '
+     'your own disclosure rather than from this page.',
+   ]),
+   ('Why it is fast, and what fast actually means', [
+     'The application takes about a minute. Prequalification runs on a <strong>soft credit pull '
+     'with no impact to your score</strong>, needs no documents at that stage, and returns a '
+     'decision immediately.',
+     'After you submit, income verification, property valuation and title review run <strong>in '
+     'parallel</strong> rather than one after another. That is the single biggest reason a bank '
+     'second mortgage takes six weeks and this one averages <strong>about six days</strong>. '
+     'Closing documents are system-generated, most states close by remote online notarization, and '
+     'funding can land on a weekend.',
+     'Six days is an average, not a promise. What stretches it: payoffs that need coordinating with '
+     'your existing creditors, complicated income, title that needs curative work, a full appraisal '
+     '(required over $500,000 or when the automated valuation is not confident enough), and how '
+     'fast you return documents. The last one is the only one you control, and it is usually the '
+     'one that decides it.',
+   ]),
+   ('Three things to understand before you apply', [
+     '<strong>There is a mandatory 75% draw at closing.</strong> This is the term most people miss '
+     'and the most important one on this page. You must take at least three quarters of the '
+     'approved line when the loan closes. This is not a line you open and leave at zero for a rainy '
+     'day. If standby access to a small amount is what you want, this is the wrong product and we '
+     'will tell you so on the first call.',
+     '<strong>The rate is variable, and you should know which half of it moves.</strong> It is '
+     '<strong>WSJ Prime plus a margin</strong>. The margin is set at origination and never changes '
+     'for the life of the loan. Prime moves, and your rate moves with it. That is a real risk and '
+     'it belongs in your decision, not in the small print.',
+     '<strong>It is not a purchase or refinance tool.</strong> You must already own the home and be '
+     'on title when you apply. It does not close alongside a purchase, it is not a rate-and-term '
+     'refinance, and there are no discount points or buydowns available to buy the rate down.',
+   ]),
+   ('What it lends on', [
+     'Lines run up to <strong>$750,000</strong>, with combined loan-to-value up to '
+     '<strong>90%</strong>, depending on your credit profile and the property type. Combined '
+     'loan-to-value measures your first mortgage plus this line against the value of the home, so '
+     'the equity you can actually reach is a function of what you still owe.',
+     '<strong>Investment property is eligible</strong>, which is unusual and genuinely useful. '
+     'Investment lines run up to <strong>$500,000</strong> with combined loan-to-value to 90% at a '
+     '720 or better score. Primary residences and second homes are eligible as well. '
+     '<strong>Manufactured homes and timeshares are not.</strong>',
+     'There is <strong>no prepayment penalty and no early termination fee</strong>, so paying it '
+     'down or paying it off early costs you nothing beyond the interest already accrued.',
+     'If your income is not a W-2, verification runs through several paths rather than one. That is '
+     'why self-employed borrowers clear this product more often than they clear a bank second: when '
+     'one path cannot verify you, there is another behind it.',
+   ]),
+   ('When this beats a cash-out refinance', [
+     'This is the comparison that decides it, and it is arithmetic rather than opinion.',
+     'A cash-out refinance replaces your first mortgage. If the rate on that first mortgage is '
+     'better than what is available today, refinancing the whole balance to reach equity means '
+     'repricing debt you are happy with in order to get at debt you are not. On a large first '
+     'mortgage at a good rate that trade is usually terrible, and people make it anyway because it '
+     'is the only option they were shown.',
+     'A second lien leaves the first mortgage alone. You borrow only what you need, at a higher rate '
+     'on a much smaller balance. Run the <strong>blended rate</strong> across both and compare it '
+     'with the blended rate after a cash-out. Our '
+     '<a href="/cash-out-refinance-calculator/">cash-out refinance calculator</a> does that math, '
+     'and the <a href="/loan-programs/mortgage-refinance/">refinance page</a> explains how to read '
+     'the result.',
+     'And be straight with yourself about consolidation. Card debt is unsecured. Moving it onto a '
+     'line secured by your home changes what is at risk if things go wrong. The payment drops, '
+     'frequently by a lot, and the exposure changes too. Do that on purpose, not by accident.',
+   ]),
+   ('When something else is the better answer', [
+     'If you want a line to sit unused as a safety net, the mandatory draw makes this the wrong '
+     'instrument. Say so early and we will point you elsewhere.',
+     'If payment certainty matters more to you than anything, a fixed-rate second or a fixed-rate '
+     '<a href="/loan-programs/mortgage-refinance/">cash-out refinance</a> may suit you better than '
+     'a variable line even at a higher starting cost.',
+     'If you have strong consistent cash flow moving through a checking account every month, read '
+     'the <a href="/all-in-one-loan/">All In One Loan</a> page before you decide. It is a first-lien '
+     'line where your deposits offset the balance every day, and for the right household it does '
+     'more than a second lien ever could. It is also wrong for a thin cash flow, and that page says '
+     'so plainly.',
+     'And if the money is going into repairs on a house you are buying rather than one you already '
+     'own, that is an <a href="/loan-programs/fha-203k-loan/">FHA 203(k)</a> conversation instead.',
+   ]),
+  ],
+  geo_heading=None,
+  geo_intro=None,
+  cities=None,
+  extra=(
+    '<section class="section soft"><div class="wrap" style="text-align:center">'
+    '<h2>Check your line without touching your credit score</h2>'
+    '<p style="max-width:62ch;margin:0 auto 22px">About a minute to apply, a soft credit inquiry '
+    'with no impact to your score, and an answer immediately. No documents needed to find out '
+    'where you stand.</p>'
+    '<p><a class="btn btn-primary" '
+    'href="https://accessheloc.com/invite/evo-home-loans-llc/ricky-khamis-2/signup" '
+    'target="_blank" rel="noopener">Start the EPiQ Advantage HELOC application</a></p>'
+    '<p style="font-size:.85rem;color:var(--muted);margin-top:18px">Opens our lending partner\'s '
+    'secure application. Prequalification uses a soft credit inquiry and does not affect your '
+    'credit score. Submitting an application does not obligate you to accept a loan, and approval '
+    'is subject to the partner\'s current terms and underwriting.</p>'
+    '</div></section>'
+  ),
+  faq=[
+   ('How much can I borrow?',
+    'Up to $750,000, with combined loan-to-value up to 90% depending on your credit profile and the '
+    'property type. Investment properties run up to $500,000 with combined loan-to-value to 90% at '
+    'a 720 or better score.'),
+   ('Do I have to draw the whole line at closing?',
+    'You must draw at least 75% of the approved line at closing. That is a mandatory term rather '
+    'than a preference, and it makes this the wrong product for anyone who wants a line sitting '
+    'unused.'),
+   ('Is the rate fixed?',
+    'No. It is WSJ Prime plus a margin. The margin is fixed at origination and never changes. Prime '
+    'moves, and your rate moves with it.'),
+   ('How long is the draw period?',
+    'Three years of interest-only payments, then seventeen years of principal and interest. Twenty '
+    'years in total.'),
+   ('Will checking my options hurt my credit?',
+    'No. Prequalification uses a soft credit inquiry with no impact to your score, requires no '
+    'documents, and returns a decision immediately.'),
+   ('How fast does it really fund?',
+    'About six days on average. A full appraisal (required over $500,000 or when the automated '
+    'valuation is not confident enough), creditor payoffs, complex income and title curative work '
+    'all extend it.'),
+   ('Can I use it to buy a home, or to refinance my first mortgage?',
+    'Neither. You must already own the home and be on title when you apply. It does not close '
+    'alongside a purchase and it is not a rate-and-term refinance.'),
+   ('Is there a prepayment penalty?',
+    'No prepayment penalty and no early termination fee.'),
+   ('Can I use it on a rental?',
+    'Yes. Investment properties are eligible up to $500,000 with combined loan-to-value to 90% at a '
+    '720 or better score. Manufactured homes and timeshares are not eligible.'),
+  ],
+  related=[
+   ('/cash-out-refinance-calculator/', 'Cash-out refinance calculator',
+    'The blended rate across everything you owe, which is the number that decides whether a second '
+    'lien beats a refinance.'),
+   ('/loan-programs/mortgage-refinance/', 'Refinance and cash-out',
+    'The alternative, its loan-to-value ceilings, and what consolidating unsecured debt actually '
+    'trades away.'),
+   ('/all-in-one-loan/', 'All In One Loan',
+    'A first-lien line where daily deposits offset the balance. Better than a second lien for the '
+    'right cash flow, worse for the wrong one.'),
+  ],
+ ),
 ]
