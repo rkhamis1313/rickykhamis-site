@@ -106,6 +106,55 @@ FORMS: dict[str, dict] = {
              ["Next 90 days", "3 to 6 months", "6 to 12 months", "Just researching"]),
         ],
     },
+    # These two reuse Netlify form names that already exist on the site
+    # (registered 3 September), so the program pages do not create new forms
+    # the owner has to configure notifications for all over again. The field
+    # names are drawn from those forms' existing field sets for the same
+    # reason: submissions land in the columns the dashboard already knows.
+    "purchase": {
+        "name": "purchase",
+        "heading": "Find out which program actually costs you less",
+        "blurb": (
+            "FHA, conventional and jumbo price the same borrower very differently once the "
+            "mortgage insurance is compared across the years you will own the home. Tell me the "
+            "shape of your file and I will run them side by side."
+        ),
+        "cta": "Compare my options",
+        "fields": [
+            ("stage", "Where you are", "select",
+             ["Under contract now", "Making offers", "Starting to look", "Just getting organized"]),
+            ("price", "Price range", "select",
+             ["Under $400,000", "$400,000 to $600,000", "$600,000 to $832,750",
+              "$832,750 to $1,200,000", "Over $1,200,000"]),
+            ("down", "Down payment you have in mind", "select",
+             ["Nothing yet", "3% to 3.5%", "5% to 9%", "10% to 19%", "20% or more"]),
+            ("credit", "Credit, roughly", "select",
+             ["760 or better", "700 to 759", "640 to 699", "580 to 639", "Under 580", "Not sure"]),
+        ],
+    },
+    "refinance": {
+        "name": "refinance",
+        "heading": "Find out what your blended rate actually is",
+        "blurb": (
+            "A refinance is shopped against the mortgage rate and decided by the blended rate "
+            "across everything you owe. Tell me what is on the house and what you want gone, and "
+            "I will run both."
+        ),
+        "cta": "Run my blended rate",
+        "fields": [
+            ("goal", "What you want", "select",
+             ["Cash out for debt or a project", "A lower rate", "A shorter term",
+              "Remove mortgage insurance", "Not sure yet"]),
+            ("balance", "Balance on the first mortgage", "select",
+             ["Under $250,000", "$250,000 to $450,000", "$450,000 to $832,750",
+              "Over $832,750", "Owned free and clear"]),
+            ("value", "What the home is worth, roughly", "select",
+             ["Under $400,000", "$400,000 to $600,000", "$600,000 to $1,000,000",
+              "Over $1,000,000", "Not sure"]),
+            ("credit", "Credit, roughly", "select",
+             ["760 or better", "700 to 759", "640 to 699", "Under 640", "Not sure"]),
+        ],
+    },
 }
 
 

@@ -50,7 +50,6 @@ http://www.khamisgroup.com/*   https://rickykhamis.com/:splat  301!
 /first-time-home-buyer-programs-in-scottsdale-arizona/  /blog/first-time-home-buyer-programs-in-scottsdale-arizona/  301
 /scottsdale-mortgage-broker-vs-bank-which-is-better-for-home-buyers/  /blog/scottsdale-mortgage-broker-vs-bank-which-is-better-for-home-buyers/  301
 /scottsdale-mortgage-options-for-real-estate-investors-strategies-for-success-in-2026/  /blog/scottsdale-mortgage-options-for-real-estate-investors-strategies-for-success-in-2026/  301
-/cash-out-refinance-scottsdale/  /blog/cash-out-refinance-scottsdale/  301
 /self-employed-home-loans-scottsdale/  /blog/self-employed-home-loans-scottsdale/  301
 /va-loans-scottsdale-az/  /blog/va-loans-scottsdale-az/  301
 /fha-loans-scottsdale-az/  /blog/fha-loans-scottsdale-az/  301
@@ -80,5 +79,60 @@ http://www.khamisgroup.com/*   https://rickykhamis.com/:splat  301!
 # whatever link equity it carries. Sending them to the blog index is a soft
 # landing rather than a dead end. Remove this if those URLs are ever mapped to
 # real destinations one by one, which is strictly better than a catch-all.
+
+# The forty eight city landing pages, retired 8 October 2026. Six programs by
+# eight cities, each 549 to 681 words and 79% to 84% identical to its siblings,
+# all competing with each other for the queries that produce loans. Their
+# authority is consolidated onto one deep page per program, which now carries
+# the same East Valley geography with something specific to say about each city.
+/cash-out-refinance-chandler/  /loan-programs/mortgage-refinance/  301
+/cash-out-refinance-gilbert/  /loan-programs/mortgage-refinance/  301
+/cash-out-refinance-mesa/  /loan-programs/mortgage-refinance/  301
+/cash-out-refinance-paradise-valley/  /loan-programs/mortgage-refinance/  301
+/cash-out-refinance-phoenix/  /loan-programs/mortgage-refinance/  301
+/cash-out-refinance-queen-creek/  /loan-programs/mortgage-refinance/  301
+/cash-out-refinance-scottsdale/  /loan-programs/mortgage-refinance/  301
+/cash-out-refinance-tempe/  /loan-programs/mortgage-refinance/  301
+/conventional-loans-chandler/  /loan-programs/conventional-loans/  301
+/conventional-loans-gilbert/  /loan-programs/conventional-loans/  301
+/conventional-loans-mesa/  /loan-programs/conventional-loans/  301
+/conventional-loans-paradise-valley/  /loan-programs/conventional-loans/  301
+/conventional-loans-phoenix/  /loan-programs/conventional-loans/  301
+/conventional-loans-queen-creek/  /loan-programs/conventional-loans/  301
+/conventional-loans-scottsdale/  /loan-programs/conventional-loans/  301
+/conventional-loans-tempe/  /loan-programs/conventional-loans/  301
+/dscr-loans-chandler/  /dscr-investor-loans/  301
+/dscr-loans-gilbert/  /dscr-investor-loans/  301
+/dscr-loans-mesa/  /dscr-investor-loans/  301
+/dscr-loans-paradise-valley/  /dscr-investor-loans/  301
+/dscr-loans-phoenix/  /dscr-investor-loans/  301
+/dscr-loans-queen-creek/  /dscr-investor-loans/  301
+/dscr-loans-scottsdale/  /dscr-investor-loans/  301
+/dscr-loans-tempe/  /dscr-investor-loans/  301
+/fha-loans-chandler/  /loan-programs/fha-loans/  301
+/fha-loans-gilbert/  /loan-programs/fha-loans/  301
+/fha-loans-mesa/  /loan-programs/fha-loans/  301
+/fha-loans-paradise-valley/  /loan-programs/fha-loans/  301
+/fha-loans-phoenix/  /loan-programs/fha-loans/  301
+/fha-loans-queen-creek/  /loan-programs/fha-loans/  301
+/fha-loans-scottsdale/  /loan-programs/fha-loans/  301
+/fha-loans-tempe/  /loan-programs/fha-loans/  301
+/jumbo-loans-chandler/  /loan-programs/jumbo-loans/  301
+/jumbo-loans-gilbert/  /loan-programs/jumbo-loans/  301
+/jumbo-loans-mesa/  /loan-programs/jumbo-loans/  301
+/jumbo-loans-paradise-valley/  /loan-programs/jumbo-loans/  301
+/jumbo-loans-phoenix/  /loan-programs/jumbo-loans/  301
+/jumbo-loans-queen-creek/  /loan-programs/jumbo-loans/  301
+/jumbo-loans-scottsdale/  /loan-programs/jumbo-loans/  301
+/jumbo-loans-tempe/  /loan-programs/jumbo-loans/  301
+/va-loans-chandler/  /loan-programs/va-loans/  301
+/va-loans-gilbert/  /loan-programs/va-loans/  301
+/va-loans-mesa/  /loan-programs/va-loans/  301
+/va-loans-paradise-valley/  /loan-programs/va-loans/  301
+/va-loans-phoenix/  /loan-programs/va-loans/  301
+/va-loans-queen-creek/  /loan-programs/va-loans/  301
+/va-loans-scottsdale/  /loan-programs/va-loans/  301
+/va-loans-tempe/  /loan-programs/va-loans/  301
+
 /post/*    /blog/    301
 /blog/higher-rates-sellers-price-cut-vs-buydown/  /blog/compete-with-builder-rate-buydowns/  301

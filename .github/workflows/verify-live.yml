@@ -68,6 +68,15 @@ jobs:
           expect_status /about/ 200
           expect_status /sitemap.xml 200
 
+          echo "== the retired city pages really 301 to their program page =="
+          expect_redirect /fha-loans-mesa/ /loan-programs/fha-loans/
+          expect_redirect /va-loans-gilbert/ /loan-programs/va-loans/
+          expect_redirect /conventional-loans-tempe/ /loan-programs/conventional-loans/
+          expect_redirect /jumbo-loans-paradise-valley/ /loan-programs/jumbo-loans/
+          expect_redirect /dscr-loans-scottsdale/ /dscr-investor-loans/
+          expect_redirect /cash-out-refinance-scottsdale/ /loan-programs/mortgage-refinance/
+          expect_status /cash-out-refinance-calculator/ 200
+
           echo "== the two generated posts =="
           expect_status /blog/best-first-time-buyer-lender-scottsdale/ 200
           expect_status /blog/best-first-time-buyer-lender-gilbert/ 200
