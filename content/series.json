@@ -1939,6 +1939,34 @@
       "slug": "liquidity-event-paradise-valley",
       "date": "2026-10-04",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "permanent-vs-temporary-buydown",
+      "date": "2026-10-08",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "3-2-1-buydown-explained",
+      "date": "2026-10-08",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "seller-concession-vs-price-reduction-math",
+      "date": "2026-10-07",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "how-a-2-1-buydown-actually-works",
+      "date": "2026-10-07",
+      "offQueue": true
     }
   ],
   "seriesNotes": {

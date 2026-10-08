@@ -43,8 +43,13 @@ ERRORS: list[tuple[str, str]] = [
     # US English. This is a Scottsdale lender writing for Arizona borrowers, and
     # a British spelling reads as content written by someone who is not here.
     # Fourteen of them reached the site before anyone looked.
+    # "analyse" is written analyse(?!s) because "analyses" is the correct US
+    # plural of "analysis" and tripped this rule on a legitimate post, which
+    # failed the build and held seven days of publishing. The British third
+    # person "he analyses" is indistinguishable from that plural, so it is
+    # deliberately allowed through rather than blocking correct English.
     (r"\b\w*(?:neighbour|behaviour|favour|colour|centre|metre|licence|organis|"
-     r"recognis|analyse|whilst|amongst)\w*\b", "uses a British spelling"),
+     r"recognis|analyse(?!s)|whilst|amongst)\w*\b", "uses a British spelling"),
 ]
 
 WARNINGS: list[tuple[str, str]] = [
