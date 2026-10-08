@@ -45,32 +45,39 @@
     }
   },
   "neighborhoods": {
-    "Silverleaf": {
-      "city": "Scottsdale",
-      "facts": {
-        "developer": "DMB",
-        "partOf": "DC Ranch",
-        "golfCourse": "Silverleaf Club",
-        "courseArchitect": "Tom Weiskopf",
-        "courseOpened": 2002,
-        "clubhouseOpened": 2004,
-        "clubhouseSize": "50,000 square feet",
-        "enclaves": [
-          "Upper Canyon",
-          "Horseshoe Canyon",
-          "The Summit",
-          "Silverleaf Village"
-        ],
-        "setting": "canyons of the McDowell Mountains, bordering the McDowell Sonoran Preserve",
-        "priorUse": "mining claim, then cattle ranch",
-        "masterPlanBegan": "late 1990s",
-        "firstHomes": "early 2000s",
-        "membershipType": "private equity club"
-      },
-      "sources": [
-        "https://dmbdevelopment.com/portfolio/silverleaf/",
-        "https://www.silverleafrealty.com/"
-      ],
+    "Agritopia": {
+      "city": "Gilbert",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Anthem": {
+      "city": "Anthem",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Biltmore": {
+      "city": "Phoenix",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Carefree": {
+      "city": "Carefree",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Cave Creek": {
+      "city": "Cave Creek",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
       "market": null
     },
     "DC Ranch": {
@@ -98,68 +105,6 @@
       "sources": [
         "https://dcranch.com/about-us/dc-ranch-history/",
         "https://dmbdevelopment.com/portfolio/dc-ranch/"
-      ],
-      "market": null
-    },
-    "Troon North": {
-      "city": "Scottsdale",
-      "facts": {
-        "acres": 1800,
-        "courses": [
-          {
-            "name": "Monument",
-            "architects": [
-              "Tom Weiskopf",
-              "Jay Morrish"
-            ],
-            "opened": 1990
-          },
-          {
-            "name": "Pinnacle",
-            "architects": [
-              "Tom Weiskopf",
-              "Jay Morrish"
-            ],
-            "opened": 1995
-          }
-        ],
-        "renovation": "Major renovation led by Tom Weiskopf in 2007, which also reconfigured the 36 holes across both courses",
-        "setting": "Sonoran Desert in the shadow of Pinnacle Peak",
-        "note": "Troon North Golf Club and the private Troon Country Club are different entities. Do not conflate them."
-      },
-      "sources": [
-        "https://www.top100golfcourses.com/golf-course/troon-north-pinnacle",
-        "https://golfscottsdale.org/courses/troon-north-golf-club"
-      ],
-      "market": null
-    },
-    "Grayhawk": {
-      "city": "Scottsdale",
-      "facts": {
-        "acres": 1615,
-        "clubOpened": 1994,
-        "courses": [
-          {
-            "name": "Talon",
-            "architects": [
-              "David Graham",
-              "Gary Panks"
-            ],
-            "opened": 1994
-          },
-          {
-            "name": "Raptor",
-            "architects": [
-              "Tom Fazio"
-            ],
-            "opened": 1995
-          }
-        ],
-        "amenities": "Pocket parks, city parks, playgrounds, picnic areas, greenbelts and the Grayhawk trail system"
-      },
-      "sources": [
-        "https://www.golfpass.com/travel-advisor/courses/15741-raptor-at-grayhawk-golf-club",
-        "https://scottsdalerealestate.com/neighborhoods/grayhawk"
       ],
       "market": null
     },
@@ -203,6 +148,131 @@
       "sources": [
         "https://www.desertmountain.com/history/",
         "https://nicklausdesign.com/course/desertmountain-geronimo/"
+      ],
+      "market": null
+    },
+    "Fountain Hills": {
+      "city": "Fountain Hills",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Grayhawk": {
+      "city": "Scottsdale",
+      "facts": {
+        "acres": 1615,
+        "clubOpened": 1994,
+        "courses": [
+          {
+            "name": "Talon",
+            "architects": [
+              "David Graham",
+              "Gary Panks"
+            ],
+            "opened": 1994
+          },
+          {
+            "name": "Raptor",
+            "architects": [
+              "Tom Fazio"
+            ],
+            "opened": 1995
+          }
+        ],
+        "amenities": "Pocket parks, city parks, playgrounds, picnic areas, greenbelts and the Grayhawk trail system"
+      },
+      "sources": [
+        "https://www.golfpass.com/travel-advisor/courses/15741-raptor-at-grayhawk-golf-club",
+        "https://scottsdalerealestate.com/neighborhoods/grayhawk"
+      ],
+      "market": null
+    },
+    "Las Sendas": {
+      "city": "Mesa",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Moon Valley": {
+      "city": "Phoenix",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Ocotillo": {
+      "city": "Chandler",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Rio Verde": {
+      "city": "Rio Verde",
+      "facts": {},
+      "sources": [],
+      "factsStatus": "Stub. Created so market data can be imported for this community. The descriptive claims currently live in the post prose and have NOT been migrated here with citations yet. Do not treat this empty facts block as meaning the community has no documented history; it means nobody has sourced it into this file.",
+      "market": null
+    },
+    "Silverleaf": {
+      "city": "Scottsdale",
+      "facts": {
+        "developer": "DMB",
+        "partOf": "DC Ranch",
+        "golfCourse": "Silverleaf Club",
+        "courseArchitect": "Tom Weiskopf",
+        "courseOpened": 2002,
+        "clubhouseOpened": 2004,
+        "clubhouseSize": "50,000 square feet",
+        "enclaves": [
+          "Upper Canyon",
+          "Horseshoe Canyon",
+          "The Summit",
+          "Silverleaf Village"
+        ],
+        "setting": "canyons of the McDowell Mountains, bordering the McDowell Sonoran Preserve",
+        "priorUse": "mining claim, then cattle ranch",
+        "masterPlanBegan": "late 1990s",
+        "firstHomes": "early 2000s",
+        "membershipType": "private equity club"
+      },
+      "sources": [
+        "https://dmbdevelopment.com/portfolio/silverleaf/",
+        "https://www.silverleafrealty.com/"
+      ],
+      "market": null
+    },
+    "Troon North": {
+      "city": "Scottsdale",
+      "facts": {
+        "acres": 1800,
+        "courses": [
+          {
+            "name": "Monument",
+            "architects": [
+              "Tom Weiskopf",
+              "Jay Morrish"
+            ],
+            "opened": 1990
+          },
+          {
+            "name": "Pinnacle",
+            "architects": [
+              "Tom Weiskopf",
+              "Jay Morrish"
+            ],
+            "opened": 1995
+          }
+        ],
+        "renovation": "Major renovation led by Tom Weiskopf in 2007, which also reconfigured the 36 holes across both courses",
+        "setting": "Sonoran Desert in the shadow of Pinnacle Peak",
+        "note": "Troon North Golf Club and the private Troon Country Club are different entities. Do not conflate them."
+      },
+      "sources": [
+        "https://www.top100golfcourses.com/golf-course/troon-north-pinnacle",
+        "https://golfscottsdale.org/courses/troon-north-golf-club"
       ],
       "market": null
     }

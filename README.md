@@ -322,6 +322,66 @@ obligations from ARMLS, so confirm what the agreement permits before publishing
 an MLS-derived figure. County records are public and carry no such restriction,
 which makes them the safer source for last-sale data.
 
+### Refreshing market data
+
+Market figures load from a CSV so that nobody is hand-editing JSON with a
+dollar figure in it. The importer validates hard and refuses anything it
+cannot stand behind.
+
+    cp content/market-data-template.csv /tmp/report.csv
+    # fill in the rows you have data for, leave the rest blank
+    python gen/import_market_data.py /tmp/report.csv            # dry run, prints a diff
+    python gen/import_market_data.py /tmp/report.csv --apply    # writes the file
+
+The template already lists every community a published post references. Fill
+in only the rows you have a real report for; a blank row is skipped, not
+guessed at.
+
+**What the importer rejects**, each of which is a way a wrong number could
+otherwise reach the site:
+
+- A missing or empty `asOf`, or one dated in the future.
+- An `asOf` more than a year old. Pull a current report instead.
+- A missing `source`, or one too short to cite. `MLS` is rejected; `ARMLS
+  subdivision report pulled 2026-10-01` is accepted.
+- A figure outside sane bounds, which catches a transposed digit or a price
+  typed in thousands.
+- A `lastSaleDate` without a `lastSalePrice`, or either half of a price range
+  without the other, or a range whose low exceeds its high.
+- A row where every figure is blank, which would publish an empty table. The
+  post keeps its honest placeholder instead.
+- A community not already in `neighborhoods.json`. Add it with its sourced
+  facts first, so market data can never arrive for a place the file does not
+  know.
+
+**What it warns about but still allows**, because these need a human eye rather
+than a hard stop:
+
+- A median and a price per square foot that imply an implausible house size,
+  which is the signature of a unit mismatch.
+- An average and a median more than three times apart.
+- A `source` naming the MLS, which triggers the ARMLS IDX reminder above.
+
+After applying, posts that have **already published** need re-rendering to pick
+up the new figures:
+
+    python gen/new_post.py --force content/posts/<affected posts>.md
+
+Posts still in the queue pick the data up automatically when they render.
+
+### Communities that are stubs
+
+Ten communities were added to `neighborhoods.json` as stubs so market data
+could be imported for them: Cave Creek, Carefree, Fountain Hills, Rio Verde,
+Anthem, Agritopia, Biltmore, Ocotillo, Las Sendas and Moon Valley. Their
+`facts` blocks are empty and carry a `factsStatus` note saying so.
+
+That empty block does **not** mean the community has no documented history. It
+means the descriptive claims currently live in the post prose and have not been
+migrated into this file with citations. Doing that migration is worthwhile, and
+it has to be done the same way the first five were: a source per claim, nothing
+written from memory.
+
 ## Contact card
 
 `gen/make_vcard.py` builds `site/assets/ricky-khamis.vcf` and a QR code from
