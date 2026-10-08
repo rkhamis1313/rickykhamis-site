@@ -136,7 +136,10 @@ def build_main(p: dict) -> str:
         body.append(f'<h2>{esc(p["geo_heading"])}</h2>')
         body.append(f'<p>{p["geo_intro"]}</p>')
         body.append('<ul>')
-        for city in CITIES:
+        # A page may override the city list. The rehab page trades Paradise
+        # Valley for Apache Junction, which has no page on this site and was
+        # pulling real search impressions.
+        for city in p.get('city_list') or CITIES:
             body.append(f'<li><strong>{esc(city)}.</strong> {p["cities"][city]}</li>')
         body.append('</ul>')
 

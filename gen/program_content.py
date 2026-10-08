@@ -922,4 +922,184 @@ PROGRAMS = [
     'One address in, a full written analysis back within 24 hours at no charge.'),
   ],
  ),
+# ------------------------------------------------------------------- 203(k)
+ dict(
+  path='loan-programs/fha-203k-loan',
+  title='FHA 203(k) Rehab Loans in Arizona: Buy the House and the Repairs With One Loan',
+  h1='FHA 203(k) renovation loans',
+  lede=('One loan that covers the purchase price and the work the house needs. In a market where '
+        'the best value is in older homes that will not pass a standard appraisal, this is '
+        'frequently the only financing that fits.'),
+  description=('How FHA 203(k) rehab loans work in Maricopa and Pinal County: the Limited and '
+               'Standard programs, the $75,000 Limited cap, when a 203(k) Consultant is mandatory, '
+               'and where rehab files actually come from across Mesa, Apache Junction, Chandler '
+               'and Phoenix.'),
+  form='purchase',
+  hook=('The house is right, the street is right, the price is right, and it needs forty thousand '
+        'dollars of work you do not have sitting in an account.'),
+  sections=[
+   ('Why this program exists at all', [
+     'A standard FHA appraisal is a condition review as much as a valuation. Peeling paint, a roof '
+     'with no remaining service life, missing handrails, exposed wiring, an inoperable system: any '
+     'of those can become a repair that must be completed <em>before</em> closing. On a seller who '
+     'will not do the work, and on a bank-owned or estate property where there is nobody to do it, '
+     'the deal simply dies.',
+     'That is the trap the 203(k) was built for. Instead of requiring the house to be finished '
+     'before you can buy it, the program finances the purchase and the repairs together, escrows '
+     'the repair money at closing, and releases it to contractors in draws as the work gets done. '
+     'The appraisal is made subject to the completed work, so the value you are borrowing against '
+     'is the house as it will be, not as it sits.',
+     'In the East Valley that matters more than it does in most markets, because the best value per '
+     'square foot is concentrated in housing built before the mid 1980s, which is exactly the stock '
+     'that generates condition findings.',
+   ]),
+   ('Two programs, and the choice decides your whole timeline', [
+     'There is no single 203(k). There are two, and picking the wrong one costs weeks.',
+     '<strong>Limited 203(k)</strong> covers total rehabilitation costs up to <strong>$75,000</strong>. '
+     'HUD raised that ceiling from $35,000 in Mortgagee Letter 2024-13, effective for FHA case '
+     'numbers assigned on or after 4 November 2024, and said the limit would be reviewed annually '
+     'alongside FHA\'s nationwide loan limits. There is <strong>no minimum</strong> repair cost. A '
+     '203(k) Consultant is optional. Energy improvements may be counted in addition to the $75,000 '
+     'ceiling.',
+     '<strong>Standard 203(k)</strong> has a <strong>$5,000 minimum</strong> repair cost per HUD\'s '
+     '203(k) calculator guidance, no fixed ceiling beyond the FHA loan limit for the county, and it '
+     'is the program that permits structural work. It <strong>requires</strong> a 203(k) '
+     'Consultant.',
+     'The practical rule: if the work is cosmetic and updating, Limited is faster and lighter. If '
+     'you are moving walls, touching the foundation, or the scope runs past the Limited ceiling, '
+     'you are in Standard and you should plan the calendar accordingly.',
+     'Because that ceiling is reviewed annually, confirm the current figure on your own file before '
+     'you write an offer around it.',
+   ]),
+   ('The consultant is the part people get wrong', [
+     'On a Standard 203(k) the consultant is not optional and is not someone you choose from a '
+     'referral. Under Mortgagee Letter 2024-13 the lender must select an FHA-approved 203(k) '
+     'Consultant who is <strong>active on the FHA 203(k) Consultant Roster for the state the '
+     'property is in</strong>. Roster approval runs two years and consultants who fail '
+     'recertification come off the list.',
+     'The consultant inspects the property and prepares the <strong>Work Write-Up and Cost '
+     'Estimate</strong>. That document, not your contractor\'s bid, is what the loan is built on. '
+     'Consultant fees are governed by a published HUD schedule, which includes a feasibility study '
+     'fee of $375 when one is prepared.',
+     'On a Limited 203(k) you may use a consultant and most borrowers do not. If none is used, the '
+     'lender enters the placeholder "203KS" in the Consultant ID field, which is a small detail '
+     'that tells you whether the person handling your file has done one of these before.',
+   ]),
+   ('What changed in 2026, and why we will not print a number for it', [
+     'HUD issued <strong>Mortgagee Letter 2026-06 on 23 June 2026</strong> revising the draw rules '
+     'and the test for which repairs are ineligible under the Limited program. The letter is '
+     'explicit about why: the old draw limit no longer matched the much higher rehabilitation costs '
+     'the program now permits, and squeezing a larger job into too few draws starves contractor '
+     'cash flow and causes delays.',
+     'The exact revised draw count and the revised ineligible-repair test need to be read against '
+     'the current Handbook 4000.1 rather than taken from any web page, including this one. We will '
+     'confirm both against the handbook on your file before your contractor signs anything, because '
+     'draw schedule is the single thing that determines whether a contractor will take a 203(k) '
+     'job at all.',
+   ]),
+   ('Where these files actually go wrong', [
+     '<strong>The contractor, every time.</strong> Most 203(k) files that fail, fail because the '
+     'contractor could not or would not work inside a draw schedule, or was not licensed and '
+     'insured to the standard the file requires. Find the contractor before you find the house if '
+     'you can.',
+     '<strong>Scope creep after the write-up.</strong> The loan is sized from the approved scope. '
+     'Deciding mid-project to add the primary bathroom is not a conversation with your contractor, '
+     'it is a change to a mortgage. Build the wish list in before the write-up is final.',
+     '<strong>The calendar.</strong> There is a completion window and HUD updated the rules around '
+     'it in 2026. A job that overruns is a problem for the escrow, not just for your patience.',
+     '<strong>Who is allowed to do the work.</strong> Most files use licensed contractors. '
+     'Self-help has conditions attached and is not the default. Decide this early, because it '
+     'changes the write-up.',
+     '<strong>Living in it.</strong> You can usually occupy during some kinds of work and not '
+     'others. That affects whether you need somewhere else to live, which is a real cost that '
+     'belongs in the plan.',
+   ]),
+   ('When something else is the better answer', [
+     'A 203(k) is paperwork. It is worth it when the repairs are what stands between you and a '
+     'house you could not otherwise buy. It is not worth it when there is a simpler route.',
+     'If you already own the home and have equity, a second lien or a '
+     '<a href="/loan-programs/mortgage-refinance/">cash-out refinance</a> reaches the money with '
+     'far less process, and the <a href="/loan-programs/mortgage-refinance/">blended rate</a> is '
+     'the number that decides it. If the work is modest and your credit and leverage are strong, a '
+     'conventional renovation product may price better, and we run both. And if the house needs '
+     'nothing structural and you simply want to update it over the first two years, buying '
+     'conventionally and paying for the work out of cash flow is frequently cheaper than financing '
+     'it for thirty years.',
+     'We will tell you which one of those you are. The 203(k) is a tool, not a destination.',
+   ]),
+  ],
+  geo_heading='Where rehab files come from across the East Valley',
+  geo_intro=('Rehab demand follows the age of the housing, not the size of the city. These are the '
+             'markets where the program comes up most, and what it tends to be used for in each.'),
+  city_list=['Mesa', 'Apache Junction', 'Phoenix', 'Scottsdale',
+             'Tempe', 'Chandler', 'Queen Creek', 'Gilbert'],
+  cities={
+   'Mesa': 'The deepest supply of pre-1985 housing in the East Valley, which is precisely the stock '
+           'that produces appraisal condition findings. Most Mesa rehab files are Limited 203(k) '
+           'work: roof, paint, electrical, systems and an unpermitted addition brought up to code.',
+   'Apache Junction': 'Older stock, larger lots, and a mix of site-built and manufactured housing at '
+                      'prices low enough that the rehab budget is a large share of the total deal. '
+                      'Confirm property type eligibility before you write, because not every unit '
+                      'out here qualifies for FHA financing at all, and that is a cheaper thing to '
+                      'learn on a phone call than after an inspection.',
+   'Phoenix': 'The widest range of the group. The central historic districts are where Standard '
+              '203(k) with a consultant earns its fee, because the scope turns structural and the '
+              'comparable sales are thin enough that the subject-to-completion appraisal is real '
+              'work rather than a formality.',
+   'Scottsdale': 'South Scottsdale and the blocks around Old Town hold the 1950s to 1970s stock '
+                 'where a 203(k) buyer is bidding against a cash flipper. You will not win on '
+                 'price, so you win on certainty: a complete file and a write-up already underway '
+                 'before the offer goes in.',
+   'Tempe': 'Attached housing near the university. Rehab on a condominium under 203(k) is '
+            'restricted to the interior of the unit and comes with conditions, and the project '
+            'still has to satisfy FHA condominium requirements on top of that. Check both before '
+            'you write.',
+   'Chandler': 'Newer on average, so rehab files here are usually cosmetic: kitchens, flooring, '
+               'systems at end of life. Limited 203(k) covers most of what Chandler needs, which '
+               'keeps the timeline close to a normal purchase.',
+   'Queen Creek': 'Larger parcels, septic systems, shared wells and outbuildings. Scope definition '
+                  'matters more here than anywhere else on this list, because the things that need '
+                  'work are frequently not the house.',
+   'Gilbert': 'Mostly built after the mid 1990s, so 203(k) is the exception rather than the rule. '
+              'When it does come up it is usually a flip that failed inspection, or a pool and '
+              'exterior that have been let go.',
+  },
+  faq=[
+   ('How much repair money can I finance?',
+    'Under the Limited 203(k), total rehabilitation costs up to $75,000, raised from $35,000 by HUD '
+    'Mortgagee Letter 2024-13 for case numbers assigned on or after 4 November 2024, and reviewed '
+    'annually. The Standard 203(k) has no fixed ceiling beyond the county FHA loan limit.'),
+   ('Is there a minimum?',
+    'Limited 203(k) has no minimum repair cost. Standard 203(k) carries a $5,000 minimum per HUD\'s '
+    '203(k) calculator guidance.'),
+   ('Do I need a 203(k) Consultant?',
+    'On a Standard 203(k), yes, and the lender must select one active on the FHA 203(k) Consultant '
+    'Roster for Arizona. On a Limited 203(k) a consultant is optional and most files do not use '
+    'one.'),
+   ('Can I do the work myself?',
+    'Most files use licensed contractors. Self-help carries conditions and is not the default, so '
+    'decide early because it changes the work write-up.'),
+   ('Can I use a 203(k) on a condo?',
+    'Rehabilitation on a condominium is restricted to the interior of the unit and carries '
+    'conditions, and the project must still meet FHA condominium requirements. Confirm both before '
+    'writing an offer.'),
+   ('Can I refinance into a 203(k) on a house I already own?',
+    'Yes, the program covers refinance as well as purchase. Whether it beats a second lien or a '
+    'cash-out refinance depends on your equity and your current rate, and that comparison is worth '
+    'running before you choose.'),
+   ('How long does it take?',
+    'Longer than a standard purchase, and the variable is the write-up and the contractor rather '
+    'than the underwriting. Starting the consultant and the bids early is what keeps a 203(k) on a '
+    'normal contract timeline.'),
+  ],
+  related=[
+   ('/loan-programs/fha-loans/', 'FHA loans',
+    'The underlying program, including the appraisal condition review that sends most buyers to '
+    '203(k) in the first place.'),
+   ('/loan-programs/mortgage-refinance/', 'Refinance and cash-out',
+    'If you already own the home, the simpler route to repair money, and how to compare it.'),
+   ('/analyze/', 'Send me an address',
+    'Send the address of the house that needs work and I will tell you whether a 203(k) fits it.'),
+  ],
+ ),
 ]
