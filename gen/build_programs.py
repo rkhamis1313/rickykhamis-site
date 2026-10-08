@@ -110,6 +110,33 @@ DISCLAIMER = (
 )
 
 
+def hero_cta(p: dict) -> str:
+    """Buttons in the hero.
+
+    These pages run 1,700 to 2,300 words. Measured on the HELOC page before
+    this existed, the apply button sat 69% down a 9.4-screen desktop page and
+    66% down a 17.5-screen phone page: eleven screens of scrolling before a
+    reader who had already decided could act. A long page is not an excuse for
+    hiding the action, so every page now offers it in the first screen as well.
+
+    The lead form renders with id="apply", so the secondary button is an anchor
+    to it rather than a new destination.
+    """
+    primary, secondary = p.get('hero_cta') or (
+        ('Check what you qualify for', '#apply'),
+        ('(480) 999-9842', 'tel:+14809999842'),
+    )
+    ptext, phref = primary
+    stext, shref = secondary
+    ext = ' target="_blank" rel="noopener"' if phref.startswith('http') else ''
+    return (
+      '<div class="btns" style="margin-top:26px">'
+      f'<a class="btn btn-primary" href="{phref}"{ext}>{esc(ptext)}</a>'
+      f'<a class="btn btn-ghost" href="{shref}">{esc(stext)}</a>'
+      '</div>'
+    )
+
+
 def build_main(p: dict) -> str:
     out = ['<main id="main">']
 
@@ -120,6 +147,7 @@ def build_main(p: dict) -> str:
       '<span class="eyebrow">Loan program</span>'
       f'<h1>{esc(p["h1"])}</h1>'
       f'<p>{esc(p["lede"])}</p>'
+      + hero_cta(p) +
       '</div></section>'
     )
 
