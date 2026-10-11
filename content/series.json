@@ -1995,6 +1995,20 @@
       "slug": "seller-concession-limits-by-loan-type",
       "date": "2026-10-10",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "what-happens-when-the-buydown-ends",
+      "date": "2026-10-11",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "buydown-funds-who-can-pay",
+      "date": "2026-10-11",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
