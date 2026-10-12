@@ -2009,6 +2009,20 @@
       "slug": "buydown-funds-who-can-pay",
       "date": "2026-10-11",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "price-reduction-fatigue-listing-stale",
+      "date": "2026-10-12",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "open-house-payment-flyer-compliance",
+      "date": "2026-10-12",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
