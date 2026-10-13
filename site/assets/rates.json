@@ -6,23 +6,23 @@
       "label": "FHA 30-Year, 3.5% down",
       "term": 30,
       "rate": 6.75,
-      "apr": 6.928
+      "apr": 6.901
     },
     {
       "product": "VA 30-Year",
       "scenario": "0% down",
       "label": "VA 30-Year, 0% down",
       "term": 30,
-      "rate": 7.25,
-      "apr": 7.404
+      "rate": 7.125,
+      "apr": 7.275
     },
     {
       "product": "Conventional 30-Year",
       "scenario": "5% down \u00b7 Primary Residence",
       "label": "Conventional 30-Year, 5% down \u00b7 Primary Residence",
       "term": 30,
-      "rate": 7.375,
-      "apr": 7.51
+      "rate": 7.25,
+      "apr": 7.421
     },
     {
       "product": "Conventional 30-Year",
@@ -30,7 +30,7 @@
       "label": "Conventional 30-Year, 25% down \u00b7 Primary Residence",
       "term": 30,
       "rate": 7.25,
-      "apr": 7.411
+      "apr": 7.395
     },
     {
       "product": "Conventional 15-Year",
@@ -38,7 +38,7 @@
       "label": "Conventional 15-Year, 25% down \u00b7 Primary Residence",
       "term": 15,
       "rate": 6.875,
-      "apr": 7.087
+      "apr": 7.083
     },
     {
       "product": "Conventional 30-Year",
@@ -46,13 +46,13 @@
       "label": "Conventional 30-Year, 25% down \u00b7 Investment",
       "term": 30,
       "rate": 7.625,
-      "apr": 7.769
+      "apr": 7.754
     }
   ],
   "defaultIndex": 3,
-  "asOf": "2026-10-09",
-  "aprNote": "The Annual Percentage Rate (APR) is determined based on different loan amounts and types. For conforming, FHA, and VA loans, the APR is calculated based on a loan amount of $450,000. All rates are based on approximately 0.88 to 1.363 discount points paid by the borrower. The APR assumes no increase in the financial index. However, after a fixed period, your interest rate and monthly payment may increase based on market index fluctuations.",
+  "asOf": "2026-10-13",
+  "aprNote": "The Annual Percentage Rate (APR) is determined based on different loan amounts and types. For conforming, FHA, and VA loans, the APR is calculated based on a loan amount of $450,000. All rates are based on approximately 0.813 to 1.245 discount points paid by the borrower. The APR assumes no increase in the financial index. However, after a fixed period, your interest rate and monthly payment may increase based on market index fluctuations.",
   "source": "EPiQ Lending rate sheet",
   "sourceUrl": "https://www.epiqrates.com/rates/rickykhamis",
-  "fetchedAt": "2026-10-09T18:33:02Z"
+  "fetchedAt": "2026-10-13T19:35:21Z"
 }
