@@ -2023,6 +2023,20 @@
       "slug": "open-house-payment-flyer-compliance",
       "date": "2026-10-12",
       "offQueue": true
+    },
+    {
+      "city": "Cave Creek",
+      "series": null,
+      "slug": "self-employed-cave-creek",
+      "date": "2026-10-13",
+      "offQueue": true
+    },
+    {
+      "city": "Fountain Hills",
+      "series": null,
+      "slug": "retiree-fountain-hills",
+      "date": "2026-10-13",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
