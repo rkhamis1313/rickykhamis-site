@@ -2037,6 +2037,20 @@
       "slug": "retiree-fountain-hills",
       "date": "2026-10-13",
       "offQueue": true
+    },
+    {
+      "city": "Gilbert",
+      "series": null,
+      "slug": "self-employed-agritopia-gilbert",
+      "date": "2026-10-14",
+      "offQueue": true
+    },
+    {
+      "city": "Rio Verde",
+      "series": null,
+      "slug": "second-home-rio-verde-az",
+      "date": "2026-10-14",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
