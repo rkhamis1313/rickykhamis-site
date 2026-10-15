@@ -2051,6 +2051,20 @@
       "slug": "second-home-rio-verde-az",
       "date": "2026-10-14",
       "offQueue": true
+    },
+    {
+      "city": "Phoenix",
+      "series": null,
+      "slug": "self-employed-biltmore-phoenix",
+      "date": "2026-10-15",
+      "offQueue": true
+    },
+    {
+      "city": "Chandler",
+      "series": null,
+      "slug": "investor-ocotillo-chandler",
+      "date": "2026-10-15",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
