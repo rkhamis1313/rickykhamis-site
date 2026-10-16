@@ -2065,6 +2065,20 @@
       "slug": "investor-ocotillo-chandler",
       "date": "2026-10-15",
       "offQueue": true
+    },
+    {
+      "city": "Anthem",
+      "series": null,
+      "slug": "retiree-anthem-az",
+      "date": "2026-10-16",
+      "offQueue": true
+    },
+    {
+      "city": "Mesa",
+      "series": null,
+      "slug": "investor-las-sendas-mesa",
+      "date": "2026-10-16",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
