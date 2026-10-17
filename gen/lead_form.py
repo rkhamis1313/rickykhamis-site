@@ -190,6 +190,10 @@ def _field(form_name: str, key: str, label: str, kind: str, options) -> str:
     return f'<div><label for="{fid}">{label}</label>{control}</div>'
 
 
+# A2P 10DLC: optional, unchecked SMS opt-in. Never pre-check it or make it required.
+SMS_OPTIN = '<label class="sms-optin" style="display:flex;gap:10px;align-items:flex-start;margin:14px 0 6px;font-size:.8rem;line-height:1.45;font-weight:400;text-transform:none;letter-spacing:0;color:inherit;cursor:pointer;text-align:left"><input type="checkbox" name="sms_consent" value="yes" style="width:auto;min-width:16px;height:16px;margin:2px 0 0;flex:0 0 auto;padding:0"><span><strong>Yes, text me (optional).</strong> I agree to receive text messages from EPiQ Lending (Ricky Khamis and team) about my inquiry, application, appointments and loan status. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of any purchase. <a href="/privacy-policy/#sms">Privacy Policy</a> &middot; <a href="/terms-of-use/#sms">SMS Terms</a>.</span></label>'
+
+
 def render(kind: str) -> str:
     """Return the form block for a front matter `form:` value, or '' if unknown."""
     spec = FORMS.get((kind or "").strip().lower())
@@ -216,8 +220,9 @@ def render(kind: str) -> str:
         f'<div><label for="{n}-phone">Phone</label>'
         f'<input id="{n}-phone" type="tel" name="phone" required placeholder=""></div>'
         f'</div>'
+        + SMS_OPTIN +
         f'<div class="actions"><button class="btn btn-primary" type="submit">{spec["cta"]}</button>'
-        f'<p class="fine">' + 'By submitting, you agree that EPiQ Lending (Ricky Khamis and team) may contact you by phone, email, or text message about your request. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of any purchase.' +
+        f'<p class="fine">' + 'By submitting, you agree to be contacted by phone or email about your request.' +
         f' No spam, no obligation. This is not a loan application and no credit is '
         f'pulled. Equal Housing Opportunity.' + ' <a href="/privacy-policy/#sms">Privacy Policy</a> &middot; <a href="/terms-of-use/#sms">SMS Terms</a>.' + '</p></div>'
         f'</form></div></section>'
