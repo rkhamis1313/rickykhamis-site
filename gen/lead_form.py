@@ -217,8 +217,8 @@ def render(kind: str) -> str:
         f'<input id="{n}-phone" type="tel" name="phone" required placeholder=""></div>'
         f'</div>'
         f'<div class="actions"><button class="btn btn-primary" type="submit">{spec["cta"]}</button>'
-        f'<p class="fine">By submitting, you agree to be contacted by phone, email, or text about '
-        f'your request. No spam, no obligation. This is not a loan application and no credit is '
-        f'pulled. Equal Housing Opportunity.</p></div>'
+        f'<p class="fine">' + 'By submitting, you agree that EPiQ Lending (Ricky Khamis and team) may contact you by phone, email, or text message about your request. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of any purchase.' +
+        f' No spam, no obligation. This is not a loan application and no credit is '
+        f'pulled. Equal Housing Opportunity.' + ' <a href="/privacy-policy/#sms">Privacy Policy</a> &middot; <a href="/terms-of-use/#sms">SMS Terms</a>.' + '</p></div>'
         f'</form></div></section>'
     )
