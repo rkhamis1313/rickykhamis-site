@@ -2079,6 +2079,20 @@
       "slug": "investor-las-sendas-mesa",
       "date": "2026-10-16",
       "offQueue": true
+    },
+    {
+      "city": "Phoenix",
+      "series": null,
+      "slug": "self-employed-moon-valley-phoenix",
+      "date": "2026-10-17",
+      "offQueue": true
+    },
+    {
+      "city": "Carefree",
+      "series": null,
+      "slug": "self-employed-carefree-az",
+      "date": "2026-10-17",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
