@@ -453,6 +453,21 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
     if figures is not None:
         body_html = figures.expand(body_html)
 
+    # Expand any [[RULE:key]] markers into citable guideline blocks. Same
+    # reasoning again, with higher stakes: an unverified rule renders an honest
+    # placeholder and no number rather than a figure nobody checked, because a
+    # reader acts on a guideline and the NMLS number at the bottom is real.
+    try:
+        import guidelines
+    except ImportError:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        try:
+            import guidelines
+        except ImportError:
+            guidelines = None
+    if guidelines is not None:
+        body_html = guidelines.expand(body_html)
+
     # An in-post lead form, when the post opts in with `form:` in front matter.
     # Kept optional and failure-tolerant for the same reason the header image is:
     # a post must still publish if this cannot be built.

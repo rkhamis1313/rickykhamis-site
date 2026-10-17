@@ -382,6 +382,103 @@ migrated into this file with citations. Doing that migration is worthwhile, and
 it has to be done the same way the first five were: a source per claim, nothing
 written from memory.
 
+## Loan guidelines and the citation system
+
+`content/guidelines.json` holds citable program rules, one entry per rule,
+referenced from posts with a marker:
+
+    [[RULE:fha-min-credit-score]]
+
+Same architecture as the market data and for a sharper reason. A page that
+asserts "FHA requires X" and is eighteen months stale is worse than a page
+that says nothing, because a reader acts on it and the NMLS number at the
+bottom belongs to a real person. So every rule carries the handbook section it
+came from, the date a human verified it against that section, and the text
+itself. Nothing is written from memory.
+
+`gen/guidelines.py` expands the marker at render time, with three states:
+
+- **Not verified** (the default): renders an honest line saying requirements
+  are quoted with a section and a date, and offers the current answer by
+  phone. **It states no number.** This is what makes a post publishable before
+  anyone has opened the handbook.
+- **Verified and recent:** renders the rule, the citation and the date.
+- **Verified but older than 180 days:** adds a visible notice saying how old
+  the verification is.
+
+An unknown key renders a visible "missing rule reference" block rather than
+failing silently, and `gen/check_guideline_prose.py` catches it in CI first.
+
+### The overlay distinction
+
+This is the whole content strategy, so the data model enforces it.
+`handbookFloor` is the published rule. `overlayReality` is what investors
+actually do, and it renders under a label saying it is Ricky's observation
+from running files rather than a published requirement.
+
+The handbook is a floor almost nobody lends at. The gap between the floor and
+the overlay is where a borrower actually lives, and it is the part no
+competitor can scrape and no AI assistant can answer from public text. Never
+merge the two fields.
+
+### Verifying a rule
+
+Open the cited section, read it, then:
+
+    python gen/verify_guideline.py fha-min-credit-score \
+        --section "Handbook 4000.1 II.A.4.b.iii" \
+        --text "What the section actually says" \
+        [--overlay "What investors actually do"] \
+        --apply
+
+Without `--apply` it is a dry run. It refuses a citation that names a document
+rather than a section, a `--section` without `--text`, text too short to be a
+rule, and a key that is not registered. Never hand-edit a `verifiedOn` date,
+and never stamp a rule you did not read.
+
+Useful commands:
+
+    python gen/verify_guideline.py --list    # work list, with what Ricky must add
+    python gen/guidelines.py --audit         # coverage: verified / stale / unverified
+
+`judgmentNeeded` on a rule records what Ricky still has to supply for the page
+to be worth reading. The guideline mechanics can be drafted; the "here's what
+actually happens" paragraph cannot.
+
+After verifying, re-render any already-published post citing that rule:
+
+    python gen/new_post.py --force content/posts/<post>.md
+
+**Note the date gate.** `--force` ignores it, so forcing a future-dated post
+publishes it early. Check the post's date before forcing, or roll back with
+`git checkout -- site/ content/series.json` plus `git clean -fd site/blog/<slug>`.
+
+### The prose guard
+
+`gen/check_guideline_prose.py` runs in CI and fails the build if a guideline
+figure is written into a paragraph, where it would bypass the citation and the
+staleness notice. It catches score thresholds, down payment and ratio
+requirements, seasoning periods, loan limits, insurance rates and concession
+caps when they sit next to requirement language.
+
+It deliberately does **not** flag a number describing a real closed file, such
+as "credit work moved him to a 770 FICO". That is an outcome, not a published
+requirement, and it is the most valuable content on the site.
+
+It is scoped by default to posts carrying a `[[RULE:]]` marker. Screening
+everything fails the build over program parameters written inline before the
+system existed, and a check that breaks publishing is a check somebody
+disables. Run the backlog audit by hand:
+
+    python gen/check_guideline_prose.py --all content/posts/*.md
+
+As of the FHA build that reports **59 findings across 32 posts**, all credit
+score or debt-to-income figures in the physician, DSCR and non-QM content.
+Those are investor program parameters rather than government guidelines, so
+they are a lower grade of exposure than an FHA rule would be, but they carry
+no citation and no date and will go stale silently. Migrating them behind
+markers is real follow-up work.
+
 ## Contact card
 
 `gen/make_vcard.py` builds `site/assets/ricky-khamis.vcf` and a QR code from

@@ -92,6 +92,19 @@ jobs:
       - name: Screen every post for compliance
         run: python gen/compliance_check.py content/posts/*.md
 
+      # Guards the guideline citation system. Scoped to posts that carry a
+      # [[RULE:]] marker, deliberately: screening everything would fail the
+      # build over program parameters written inline before the system
+      # existed, and a check that breaks publishing is a check somebody
+      # disables. Run `--all` by hand to see that backlog.
+      - name: Screen cited guidelines for figures written into prose
+        run: python gen/check_guideline_prose.py content/posts/*.md
+
+      # Reports verification coverage. Never fails: an unverified rule renders
+      # an honest placeholder and no number, so it is safe to publish.
+      - name: Report guideline verification coverage
+        run: python gen/guidelines.py --audit
+
       - name: Render posts that are due
         run: python gen/new_post.py --all-unpublished --due-only
 

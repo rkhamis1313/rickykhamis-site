@@ -48,7 +48,9 @@ ERRORS: list[tuple[str, str]] = [
     # failed the build and held seven days of publishing. The British third
     # person "he analyses" is indistinguishable from that plural, so it is
     # deliberately allowed through rather than blocking correct English.
-    (r"\b\w*(?:neighbour|behaviour|favour|colour|centre|metre|licence|organis|"
+    # "organis" is written organis(?!m) for the same reason: "wood-destroying
+    # organism" is the standard inspection term and is correct US English.
+    (r"\b\w*(?:neighbour|behaviour|favour|colour|centre|metre|licence|organis(?!m)|"
      r"recognis|analyse(?!s)|whilst|amongst)\w*\b", "uses a British spelling"),
 ]
 

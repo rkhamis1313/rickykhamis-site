@@ -1,0 +1,272 @@
+{
+  "_comment": [
+    "Citable loan-program rules, one entry per rule, referenced from posts with",
+    "a [[RULE:key]] marker. Same architecture as neighborhoods.json: the volatile",
+    "thing lives in one data file and the posts carry markers, so refreshing the",
+    "whole site after a handbook update is one edit rather than forty.",
+    "",
+    "WHY THIS FILE EXISTS. A page on a licensed originator's site that asserts",
+    "'FHA requires X' and is eighteen months stale is worse than a page that",
+    "says nothing, because the reader acts on it and the NMLS number at the",
+    "bottom is a real person's. Every rule here therefore carries three things:",
+    "the handbook section it comes from, the date a human verified it against",
+    "that section, and the text itself. Nothing is written from memory.",
+    "",
+    "THREE RENDER STATES, all handled by gen/guidelines.py:",
+    "",
+    "1. verifiedOn is null -> the page renders an honest line saying the current",
+    "   requirement is confirmed per file, with a phone number. It does NOT",
+    "   state a number. This is the default and it is deliberately safe, so a",
+    "   post can publish before anyone has opened the handbook.",
+    "2. verifiedOn is recent -> renders the rule, the handbook citation and the",
+    "   verification date.",
+    "3. verifiedOn older than STALE_DAYS -> renders the rule plus a visible",
+    "   notice saying how old the verification is.",
+    "",
+    "HOW A RULE GETS VERIFIED. Open the cited handbook section, read it, and",
+    "record what it actually says. Then run:",
+    "    python gen/verify_guideline.py <key> --section '<cite>' --text '<rule>'",
+    "That stamps verifiedOn with today and writes the text. Never hand-edit a",
+    "verifiedOn date, and never stamp a rule you did not read.",
+    "",
+    "THE OVERLAY DISTINCTION, which is the whole point of the content strategy.",
+    "The handbook is a floor, not the market. Investors layer their own stricter",
+    "requirements on top, and the gap between the two is where a borrower",
+    "actually lives. `handbookFloor` is the published rule. `overlayReality` is",
+    "what lenders actually do, which is Ricky's observation and is labelled as",
+    "such rather than presented as a published requirement. Keep them separate.",
+    "Conflating them is how a page becomes wrong.",
+    "",
+    "SOURCES. FHA rules cite the HUD Single Family Housing Policy Handbook",
+    "4000.1, which is a US government work and free to quote. VA cites the",
+    "Lenders Handbook M26-7. Conventional cites the Fannie Mae Selling Guide or",
+    "the Freddie Mac Seller/Servicer Guide. Cite the section, not just the",
+    "document."
+  ],
+  "ruleSchema": {
+    "program": "FHA | VA | USDA | Conventional | Jumbo | Non-QM",
+    "topic": "credit | income | assets | collateral | employment | residency | obligations | process",
+    "question": "The rule in borrower language, used as the aside heading.",
+    "handbookFloor": "What the published guideline says. Null until verified.",
+    "section": "The citation, e.g. 'Handbook 4000.1 II.A.4.b'. Null until verified.",
+    "verifiedOn": "YYYY-MM-DD, the date a human read that section. Null by default.",
+    "overlayReality": "Optional. What investors actually do, labelled as Ricky's observation, not as a published rule.",
+    "judgmentNeeded": "Optional note on what Ricky still has to add to the page."
+  },
+  "rules": {
+    "fha-min-credit-score": {
+      "program": "FHA",
+      "topic": "credit",
+      "question": "What credit score does FHA actually require?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The overlay gap is the entire value of this page. What is the lowest score you have actually closed, and how many investors would touch it?"
+    },
+    "fha-gift-funds": {
+      "program": "FHA",
+      "topic": "assets",
+      "question": "Can the FHA down payment be a gift?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Which donor documentation requests kill the most deals in practice?"
+    },
+    "fha-bankruptcy-waiting-period": {
+      "program": "FHA",
+      "topic": "credit",
+      "question": "How long after a bankruptcy can I get an FHA loan?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Chapter 13 while still in plan: have you closed one, and what did the trustee letter need to say?"
+    },
+    "fha-foreclosure-waiting-period": {
+      "program": "FHA",
+      "topic": "credit",
+      "question": "How long after a foreclosure or short sale?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-student-loan-payment": {
+      "program": "FHA",
+      "topic": "obligations",
+      "question": "How is a student loan payment counted if it is deferred or on an income-driven plan?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "This rule changed in recent years. Worth saying what the practical effect was on borrowers you were working with."
+    },
+    "fha-self-employed-history": {
+      "program": "FHA",
+      "topic": "income",
+      "question": "How long do I need to be self-employed for an FHA loan?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The same-industry exception is the whole answer for a lot of people. How have you documented prior experience successfully?"
+    },
+    "fha-child-support-income": {
+      "program": "FHA",
+      "topic": "income",
+      "question": "Does child support or alimony count as income?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-child-support-obligation": {
+      "program": "FHA",
+      "topic": "obligations",
+      "question": "How does child support I pay affect what I qualify for?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-mip-duration": {
+      "program": "FHA",
+      "topic": "process",
+      "question": "How long do I pay FHA mortgage insurance?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The refinance-out-of-FHA play is the practical answer. When does it make sense and when does it not?"
+    },
+    "fha-loan-limit-maricopa": {
+      "program": "FHA",
+      "topic": "collateral",
+      "question": "What is the FHA loan limit in Maricopa County?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "This is published annually by HUD by county. Needs a yearly refresh, not a one-time verification."
+    },
+    "fha-occupancy-requirement": {
+      "program": "FHA",
+      "topic": "residency",
+      "question": "Do I have to live in the house?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-two-fha-loans": {
+      "program": "FHA",
+      "topic": "residency",
+      "question": "Can I have two FHA loans at once?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The relocation and family-size exceptions are where this gets interesting. Closed any?"
+    },
+    "fha-non-occupant-coborrower": {
+      "program": "FHA",
+      "topic": "employment",
+      "question": "Can a parent co-sign an FHA loan?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-seller-concession-limit": {
+      "program": "FHA",
+      "topic": "process",
+      "question": "How much can the seller pay toward my FHA closing costs?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Ties directly into the buydown content. How often does the FHA cap bind before the seller's willingness does?"
+    },
+    "fha-appraisal-repairs": {
+      "program": "FHA",
+      "topic": "collateral",
+      "question": "What will an FHA appraiser make the seller fix?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The listing-agent angle: which FHA appraisal call-outs most often blow up a resale, and how do you get ahead of them?"
+    },
+    "fha-manual-underwrite": {
+      "program": "FHA",
+      "topic": "process",
+      "question": "What is a manual underwrite and why am I in one?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Compensating factors are judgment. Which ones actually move an underwriter?"
+    },
+    "fha-dti-limits": {
+      "program": "FHA",
+      "topic": "obligations",
+      "question": "What debt-to-income ratio will FHA allow?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The spread between the TOTAL Scorecard answer and the manual answer is the real story."
+    },
+    "fha-collections-judgments": {
+      "program": "FHA",
+      "topic": "credit",
+      "question": "Do I have to pay off collections and judgments?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-cash-to-close-sourcing": {
+      "program": "FHA",
+      "topic": "assets",
+      "question": "Where can my down payment and closing costs come from?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-employment-gap": {
+      "program": "FHA",
+      "topic": "employment",
+      "question": "I changed jobs or had a gap. Does that disqualify me?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-non-permanent-resident": {
+      "program": "FHA",
+      "topic": "residency",
+      "question": "Can I get an FHA loan without being a US citizen?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Work authorization documentation is where these stall. What do you ask for on the first call?"
+    },
+    "fha-condo-approval": {
+      "program": "FHA",
+      "topic": "collateral",
+      "question": "Does the condo have to be FHA approved?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Single-unit approval exists. Have you used it, and how long did it take?"
+    },
+    "fha-caivrs-federal-debt": {
+      "program": "FHA",
+      "topic": "credit",
+      "question": "Can unpaid federal debt stop my FHA loan?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-streamline-refinance": {
+      "program": "FHA",
+      "topic": "process",
+      "question": "What is an FHA streamline refinance?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-203k-renovation": {
+      "program": "FHA",
+      "topic": "collateral",
+      "question": "Can an FHA loan cover repairs?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    }
+  }
+}
