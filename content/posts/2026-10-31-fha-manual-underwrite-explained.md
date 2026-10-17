@@ -12,6 +12,8 @@ tags:
   - Debt-to-Income
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 Most FHA files run through an automated evaluation and come out the other side. Some do not, and those get manually underwritten.
 
 If you are in a manual underwrite, two things are true: your ratio tolerance is tighter, and the quality of how your file is presented genuinely affects whether it is approved. That second part is unusual in lending and it is worth understanding.

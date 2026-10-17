@@ -12,6 +12,8 @@ tags:
   - First-Time Buyers
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 If you carry student debt, this single rule probably moves your approval more than anything else in your file. It decides what monthly figure goes into your debt-to-income ratio, and your ratio is where FHA approvals are won and lost.
 
 ## The rule

@@ -12,6 +12,8 @@ tags:
   - Credit
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 Most FHA pages online are the handbook retyped. That is not useful, because the handbook is free, public, and already answered by every search engine and every AI assistant on the planet.
 
 What is useful is the gap. **FHA publishes a floor. Investors lend above it.** The floor is what you read about; the overlay is what actually decides your file. A borrower who reads the published minimum and assumes it applies to them walks into a declination they did not see coming.

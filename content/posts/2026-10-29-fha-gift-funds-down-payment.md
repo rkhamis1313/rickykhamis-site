@@ -12,6 +12,8 @@ tags:
   - First-Time Buyers
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 A parent wants to help with the down payment. That is permitted, it is extremely common, and it almost never causes a problem when it is handled in the right order.
 
 The problems are always the same three: the money moved before anyone documented it, it arrived as cash, or the donor refuses to show a bank statement.

@@ -13,6 +13,8 @@ tags:
   - Arizona
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 You went out on your own last year and you want to buy. The answer you have been given is to wait until you have two years of returns.
 
 That is the default, not the rule. There is an exception, it turns on documented experience in the same line of work, and it is routinely missed because claiming it takes more work than quoting a waiting period.

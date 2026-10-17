@@ -12,6 +12,8 @@ tags:
   - First-Time Buyers
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 The question gets asked as though one program wins. It does not. These are two different structures and the right one depends on your credit, your down payment, the property, and how long you intend to keep the loan.
 
 Here is the actual decision framework, and the factor that most often decides it.

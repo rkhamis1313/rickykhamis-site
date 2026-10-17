@@ -174,6 +174,64 @@ PROGRAMS = [
     'Frequently yes, if you are above 90% original loan-to-value and have built equity, because '
     'that premium does not terminate on its own. Check the case number date first: loans with '
     'case numbers assigned before 3 June 2013 followed different cancellation rules.'),
+   # The rest of the questions buyers actually type. Answers stay qualitative
+   # on purpose: the FAQPage JSON-LD is built straight from this list and does
+   # not run through guidelines.expand, so a figure here would be an
+   # uncitable, undated assertion inside structured data. The cited number
+   # lives on the linked article behind a [[RULE:]] marker.
+   ('Does FHA have income limits?',
+    'No. FHA has no income limit and no income cap. People confuse it with USDA, which does have '
+    'limits, and with down payment assistance programs, many of which do. FHA is a credit and '
+    'down payment program, not a means-tested one.'),
+   ('Do I have to live in the house?',
+    'Yes. FHA insures owner-occupied housing, and that is the premise of the insurance rather than '
+    'a technicality. There are narrow exceptions that allow a second FHA loan, mostly covering a '
+    'genuine relocation or an outgrown home, and they are narrower than the internet suggests. '
+    '<span class="more"><a href="/blog/fha-two-loans-at-once/">Can you have two FHA loans at once?</a></span>'),
+   ('Can I get an FHA loan after a bankruptcy or foreclosure?',
+    'Usually yes, and sooner than with conventional financing. The waiting period runs from the '
+    'completion date rather than the filing date, which catches people out in both directions, and '
+    'documented one-time circumstances outside your control can shorten it. Chapter 13 while still '
+    'in plan is frequently possible and frequently not pursued. '
+    '<span class="more"><a href="/blog/fha-after-bankruptcy-arizona/">What the waiting periods require</a></span>'),
+   ('How do student loans affect what I qualify for?',
+    'More than almost anything else in the file, because the monthly figure an underwriter counts '
+    'is often not the payment you actually make. Deferred and income-driven plans are the cases to '
+    'get right, and the treatment has changed. Ask your lender what figure they are using and why. '
+    '<span class="more"><a href="/blog/fha-student-loans-dti/">How FHA counts student loans</a></span>'),
+   ('Can I use FHA if I am self-employed?',
+    'Yes. The standard answer is two years of filed returns, and there is an exception for someone '
+    'who did the same work as an employee first, which turns on documented prior experience in the '
+    'same field. It is real and it is routinely missed. '
+    '<span class="more"><a href="/blog/fha-self-employed-arizona/">The same-industry exception</a></span>'),
+   ('Can the seller pay my closing costs?',
+    'Yes, up to a cap that depends on the loan, and the same room also funds a rate buydown if you '
+    'would rather have a lower payment than a lower price. Confirm the cap against your actual loan '
+    'before anyone signs, because a concession over the limit gets cut back at underwriting. '
+    '<span class="more"><a href="/blog/seller-concession-limits-by-loan-type/">How concession caps work</a></span>'),
+   ('Can I buy a condo with an FHA loan?',
+    'Yes, if the project qualifies or the individual unit does. Single-unit approval means an '
+    'unapproved building is no longer automatically a dead end, though it takes lead time and not '
+    'every lender will process one. Check the project before you write the offer. '
+    '<span class="more"><a href="/blog/fha-condo-approval-arizona/">Condo and single-unit approval</a></span>'),
+   ('Will collections or judgments stop me?',
+    'Not usually on their own, and paying an old collection is not automatically the right move. '
+    'The item that actually stops FHA files is unpaid federal debt, including a defaulted federal '
+    'student loan that fell off your credit report years ago and still shows in the federal '
+    'screening. Raise it on the first call. '
+    '<span class="more"><a href="/blog/fha-collections-judgments-federal-debt/">Collections, judgments and federal debt</a></span>'),
+   ('What is a manual underwrite and should I worry?',
+    'It means a human applies a stricter framework instead of the automated evaluation. Ratio '
+    'limits tighten and compensating factors start to matter, which makes documented rent history '
+    'and real reserves after closing the most valuable things in your file. It is the one situation '
+    'where how your file is presented changes the outcome. '
+    '<span class="more"><a href="/blog/fha-manual-underwrite-explained/">Winning a manual underwrite</a></span>'),
+   ('Is FHA or conventional cheaper for me?',
+    'It depends on your credit and how long you keep the loan, and the factor that usually decides '
+    'it is how long the mortgage insurance lasts on each. Ask for both payments with the insurance '
+    'line broken out, and the total over the period you realistically expect to hold, not over '
+    'thirty years. '
+    '<span class="more"><a href="/blog/fha-vs-conventional-arizona/">How to actually decide</a></span>'),
   ],
   related=[
    ('/loan-programs/conventional-loans/', 'Conventional loans',

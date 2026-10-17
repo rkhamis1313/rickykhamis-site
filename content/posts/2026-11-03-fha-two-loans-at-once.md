@@ -12,6 +12,8 @@ tags:
   - Arizona
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 The short answer is generally no, and the exceptions are narrower than the internet implies.
 
 Worth understanding properly, because this is a question where a borrower acting on a half-remembered rule can end up making an occupancy representation they cannot support, and that is not a paperwork problem.

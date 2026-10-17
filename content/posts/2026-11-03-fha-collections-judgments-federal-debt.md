@@ -12,6 +12,8 @@ tags:
   - Arizona
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 Borrowers lump these together. Underwriting does not. They are three distinct issues with three different answers, and treating them as one problem is how a file gets a nasty surprise late.
 
 ## Collections and charged-off accounts

@@ -12,6 +12,8 @@ tags:
   - Debt-to-Income
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 Support payments cut both ways in an FHA file, and borrowers routinely get one direction wrong.
 
 If you receive support, it can be real qualifying income and people fail to claim it. If you pay support, it is an obligation and people fail to disclose it, which an underwriter finds anyway.

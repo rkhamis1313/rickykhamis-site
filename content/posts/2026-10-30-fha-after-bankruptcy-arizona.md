@@ -12,6 +12,8 @@ tags:
   - Arizona
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 A credit event is not a permanent disqualification, and FHA is generally the most accommodating path back. Two things decide your timeline: how long it has been, and whether an exception applies to you.
 
 Most borrowers only learn about the first. The exceptions are where the real opportunity is, and they require someone willing to document them.

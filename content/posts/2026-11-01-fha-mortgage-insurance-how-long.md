@@ -12,6 +12,8 @@ tags:
   - Conventional
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 This is the most consequential thing about an FHA loan that borrowers understand least at closing, and it is the factor that most often decides whether FHA was the right choice in hindsight.
 
 ## The two premiums

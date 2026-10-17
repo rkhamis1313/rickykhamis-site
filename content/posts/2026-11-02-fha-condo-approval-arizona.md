@@ -12,6 +12,8 @@ tags:
   - First-Time Buyers
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 A buyer finds a condo they want, writes an offer with FHA financing, and learns in week two that the building is not FHA approved. Historically that was the end of it.
 
 It is no longer automatically the end of it, and the path that exists now is one of the more useful underused tools in the program.

@@ -65,8 +65,13 @@ BANNED = [
     (r'\byou\s+will\s+(?:save|qualify|be\s+approved)\b', 'a promised outcome'),
     (r'\bno\s+(?:closing\s+)?costs?\b(?!\s*\?)', 'a no-costs claim'),
     (r'\$\d[\d,]*\s*(?:/|per\s+)mo(?:nth)?\b', 'a specific monthly payment'),
-    (r'\b\w*(?:neighbour|behaviour|favour|colour|centre|metre|licence|organis|'
-     r'recognis|whilst|amongst)\w*\b', 'a British spelling'),
+    # organis(?!m) and analyse(?!s) for the same reason compliance_check.py
+    # narrows them: "wood-destroying organism" is the standard inspection term
+    # and "analyses" is the correct US plural of "analysis". Blocking correct
+    # English is the more expensive error, and both already failed a build.
+    (r'\b\w*(?:neighbour|behaviour|favour|colour|centre|metre|licence|'
+     r'organis(?!m)|recognis|analyse(?!s)|whilst|amongst)\w*\b',
+     'a British spelling'),
 ]
 
 REQUIRED = [
@@ -75,6 +80,98 @@ REQUIRED = [
     ('173141', "Ricky's NMLS number"),
     ('nmlsconsumeraccess.org', 'the NMLS Consumer Access link'),
 ]
+
+
+BLOG_LINK = re.compile(r'<a href="/blog/([a-z0-9-]+)/">(.*?)</a>', re.S)
+MORE_SPAN = re.compile(r'\s*<span class="more">.*?</span>', re.S)
+MORE_LINK = re.compile(
+    r'\s*<span class="more">\s*<a href="/blog/([a-z0-9-]+)/">.*?</a>\s*</span>',
+    re.S)
+
+
+def prune_unrendered_links(html: str) -> tuple[str, list[str]]:
+    """Unwrap links to posts that have not rendered yet, keeping the text.
+
+    The editorial queue is written weeks ahead, so a page that links every
+    article in the plan puts 404s on exactly the pages search engines crawl
+    first. build_hubs.py handles this by linking only posts that exist; these
+    pages carry their links inside prose and FAQ answers, so the same rule is
+    applied to the finished HTML instead. That covers the visible page and the
+    FAQPage JSON-LD in one pass, since both are in the document by this point.
+
+    Each link comes back on its own as the post it points at goes live, so
+    nothing has to be remembered or re-edited.
+    """
+    pruned: list[str] = []
+
+    def rendered(slug: str) -> bool:
+        return (SITE / 'blog' / slug / 'index.html').exists()
+
+    # A trailing "read further" pointer is wrapped in <span class="more">, so
+    # an unpublished one is removed whole. Unwrapping it instead would leave
+    # the article title stranded as a sentence with no link.
+    def sub_more(m):
+        slug = m.group(1)
+        if rendered(slug):
+            return m.group(0)
+        pruned.append(slug)
+        return ''
+
+    html = MORE_LINK.sub(sub_more, html)
+
+    # An inline link inside a sentence is unwrapped rather than removed, since
+    # deleting it would break the prose around it.
+    def sub_inline(m):
+        slug, text = m.group(1), m.group(2)
+        if rendered(slug):
+            return m.group(0)
+        pruned.append(slug)
+        return text
+
+    html = BLOG_LINK.sub(sub_inline, html)
+    # No whitespace tidying here. An earlier version collapsed runs of spaces
+    # and stripped the space before punctuation, which silently corrupted the
+    # inline SVG icons in the page chrome: in path data "3 .4" is two numbers
+    # and "3.4" is one, so every social icon on all eight pages was mangled.
+    # MORE_SPAN already swallows the whitespace ahead of a removed pointer, and
+    # unwrapping an inline link leaves the surrounding prose untouched, so
+    # there is nothing left to tidy.
+    return html, pruned
+
+
+def faq_answer_text(a: str) -> str:
+    """Plain-text answer for the FAQPage structured data.
+
+    The trailing <span class="more"> pointer is page furniture: on screen it is
+    a link to the deep article, but tags get stripped for the schema, which
+    left the article title sitting in the answer as a dangling fragment
+    ("...narrower than the internet suggests. Can you have two FHA loans at
+    once?"). Structured data should carry a complete answer and nothing else,
+    so the pointer is removed here rather than flattened.
+    """
+    a = MORE_SPAN.sub('', a)
+    a = re.sub(r'<[^>]+>', '', a)
+    return re.sub(r'\s+([.,;:])', r'\1', re.sub(r'\s{2,}', ' ', a)).strip()
+
+
+def screen_faq(p: dict) -> list[str]:
+    """FAQ answers may not carry [[RULE:]] markers.
+
+    build_main's output is run through guidelines.expand, but the FAQPage
+    structured data is assembled separately straight from p['faq'], so a
+    marker there renders correctly on screen and ships as literal text inside
+    the JSON-LD. Keep FAQ answers qualitative and cite the figure on the
+    linked article instead.
+    """
+    problems = []
+    for q, a in p.get('faq', []):
+        for field, label in ((q, 'question'), (a, 'answer')):
+            if '[[' in field:
+                problems.append(
+                    f'{p["path"]}: marker in faq {label} "{q[:48]}". It would '
+                    'leak into the FAQPage JSON-LD; keep FAQ answers '
+                    'qualitative and cite the figure on the linked article.')
+    return problems
 
 
 def screen(path: str, html: str) -> list[str]:
@@ -232,7 +329,19 @@ def build_main(p: dict) -> str:
       '</div></section>'
     )
     out.append('</main>')
-    return '\n'.join(out)
+    html = '\n'.join(out)
+
+    # Expand any [[RULE:key]] markers the same way new_post.py does for posts.
+    # Program pages carried sourced figures inline before this existed, which
+    # is better than nothing and still has no verification date and no way to
+    # go stale loudly. A marker here gets the citation, the date and the age
+    # notice, and refreshing every page after a handbook update is one edit.
+    try:
+        import guidelines
+        html = guidelines.expand(html)
+    except ImportError:
+        pass
+    return html
 
 
 def build(p: dict, template: str) -> tuple[Path, bool]:
@@ -271,8 +380,7 @@ def build(p: dict, template: str) -> tuple[Path, bool]:
             '@type': 'FAQPage',
             'mainEntity': [
               {'@type': 'Question', 'name': q,
-               'acceptedAnswer': {'@type': 'Answer',
-                                  'text': re.sub(r'<[^>]+>', '', a)}}
+               'acceptedAnswer': {'@type': 'Answer', 'text': faq_answer_text(a)}}
               for q, a in p['faq']
             ],
           },
@@ -300,7 +408,12 @@ def build(p: dict, template: str) -> tuple[Path, bool]:
         if n != 1:
             raise ValueError('no </body> to attach scripts to')
 
-    problems = screen(f'/{p["path"]}/', doc)
+    doc, pruned = prune_unrendered_links(doc)
+    if pruned:
+        print(f'  . /{p["path"]}/ held {len(pruned)} link(s) to unpublished '
+              f'post(s): {", ".join(sorted(set(pruned)))}')
+
+    problems = screen(f'/{p["path"]}/', doc) + screen_faq(p)
     if problems:
         raise ValueError('house style or disclosure problem:\n  ' + '\n  '.join(problems))
 

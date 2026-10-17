@@ -12,6 +12,8 @@ tags:
   - Sellers
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 Plenty of listing agents treat an FHA offer as a weaker offer, and a buyer with an FHA pre-approval loses contested properties partly because of it.
 
 Some of that reputation is earned and some is folklore. Worth separating, because if you are a seller, understanding it protects your closing date, and if you are a buyer, understanding it makes your offer stronger.

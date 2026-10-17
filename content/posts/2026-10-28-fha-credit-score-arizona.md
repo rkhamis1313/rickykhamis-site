@@ -12,6 +12,8 @@ tags:
   - First-Time Buyers
 ---
 
+*Part of the [FHA loans in Arizona](/loan-programs/fha-loans/) guide, where every rule on this page is cited and dated.*
+
 A borrower reads the FHA minimum credit score online, checks their own score, sees they are above it, applies, and gets declined. Then they conclude the lender made a mistake or the internet lied.
 
 Neither. They ran into an **overlay**, and nobody explained that the published minimum is not the number that decides anything.
