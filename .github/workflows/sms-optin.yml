@@ -1,0 +1,34 @@
+# One-time A2P 10DLC compliance patch: adds the optional SMS opt-in checkbox
+# disclosure to every lead form consent line and SMS sections to the Privacy Policy and Terms of Use.
+# The script is idempotent, so re-running this is harmless.
+name: SMS opt-in patch
+
+on:
+  push:
+    branches: [claude/rickykhamis-daily-blog-automation-dovt88]
+    paths: [scripts/sms_optin.py, .github/workflows/sms-optin.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/rickykhamis-daily-blog-automation-dovt88
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Apply patch
+        run: python scripts/sms_optin.py .
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A site gen
+          if git diff --cached --quiet; then echo "Nothing to change"; exit 0; fi
+          git commit -m "A2P 10DLC: optional SMS opt-in checkbox on lead forms, /sms-consent/ page"
+          git push origin HEAD:claude/rickykhamis-daily-blog-automation-dovt88
