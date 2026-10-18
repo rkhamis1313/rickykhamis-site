@@ -58,9 +58,11 @@
       "program": "FHA",
       "topic": "collateral",
       "question": "Can an FHA loan cover repairs?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "Section 203(k) is FHA's renovation program, financing a purchase and the improvements together and sizing the loan on the completed value. It is the route for a property that cannot pass as-is, and HUD REO properties that do not qualify for Section 203(b) are eligible only under 203(k).",
+      "section": "HUD Handbook 4000.1 Section 203(k), verified against a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "overlayReality": "This is the clearest overlay in the whole program. The lender matrix I verified this against states plainly that it does not originate or purchase 203(k) transactions at all. FHA offers the program; that investor will not do it. A borrower told renovation financing is not available was told one shelf's answer, and placing a 203(k) is a matter of finding a lender who does them.",
+      "judgmentNeeded": "Who do you actually place 203(k) files with, and how much longer do they take?"
     },
     "fha-appraisal-repairs": {
       "program": "FHA",
@@ -96,50 +98,58 @@
       "topic": "process",
       "question": "How much equity can I take out with an FHA cash-out refinance?",
       "judgmentNeeded": "Worth saying when FHA cash-out beats a conventional cash-out and when it clearly does not.",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "FHA cash-out refinancing is capped at 80% loan-to-value. If the property was listed for sale it must have been off the market at least six months before the application, where a rate-and-term refinance only requires it to be off the market one day before application.",
+      "section": "HUD Handbook 4000.1, verified against Part Q of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "overlayReality": "The six month seasoning after a listing is the one that catches people. A seller who gives up, pulls the listing and decides to take equity out instead cannot do a cash-out for half a year. A rate-and-term is available almost immediately, so if the goal is a lower payment rather than cash, there is a path now."
     },
     "fha-cash-to-close-sourcing": {
       "program": "FHA",
       "topic": "assets",
       "question": "Where can my down payment and closing costs come from?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "Every dollar of cash to close must be sourced and documented. Asset verification must be current, and where a third-party verification service is used the data has to be current within 30 days of the verification date. Cash that cannot be traced to a documented source cannot be used, which is why cash deposits are generally unusable and why any large or unusual deposit is questioned.",
+      "section": "HUD Handbook 4000.1, verified against Part H of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Worth one line on the largest deposit you have had to source and what finally satisfied it."
     },
     "fha-child-support-income": {
       "program": "FHA",
       "topic": "income",
       "question": "Does child support or alimony count as income?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "Alimony and child support are recognised sources of effective income when properly verified and documented, alongside pensions, Social Security, disability, trust income and others. Effective income must be shown to be reasonably likely to continue for at least the first three years of the loan, which is the test that matters for support with an end date.",
+      "section": "HUD Handbook 4000.1, verified against Part G of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "overlayReality": "The continuation test is what decides this. Child support with a termination date inside three years contributes little or nothing to qualifying, however reliably it arrives today. Get the order and the payment history from the state disbursement records early, because a documented history is the difference between income and a number nobody will count.",
+      "judgmentNeeded": "Does Arizona's clearinghouse payment history satisfy underwriting cleanly, or do you need more?"
     },
     "fha-child-support-obligation": {
       "program": "FHA",
       "topic": "obligations",
       "question": "How does child support I pay affect what I qualify for?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "Support you pay is a monthly obligation and is included in your liabilities for the debt-to-income calculation. It appears in credit reporting, in the decree and as a recurring withdrawal in bank statements, so it is found whether or not it is disclosed. Arrears are a separate and more serious matter than the monthly amount.",
+      "section": "HUD Handbook 4000.1, verified against Part I of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Disclose on call one. Worth saying how often an undisclosed obligation surfaces late and what it costs."
     },
     "fha-collections-judgments": {
       "program": "FHA",
       "topic": "credit",
       "question": "Do I have to pay off collections and judgments?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "Collection accounts are evaluated against a cumulative balance threshold rather than individually, and in a community property state the collection accounts of a non-borrowing spouse are included in that cumulative balance and analyzed as part of your ability to pay, unless state law excludes them. Judgments of a non-borrowing spouse in a community property state generally must be resolved. Disputed derogatory accounts are treated differently again, and a non-borrowing spouse's disputed accounts are not counted toward the cumulative balance.",
+      "section": "HUD Handbook 4000.1, verified against Part F of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "overlayReality": "Arizona is a community property state, so this matters here in a way it does not in most of the country. A spouse who is not on the loan can still bring collections and judgments into the analysis. If your spouse is staying off the application to protect the file, their derogatory credit may follow it anyway, and that is worth finding out in week one.",
+      "judgmentNeeded": "Arizona community property angle is strong. Have you had a non-borrowing spouse's collections change a file?"
     },
     "fha-condo-approval": {
       "program": "FHA",
       "topic": "collateral",
       "question": "Does the condo have to be FHA approved?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "Single-unit approval exists. Have you used it, and how long did it take?"
+      "handbookFloor": "Other than on a streamline refinance, the condominium project must be HUD approved and the approval must not be expired at the time the case number is issued. HUD publishes a searchable list of approved projects, so the status of a specific building is checkable before you write an offer rather than discovered in underwriting.",
+      "section": "HUD Handbook 4000.1, verified against Part J of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Have you used single-unit approval, and how long did it actually take?",
+      "overlayReality": "The lender matrix I verified this against states it will not process a DELRAP, the lender-driven review by which a project can be approved directly. So at that investor an unapproved building is simply unapproved; there is no path to get it reviewed. Whether your originator will pursue project or single-unit approval is therefore a question worth asking out loud, because the answer varies and most buyers never ask."
     },
     "fha-departing-residence": {
       "program": "FHA",
@@ -163,10 +173,11 @@
       "program": "FHA",
       "topic": "obligations",
       "question": "What debt-to-income ratio will FHA allow?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "The spread between the TOTAL Scorecard answer and the manual answer is the real story."
+      "handbookFloor": "On a file that receives an automated approval the maximum debt-to-income ratio is whatever the automated underwriting system returns, rather than a single published ceiling. Manually underwritten files must meet HUD's own manual requirements, where the ratio limits are tighter and documented compensating factors are what allow a file above the baseline.",
+      "section": "HUD Handbook 4000.1 Chapter 5, verified against the Qualifying Ratios section of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "How often does an exception review come back approved, and what makes the difference?",
+      "overlayReality": "The investor layer is where this gets real. The matrix I verified this against requires an internal exception review for any FHA file with a qualifying score below 660 where both ratios exceed 37 and 47. Both have to exceed, so a 39 and 50 goes to review and a 39 and 43 does not. That is an extra approval step most borrowers never hear about, and it is the kind of thing that turns a yes into a maybe."
     },
     "fha-ead-work-authorization": {
       "program": "FHA",
@@ -199,10 +210,11 @@
       "program": "FHA",
       "topic": "assets",
       "question": "Can the FHA down payment be a gift?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "Which donor documentation requests kill the most deals in practice?"
+      "handbookFloor": "For funds to count as a gift there must be no expected or implied repayment to the donor. The lender must establish both that the gift did not come from an unacceptable source and that the money was the donor's own funds, which is why the donor's bank statement is requested and why the request is not optional. Timing of when the gift reached you does not remove that requirement.",
+      "section": "HUD Handbook 4000.1, verified against Part H of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Which donor documentation request kills the most deals in practice?",
+      "overlayReality": "One trap worth knowing: on a manually underwritten file, surplus gift funds may not be counted as cash reserves. So a borrower whose entire cash position is a gift can satisfy the down payment and still fail the reserve test, and manual underwriting is exactly where reserves matter most."
     },
     "fha-identity-of-interest": {
       "program": "FHA",
@@ -217,10 +229,11 @@
       "program": "FHA",
       "topic": "collateral",
       "question": "What is the FHA loan limit in Maricopa County?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "This is published annually by HUD by county. Needs a yearly refresh, not a one-time verification."
+      "handbookFloor": "FHA sets a maximum loan amount by county and revises it annually, and the programs distinguish standard loan amounts from high balance loan amounts, which are the amounts above the standard limit in higher-cost counties. Because the figure changes every year, the current Maricopa County limit should be read from HUD rather than from any page that hardcodes it, including this one.",
+      "section": "HUD published county loan limits, cross-checked against the standard and high balance tiers of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "This needs a yearly refresh, not a one-time verification. Worth a calendar reminder each January.",
+      "overlayReality": "High balance files carry extra conditions at the investor level. The matrix I verified this against requires a maximum of one 30-day late in 12 months on mortgage history and an automated approval for every high balance loan, where a streamline may still be manually underwritten. So crossing into high balance territory tightens the file, not just the price."
     },
     "fha-manual-underwrite": {
       "program": "FHA",
@@ -255,9 +268,11 @@
       "program": "FHA",
       "topic": "employment",
       "question": "Can a parent co-sign an FHA loan?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "A non-occupying co-borrower or cosigner is permitted on an FHA purchase. Cash-out refinancing is not permitted where one is used. The co-borrower may not be an interested party to the sales transaction, which rules out the seller, the builder or the agent.",
+      "section": "HUD Handbook 4000.1, verified against the Non-Occupant Co-Borrower section of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "overlayReality": "The matrix I verified this against expects overall transaction ratios generally not to exceed 31 and 43 when a non-occupying co-borrower is used, with higher ratios considered where the co-borrower's financial strength is established. That is tighter than the ratios an occupying borrower alone would face, so adding a parent can bring the ceiling down as well as the income up. Worth modelling both ways before anyone signs.",
+      "judgmentNeeded": "Have you seen adding a co-borrower actually hurt a file because of the tighter ratio expectation?"
     },
     "fha-non-permanent-resident": {
       "program": "FHA",
@@ -281,9 +296,10 @@
       "program": "FHA",
       "topic": "residency",
       "question": "Do I have to live in the house?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "FHA insures owner-occupied housing, and eligible property types are one to four family dwellings, planned unit developments, townhomes, row homes, modular homes and HUD approved condominiums, with manufactured homes eligible under a separate addendum. Streamline refinances are the exception that may be done on owner occupied, HUD approved secondary residences and non-owner-occupied properties.",
+      "section": "HUD Handbook 4000.1, verified against Part C of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Occupancy misrepresentation is the line people cross without realising. Worth one blunt sentence."
     },
     "fha-secondary-financing-dpa": {
       "program": "FHA",
@@ -298,10 +314,11 @@
       "program": "FHA",
       "topic": "income",
       "question": "How long do I need to be self-employed for an FHA loan?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "The same-industry exception is the whole answer for a lot of people. How have you documented prior experience successfully?"
+      "handbookFloor": "Qualifying income must be shown to be reasonably likely to continue for at least the first three years of the loan, and every file carries an income worksheet setting out the rationale behind the calculation. For a self-employed borrower that means the figure is derived and documented rather than stated, and you are entitled to see how it was reached.",
+      "section": "HUD Handbook 4000.1, verified against Part G of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "The same-industry exception for under two years: how have you documented prior experience successfully?",
+      "overlayReality": "Ask for the income worksheet. It is a required document, it shows the arithmetic that produced your qualifying income, and almost no borrower knows to ask for it. If the number came out lower than you expected, the worksheet is where you find out whether an add-back was missed or a year was treated as the qualifying figure."
     },
     "fha-seller-concession-limit": {
       "program": "FHA",
@@ -317,9 +334,10 @@
       "program": "FHA",
       "topic": "process",
       "question": "What is an FHA streamline refinance?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "A streamline refinance carries reduced documentation and is the one FHA transaction available on a non-owner-occupied property or a HUD approved secondary residence as well as a primary home. Non-owner-occupied properties and HUD approved secondary residences may only be streamline refinanced into a fixed rate mortgage. A streamline stays inside FHA, so the mortgage insurance structure continues; it lowers a rate, it does not escape the premium.",
+      "section": "HUD Handbook 4000.1, verified against Part Q of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "People conflate a streamline with escaping MIP. Worth being blunt that it does not."
     },
     "fha-student-loan-payment": {
       "program": "FHA",

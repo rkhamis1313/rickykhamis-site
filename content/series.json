@@ -2135,6 +2135,62 @@
       "slug": "fha-appraisal-repairs-sellers",
       "date": "2026-10-18",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-two-loans-at-once",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-student-loans-dti",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-self-employed-arizona",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-manual-underwrite-explained",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-condo-approval-arizona",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-collections-judgments-federal-debt",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-child-support-alimony",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-after-bankruptcy-arizona",
+      "date": "2026-10-18",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
