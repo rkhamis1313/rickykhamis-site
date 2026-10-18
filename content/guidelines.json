@@ -54,23 +54,22 @@
     "judgmentNeeded": "Optional note on what Ricky still has to add to the page."
   },
   "rules": {
-    "fha-min-credit-score": {
+    "fha-203k-renovation": {
       "program": "FHA",
-      "topic": "credit",
-      "question": "What credit score does FHA actually require?",
+      "topic": "collateral",
+      "question": "Can an FHA loan cover repairs?",
       "handbookFloor": null,
       "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "The overlay gap is the entire value of this page. What is the lowest score you have actually closed, and how many investors would touch it?"
+      "verifiedOn": null
     },
-    "fha-gift-funds": {
+    "fha-appraisal-repairs": {
       "program": "FHA",
-      "topic": "assets",
-      "question": "Can the FHA down payment be a gift?",
+      "topic": "collateral",
+      "question": "What will an FHA appraiser make the seller fix?",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null,
-      "judgmentNeeded": "Which donor documentation requests kill the most deals in practice?"
+      "judgmentNeeded": "The listing-agent angle: which FHA appraisal call-outs most often blow up a resale, and how do you get ahead of them?"
     },
     "fha-bankruptcy-waiting-period": {
       "program": "FHA",
@@ -81,31 +80,30 @@
       "verifiedOn": null,
       "judgmentNeeded": "Chapter 13 while still in plan: have you closed one, and what did the trustee letter need to say?"
     },
-    "fha-foreclosure-waiting-period": {
+    "fha-caivrs-federal-debt": {
       "program": "FHA",
       "topic": "credit",
-      "question": "How long after a foreclosure or short sale?",
+      "question": "Can unpaid federal debt stop my FHA loan?",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null
     },
-    "fha-student-loan-payment": {
+    "fha-cash-out-refinance": {
       "program": "FHA",
-      "topic": "obligations",
-      "question": "How is a student loan payment counted if it is deferred or on an income-driven plan?",
+      "topic": "process",
+      "question": "How much equity can I take out with an FHA cash-out refinance?",
+      "judgmentNeeded": "Worth saying when FHA cash-out beats a conventional cash-out and when it clearly does not.",
       "handbookFloor": null,
       "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "This rule changed in recent years. Worth saying what the practical effect was on borrowers you were working with."
+      "verifiedOn": null
     },
-    "fha-self-employed-history": {
+    "fha-cash-to-close-sourcing": {
       "program": "FHA",
-      "topic": "income",
-      "question": "How long do I need to be self-employed for an FHA loan?",
+      "topic": "assets",
+      "question": "Where can my down payment and closing costs come from?",
       "handbookFloor": null,
       "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "The same-industry exception is the whole answer for a lot of people. How have you documented prior experience successfully?"
+      "verifiedOn": null
     },
     "fha-child-support-income": {
       "program": "FHA",
@@ -123,75 +121,40 @@
       "section": null,
       "verifiedOn": null
     },
-    "fha-mip-duration": {
+    "fha-collections-judgments": {
       "program": "FHA",
-      "topic": "process",
-      "question": "How long do I pay FHA mortgage insurance?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "The refinance-out-of-FHA play is the practical answer. When does it make sense and when does it not?"
-    },
-    "fha-loan-limit-maricopa": {
-      "program": "FHA",
-      "topic": "collateral",
-      "question": "What is the FHA loan limit in Maricopa County?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "This is published annually by HUD by county. Needs a yearly refresh, not a one-time verification."
-    },
-    "fha-occupancy-requirement": {
-      "program": "FHA",
-      "topic": "residency",
-      "question": "Do I have to live in the house?",
+      "topic": "credit",
+      "question": "Do I have to pay off collections and judgments?",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null
     },
-    "fha-two-fha-loans": {
+    "fha-condo-approval": {
       "program": "FHA",
-      "topic": "residency",
-      "question": "Can I have two FHA loans at once?",
+      "topic": "collateral",
+      "question": "Does the condo have to be FHA approved?",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null,
-      "judgmentNeeded": "The relocation and family-size exceptions are where this gets interesting. Closed any?"
+      "judgmentNeeded": "Single-unit approval exists. Have you used it, and how long did it take?"
     },
-    "fha-non-occupant-coborrower": {
+    "fha-departing-residence": {
       "program": "FHA",
-      "topic": "employment",
-      "question": "Can a parent co-sign an FHA loan?",
+      "topic": "obligations",
+      "question": "I am keeping my current home. Does that payment count against me?",
+      "judgmentNeeded": "This is one of the widest overlay spreads there is. Which investors let a lease and a documented deposit exclude the old payment, and which make you close the sale first?",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null
     },
-    "fha-seller-concession-limit": {
-      "program": "FHA",
-      "topic": "process",
-      "question": "How much can the seller pay toward my FHA closing costs?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "Ties directly into the buydown content. How often does the FHA cap bind before the seller's willingness does?"
-    },
-    "fha-appraisal-repairs": {
+    "fha-disaster-area-reinspection": {
       "program": "FHA",
       "topic": "collateral",
-      "question": "What will an FHA appraiser make the seller fix?",
+      "question": "My area had a wildfire or flood. Does the appraisal have to be redone?",
+      "judgmentNeeded": "Arizona-relevant for wildfire and monsoon flooding. Have you had a closing held for a disaster re-inspection, and how long did it add?",
       "handbookFloor": null,
       "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "The listing-agent angle: which FHA appraisal call-outs most often blow up a resale, and how do you get ahead of them?"
-    },
-    "fha-manual-underwrite": {
-      "program": "FHA",
-      "topic": "process",
-      "question": "What is a manual underwrite and why am I in one?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "Compensating factors are judgment. Which ones actually move an underwriter?"
+      "verifiedOn": null
     },
     "fha-dti-limits": {
       "program": "FHA",
@@ -202,18 +165,11 @@
       "verifiedOn": null,
       "judgmentNeeded": "The spread between the TOTAL Scorecard answer and the manual answer is the real story."
     },
-    "fha-collections-judgments": {
+    "fha-ead-work-authorization": {
       "program": "FHA",
-      "topic": "credit",
-      "question": "Do I have to pay off collections and judgments?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
-    },
-    "fha-cash-to-close-sourcing": {
-      "program": "FHA",
-      "topic": "assets",
-      "question": "Where can my down payment and closing costs come from?",
+      "topic": "residency",
+      "question": "What work authorization documents do I need as a non-citizen?",
+      "judgmentNeeded": "Documentation is where these stall. What do you ask for on the first call to avoid a week-three surprise?",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null
@@ -222,6 +178,76 @@
       "program": "FHA",
       "topic": "employment",
       "question": "I changed jobs or had a gap. Does that disqualify me?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-foreclosure-waiting-period": {
+      "program": "FHA",
+      "topic": "credit",
+      "question": "How long after a foreclosure or short sale?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-gift-funds": {
+      "program": "FHA",
+      "topic": "assets",
+      "question": "Can the FHA down payment be a gift?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Which donor documentation requests kill the most deals in practice?"
+    },
+    "fha-identity-of-interest": {
+      "program": "FHA",
+      "topic": "collateral",
+      "question": "Can I buy a house from a family member with an FHA loan?",
+      "judgmentNeeded": "Non-arm's length purchases get extra scrutiny. What have you actually had to produce to close one?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-loan-limit-maricopa": {
+      "program": "FHA",
+      "topic": "collateral",
+      "question": "What is the FHA loan limit in Maricopa County?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "This is published annually by HUD by county. Needs a yearly refresh, not a one-time verification."
+    },
+    "fha-manual-underwrite": {
+      "program": "FHA",
+      "topic": "process",
+      "question": "What is a manual underwrite and why am I in one?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Compensating factors are judgment. Which ones actually move an underwriter?"
+    },
+    "fha-min-credit-score": {
+      "program": "FHA",
+      "topic": "credit",
+      "question": "What credit score does FHA actually require?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The overlay gap is the entire value of this page. What is the lowest score you have actually closed, and how many investors would touch it?"
+    },
+    "fha-mip-duration": {
+      "program": "FHA",
+      "topic": "process",
+      "question": "How long do I pay FHA mortgage insurance?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The refinance-out-of-FHA play is the practical answer. When does it make sense and when does it not?"
+    },
+    "fha-non-occupant-coborrower": {
+      "program": "FHA",
+      "topic": "employment",
+      "question": "Can a parent co-sign an FHA loan?",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null
@@ -235,22 +261,49 @@
       "verifiedOn": null,
       "judgmentNeeded": "Work authorization documentation is where these stall. What do you ask for on the first call?"
     },
-    "fha-condo-approval": {
+    "fha-number-of-borrowers": {
       "program": "FHA",
-      "topic": "collateral",
-      "question": "Does the condo have to be FHA approved?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "Single-unit approval exists. Have you used it, and how long did it take?"
-    },
-    "fha-caivrs-federal-debt": {
-      "program": "FHA",
-      "topic": "credit",
-      "question": "Can unpaid federal debt stop my FHA loan?",
+      "topic": "employment",
+      "question": "How many people can be on an FHA loan together?",
+      "judgmentNeeded": "A good teaching example: caps here have historically been investor overlays rather than the federal rule, and they move. Worth using to show the reader the difference.",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null
+    },
+    "fha-occupancy-requirement": {
+      "program": "FHA",
+      "topic": "residency",
+      "question": "Do I have to live in the house?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-secondary-financing-dpa": {
+      "program": "FHA",
+      "topic": "assets",
+      "question": "Can I combine FHA with down payment assistance?",
+      "judgmentNeeded": "DPA programs stack onto FHA constantly in Arizona and each has its own rules. Which ones do you actually see work, and where do they break?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null
+    },
+    "fha-self-employed-history": {
+      "program": "FHA",
+      "topic": "income",
+      "question": "How long do I need to be self-employed for an FHA loan?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The same-industry exception is the whole answer for a lot of people. How have you documented prior experience successfully?"
+    },
+    "fha-seller-concession-limit": {
+      "program": "FHA",
+      "topic": "process",
+      "question": "How much can the seller pay toward my FHA closing costs?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "Ties directly into the buydown content. How often does the FHA cap bind before the seller's willingness does?"
     },
     "fha-streamline-refinance": {
       "program": "FHA",
@@ -260,13 +313,32 @@
       "section": null,
       "verifiedOn": null
     },
-    "fha-203k-renovation": {
+    "fha-student-loan-payment": {
       "program": "FHA",
-      "topic": "collateral",
-      "question": "Can an FHA loan cover repairs?",
+      "topic": "obligations",
+      "question": "How is a student loan payment counted if it is deferred or on an income-driven plan?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "This rule changed in recent years. Worth saying what the practical effect was on borrowers you were working with."
+    },
+    "fha-temporary-buydown": {
+      "program": "FHA",
+      "topic": "process",
+      "question": "Can a seller fund a temporary rate buydown on an FHA loan?",
+      "judgmentNeeded": "Ties straight into the seller and listing-agent cluster. Does the FHA concession cap bind before the seller's willingness does, on a typical Scottsdale price point?",
       "handbookFloor": null,
       "section": null,
       "verifiedOn": null
+    },
+    "fha-two-fha-loans": {
+      "program": "FHA",
+      "topic": "residency",
+      "question": "Can I have two FHA loans at once?",
+      "handbookFloor": null,
+      "section": null,
+      "verifiedOn": null,
+      "judgmentNeeded": "The relocation and family-size exceptions are where this gets interesting. Closed any?"
     }
   }
 }
