@@ -56,10 +56,15 @@ def load() -> dict:
 
 
 def _aside(inner: str) -> str:
-    return (
-        '<aside class="card" style="padding:18px 20px;margin:28px 0">'
-        f"{inner}</aside>"
-    )
+    """A cited guideline, rendered as a raised panel with an orange edge.
+
+    The visual separation is doing real work: it marks the sourced, dated
+    claim apart from the surrounding prose, which is the distinction the
+    whole citation system exists to make. Styles live in site.css under
+    .bevel and .rule rather than inline, so the treatment can be changed in
+    one place across every page that cites a rule.
+    """
+    return f'<aside class="bevel rule">{inner}</aside>' 
 
 
 def _overlay(rule: dict) -> str:
@@ -68,9 +73,9 @@ def _overlay(rule: dict) -> str:
     if not overlay:
         return ""
     return (
-        "<p style='margin:10px 0 0'><strong>What lenders actually do.</strong> "
+        '<span class="ovl"><b>What lenders actually do.</b> '
         f"{overlay} That is my observation from running these files, not a "
-        "published requirement, and it varies by investor.</p>"
+        "published requirement, and it varies by investor.</span>"
     )
 
 
@@ -115,19 +120,19 @@ def render(key: str) -> str:
     warn = ""
     if age > STALE_DAYS:
         warn = (
-            "<p style='margin:10px 0 0;font-size:.85rem'><em>This was verified "
+            '<span class="age">This was verified '
             f"{age} days ago. Guidelines change; confirm the current "
-            "requirement before you rely on it.</em></p>"
+            "requirement before you rely on it.</span>"
         )
 
     return _aside(
         f"<p style='margin:0'>{heading}{floor}</p>"
         + _overlay(rule)
-        + f"<p style='margin:10px 0 0;font-size:.85rem;color:var(--muted)'>"
+        + f'<span class="src">'
         f"Source: {section}. Verified "
         f"{as_of.strftime('%B %-d, %Y')}. Guidelines change and investor "
         "requirements are frequently stricter than the published floor; this "
-        "is general information, not a commitment to lend.</p>" + warn
+        "is general information, not a commitment to lend.</span>" + warn
     )
 
 

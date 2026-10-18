@@ -47,6 +47,10 @@ DEFAULT_IMAGE = "/assets/images/og-default.jpg"
 TITLE_SUFFIX = " | Ricky Khamis, EPiQ Lending"
 NEIGHBOUR_TITLE_CAP = 48
 
+# Series whose posts make sourced regulatory claims and therefore carry the
+# credential strip. Opt-in by name so adding a series is a deliberate act.
+GUIDELINE_SERIES = {"fha", "va", "conventional", "jumbo", "declines"}
+
 CARD_RE = re.compile(
     r'<div class="card post"><a href="(?P<url>/blog/[^"]+/)">'
     r'(?P<thumb>.*?)</a>'
@@ -420,10 +424,25 @@ def render_post(meta: dict, body_html: str, template: str, newer: dict | None,
 
     hero_img = ""
     if meta.get("image"):
-        hero_img = (
-            f'<img src="{image}" alt="{title_attr}" '
-            'style="border-radius:18px;margin-bottom:32px;aspect-ratio:16/9;'
-            'object-fit:cover;width:100%">'
+        hero_img = f'<img class="bevel-img" src="{image}" alt="{title_attr}">'
+
+    # A credential strip above the fold on pages that cite a guideline. These
+    # pages make sourced regulatory claims, so who stands behind them and
+    # under which licence belongs at the top where a reader and an answer
+    # engine both meet it, not only in the footer. Scoped to the series that
+    # carries citations so the rest of the blog is unchanged.
+    if (meta.get("series") or "").strip().lower() in GUIDELINE_SERIES:
+        hero_img += (
+            '<aside class="vstrip">'
+            '<img src="/assets/images/epiq-logo.png" alt="EPiQ Lending" '
+            'width="38" height="38" loading="lazy">'
+            '<span class="t"><b>Verified and written by Ricky Khamis</b>, '
+            'President of EPiQ Lending, lending in Arizona since 1999. '
+            '<span class="nm">NMLS #173141</span> \u00b7 EPiQ Lending NMLS '
+            '#1936984 \u00b7 Scottsdale, AZ. Every guideline on this page '
+            'carries its source and the date it was verified.</span>'
+            '<a class="btn" href="tel:+14809999842">(480) 999-9842</a>'
+            '</aside>'
         )
     # Expand any <!-- MARKET:Community --> markers from the neighborhood data.
     # Kept out of the markdown on purpose: sale prices go stale in weeks, and a

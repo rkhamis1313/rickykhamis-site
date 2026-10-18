@@ -2107,6 +2107,34 @@
       "slug": "fha-credit-score-arizona",
       "date": "2026-10-18",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-vs-conventional-arizona",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-mortgage-insurance-how-long",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-gift-funds-down-payment",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-appraisal-repairs-sellers",
+      "date": "2026-10-18",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
