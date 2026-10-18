@@ -2,7 +2,7 @@
 title: "The Arizona Septic Transfer Inspection: Put It on the Calendar at Contract"
 slug: arizona-septic-transfer-inspection-loan
 description: "Arizona requires an on-site wastewater system inspection when a property transfers. It takes calendar time, it occasionally finds something expensive, and it is one of the most common causes of a delayed closing on desert acreage."
-date: 2026-10-18
+date: 2026-10-28
 city: Scottsdale
 tags:
   - Arizona

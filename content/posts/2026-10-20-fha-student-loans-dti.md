@@ -2,7 +2,7 @@
 title: "How FHA Counts Your Student Loans, and Why It Changed What You Qualify For"
 slug: fha-student-loans-dti
 description: "The way a deferred or income-driven student loan payment gets counted decides how much house you qualify for. The rule has changed, and the change moved real buying power."
-date: 2026-10-30
+date: 2026-10-20
 city: Scottsdale
 series: fha
 tags:

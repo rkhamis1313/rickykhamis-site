@@ -2093,6 +2093,20 @@
       "slug": "self-employed-carefree-az",
       "date": "2026-10-17",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-loan-arizona-guide",
+      "date": "2026-10-18",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "fha",
+      "slug": "fha-credit-score-arizona",
+      "date": "2026-10-18",
+      "offQueue": true
     }
   ],
   "seriesNotes": {

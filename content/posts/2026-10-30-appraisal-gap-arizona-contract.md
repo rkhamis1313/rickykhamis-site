@@ -2,7 +2,7 @@
 title: "When the Appraisal Comes In Low: Your Options on an Arizona Contract"
 slug: appraisal-gap-arizona-contract
 description: "A value below contract price does not kill a deal, it reallocates cash. Here are the five ways a gap gets closed, what a reconsideration of value actually requires, and how to plan for it before you need to."
-date: 2026-10-20
+date: 2026-10-30
 city: Scottsdale
 tags:
   - Appraisals

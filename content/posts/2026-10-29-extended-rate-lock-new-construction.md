@@ -2,7 +2,7 @@
 title: "Extended Rate Locks on New Construction: Covering a Delivery You Cannot Control"
 slug: extended-rate-lock-new-construction
 description: "A house delivering in eight months cannot be financed with a thirty day lock. Extended locks, float-downs and lock extensions each cost something. Here is how to decide what to buy."
-date: 2026-10-19
+date: 2026-10-29
 city: Scottsdale
 tags:
   - New Construction

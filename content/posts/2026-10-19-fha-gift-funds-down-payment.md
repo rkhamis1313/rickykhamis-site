@@ -2,7 +2,7 @@
 title: "Using Gift Funds for an FHA Down Payment: The Paper Trail Is the Whole Job"
 slug: fha-gift-funds-down-payment
 description: "Family help with an FHA down payment is routine and permitted. It goes wrong when money moves before the paperwork, or arrives as cash, or the donor will not produce a statement."
-date: 2026-10-29
+date: 2026-10-19
 city: Scottsdale
 series: fha
 tags:

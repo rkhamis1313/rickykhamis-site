@@ -230,19 +230,20 @@
       "program": "FHA",
       "topic": "credit",
       "question": "What credit score does FHA actually require?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "The overlay gap is the entire value of this page. What is the lowest score you have actually closed, and how many investors would touch it?"
+      "handbookFloor": "A minimum decision credit score of 580 reaches FHA's maximum financing, a 96.50% loan-to-value on a purchase. Scores from 500 to 579 are eligible at a reduced loan-to-value, which means a larger down payment. The rate-and-term and simple refinance maximum is 97.75% loan-to-value, and cash-out is capped at 80%.",
+      "section": "HUD Handbook 4000.1, confirmed against the Loan Matrix of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Lowest score you have actually closed, and how many investors would touch it.",
+      "overlayReality": "The lender matrix I verified this against sets its own floor at 580 for every transaction type and offers no 500 to 579 tier at all, and it also requires an automated underwriting approval. So FHA's published floor of 500 is not available there at any down payment. That is the overlay, and it is why the number you read online is not your real minimum."
     },
     "fha-mip-duration": {
       "program": "FHA",
       "topic": "process",
       "question": "How long do I pay FHA mortgage insurance?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "The refinance-out-of-FHA play is the practical answer. When does it make sense and when does it not?"
+      "handbookFloor": "The upfront premium is 175 basis points, 1.75%, of the base loan amount, financed or paid in cash. The annual premium runs for a period set by your original loan-to-value: at 90% or below it is assessed for the first 11 years of the term or until the end of the term, whichever comes first; above 90%, which includes every minimum-down-payment file, it is assessed for 30 years or the end of the term. This applies to case numbers assigned on or after June 3, 2013. Above 90% the only reliable exit is refinancing out of FHA.",
+      "section": "HUD Handbook 4000.1, Part M of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "The refinance-out-of-FHA play: when does it make sense at today's rates and when does the rate difference swamp the insurance saving?"
     },
     "fha-non-occupant-coborrower": {
       "program": "FHA",
@@ -300,10 +301,11 @@
       "program": "FHA",
       "topic": "process",
       "question": "How much can the seller pay toward my FHA closing costs?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "Ties directly into the buydown content. How often does the FHA cap bind before the seller's willingness does?"
+      "handbookFloor": "Interested parties may contribute up to 6 percent of the sales price toward the borrower's origination fees, other closing costs and discount points. Everything an interested party pays counts against that one limit, including any interest rate buydown, so a seller funding a buydown and the buyer's closing costs is spending from the same 6 percent. Premium pricing used to pay actual closing costs or prepaid items is treated separately and does not count against the limit, but it cannot be used to pay off debts, collections, escrow shortages or judgments.",
+      "section": "HUD Handbook 4000.1, Part S of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "How often does the 6 percent cap bind before the seller's willingness does, at a typical Scottsdale price point?",
+      "overlayReality": "The matrix also caps total sales incentive, including commissions and finder's fees, at 8 percent of the sales price, and it prohibits raising the sales price after the appraisal in order to create a seller credit. Those are the lender's own rules rather than FHA's, and the second one catches deals that try to manufacture concession room late."
     },
     "fha-streamline-refinance": {
       "program": "FHA",
@@ -326,10 +328,11 @@
       "program": "FHA",
       "topic": "process",
       "question": "Can a seller fund a temporary rate buydown on an FHA loan?",
-      "judgmentNeeded": "Ties straight into the seller and listing-agent cluster. Does the FHA concession cap bind before the seller's willingness does, on a typical Scottsdale price point?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "judgmentNeeded": "This is the bridge between the FHA cluster and the seller and listing-agent cluster. Worth a line on how often you use a 2-1 versus a 3-2-1 on an FHA purchase.",
+      "handbookFloor": "Temporary buydowns are permitted on FHA. Available structures include 3-2-1, 2-1, 1-1 and 1-0. They are limited to a primary residence, a purchase rather than a refinance, and a fixed rate loan. An escrow account is funded at settlement and the servicer draws from it each month for the difference between the payment at the note rate and the payment at the buydown rate. Two points decide most files: the borrower must qualify at the note rate, not the reduced rate, and a buydown funded by an interested party counts against the 6 percent interested party contribution limit.",
+      "section": "HUD Handbook 4000.1, Part W of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "overlayReality": "At the lender whose matrix I verified this against, temporary buydowns are available only through the wholesale brokered channel and not through its Select Partner channel. Which channel your originator uses can therefore decide whether the structure is available to you at all, and that is not something most borrowers know to ask."
     },
     "fha-two-fha-loans": {
       "program": "FHA",

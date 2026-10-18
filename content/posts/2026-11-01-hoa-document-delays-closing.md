@@ -2,7 +2,7 @@
 title: "When HOA Documents Delay a Closing, and How to Get Ahead of It"
 slug: hoa-document-delays-closing
 description: "Association documents, transfer fees and estoppel letters are outside your control and inside your critical path. On a Scottsdale address with layered associations, this is a week one task."
-date: 2026-10-22
+date: 2026-11-01
 city: Scottsdale
 tags:
   - HOA Dues

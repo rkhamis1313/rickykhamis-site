@@ -2,7 +2,7 @@
 title: "Arizona Closing Costs: What Each Line Is and Who Customarily Pays It"
 slug: arizona-closing-costs-who-pays-what
 description: "A walk through the charges on an Arizona purchase, which ones a lender controls, which ones are fixed by third parties, and where a buyer can actually negotiate."
-date: 2026-10-21
+date: 2026-10-31
 city: Scottsdale
 tags:
   - Closing Costs

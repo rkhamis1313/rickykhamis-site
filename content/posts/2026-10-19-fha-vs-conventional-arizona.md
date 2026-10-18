@@ -2,7 +2,7 @@
 title: "FHA or Conventional: How to Actually Decide, Not Which One Is Better"
 slug: fha-vs-conventional-arizona
 description: "There is no better program, only a better fit. The decision usually turns on one thing people rarely weigh correctly: how long the mortgage insurance lasts on each."
-date: 2026-10-29
+date: 2026-10-19
 city: Scottsdale
 series: fha
 tags:

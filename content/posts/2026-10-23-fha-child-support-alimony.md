@@ -2,7 +2,7 @@
 title: "Child Support and Alimony on an FHA File: Both Directions Count"
 slug: fha-child-support-alimony
 description: "Support you receive can be qualifying income if it is documented and continuing. Support you pay is an obligation in your ratio. Both have specific documentation requirements and both get missed."
-date: 2026-11-02
+date: 2026-10-23
 city: Scottsdale
 series: fha
 tags:

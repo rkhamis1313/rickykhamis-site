@@ -2,7 +2,7 @@
 title: "Fix the Credit First: Why Sequence Decides Which Loans You Can Get"
 slug: credit-repair-before-mortgage
 description: "Credit work done before a file is structured changes which programs exist for you. The same work attempted after an offer is accepted does not, because the clock will not allow it. A real Scottsdale file that turned on this."
-date: 2026-10-23
+date: 2026-11-02
 city: Scottsdale
 borrowerType: Self-Employed
 tags:

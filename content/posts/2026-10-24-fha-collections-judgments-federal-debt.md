@@ -2,7 +2,7 @@
 title: "Collections, Judgments and Federal Debt: Three Different FHA Problems"
 slug: fha-collections-judgments-federal-debt
 description: "A collection, a judgment and an unpaid federal debt get treated three different ways, and the last one stops more FHA files than the other two combined because nobody sees it coming."
-date: 2026-11-03
+date: 2026-10-24
 city: Scottsdale
 series: fha
 tags:

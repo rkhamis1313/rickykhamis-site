@@ -2,7 +2,7 @@
 title: "What Credit Score FHA Actually Requires, and Why Your Lender Said No Anyway"
 slug: fha-credit-score-arizona
 description: "FHA publishes a minimum. Almost no investor lends at it. The gap between the published floor and the overlay is why borrowers get declined for a loan they read they qualified for."
-date: 2026-10-28
+date: 2026-10-18
 city: Scottsdale
 series: fha
 tags:

@@ -2,7 +2,7 @@
 title: "Getting an FHA Loan After a Bankruptcy, Foreclosure or Short Sale"
 slug: fha-after-bankruptcy-arizona
 description: "FHA waiting periods after a credit event are shorter than conventional, and there are exceptions most originators never pursue. Here is what the handbook allows and what it takes to document."
-date: 2026-10-30
+date: 2026-10-20
 city: Scottsdale
 series: fha
 tags:

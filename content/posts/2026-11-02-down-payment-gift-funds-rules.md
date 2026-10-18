@@ -2,7 +2,7 @@
 title: "Gift Funds for a Down Payment: What Has to Be Documented and What Cannot Be a Gift"
 slug: down-payment-gift-funds-rules
 description: "Family gifts are routine and well-handled, as long as the paper trail is right. Here is what a gift letter needs, how the transfer should happen, and the three mistakes that create real problems."
-date: 2026-10-23
+date: 2026-11-02
 city: Scottsdale
 tags:
   - Buyers

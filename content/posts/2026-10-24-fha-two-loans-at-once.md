@@ -2,7 +2,7 @@
 title: "Can You Have Two FHA Loans at Once? Narrower Than the Internet Says"
 slug: fha-two-loans-at-once
 description: "FHA is an owner-occupant program, so the default answer is one. The exceptions are real, specific, and much narrower than most pages suggest. Here is what actually qualifies."
-date: 2026-11-03
+date: 2026-10-24
 city: Scottsdale
 series: fha
 tags:

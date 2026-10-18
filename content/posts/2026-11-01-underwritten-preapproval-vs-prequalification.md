@@ -2,7 +2,7 @@
 title: "Pre-Qualified, Pre-Approved, Underwritten: Three Different Things"
 slug: underwritten-preapproval-vs-prequalification
 description: "A pre-qualification is a calculator. An underwritten pre-approval means a human read your documents and an underwriter signed off. In a competitive situation that difference is what wins the house."
-date: 2026-10-22
+date: 2026-11-01
 city: Scottsdale
 tags:
   - Buyers

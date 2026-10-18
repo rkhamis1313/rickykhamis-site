@@ -2,7 +2,7 @@
 title: "A Realistic Escrow Timeline: What Happens in Each Week, and What Moves the Date"
 slug: escrow-timeline-arizona-30-days
 description: "Thirty days is achievable on a clean file and optimistic on most others. Here is what actually happens week by week, and the five items that most commonly push a closing."
-date: 2026-10-21
+date: 2026-10-31
 city: Scottsdale
 tags:
   - Escrow

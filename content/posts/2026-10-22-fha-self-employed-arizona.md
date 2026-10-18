@@ -2,7 +2,7 @@
 title: "Self-Employed and Buying With FHA: The Same-Industry Exception Nobody Mentions"
 slug: fha-self-employed-arizona
 description: "The standard answer is two years of returns. The exception for someone who did the same work as an employee first is real, underused, and requires documentation most originators never request."
-date: 2026-11-01
+date: 2026-10-22
 city: Scottsdale
 borrowerType: Self-Employed
 series: fha

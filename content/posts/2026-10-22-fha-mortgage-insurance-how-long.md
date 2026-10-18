@@ -2,7 +2,7 @@
 title: "How Long You Pay FHA Mortgage Insurance, and How People Actually Get Out of It"
 slug: fha-mortgage-insurance-how-long
 description: "FHA mortgage insurance may not come off the way conventional PMI does. For many loans the only reliable exit is refinancing into a different program, which makes this a decision to understand before you close."
-date: 2026-11-01
+date: 2026-10-22
 city: Scottsdale
 series: fha
 tags:

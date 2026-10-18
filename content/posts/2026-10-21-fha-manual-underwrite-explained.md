@@ -2,7 +2,7 @@
 title: "What a Manual Underwrite Is, Why You Are In One, and How to Win It"
 slug: fha-manual-underwrite-explained
 description: "A manual underwrite means a human applies a stricter framework to your file. Ratio limits tighten and compensating factors start to matter, which means how your file is presented changes the outcome."
-date: 2026-10-31
+date: 2026-10-21
 city: Scottsdale
 series: fha
 tags:

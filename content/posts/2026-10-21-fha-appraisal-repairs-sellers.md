@@ -2,7 +2,7 @@
 title: "What an FHA Appraiser Will Make the Seller Fix, and How to Get Ahead of It"
 slug: fha-appraisal-repairs-sellers
 description: "FHA appraisals carry minimum property requirements on top of valuation. That is why some listing agents resist FHA offers. Here is what actually gets called out and how to clear it before it costs a closing."
-date: 2026-10-31
+date: 2026-10-21
 city: Scottsdale
 series: fha
 tags:

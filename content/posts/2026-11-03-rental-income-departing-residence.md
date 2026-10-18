@@ -2,7 +2,7 @@
 title: "Renting Out the House You Are Leaving: What Counts and What Does Not"
 slug: rental-income-departing-residence
 description: "Keeping your current home as a rental can let you buy the next one, but only if the income is documented the way the program requires. Here is what qualifies, at what haircut, and the equity test people miss."
-date: 2026-10-24
+date: 2026-11-03
 city: Scottsdale
 tags:
   - Move-Up Buyers

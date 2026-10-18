@@ -2,7 +2,7 @@
 title: "Well Water and Mortgage Financing in Arizona: What a Lender Needs to See"
 slug: well-water-mortgage-arizona
 description: "A private or shared well is routine in the desert north and east of Scottsdale, and it is a documented underwriting item rather than a formality. Here is what gets tested, what gets recorded, and where files stall."
-date: 2026-10-18
+date: 2026-10-28
 city: Scottsdale
 tags:
   - Arizona

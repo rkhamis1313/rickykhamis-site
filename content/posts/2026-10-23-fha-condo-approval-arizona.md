@@ -2,7 +2,7 @@
 title: "Does the Condo Have to Be FHA Approved? Single-Unit Approval Changed the Answer"
 slug: fha-condo-approval-arizona
 description: "For years an FHA buyer could only buy in an approved project. Single-unit approval opened a path into unapproved buildings, and most buyers and agents still do not know it exists."
-date: 2026-11-02
+date: 2026-10-23
 city: Scottsdale
 series: fha
 tags:

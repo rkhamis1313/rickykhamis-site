@@ -2,7 +2,7 @@
 title: "Lock or Float: How to Decide, and the Question Almost Nobody Asks"
 slug: rate-lock-vs-float-arizona
 description: "Locking protects your approval, not just your payment. That is the real reason to lock, and it is the one most buyers never hear. Here is the framework, plus what a float-down is worth."
-date: 2026-10-20
+date: 2026-10-30
 city: Scottsdale
 tags:
   - Rate Locks

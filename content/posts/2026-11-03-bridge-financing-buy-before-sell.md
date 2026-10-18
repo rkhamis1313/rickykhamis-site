@@ -2,7 +2,7 @@
 title: "Buying Before You Sell: Bridge Loans and the Three Alternatives"
 slug: bridge-financing-buy-before-sell
 description: "Most move-up buyers in Scottsdale have their money in the house they are leaving. Here are the four ways to buy first, what each costs, and the qualifying question that decides which one you can use."
-date: 2026-10-24
+date: 2026-11-03
 city: Scottsdale
 tags:
   - Move-Up Buyers

@@ -2,7 +2,7 @@
 title: "Builder's Lender or Your Own: How to Compare Without Losing the Incentive"
 slug: builder-lender-vs-your-own-lender
 description: "Builders tie their best incentives to using their affiliated lender, which removes your ability to shop the loan. Here is how to evaluate whether the incentive is worth more than the competition you gave up."
-date: 2026-10-19
+date: 2026-10-29
 city: Scottsdale
 tags:
   - New Construction

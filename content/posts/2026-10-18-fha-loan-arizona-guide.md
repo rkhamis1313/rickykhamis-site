@@ -2,7 +2,7 @@
 title: "FHA Loans in Arizona: What the Handbook Says and What Lenders Actually Do"
 slug: fha-loan-arizona-guide
 description: "FHA is insurance on a loan a lender makes, not a loan from the government, and the published minimums are a floor that almost no investor lends at. Here is how the program actually works, question by question."
-date: 2026-10-28
+date: 2026-10-18
 city: Scottsdale
 series: fha
 tags:
