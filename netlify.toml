@@ -2,3 +2,11 @@
 # Nothing is compiled at deploy time. Netlify just publishes the directory.
 [build]
   publish = "site"
+
+# Serverless functions. The site itself is still a committed static mirror and
+# nothing is compiled at deploy; this only tells Netlify where functions live.
+# crm-forward receives a Netlify Forms outgoing webhook and pushes the lead to
+# the CRM, holding the API key server side so it never reaches the browser.
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

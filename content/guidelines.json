@@ -75,18 +75,21 @@
       "program": "FHA",
       "topic": "credit",
       "question": "How long after a bankruptcy can I get an FHA loan?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "Chapter 13 while still in plan: have you closed one, and what did the trustee letter need to say?"
+      "handbookFloor": "Chapter 7 must be discharged 24 months before the case number assignment date. Chapter 13 must have been entered at least 12 months before the case number assignment date with payments made as agreed. Exceptions for documented extenuating circumstances are considered case by case.",
+      "section": "HUD Handbook 4000.1, verified against Part F of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Have you closed one during an active Chapter 13, and what did the trustee letter need to say?",
+      "overlayReality": "Two investor additions matter here. The matrix I verified this against requires a Chapter 13 plan to be paid out and discharged before closing and will not allow loan proceeds to pay off a bankruptcy balance, where FHA itself contemplates closing during an active plan with court or trustee approval. It also does not permit FHA's Back to Work extenuating circumstances program at all. So a borrower told no on an active Chapter 13 has been told that lender's answer, not FHA's."
     },
     "fha-caivrs-federal-debt": {
       "program": "FHA",
       "topic": "credit",
       "question": "Can unpaid federal debt stop my FHA loan?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "Every borrower must pass a HUD Credit Alert Interactive Voice Response System check, known as CAIVRS, which screens for delinquent federal debt and prior FHA insurance claims. Lenders must also confirm that parties to the transaction do not appear on the SAM Excluded Parties List or HUD's Limited Denial of Participation list. A valid Social Security number is required; other forms of taxpayer identification are not accepted.",
+      "section": "HUD Handbook 4000.1, verified against Part A of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "overlayReality": "CAIVRS is not your credit report, and that is why this ambushes people. A defaulted federal student loan can have dropped off a credit report years ago and still return a CAIVRS hit, which makes a borrower with a clean report and a good score ineligible until it is resolved. Rehabilitation or consolidation out of default takes months, so this is the first thing to raise rather than the last.",
+      "judgmentNeeded": "How many files have you seen stopped by a CAIVRS hit the borrower had no idea about?"
     },
     "fha-cash-out-refinance": {
       "program": "FHA",
@@ -186,9 +189,11 @@
       "program": "FHA",
       "topic": "credit",
       "question": "How long after a foreclosure or short sale?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null
+      "handbookFloor": "A foreclosure must be settled a minimum of 36 months before the case number assignment date. The same three year measure applies to a transfer of title through a foreclosure sale, a deed in lieu of foreclosure, and a pre-foreclosure or short sale. The clock runs from the transfer of title, not from the filing.",
+      "section": "HUD Handbook 4000.1, verified against Part F of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "overlayReality": "Exceptions for extenuating circumstances exist but at this investor require corporate credit approval, which is a real process rather than an underwriter's discretion. Expect to produce independent third-party evidence of the event, not an explanation.",
+      "judgmentNeeded": "People routinely count from the wrong date. Worth a line on how often the recorded trustee's deed date differs from what the borrower believes."
     },
     "fha-gift-funds": {
       "program": "FHA",
@@ -221,10 +226,11 @@
       "program": "FHA",
       "topic": "process",
       "question": "What is a manual underwrite and why am I in one?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "Compensating factors are judgment. Which ones actually move an underwriter?"
+      "handbookFloor": "A file is downgraded from the automated evaluation to a manual underwrite on defined triggers rather than at random. They include a transfer of title through foreclosure or deed in lieu within three years of the case number assignment date, a mortgage payment history on any reported trade line that requires a downgrade, undisclosed mortgage debt, and business income showing a decline greater than 20 percent over the analysis period. Once manual, the file must meet HUD's requirements for manually underwritten loans and compensating factors begin to matter.",
+      "section": "HUD Handbook 4000.1, verified against Part F of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Which compensating factors actually move an underwriter on a manual file?",
+      "overlayReality": "The business income trigger is the one that blindsides self-employed borrowers. A year over year decline past 20 percent moves the file to manual underwriting on its own, which tightens the ratio limits at exactly the moment the qualifying income also fell. Two bad things arrive together and neither is obvious in advance."
     },
     "fha-min-credit-score": {
       "program": "FHA",
@@ -319,10 +325,11 @@
       "program": "FHA",
       "topic": "obligations",
       "question": "How is a student loan payment counted if it is deferred or on an income-driven plan?",
-      "handbookFloor": null,
-      "section": null,
-      "verifiedOn": null,
-      "judgmentNeeded": "This rule changed in recent years. Worth saying what the practical effect was on borrowers you were working with."
+      "handbookFloor": "Regardless of payment status, including deferment and forbearance, the monthly obligation counted is either the payment shown on the credit report or the actual documented payment when that is above zero, or 0.5 percent of the outstanding loan balance when the reported payment is zero. The payment can be excluded entirely only with written documentation from the servicer or program that the balance has been forgiven, cancelled, discharged or paid in full. Deferment does not mean excluded.",
+      "section": "HUD Handbook 4000.1, verified against Part F of a wholesale FHA guideline current to 2026-10-15",
+      "verifiedOn": "2026-10-18",
+      "judgmentNeeded": "Have you moved a file by getting a servicer to document an actual payment instead of letting the 0.5 percent apply?",
+      "overlayReality": "The practical effect is the half-percent rule. A borrower deferred at zero has 0.5 percent of the balance counted against them, which on a six-figure balance is a payment far above what they pay today. That single line decides how much house a lot of people qualify for, and it is why documenting an actual payment above zero with the servicer can be worth more than anything else in the file."
     },
     "fha-temporary-buydown": {
       "program": "FHA",
