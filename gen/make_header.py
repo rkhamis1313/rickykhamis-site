@@ -158,6 +158,21 @@ def mark(d: ImageDraw.ImageDraw, kind: str, cx: int, cy: int, r: int) -> None:
         d.rectangle([cx - b, cy - a, cx + b, cy + a], fill=hot)
         d.rectangle([cx - a, cy - b, cx + a, cy + b], fill=hot)
 
+    elif kind == "shield":
+        # Shield with a chevron. Reads as service at thumbnail size without
+        # borrowing insignia: military marks and seals are restricted, and a
+        # lender page is the wrong place to imply an endorsement that does not
+        # exist. A plain geometric shield says the same thing and is ours.
+        w, h = r * 0.92, r * 1.08
+        d.polygon([(cx, cy - h), (cx + w, cy - h * 0.62),
+                   (cx + w * 0.86, cy + h * 0.28), (cx, cy + h),
+                   (cx - w * 0.86, cy + h * 0.28), (cx - w, cy - h * 0.62)],
+                  outline=line, width=9)
+        cw, cy0 = w * 0.52, cy - h * 0.10
+        for off in (0, h * 0.34):
+            d.line([(cx - cw, cy0 + off), (cx, cy0 + off + h * 0.26),
+                    (cx + cw, cy0 + off)], fill=hot, width=11, joint="curve")
+
     elif kind == "graduate":
         # Mortarboard: a diamond cap over a short tassel.
         w = r * 1.05
@@ -230,6 +245,18 @@ def mark(d: ImageDraw.ImageDraw, kind: str, cx: int, cy: int, r: int) -> None:
         d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=line, width=9)
 
 
+# Program series get a product headline rather than a city. Keyed on the
+# `series` front matter so adding a cluster is one line here.
+SERIES_LABEL = {
+    "fha": "FHA Loans",
+    "va": "VA Loans",
+    "conventional": "Conventional",
+    "jumbo": "Jumbo Loans",
+    "declines": "Loan Denials",
+}
+SERIES_MOTIF = {"fha": "keys", "va": "shield", "declines": "statements"}
+
+
 def build(meta: dict) -> Image.Image:
     slug = meta.get("slug", "post")
     seed = seed_of(slug)
@@ -243,7 +270,15 @@ def build(meta: dict) -> Image.Image:
     # A reader searching "bank statement loan" is not searching "Scottsdale",
     # and ten product posts headlined Scottsdale would be ten identical cards.
     motif = (meta.get("motif") or "").strip().lower()
+    if not motif:
+        motif = SERIES_MOTIF.get((meta.get("series") or "").strip().lower(), "")
     program = (meta.get("program") or "").strip()
+    # A post in a program series is identified by the program. Without this the
+    # headline fell through to the city, and because the eyebrow also falls
+    # back to the city, 65 pages printed the same word twice: a giant
+    # "Phoenix" above an eyebrow reading PHOENIX.
+    if not program:
+        program = SERIES_LABEL.get((meta.get("series") or "").strip().lower(), "")
     place = program or meta.get("neighborhood") or meta.get("city") or "Scottsdale"
     # A mark needs room, so the headline gets a narrower column when one is drawn.
     head_w = W - pad * 2 - (300 if motif else 0)
@@ -252,6 +287,13 @@ def build(meta: dict) -> Image.Image:
     kicker = (meta.get("borrowerType") or "").upper()
     if kicker in ("ALL", ""):
         kicker = (meta.get("city") or "SCOTTSDALE").upper()
+    # Last guard: the eyebrow must never repeat the headline. Falling back to
+    # the city twice is what produced the duplicate, so when they collide the
+    # eyebrow becomes the place and the headline keeps the product, or the
+    # eyebrow degrades to a neutral label.
+    if kicker.strip() == place.upper().strip():
+        alt = (meta.get("city") or "").upper()
+        kicker = alt if alt and alt != place.upper() else "HOME LOANS"
     f_kick = font(BOLD, 27)
 
     y = pad + 6
