@@ -32,6 +32,14 @@ OUT = ROOT / "site" / "assets" / "images" / "figures"
 ORANGE = "#F36B24"
 BLUE = "#2a78d6"
 AQUA = "#1baf7a"
+# Fourth categorical slot, added for the VA fourplex timeline. Cleared by the
+# data-viz validator against the light surface: lightness band, chroma floor,
+# CVD separation (worst adjacent pair deltaE 20.2 deutan, 9.6 tritan) and the
+# normal-vision floor (24.0) all pass. The run returned a contrast warning
+# against the surface, which obligates visible labels rather than colour
+# alone, so every segment is directly labelled and the figure is restated as
+# a table in the post.
+VIOLET = "#8a63d2"
 INK = "#1b1e24"
 MUTED = "#5d6169"
 LINE = "#e6e7ea"
@@ -172,11 +180,114 @@ def builder_incentives() -> str:
     return "\n".join(p)
 
 
+
+def va_fourplex_timeline() -> str:
+    """Doors owned over ten years across four sequential fourplex purchases.
+
+    Single axis on purpose. Doors and dollars are different scales, and a
+    second y axis would be the most common chart mistake there is, so the
+    money lives in a table in the post rather than on this plot.
+
+    A stacked column rather than a line: the count steps when a property
+    closes and holds flat in between. Drawing a slope between acquisitions
+    would imply doors arriving continuously, which is not what happens.
+    """
+    # (label, colour, acquisition year). Each fourplex adds four doors and the
+    # cycle is roughly two years of occupancy, then refinance and repeat.
+    props = [
+        ("Fourplex 1", ORANGE, 1),
+        ("Fourplex 2", BLUE, 3),
+        ("Fourplex 3", AQUA, 5),
+        ("Fourplex 4", VIOLET, 7),
+    ]
+    # Deep bottom margin: the axis label and the illustrative-only footnote
+    # collided at the first geometry, so they get their own rows.
+    W, H = 840, 510
+    L, R, T, B = 68, 172, 56, 96
+    years, y_hi = 10, 16
+    pw, ph = W - L - R, H - T - B
+    bw = pw / years * 0.62
+    GAP = 2.0                              # surface gap between stacked fills
+
+    def xc(yr: int) -> float:
+        return L + pw * (yr - 0.5) / years
+
+    def y(v: float) -> float:
+        return T + ph * (y_hi - v) / y_hi
+
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" '
+         f'width="{W}" height="{H}" role="img" aria-label="Doors owned by year '
+         'across four sequential fourplex purchases, reaching sixteen doors by '
+         'year seven and held through year ten. Illustrative." '
+         'style="font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif">']
+    p.append('<title>Doors owned by year across four fourplex purchases</title>')
+
+    # Recessive gridlines and axis labels.
+    for v in range(0, y_hi + 1, 4):
+        p.append(f'<line x1="{L}" y1="{y(v):.1f}" x2="{W-R}" y2="{y(v):.1f}" '
+                 'stroke="#e6e7ea" stroke-width="1"/>')
+        p.append(f'<text x="{L-12}" y="{y(v)+4:.1f}" text-anchor="end" '
+                 f'font-size="13" fill="#5d6169">{v}</text>')
+    p.append(f'<text x="{L-12}" y="{T-22}" text-anchor="end" font-size="12" '
+             'fill="#5d6169">Doors</text>')
+
+    for yr in range(1, years + 1):
+        p.append(f'<text x="{xc(yr):.1f}" y="{H-B+26}" text-anchor="middle" '
+                 f'font-size="13" fill="#5d6169">{yr}</text>')
+    p.append(f'<text x="{L+pw/2:.1f}" y="{H-B+52}" text-anchor="middle" '
+             'font-size="12" fill="#5d6169">Year</text>')
+
+    # Stacked columns. Rounded data-end only on the topmost segment, anchored
+    # to the baseline below.
+    for yr in range(1, years + 1):
+        held = [pr for pr in props if pr[2] <= yr]
+        base = 0.0
+        for idx, (label, colour, _) in enumerate(held):
+            top, bot = base + 4, base
+            y0, y1 = y(top), y(bot)
+            h = max(y1 - y0 - (GAP if idx < len(held) - 1 else 0), 1)
+            topmost = idx == len(held) - 1
+            p.append(
+                f'<rect x="{xc(yr)-bw/2:.1f}" y="{y0:.1f}" width="{bw:.1f}" '
+                f'height="{h:.1f}" fill="{colour}" '
+                f'rx="{4 if topmost else 0}" ry="{4 if topmost else 0}"/>')
+            base = top
+        if held:
+            p.append(f'<text x="{xc(yr):.1f}" y="{y(base)-10:.1f}" '
+                     'text-anchor="middle" font-size="13" font-weight="700" '
+                     f'fill="#1b1e24">{int(base)}</text>')
+
+    # Legend, present because there are four series, and each series is also
+    # directly labelled at the year it is acquired.
+    ly = T + 6
+    for label, colour, yr in props:
+        p.append(f'<rect x="{W-R+12}" y="{ly}" width="12" height="12" rx="3" '
+                 f'fill="{colour}"/>')
+        p.append(f'<text x="{W-R+30}" y="{ly+11}" font-size="13" '
+                 f'fill="#1b1e24">{label}</text>')
+        p.append(f'<text x="{W-R+30}" y="{ly+27}" font-size="11.5" '
+                 f'fill="#5d6169">acquired year {yr}</text>')
+        ly += 46
+
+    p.append(f'<text x="{L}" y="{H-14}" font-size="11.5" fill="#5d6169">'
+             'Illustrative sequence only. Each VA purchase requires you to '
+             'occupy the property; nothing here is a projection of returns.'
+             '</text>')
+    p.append('</svg>')
+    return "".join(p)
+
+
 FIGURES = {
     "buydown-ladder": (
         buydown_ladder,
         "Effective mortgage rate by year under a 3-2-1, 2-1 and 1-0 temporary "
         "buydown, each returning to the note rate. Illustrative.",
+    ),
+    "va-fourplex-timeline": (
+        va_fourplex_timeline,
+        "Doors owned by year across four sequential fourplex purchases, "
+        "reaching 16 doors by year seven. Illustrative sequence, not a "
+        "projection of returns.",
     ),
     "builder-incentives": (
         builder_incentives,

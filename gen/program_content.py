@@ -250,6 +250,8 @@ PROGRAMS = [
 # ----------------------------------------------------------------------- VA
  dict(
   path='loan-programs/va-loans',
+  series='va',
+  seriesLabel='VA loan',
   title='VA Loans in Arizona: Full Entitlement, the Funding Fee Exemption, and the Refund Most Veterans Never Claim',
   h1='VA loans',
   lede=('Zero down, no monthly mortgage insurance, and since 2020 no county loan limit at all if '
