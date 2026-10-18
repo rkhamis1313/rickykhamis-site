@@ -234,6 +234,43 @@ def hero_cta(p: dict) -> str:
     )
 
 
+POSTS_DIR = ROOT / 'content' / 'posts'
+
+
+def series_articles(series: str) -> list[tuple[str, str, str]]:
+    """Every published post in a series, newest first, as (url, title, desc).
+
+    A hub that links only the articles its FAQ answers happen to mention is
+    not a hub. Before this existed the FHA page reached 8 of its 14 articles
+    and the other 6, the pillar guide among them, were discoverable only
+    through the blog feed they were about to scroll off.
+
+    Titles and descriptions come from each post's front matter rather than
+    being repeated here, so a retitled post cannot leave a stale label
+    behind, and only posts that have actually rendered are listed, so a
+    queue written weeks ahead does not put 404s on the page.
+    """
+    out = []
+    for md in sorted(POSTS_DIR.glob('*.md'), reverse=True):
+        text = md.read_text(encoding='utf-8')
+        if not text.startswith('---'):
+            continue
+        fm = text.split('---\n', 2)[1]
+        got = {}
+        for key in ('series', 'title', 'description', 'slug'):
+            m = re.search(rf'^{key}:\s*"?(.*?)"?\s*$', fm, re.M)
+            if m:
+                got[key] = m.group(1).strip()
+        if got.get('series', '').strip().lower() != series:
+            continue
+        slug = got.get('slug') or md.stem[11:]
+        if not (SITE / 'blog' / slug / 'index.html').exists():
+            continue
+        out.append((f'/blog/{slug}/', got.get('title', slug),
+                    got.get('description', '')))
+    return out
+
+
 def build_main(p: dict) -> str:
     out = ['<main id="main">']
 
@@ -303,6 +340,24 @@ def build_main(p: dict) -> str:
     out.append('<section class="section soft"><div class="wrap">')
     out.append(lead_form.render(p['form']))
     out.append('</div></section>')
+
+    # Every article in this program's series, so the hub actually reaches them.
+    arts = series_articles(p['series']) if p.get('series') else []
+    if arts:
+        out.append(
+          '<section class="section"><div class="wrap">'
+          # h1 is a noun phrase like "FHA loans", which reads badly inside
+          # this sentence, so the heading uses an explicit label.
+          f'<h2>Every {p.get("seriesLabel", p["h1"])} question, answered</h2>'
+          '<p class="lede">Each page cites the guideline section behind every '
+          'figure and the date it was verified.</p>'
+          '<div class="grid g3">')
+        for url, name, blurb in arts:
+            out.append(
+              f'<a class="card bevel link" href="{url}"><div class="b">'
+              f'<h3>{esc(name)}</h3>'
+              f'<div class="d">{esc(blurb[:150])}</div></div></a>')
+        out.append('</div></div></section>')
 
     if p['related']:
         out.append('<section class="section"><div class="wrap"><h2>Read further</h2>'

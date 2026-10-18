@@ -27,6 +27,8 @@ PROGRAMS = [
 # ---------------------------------------------------------------------- FHA
  dict(
   path='loan-programs/fha-loans',
+  series='fha',
+  seriesLabel='FHA',
   title='FHA Loans in Arizona: The 3.5% Down Program, and the Mortgage Insurance Rule Nobody Explains',
   h1='FHA loans',
   lede=('Government-insured financing that reaches credit profiles conventional guidelines turn '
