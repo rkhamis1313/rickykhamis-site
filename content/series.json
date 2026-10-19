@@ -2275,6 +2275,20 @@
       "slug": "va-appraisal-tidewater-mpr",
       "date": "2026-10-18",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "recast-vs-refinance",
+      "date": "2026-10-19",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "cash-offer-then-delayed-financing",
+      "date": "2026-10-19",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
