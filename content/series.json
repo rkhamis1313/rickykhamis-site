@@ -2331,6 +2331,20 @@
       "slug": "arizona-septic-transfer-inspection-loan",
       "date": "2026-10-22",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "extended-rate-lock-new-construction",
+      "date": "2026-10-23",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "builder-lender-vs-your-own-lender",
+      "date": "2026-10-23",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
