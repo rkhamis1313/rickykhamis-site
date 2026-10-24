@@ -2345,6 +2345,20 @@
       "slug": "builder-lender-vs-your-own-lender",
       "date": "2026-10-23",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "rate-lock-vs-float-arizona",
+      "date": "2026-10-24",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "appraisal-gap-arizona-contract",
+      "date": "2026-10-24",
+      "offQueue": true
     }
   ],
   "seriesNotes": {

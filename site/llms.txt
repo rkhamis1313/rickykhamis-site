@@ -42,6 +42,8 @@
 
 
 ## Articles
+- [Lock or Float: How to Decide, and the Question Almost Nobody Asks](https://rickykhamis.com/blog/rate-lock-vs-float-arizona/): Locking protects your approval, not just your payment. That is the real reason to lock, and it is the one most buyers never hear. Here is the framework, plus what a float-down is worth.
+- [When the Appraisal Comes In Low: Your Options on an Arizona Contract](https://rickykhamis.com/blog/appraisal-gap-arizona-contract/): A value below contract price does not kill a deal, it reallocates cash. Here are the five ways a gap gets closed, what a reconsideration of value actually requires, and how to plan for it before you need to.
 - [Extended Rate Locks on New Construction: Covering a Delivery You Cannot Control](https://rickykhamis.com/blog/extended-rate-lock-new-construction/): A house delivering in eight months cannot be financed with a thirty day lock. Extended locks, float-downs and lock extensions each cost something. Here is how to decide what to buy.
 - [Builder's Lender or Your Own: How to Compare Without Losing the Incentive](https://rickykhamis.com/blog/builder-lender-vs-your-own-lender/): Builders tie their best incentives to using their affiliated lender, which removes your ability to shop the loan. Here is how to evaluate whether the incentive is worth more than the competition you gave up.
 - [Well Water and Mortgage Financing in Arizona: What a Lender Needs to See](https://rickykhamis.com/blog/well-water-mortgage-arizona/): A private or shared well is routine in the desert north and east of Scottsdale, and it is a documented underwriting item rather than a formality. Here is what gets tested, what gets recorded, and where files stall.
