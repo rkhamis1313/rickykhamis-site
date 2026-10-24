@@ -128,6 +128,17 @@ footer a{color:#B9B9C2}
 .quote{background:var(--paper2);border:1px solid #E6E1D8;border-left:4px solid var(--orange);border-radius:10px;padding:22px 24px;margin-top:22px}
 .quote p{margin:0 0 12px;font-size:16px;line-height:1.6}
 .quote .by{font-size:13.5px;color:var(--mute2);font-weight:700;margin:0}
+
+.phead{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+.pavatar{width:92px;height:92px;flex:0 0 92px;border-radius:50%;object-fit:cover;object-position:center 15%;
+  border:3px solid var(--line2);box-shadow:0 6px 20px rgba(0,0,0,.18);background:var(--ink)}
+.pcard.cmg .pavatar{border-color:#6FA32E}
+.pcard.rog .pavatar{border-color:#B89445}
+.phead .role{margin:7px 0 0}
+@media(max-width:430px){
+  .pavatar{width:72px;height:72px;flex-basis:72px}
+  .pcard .who{font-size:1.3rem}
+}
 </style>
 </head>
 <body>
@@ -159,15 +170,27 @@ footer a{color:#B9B9C2}
 
   <div class="pgrid">
     <div class="pcard cmg">
-      <h3 class="who">CMG Financial</h3>
-      <div class="role">Christopher M. George &middot; Founder, President and CEO</div>
+      <div class="phead">
+        <img class="pavatar" src="/assets/images/chris-george.jpg" width="377" height="516"
+             alt="Christopher M. George, Founder, President and CEO of CMG Financial" loading="lazy">
+        <div>
+          <h3 class="who">CMG Financial</h3>
+          <div class="role">Christopher M. George &middot; Founder, President and CEO</div>
+        </div>
+      </div>
       <p>Since 1993, CMG Financial has grown from a garage to a national brand. Chris George is a former Chairman of the Mortgage Bankers Association and a long-standing champion for responsible lending.</p>
       <p>A direct lender in all 50 states, with federal approvals across HUD, VA, RHS, GNMA, FNMA and FHLMC.</p>
       <p>Home of the <strong>All In One Loan</strong> and <strong>HomeFundIt</strong>, proprietary programs your buyers cannot get through most lenders.</p>
     </div>
     <div class="pcard rog">
-      <h3 class="who">Realty ONE Group</h3>
-      <div class="role">Kuba Jewgieniew &middot; Founder and CEO</div>
+      <div class="phead">
+        <img class="pavatar" src="/assets/images/kuba-jewgieniew.jpg" width="411" height="468"
+             alt="Kuba Jewgieniew, Founder and CEO of Realty ONE Group" loading="lazy">
+        <div>
+          <h3 class="who">Realty ONE Group</h3>
+          <div class="role">Kuba Jewgieniew &middot; Founder and CEO</div>
+        </div>
+      </div>
       <p>Founded in Las Vegas in 2005 and now 400+ offices nationally, built on a COOLture philosophy with one idea at the center: <strong>every ONE matters</strong>.</p>
       <p>More than <strong>4,700 agents across Arizona and Nevada</strong>, and you are now one of them.</p>
       <p>Kuba did not refer this lender to you. He invested in it, and holds a 49% ownership interest in EPiQ Lending.</p>
