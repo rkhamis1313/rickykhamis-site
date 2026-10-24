@@ -139,5 +139,10 @@ http://www.khamisgroup.com/*   https://rickykhamis.com/:splat  301!
 /heloc/  /loan-programs/heloc/  301
 /second-mortgage/  /loan-programs/heloc/  301
 
+
+# Realty ONE Group new-agent orientation. Managers send this at signup.
+/orientation/  /epiq-orientation/  301
+/rog/  /epiq-orientation/  301
+
 /post/*    /blog/    301
 /blog/higher-rates-sellers-price-cut-vs-buydown/  /blog/compete-with-builder-rate-buydowns/  301
