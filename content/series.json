@@ -2359,6 +2359,20 @@
       "slug": "appraisal-gap-arizona-contract",
       "date": "2026-10-24",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "escrow-timeline-arizona-30-days",
+      "date": "2026-10-25",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "arizona-closing-costs-who-pays-what",
+      "date": "2026-10-25",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
