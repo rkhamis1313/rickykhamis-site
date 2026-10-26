@@ -2373,6 +2373,20 @@
       "slug": "arizona-closing-costs-who-pays-what",
       "date": "2026-10-25",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "underwritten-preapproval-vs-prequalification",
+      "date": "2026-10-26",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "hoa-document-delays-closing",
+      "date": "2026-10-26",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
