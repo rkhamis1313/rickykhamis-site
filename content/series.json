@@ -2401,6 +2401,20 @@
       "slug": "credit-repair-before-mortgage",
       "date": "2026-10-27",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "rental-income-departing-residence",
+      "date": "2026-10-28",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": null,
+      "slug": "bridge-financing-buy-before-sell",
+      "date": "2026-10-28",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
