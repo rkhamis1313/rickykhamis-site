@@ -2415,6 +2415,20 @@
       "slug": "bridge-financing-buy-before-sell",
       "date": "2026-10-28",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "declines",
+      "slug": "why-mortgage-denied",
+      "date": "2026-10-29",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "declines",
+      "slug": "pre-approved-then-denied",
+      "date": "2026-10-29",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
