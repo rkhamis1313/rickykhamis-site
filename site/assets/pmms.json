@@ -1,8 +1,8 @@
 {
-  "rate": 7.32,
-  "surveyDate": "2026-10-22",
+  "rate": 7.24,
+  "surveyDate": "2026-10-29",
   "source": "Freddie Mac Primary Mortgage Market Survey",
   "sourceUrl": "https://www.freddiemac.com/pmms",
   "via": "freddiemac",
-  "fetchedAt": "2026-10-22T17:40:39Z"
+  "fetchedAt": "2026-10-29T18:41:08Z"
 }
