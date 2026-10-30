@@ -2429,6 +2429,20 @@
       "slug": "pre-approved-then-denied",
       "date": "2026-10-29",
       "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "declines",
+      "slug": "declined-by-one-lender-approved-by-another",
+      "date": "2026-10-30",
+      "offQueue": true
+    },
+    {
+      "city": "Scottsdale",
+      "series": "declines",
+      "slug": "after-a-mortgage-denial",
+      "date": "2026-10-30",
+      "offQueue": true
     }
   ],
   "seriesNotes": {
