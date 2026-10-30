@@ -6,7 +6,7 @@
       "label": "FHA 30-Year, 3.5% down",
       "term": 30,
       "rate": 6.5,
-      "apr": 6.663
+      "apr": 6.649
     },
     {
       "product": "VA 30-Year",
@@ -14,7 +14,7 @@
       "label": "VA 30-Year, 0% down",
       "term": 30,
       "rate": 6.875,
-      "apr": 7.018
+      "apr": 7.016
     },
     {
       "product": "Conventional 30-Year",
@@ -22,7 +22,7 @@
       "label": "Conventional 30-Year, 5% down \u00b7 Primary Residence",
       "term": 30,
       "rate": 6.99,
-      "apr": 7.133
+      "apr": 7.126
     },
     {
       "product": "Conventional 30-Year",
@@ -30,7 +30,7 @@
       "label": "Conventional 30-Year, 25% down \u00b7 Primary Residence",
       "term": 30,
       "rate": 6.99,
-      "apr": 7.133
+      "apr": 7.126
     },
     {
       "product": "Conventional 15-Year",
@@ -38,7 +38,7 @@
       "label": "Conventional 15-Year, 25% down \u00b7 Primary Residence",
       "term": 15,
       "rate": 6.625,
-      "apr": 6.849
+      "apr": 6.842
     },
     {
       "product": "Conventional 30-Year",
@@ -46,7 +46,7 @@
       "label": "Conventional 30-Year, 25% down \u00b7 Investment",
       "term": 30,
       "rate": 6.99,
-      "apr": 7.133
+      "apr": 7.126
     },
     {
       "product": "Jumbo 30-Year",
@@ -54,13 +54,13 @@
       "label": "Jumbo 30-Year, Full Doc 20% down \u00b7 Primary Residence",
       "term": 30,
       "rate": 7.25,
-      "apr": 7.335
+      "apr": 7.336
     }
   ],
   "defaultIndex": 3,
-  "asOf": "2026-10-29",
-  "aprNote": "The Annual Percentage Rate (APR) is determined based on different loan amounts and types. For conforming, FHA, and VA loans, the APR is calculated based on a loan amount of $450,000. All rates are based on approximately 0.678 to 1.246 discount points paid by the borrower. The APR assumes no increase in the financial index. However, after a fixed period, your interest rate and monthly payment may increase based on market index fluctuations.",
+  "asOf": "2026-10-30",
+  "aprNote": "The Annual Percentage Rate (APR) is determined based on different loan amounts and types. For conforming, FHA, and VA loans, the APR is calculated based on a loan amount of $450,000. All rates are based on approximately 0.692 to 1.099 discount points paid by the borrower. The APR assumes no increase in the financial index. However, after a fixed period, your interest rate and monthly payment may increase based on market index fluctuations.",
   "source": "EPiQ Lending rate sheet",
   "sourceUrl": "https://www.epiqrates.com/rates/rickykhamis",
-  "fetchedAt": "2026-10-29T18:41:08Z"
+  "fetchedAt": "2026-10-30T18:16:49Z"
 }
